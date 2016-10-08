@@ -1,0 +1,71 @@
+{
+  "name": "api-clients/test-utilities",
+  "license": "MIT",
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "authors": [
+    {
+      "name": "Cees-Jan Kiewiet",
+      "email": "ceesjank@gmail.com"
+    }
+  ],
+  "require": {
+    "php": "^7.0"
+  },
+  "require-dev": {
+    "humbug/humbug": "1.0.0-alpha2",
+    "phake/phake": "^2.3",
+    "phpspec/prophecy": "^1.6",
+    "phpunit/phpunit": "^5.2.3",
+    "squizlabs/php_codesniffer": "^2.6"
+  },
+  "autoload": {
+    "psr-4": {
+      "ApiClients\\Foundation\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "ApiClients\\Tests\\Foundation\\": "tests/"
+    }
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "scripts": {
+    "ensure-installed": "composer install --ansi -n -q",
+    "cs": [
+      "@ensure-installed",
+      "phpcs --standard=PSR2 src/"
+    ],
+    "unit": [
+      "@ensure-installed",
+      "phpunit --colors=always -c phpunit.xml.dist --coverage-text --coverage-html covHtml"
+    ],
+    "mutation": [
+      "@ensure-installed",
+      "if [ `php -m | grep xdebug | wc -l` -gt 0 ]; then humbug --ansi --incremental; fi"
+    ],
+    "qa-all": [
+      "@cs",
+      "@unit",
+      "@mutation"
+    ],
+    "qa-windows": [
+      "@cs",
+      "@unit"
+    ],
+    "qa-ci": [
+      "@qa-all"
+    ],
+    "qa-ci-windows": [
+      "@qa-windows"
+    ],
+    "qa-contrib": [
+      "@qa-all"
+    ],
+    "ci-coverage": [
+      "if [ -f ./build/logs/clover.xml ]; then wget https://scrutinizer-ci.com/ocular.phar && php ocular.phar code-coverage:upload --format=php-clover ./build/logs/clover.xml; fi"
+    ]
+  }
+}
