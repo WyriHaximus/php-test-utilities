@@ -1,8 +1,6 @@
 {
   "name": "api-clients/test-utilities",
   "license": "MIT",
-  "minimum-stability": "dev",
-  "prefer-stable": true,
   "authors": [
     {
       "name": "Cees-Jan Kiewiet",
@@ -10,9 +8,7 @@
     }
   ],
   "require": {
-    "php": "^7.0"
-  },
-  "require-dev": {
+    "php": "^7.0",
     "humbug/humbug": "1.0.0-alpha2",
     "phake/phake": "^2.3",
     "phpspec/prophecy": "^1.6",
@@ -21,12 +17,12 @@
   },
   "autoload": {
     "psr-4": {
-      "ApiClients\\Foundation\\": "src/"
+      "ApiClients\\Tools\\TestUtilities\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "ApiClients\\Tests\\Foundation\\": "tests/"
+      "ApiClients\\Tests\\Tools\\TestUtilities\\": "tests/"
     }
   },
   "config": {
