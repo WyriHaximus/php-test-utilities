@@ -91,4 +91,16 @@ abstract class TestCase extends PHPUnit_Framework_TestCase
 
         return $files;
     }
+
+    public function provideTrueFalse(): array
+    {
+        return [
+            [
+                true,
+            ],
+            [
+                false,
+            ],
+        ];
+    }
 }
