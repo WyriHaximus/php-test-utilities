@@ -9,6 +9,7 @@
   ],
   "require": {
     "php": "^7.0",
+    "clue/block-react": "^1.1",
     "humbug/humbug": "1.0.0-alpha2",
     "phake/phake": "^2.3",
     "phpspec/prophecy": "^1.6",
