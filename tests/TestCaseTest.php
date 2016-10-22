@@ -3,6 +3,10 @@
 namespace ApiClients\Tests\Tools\TestUtilities;
 
 use ApiClients\Tools\TestUtilities\TestCase;
+use React\EventLoop\Factory;
+use React\EventLoop\LoopInterface;
+use React\EventLoop\StreamSelectLoop;
+use function React\Promise\resolve;
 
 final class TestCaseTest extends TestCase
 {
@@ -20,6 +24,13 @@ final class TestCaseTest extends TestCase
                 (string) mt_rand($i * $i, mt_getrandmax()),
             ];
         }
+    }
+
+    public function provideEventLoop()
+    {
+        yield [null];
+        yield [Factory::create()];
+        yield [new StreamSelectLoop()];
     }
 
     /**
@@ -42,5 +53,32 @@ final class TestCaseTest extends TestCase
         foreach ($this->getFilesInDirectory($this->getTmpDir()) as $file) {
             $this->assertSame($int, file_get_contents($file));
         }
+    }
+
+    /**
+     * @dataProvider provideEventLoop
+     */
+    public function testAwait(LoopInterface $loop = null)
+    {
+        $value = time();
+        $this->assertSame($value, $this->await(resolve($value), $loop));
+    }
+
+    /**
+     * @dataProvider provideEventLoop
+     */
+    public function testAwaitAll(LoopInterface $loop = null)
+    {
+        $value = time();
+        $this->assertSame([$value, $value], $this->awaitAll([resolve($value), resolve($value)], $loop));
+    }
+
+    /**
+     * @dataProvider provideEventLoop
+     */
+    public function testAwaitAny(LoopInterface $loop = null)
+    {
+        $value = time();
+        $this->assertSame($value, $this->awaitAny([resolve($value), resolve($value)], $loop));
     }
 }

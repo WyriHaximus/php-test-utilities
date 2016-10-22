@@ -3,8 +3,14 @@
 namespace ApiClients\Tools\TestUtilities;
 
 use PHPUnit_Framework_TestCase;
+use React\EventLoop\Factory;
+use React\EventLoop\LoopInterface;
+use React\Promise\PromiseInterface;
 use RecursiveDirectoryIterator;
 use RecursiveIteratorIterator;
+use function Clue\React\Block\await;
+use function Clue\React\Block\awaitAll;
+use function Clue\React\Block\awaitAny;
 
 abstract class TestCase extends PHPUnit_Framework_TestCase
 {
@@ -102,5 +108,32 @@ abstract class TestCase extends PHPUnit_Framework_TestCase
                 false,
             ],
         ];
+    }
+
+    protected function await(PromiseInterface $promise, LoopInterface $loop = null)
+    {
+        if (!($loop instanceof LoopInterface)) {
+            $loop = Factory::create();
+        }
+
+        return await($promise, $loop);
+    }
+
+    protected function awaitAll(array $promises, LoopInterface $loop = null)
+    {
+        if (!($loop instanceof LoopInterface)) {
+            $loop = Factory::create();
+        }
+
+        return awaitAll($promises, $loop);
+    }
+
+    protected function awaitAny(array $promises, LoopInterface $loop = null)
+    {
+        if (!($loop instanceof LoopInterface)) {
+            $loop = Factory::create();
+        }
+
+        return awaitAny($promises, $loop);
     }
 }
