@@ -33,6 +33,11 @@ final class TestCaseTest extends TestCase
         yield [new StreamSelectLoop()];
     }
 
+    public function testRecursiveDirectoryCreation()
+    {
+        $this->assertFileExists($this->getTmpDir());
+    }
+
     /**
      * @dataProvider provideTemporaryDirectory
      */
@@ -80,5 +85,13 @@ final class TestCaseTest extends TestCase
     {
         $value = time();
         $this->assertSame($value, $this->awaitAny([resolve($value), resolve($value)], $loop));
+    }
+
+    /**
+     * @dataProvider provideTrueFalse
+     */
+    public function testTrueFalse(bool $bool)
+    {
+        $this->assertInternalType('bool', $bool);
     }
 }

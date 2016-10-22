@@ -2,6 +2,7 @@
 
 namespace ApiClients\Tools\TestUtilities;
 
+use FilesystemIterator;
 use PHPUnit_Framework_TestCase;
 use React\EventLoop\Factory;
 use React\EventLoop\LoopInterface;
@@ -17,6 +18,11 @@ abstract class TestCase extends PHPUnit_Framework_TestCase
     /**
      * @var string
      */
+    private $baseTmpDir;
+
+    /**
+     * @var string
+     */
     private $tmpDir;
 
     /**
@@ -28,45 +34,42 @@ abstract class TestCase extends PHPUnit_Framework_TestCase
     {
         parent::setUp();
 
-        $this->tmpDir = sys_get_temp_dir() .
+        $this->baseTmpDir = sys_get_temp_dir() .
             DIRECTORY_SEPARATOR .
-            uniqid('wyrihaximus-php-api-client-tests-', true) .
-            DIRECTORY_SEPARATOR
+            'php-api-clients-tests-' .
+            uniqid() .
+            DIRECTORY_SEPARATOR;
+        $this->tmpDir = $this->baseTmpDir .
+            uniqid() .
+            DIRECTORY_SEPARATOR;
         ;
 
-        if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {
-            $this->tmpDir = 'C:\\t\\';
-        }
-
         mkdir($this->tmpDir, 0777, true);
-        $this->tmpNamespace = uniqid('WHPACTN', true);
+        $this->tmpNamespace = uniqid('PACTN');
     }
 
     public function tearDown()
     {
         parent::tearDown();
-        $this->rmdir($this->tmpDir);
+        $this->rmdir($this->baseTmpDir);
     }
 
     protected function rmdir($dir)
     {
-        $directory = dir($dir);
-        while (false !== ($entry = $directory->read())) {
-            if (in_array($entry, ['.', '..'])) {
+        $directory = new FilesystemIterator($dir);
+
+        foreach ($directory as $node) {
+            if (is_dir($node->getPathname())) {
+                $this->rmdir($node->getPathname());
                 continue;
             }
 
-            if (is_dir($dir . $entry)) {
-                $this->rmdir($dir . $entry . DIRECTORY_SEPARATOR);
-                continue;
-            }
-
-            if (is_file($dir . $entry)) {
-                unlink($dir . $entry);
+            if (is_file($node->getPathname())) {
+                unlink($node->getPathname());
                 continue;
             }
         }
-        $directory->close();
+
         rmdir($dir);
     }
 
