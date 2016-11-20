@@ -34,7 +34,7 @@ abstract class TestCase extends PHPUnit_Framework_TestCase
     {
         parent::setUp();
 
-        $this->baseTmpDir = sys_get_temp_dir() .
+        $this->baseTmpDir = $this->getSysTempDir() .
             DIRECTORY_SEPARATOR .
             'php-api-clients-tests-' .
             uniqid() .
@@ -46,6 +46,15 @@ abstract class TestCase extends PHPUnit_Framework_TestCase
 
         mkdir($this->tmpDir, 0777, true);
         $this->tmpNamespace = uniqid('PACTN');
+    }
+
+    protected function getSysTempDir()
+    {
+        if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {
+            return 'C:\\t\\';
+        }
+
+        return sys_get_temp_dir();
     }
 
     public function tearDown()
