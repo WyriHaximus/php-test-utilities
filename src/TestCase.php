@@ -36,7 +36,7 @@ abstract class TestCase extends PHPUnit_Framework_TestCase
 
         $this->baseTmpDir = $this->getSysTempDir() .
             DIRECTORY_SEPARATOR .
-            'php-api-clients-tests-' .
+            'p-a-c-t-' .
             uniqid() .
             DIRECTORY_SEPARATOR;
         $this->tmpDir = $this->baseTmpDir .
