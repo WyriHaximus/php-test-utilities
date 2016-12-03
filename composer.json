@@ -11,6 +11,7 @@
     "php": "^7.0",
     "clue/block-react": "^1.1",
     "humbug/humbug": "1.0.0-alpha2",
+    "jakub-onderka/php-console-highlighter": "^0.3.2",
     "jakub-onderka/php-parallel-lint": "^0.9.2",
     "phake/phake": "^2.3",
     "phpspec/prophecy": "^1.6",
