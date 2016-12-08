@@ -21,7 +21,7 @@ final class TestCaseTest extends TestCase
     {
         for ($i = 0; $i <= self::PENTIUM; $i++) {
             yield [
-                (string) mt_rand($i * $i, mt_getrandmax()),
+                (string) random_int($i * $i, PHP_INT_MAX),
             ];
         }
     }
@@ -35,7 +35,7 @@ final class TestCaseTest extends TestCase
 
     public function testRecursiveDirectoryCreation()
     {
-        $this->assertFileExists($this->getTmpDir());
+        static::assertFileExists($this->getTmpDir());
     }
 
     /**
@@ -43,20 +43,20 @@ final class TestCaseTest extends TestCase
      */
     public function testTemporaryDirectoryAndGetFilesInDirectory(string $int)
     {
-        $this->assertNotSame($this->getTmpDir(), $this->previousTemporaryDirectory);
+        static::assertNotSame($this->getTmpDir(), $this->previousTemporaryDirectory);
 
         $dir = $this->getTmpDir() . $this->getRandomNameSpace() . DIRECTORY_SEPARATOR;
         mkdir($dir);
 
         for ($i = 0; $i < self::PENTIUM; $i++) {
-            $this->assertSame($i, count($this->getFilesInDirectory($this->getTmpDir())), $i);
+            static::assertCount($i, $this->getFilesInDirectory($this->getTmpDir()), $i);
             file_put_contents($dir . $i, $int);
         }
 
-        $this->assertSame(self::PENTIUM, count($this->getFilesInDirectory($this->getTmpDir())));
+        static::assertCount(self::PENTIUM, $this->getFilesInDirectory($this->getTmpDir()));
 
         foreach ($this->getFilesInDirectory($this->getTmpDir()) as $file) {
-            $this->assertSame($int, file_get_contents($file));
+            static::assertSame($int, file_get_contents($file));
         }
     }
 
@@ -66,7 +66,7 @@ final class TestCaseTest extends TestCase
     public function testAwait(LoopInterface $loop = null)
     {
         $value = time();
-        $this->assertSame($value, $this->await(resolve($value), $loop));
+        static::assertSame($value, $this->await(resolve($value), $loop));
     }
 
     /**
@@ -75,7 +75,7 @@ final class TestCaseTest extends TestCase
     public function testAwaitAll(LoopInterface $loop = null)
     {
         $value = time();
-        $this->assertSame([$value, $value], $this->awaitAll([resolve($value), resolve($value)], $loop));
+        static::assertSame([$value, $value], $this->awaitAll([resolve($value), resolve($value)], $loop));
     }
 
     /**
@@ -84,7 +84,7 @@ final class TestCaseTest extends TestCase
     public function testAwaitAny(LoopInterface $loop = null)
     {
         $value = time();
-        $this->assertSame($value, $this->awaitAny([resolve($value), resolve($value)], $loop));
+        static::assertSame($value, $this->awaitAny([resolve($value), resolve($value)], $loop));
     }
 
     /**
@@ -92,6 +92,6 @@ final class TestCaseTest extends TestCase
      */
     public function testTrueFalse(bool $bool)
     {
-        $this->assertInternalType('bool', $bool);
+        static::assertInternalType('bool', $bool);
     }
 }

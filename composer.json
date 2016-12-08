@@ -10,7 +10,6 @@
   "require": {
     "php": "^7.0",
     "clue/block-react": "^1.1",
-    "humbug/humbug": "1.0.0-alpha2",
     "jakub-onderka/php-console-highlighter": "^0.3.2",
     "jakub-onderka/php-parallel-lint": "^0.9.2",
     "phake/phake": "^2.3",
@@ -46,10 +45,6 @@
     "unit-coverage": [
       "@ensure-installed",
       "phpunit --colors=always -c phpunit.xml.dist --coverage-text --coverage-html covHtml --coverage-clover ./build/logs/clover.xml"
-    ],
-    "mutation": [
-      "@ensure-installed",
-      "if [ `php -m | grep xdebug | wc -l` -gt 0 ]; then humbug --ansi --incremental; fi"
     ],
     "lint-php": [
       "@ensure-installed",

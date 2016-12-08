@@ -3,7 +3,7 @@
 namespace ApiClients\Tools\TestUtilities;
 
 use FilesystemIterator;
-use PHPUnit_Framework_TestCase;
+use PHPUnit\Framework\TestCase as PHPUnitTestCase;
 use React\EventLoop\Factory;
 use React\EventLoop\LoopInterface;
 use React\Promise\PromiseInterface;
@@ -13,7 +13,7 @@ use function Clue\React\Block\await;
 use function Clue\React\Block\awaitAll;
 use function Clue\React\Block\awaitAny;
 
-abstract class TestCase extends PHPUnit_Framework_TestCase
+abstract class TestCase extends PHPUnitTestCase
 {
     /**
      * @var string

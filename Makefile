@@ -28,8 +28,5 @@ unit-coverage:
 ci-coverage: init
 	composer ci-coverage
 
-mutation:
-	composer mutation
-
 generate-test-resources: init
 	./api-client-resource-generator ./tests/yaml/* ./tests/resources-src/ ./tests/resources-tests
