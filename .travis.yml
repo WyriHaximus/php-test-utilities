@@ -5,7 +5,6 @@ sudo: false
 cache:
   directories:
     - $HOME/.composer/cache
-    - $HOME/.humbug
 
 ## PHP versions we test against
 php:
