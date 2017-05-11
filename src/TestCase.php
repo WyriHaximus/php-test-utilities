@@ -48,6 +48,24 @@ abstract class TestCase extends PHPUnitTestCase
         $this->tmpNamespace = uniqid('PACTN');
     }
 
+    public function tearDown()
+    {
+        parent::tearDown();
+        $this->rmdir($this->baseTmpDir);
+    }
+
+    public function provideTrueFalse(): array
+    {
+        return [
+            [
+                true,
+            ],
+            [
+                false,
+            ],
+        ];
+    }
+
     protected function getSysTempDir()
     {
         if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {
@@ -55,12 +73,6 @@ abstract class TestCase extends PHPUnitTestCase
         }
 
         return sys_get_temp_dir();
-    }
-
-    public function tearDown()
-    {
-        parent::tearDown();
-        $this->rmdir($this->baseTmpDir);
     }
 
     protected function rmdir($dir)
@@ -108,18 +120,6 @@ abstract class TestCase extends PHPUnitTestCase
         }
 
         return $files;
-    }
-
-    public function provideTrueFalse(): array
-    {
-        return [
-            [
-                true,
-            ],
-            [
-                false,
-            ],
-        ];
     }
 
     protected function await(PromiseInterface $promise, LoopInterface $loop = null)

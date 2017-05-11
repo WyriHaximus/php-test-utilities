@@ -1,5 +1,6 @@
 {
   "name": "api-clients/test-utilities",
+  "description": "Test utilities for api-clients packages",
   "license": "MIT",
   "authors": [
     {
@@ -29,17 +30,20 @@
   "require-dev": {
   },
   "config": {
-    "sort-packages": true
+    "sort-packages": true,
+    "platform": {
+      "php": "7.0"
+    }
   },
   "scripts": {
     "ensure-installed": "composer install --ansi -n -q",
     "cs": [
       "@ensure-installed",
-      "php-cs-fixer fix --config=.php_cs --path-mode=intersection --dry-run --verbose --allow-risky=yes --show-progress=estimating"
+      "php-cs-fixer fix --config=.php_cs --ansi --dry-run --diff --verbose --allow-risky=yes --show-progress=estimating"
     ],
     "cs-fix": [
       "@ensure-installed",
-      "php-cs-fixer fix --config=.php_cs --verbose --diff --allow-risky=yes --show-progress=estimating"
+      "php-cs-fixer fix --config=.php_cs --ansi --verbose --allow-risky=yes --show-progress=estimating"
     ],
     "unit": [
       "@ensure-installed",
@@ -69,9 +73,9 @@
       "@unit"
     ],
     "qa-ci": [
-      "@qa-all"
+      "@unit"
     ],
-    "qa-ci-coverage": [
+    "qa-ci-extended": [
       "@qa-all-coverage"
     ],
     "qa-ci-windows": [
