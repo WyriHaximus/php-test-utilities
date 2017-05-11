@@ -54,6 +54,9 @@ abstract class TestCase extends PHPUnitTestCase
         $this->rmdir($this->baseTmpDir);
     }
 
+    /**
+     * @return array
+     */
     public function provideTrueFalse(): array
     {
         return [
@@ -66,7 +69,10 @@ abstract class TestCase extends PHPUnitTestCase
         ];
     }
 
-    protected function getSysTempDir()
+    /**
+     * @return string
+     */
+    protected function getSysTempDir(): string
     {
         if (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN') {
             return 'C:\\t\\';
@@ -75,7 +81,10 @@ abstract class TestCase extends PHPUnitTestCase
         return sys_get_temp_dir();
     }
 
-    protected function rmdir($dir)
+    /**
+     * @param string $dir
+     */
+    protected function rmdir(string $dir)
     {
         $directory = new FilesystemIterator($dir);
 
@@ -94,16 +103,26 @@ abstract class TestCase extends PHPUnitTestCase
         rmdir($dir);
     }
 
+    /**
+     * @return string
+     */
     protected function getTmpDir(): string
     {
         return $this->tmpDir;
     }
 
+    /**
+     * @return string
+     */
     protected function getRandomNameSpace(): string
     {
         return $this->tmpNamespace;
     }
 
+    /**
+     * @param  string $path
+     * @return array
+     */
     protected function getFilesInDirectory(string $path): array
     {
         $files = [];
@@ -122,6 +141,11 @@ abstract class TestCase extends PHPUnitTestCase
         return $files;
     }
 
+    /**
+     * @param  PromiseInterface   $promise
+     * @param  LoopInterface|null $loop
+     * @return mixed
+     */
     protected function await(PromiseInterface $promise, LoopInterface $loop = null)
     {
         if (!($loop instanceof LoopInterface)) {
@@ -131,6 +155,11 @@ abstract class TestCase extends PHPUnitTestCase
         return await($promise, $loop);
     }
 
+    /**
+     * @param  array              $promises
+     * @param  LoopInterface|null $loop
+     * @return array
+     */
     protected function awaitAll(array $promises, LoopInterface $loop = null)
     {
         if (!($loop instanceof LoopInterface)) {
@@ -140,6 +169,11 @@ abstract class TestCase extends PHPUnitTestCase
         return awaitAll($promises, $loop);
     }
 
+    /**
+     * @param  array              $promises
+     * @param  LoopInterface|null $loop
+     * @return mixed
+     */
     protected function awaitAny(array $promises, LoopInterface $loop = null)
     {
         if (!($loop instanceof LoopInterface)) {
