@@ -1,10 +1,10 @@
 # Test utilities
 
-[![Build Status](https://travis-ci.org/php-api-clients/test-utilities.svg?branch=master)](https://travis-ci.org/php-api-clients/foundation)
+[![Build Status](https://travis-ci.org/php-api-clients/test-utilities.svg?branch=master)](https://travis-ci.org/php-api-clients/test-utilities)
 [![Latest Stable Version](https://poser.pugx.org/api-clients/test-utilities/v/stable.png)](https://packagist.org/packages/api-clients/test-utilities)
 [![Total Downloads](https://poser.pugx.org/api-clients/test-utilities/downloads.png)](https://packagist.org/packages/api-clients/test-utilities/stats)
 [![Code Coverage](https://scrutinizer-ci.com/g/php-api-clients/test-utilities/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/php-api-clients/test-utilities/?branch=master)
-[![License](https://poser.pugx.org/api-clients/test-utilities/license.png)](https://packagist.org/packages/api-clients/foundation)
+[![License](https://poser.pugx.org/api-clients/test-utilities/license.png)](https://packagist.org/packages/api-clients/test-utilities)
 [![PHP 7 ready](http://php7ready.timesplinter.ch/php-api-clients/test-utilities/badge.svg)](https://appveyor-ci.org/php-api-clients/test-utilities)
 
 # Installation
