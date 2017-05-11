@@ -6,6 +6,9 @@ use PhpCsFixer\Config;
 
 final class PhpCsFixerConfig
 {
+    /**
+     * @return Config
+     */
     public static function create(): Config
     {
         return Config::create()
@@ -28,6 +31,13 @@ final class PhpCsFixerConfig
                 'no_leading_import_slash' => true,
                 'new_with_braces' => true,
                 'blank_line_before_return' => true,
+                'phpdoc_align' => true,
+                'phpdoc_no_empty_return' => true,
+                'phpdoc_order' => true,
+                'phpdoc_add_missing_param_annotation' => true,
+                'phpdoc_scalar' => true,
+                'phpdoc_summary' => true,
+                'return_type_declaration' => true,
                 'array_syntax' => ['syntax' => 'short'],
             ])
         ;
