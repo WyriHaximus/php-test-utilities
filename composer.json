@@ -35,11 +35,11 @@
     "ensure-installed": "composer install --ansi -n -q",
     "cs": [
       "@ensure-installed",
-      "php-cs-fixer fix --config=.php_cs --path-mode=intersection --dry-run --verbose --allow-risky=yes --show-progress=estimating"
+      "php-cs-fixer fix --config=.php_cs --dry-run --diff --verbose --allow-risky=yes --show-progress=estimating"
     ],
     "cs-fix": [
       "@ensure-installed",
-      "php-cs-fixer fix --config=.php_cs --verbose --diff --allow-risky=yes --show-progress=estimating"
+      "php-cs-fixer fix --config=.php_cs --verbose --allow-risky=yes --show-progress=estimating"
     ],
     "unit": [
       "@ensure-installed",
