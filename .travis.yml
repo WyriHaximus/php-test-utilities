@@ -6,10 +6,6 @@ cache:
   directories:
     - $HOME/.composer/cache
 
-## Environment variables
-env:
-  - qa-extended=false
-
 ## Build matrix for lowest and highest possible targets
 matrix:
   include:
@@ -17,25 +13,35 @@ matrix:
       env:
         - qa-extended=true
     - php: 7.1
+      env:
+        - qa-extended=false
     - php: nightly
+      env:
+        - qa-extended=false
     - php: 7.0
       env:
         - dependencies=lowest
+        - qa-extended=false
     - php: 7.1
       env:
         - dependencies=lowest
+        - qa-extended=false
     - php: nightly
       env:
         - dependencies=lowest
+        - qa-extended=false
     - php: 7.0
       env:
         - dependencies=highest
+        - qa-extended=false
     - php: 7.1
       env:
         - dependencies=highest
+        - qa-extended=false
     - php: nightly
       env:
         - dependencies=highest
+        - qa-extended=false
 
 ## Install or update dependencies
 install:
