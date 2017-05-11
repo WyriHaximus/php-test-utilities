@@ -19,6 +19,15 @@ final class PhpCsFixerConfig
                 'strict_param' => true,
                 'single_class_element_per_statement' => true,
                 'no_extra_consecutive_blank_lines' => true,
+                'trailing_comma_in_multiline_array' => true,
+                'single_quote' => true,
+                'no_whitespace_in_blank_line' => true,
+                'no_whitespace_before_comma_in_array' => true,
+                'no_unused_imports' => true,
+                'no_short_bool_cast' => true,
+                'no_leading_import_slash' => true,
+                'new_with_braces' => true,
+                'blank_line_before_return' => true,
                 'array_syntax' => ['syntax' => 'short'],
             ])
         ;
