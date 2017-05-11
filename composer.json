@@ -1,5 +1,6 @@
 {
   "name": "api-clients/test-utilities",
+  "description": "Test utilities for api-clients packages",
   "license": "MIT",
   "authors": [
     {
