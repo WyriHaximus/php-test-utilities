@@ -13,35 +13,25 @@ matrix:
       env:
         - qaExtended=true
     - php: 7.1
-      env:
-        - qaExtended=false
     - php: nightly
-      env:
-        - qaExtended=false
     - php: 7.0
       env:
         - dependencies=lowest
-        - qaExtended=false
     - php: 7.1
       env:
         - dependencies=lowest
-        - qaExtended=false
     - php: nightly
       env:
         - dependencies=lowest
-        - qaExtended=false
     - php: 7.0
       env:
         - dependencies=highest
-        - qaExtended=false
     - php: 7.1
       env:
         - dependencies=highest
-        - qaExtended=false
     - php: nightly
       env:
         - dependencies=highest
-        - qaExtended=false
 
 ## Install or update dependencies
 install:
@@ -54,7 +44,7 @@ install:
 
 ## Run the actual test
 script:
-  - if [ "$qaExtended" = "false" ]; then make ci; fi;
+  - if [ -z "$qaExtended" ]; then make ci; fi;
   - if [ "$qaExtended" = "true" ]; then make ci-extended; fi;
 
 ## Gather coverage and set it to coverage servers
