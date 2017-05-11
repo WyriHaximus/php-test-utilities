@@ -11,42 +11,42 @@ matrix:
   include:
     - php: 7.0
       env:
-        - qa-extended=true
+        - qaExtended=true
     - php: 7.1
       env:
-        - qa-extended=false
+        - qaExtended=false
     - php: nightly
       env:
-        - qa-extended=false
+        - qaExtended=false
     - php: 7.0
       env:
         - dependencies=lowest
-        - qa-extended=false
+        - qaExtended=false
     - php: 7.1
       env:
         - dependencies=lowest
-        - qa-extended=false
+        - qaExtended=false
     - php: nightly
       env:
         - dependencies=lowest
-        - qa-extended=false
+        - qaExtended=false
     - php: 7.0
       env:
         - dependencies=highest
-        - qa-extended=false
+        - qaExtended=false
     - php: 7.1
       env:
         - dependencies=highest
-        - qa-extended=false
+        - qaExtended=false
     - php: nightly
       env:
         - dependencies=highest
-        - qa-extended=false
+        - qaExtended=false
 
 ## Install or update dependencies
 install:
   - composer validate
-  - if [ "$qa-extended" = "false" ]; then phpenv config-rm xdebug.ini || :; fi;
+  - if [ "$qaExtended" = "false" ]; then phpenv config-rm xdebug.ini || :; fi;
   - if [ -z "$dependencies" ]; then composer install --prefer-dist; fi;
   - if [ "$dependencies" = "lowest" ]; then composer update --prefer-lowest --prefer-dist -n; fi;
   - if [ "$dependencies" = "highest" ]; then composer update --prefer-dist -n; fi;
@@ -54,8 +54,8 @@ install:
 
 ## Run the actual test
 script:
-  - if [ "$qa-extended" = "false" ]; then make ci; fi;
-  - if [ "$qa-extended" = "true" ]; then make ci-extended; fi;
+  - if [ "$qaExtended" = "false" ]; then make ci; fi;
+  - if [ "$qaExtended" = "true" ]; then make ci-extended; fi;
 
 ## Gather coverage and set it to coverage servers
 after_script: make ci-coverage
