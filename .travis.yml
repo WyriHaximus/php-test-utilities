@@ -53,4 +53,4 @@ script:
   - if [ "$qaExtended" = "true" ]; then make ci-extended; fi;
 
 ## Gather coverage and set it to coverage servers
-after_script: make ci-coverage
+after_script: if [ "$qaExtended" = "true" ]; then make ci-coverage; fi;
