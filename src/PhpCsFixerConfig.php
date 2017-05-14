@@ -9,10 +9,11 @@ final class PhpCsFixerConfig
     /**
      * @return Config
      */
-    public static function create(): Config
+    public static function create(array $extraRules = []): Config
     {
         return Config::create()
-            ->setRules([
+            ->setRules(
+            [
                 '@PSR2' => true,
                 'array_syntax' => [
                     'syntax' => 'short',
@@ -41,7 +42,7 @@ final class PhpCsFixerConfig
                 'single_quote' => true,
                 'strict_param' => true,
                 'trailing_comma_in_multiline_array' => true,
-            ])
-        ;
+            ] + $extraRules
+        );
     }
 }
