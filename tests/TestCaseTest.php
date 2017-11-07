@@ -6,7 +6,10 @@ use ApiClients\Tools\TestUtilities\TestCase;
 use React\EventLoop\Factory;
 use React\EventLoop\LoopInterface;
 use React\EventLoop\StreamSelectLoop;
+use React\Promise\Deferred;
 use function React\Promise\resolve;
+use function React\Promise\Timer\timeout;
+use React\Promise\Timer\TimeoutException;
 
 final class TestCaseTest extends TestCase
 {
@@ -93,5 +96,15 @@ final class TestCaseTest extends TestCase
     public function testTrueFalse(bool $bool)
     {
         static::assertInternalType('bool', $bool);
+    }
+
+    /**
+     * @dataProvider provideEventLoop
+     */
+    public function testAwaitTimeout(LoopInterface $loop = null)
+    {
+        self::expectException(TimeoutException::class);
+
+        $this->await((new Deferred())->promise(), $loop, 0.1);
     }
 }

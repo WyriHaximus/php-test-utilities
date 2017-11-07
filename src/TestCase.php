@@ -15,6 +15,8 @@ use function Clue\React\Block\awaitAny;
 
 abstract class TestCase extends PHPUnitTestCase
 {
+    const DEFAULT_AWAIT_TIMEOUT = 60;
+
     /**
      * @var string
      */
@@ -146,13 +148,13 @@ abstract class TestCase extends PHPUnitTestCase
      * @param  LoopInterface|null $loop
      * @return mixed
      */
-    protected function await(PromiseInterface $promise, LoopInterface $loop = null)
+    protected function await(PromiseInterface $promise, LoopInterface $loop = null, float $timeout = self::DEFAULT_AWAIT_TIMEOUT)
     {
         if (!($loop instanceof LoopInterface)) {
             $loop = Factory::create();
         }
 
-        return await($promise, $loop);
+        return await($promise, $loop, $timeout);
     }
 
     /**
@@ -160,13 +162,13 @@ abstract class TestCase extends PHPUnitTestCase
      * @param  LoopInterface|null $loop
      * @return array
      */
-    protected function awaitAll(array $promises, LoopInterface $loop = null)
+    protected function awaitAll(array $promises, LoopInterface $loop = null, float $timeout = self::DEFAULT_AWAIT_TIMEOUT)
     {
         if (!($loop instanceof LoopInterface)) {
             $loop = Factory::create();
         }
 
-        return awaitAll($promises, $loop);
+        return awaitAll($promises, $loop, $timeout);
     }
 
     /**
@@ -174,12 +176,12 @@ abstract class TestCase extends PHPUnitTestCase
      * @param  LoopInterface|null $loop
      * @return mixed
      */
-    protected function awaitAny(array $promises, LoopInterface $loop = null)
+    protected function awaitAny(array $promises, LoopInterface $loop = null, float $timeout = self::DEFAULT_AWAIT_TIMEOUT)
     {
         if (!($loop instanceof LoopInterface)) {
             $loop = Factory::create();
         }
 
-        return awaitAny($promises, $loop);
+        return awaitAny($promises, $loop, $timeout);
     }
 }
