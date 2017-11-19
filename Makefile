@@ -1,8 +1,8 @@
 all:
 	composer run-script qa-all --timeout=0
 
-all-coverage:
-	composer run-script qa-all-coverage --timeout=0
+all-extended:
+	composer run-script qa-all-extended --timeout=0
 
 ci:
 	composer run-script qa-ci --timeout=0
@@ -21,6 +21,9 @@ cs:
 
 cs-fix:
 	composer cs-fix
+
+infection:
+	composer infection
 
 unit:
 	composer run-script unit --timeout=0
