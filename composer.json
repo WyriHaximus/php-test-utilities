@@ -73,12 +73,6 @@
       "@unit-coverage",
       "@infection"
     ],
-    "qa-windows": [
-      "@lint-php",
-      "@cs",
-      "@unit-coverage",
-      "@infection"
-    ],
     "qa-ci": [
       "@unit"
     ],
