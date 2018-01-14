@@ -18,6 +18,7 @@ final class PhpCsFixerConfig
                 'array_syntax' => [
                     'syntax' => 'short',
                 ],
+                'indentation_type' => true,
                 'blank_line_before_return' => true,
                 'declare_strict_types' => true,
                 'method_separation' => true,
