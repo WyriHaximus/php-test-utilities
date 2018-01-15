@@ -64,15 +64,15 @@
       "parallel-lint --exclude vendor ."
     ],
     "qa-all": [
-      "composer validate",
-      "composer normalize",
+      "composer validate --ansi",
+      "composer normalize --ansi",
       "@lint-php",
       "@cs",
       "@unit"
     ],
     "qa-all-coverage": [
-      "composer validate",
-      "composer normalize",
+      "composer validate --ansi",
+      "composer normalize --ansi",
       "@lint-php",
       "@cs",
       "@unit-coverage"
