@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "2574a9b901d4895f4f257e165e5ea9b7",
+    "content-hash": "52385099860e28cb024452174cb08c01",
     "packages": [
         {
             "name": "clue/block-react",
@@ -489,6 +489,225 @@
             "description": "This tool check syntax of PHP files about 20x faster than serial check.",
             "homepage": "https://github.com/JakubOnderka/PHP-Parallel-Lint",
             "time": "2015-12-15T10:42:16+00:00"
+        },
+        {
+            "name": "justinrainbow/json-schema",
+            "version": "5.2.6",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/justinrainbow/json-schema.git",
+                "reference": "d283e11b6e14c6f4664cf080415c4341293e5bbd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/justinrainbow/json-schema/zipball/d283e11b6e14c6f4664cf080415c4341293e5bbd",
+                "reference": "d283e11b6e14c6f4664cf080415c4341293e5bbd",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "^2.1",
+                "json-schema/json-schema-test-suite": "1.2.0",
+                "phpunit/phpunit": "^4.8.22"
+            },
+            "bin": [
+                "bin/validate-json"
+            ],
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "5.0.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "JsonSchema\\": "src/JsonSchema/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Bruno Prieto Reis",
+                    "email": "bruno.p.reis@gmail.com"
+                },
+                {
+                    "name": "Justin Rainbow",
+                    "email": "justin.rainbow@gmail.com"
+                },
+                {
+                    "name": "Igor Wiedler",
+                    "email": "igor@wiedler.ch"
+                },
+                {
+                    "name": "Robert Schönthal",
+                    "email": "seroscho@googlemail.com"
+                }
+            ],
+            "description": "A library to validate a json schema.",
+            "homepage": "https://github.com/justinrainbow/json-schema",
+            "keywords": [
+                "json",
+                "schema"
+            ],
+            "time": "2017-10-21T13:15:38+00:00"
+        },
+        {
+            "name": "localheinz/composer-normalize",
+            "version": "0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/localheinz/composer-normalize.git",
+                "reference": "d45da477cc66f8e68564e8551cec3b29137bd3f3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/localheinz/composer-normalize/zipball/d45da477cc66f8e68564e8551cec3b29137bd3f3",
+                "reference": "d45da477cc66f8e68564e8551cec3b29137bd3f3",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^1.1.0",
+                "localheinz/json-normalizer": "0.1.0",
+                "php": "^7.0"
+            },
+            "require-dev": {
+                "composer/composer": "^1.1.0",
+                "infection/infection": "~0.7.0",
+                "localheinz/php-cs-fixer-config": "~1.11.0",
+                "localheinz/test-util": "0.6.1",
+                "mikey179/vfsstream": "^1.6.5",
+                "phpunit/phpunit": "^6.5.5"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "Localheinz\\Composer\\Normalize\\NormalizePlugin"
+            },
+            "autoload": {
+                "psr-4": {
+                    "Localheinz\\Composer\\Normalize\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Andreas Möller",
+                    "email": "am@localheinz.com"
+                }
+            ],
+            "description": "Provides a composer plugin for normalizing composer.json.",
+            "keywords": [
+                "composer",
+                "normalize",
+                "normalizer",
+                "plugin"
+            ],
+            "time": "2018-01-14T12:15:12+00:00"
+        },
+        {
+            "name": "localheinz/json-normalizer",
+            "version": "0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/localheinz/json-normalizer.git",
+                "reference": "443a53cef0a8adc96f857a79fb7c818fc7be388d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/localheinz/json-normalizer/zipball/443a53cef0a8adc96f857a79fb7c818fc7be388d",
+                "reference": "443a53cef0a8adc96f857a79fb7c818fc7be388d",
+                "shasum": ""
+            },
+            "require": {
+                "justinrainbow/json-schema": "^4.0.0 || ^5.0.0",
+                "localheinz/json-printer": "^1.0.0",
+                "php": "^7.0"
+            },
+            "require-dev": {
+                "infection/infection": "~0.7.0",
+                "localheinz/php-cs-fixer-config": "~1.11.0",
+                "localheinz/test-util": "0.6.1",
+                "phpbench/phpbench": "~0.14.0",
+                "phpspec/prophecy": "^1.7.1",
+                "phpunit/phpunit": "^6.5.5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Localheinz\\Json\\Normalizer\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Andreas Möller",
+                    "email": "am@localheinz.com"
+                }
+            ],
+            "description": "Provides normalizers for normalizing JSON documents.",
+            "keywords": [
+                "json",
+                "normalizer"
+            ],
+            "time": "2018-01-13T21:59:29+00:00"
+        },
+        {
+            "name": "localheinz/json-printer",
+            "version": "1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/localheinz/json-printer.git",
+                "reference": "c5aba96ad796560651770bcd16be8b19f324c343"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/localheinz/json-printer/zipball/c5aba96ad796560651770bcd16be8b19f324c343",
+                "reference": "c5aba96ad796560651770bcd16be8b19f324c343",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.0"
+            },
+            "require-dev": {
+                "infection/infection": "~0.7.0",
+                "localheinz/php-cs-fixer-config": "~1.9.0",
+                "localheinz/test-util": "0.6.1",
+                "phpbench/phpbench": "~0.14.0",
+                "phpunit/phpunit": "^6.5.5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Localheinz\\Json\\Printer\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Andreas Möller",
+                    "email": "am@localheinz.com"
+                }
+            ],
+            "description": "Provides a JSON printer, allowing for flexible indentation.",
+            "keywords": [
+                "formatter",
+                "json",
+                "printer"
+            ],
+            "time": "2018-01-05T18:08:01+00:00"
         },
         {
             "name": "myclabs/deep-copy",
