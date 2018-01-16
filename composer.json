@@ -75,7 +75,7 @@
       "@cs",
       "@unit"
     ],
-    "qa-all-coverage": [
+    "qa-all-extended": [
       "composer validate --ansi",
       "composer normalize --ansi",
       "@lint-php",
