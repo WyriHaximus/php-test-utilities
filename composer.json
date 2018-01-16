@@ -15,8 +15,16 @@
     "infection/infection": "^0.6.2",
     "jakub-onderka/php-console-highlighter": "^0.3.2",
     "jakub-onderka/php-parallel-lint": "^0.9.2",
+    "localheinz/composer-normalize": "^0.1.0",
     "phake/phake": "^3.0.1",
     "phpunit/phpunit": "^6.2"
+  },
+  "require-dev": {},
+  "config": {
+    "platform": {
+      "php": "7.0"
+    },
+    "sort-packages": true
   },
   "autoload": {
     "psr-4": {
@@ -28,15 +36,13 @@
       "ApiClients\\Tests\\Tools\\TestUtilities\\": "tests/"
     }
   },
-  "require-dev": {
-  },
-  "config": {
-    "sort-packages": true,
-    "platform": {
-      "php": "7.0"
-    }
-  },
   "scripts": {
+    "post-update-cmd": [
+      "composer normalize"
+    ],
+    "post-install-cmd": [
+      "composer normalize"
+    ],
     "ensure-installed": "composer install --ansi -n -q",
     "cs": [
       "@ensure-installed",
@@ -63,11 +69,15 @@
       "infection --ansi"
     ],
     "qa-all": [
+      "composer validate --ansi",
+      "composer normalize --ansi",
       "@lint-php",
       "@cs",
       "@unit"
     ],
-    "qa-all-extended": [
+    "qa-all-coverage": [
+      "composer validate --ansi",
+      "composer normalize --ansi",
       "@lint-php",
       "@cs",
       "@unit-coverage",
