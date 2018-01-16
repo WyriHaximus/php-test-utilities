@@ -20,6 +20,16 @@ final class TestCaseTest extends TestCase
      */
     private $previousTemporaryDirectory = '';
 
+    protected function setUp()
+    {
+        parent::setUp();
+    }
+
+    protected function tearDown()
+    {
+        parent::tearDown();
+    }
+
     public function provideTemporaryDirectory()
     {
         for ($i = 0; $i <= self::PENTIUM; $i++) {
@@ -106,5 +116,10 @@ final class TestCaseTest extends TestCase
         self::expectException(TimeoutException::class);
 
         $this->await((new Deferred())->promise(), $loop, 0.1);
+    }
+
+    public function testGetSysTempDir()
+    {
+        self::assertFileExists($this->getSysTempDir());
     }
 }
