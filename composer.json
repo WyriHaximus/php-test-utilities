@@ -12,6 +12,7 @@
     "php": "^7.0",
     "clue/block-react": "^1.1",
     "friendsofphp/php-cs-fixer": "^2.5",
+    "infection/infection": "^0.6.2",
     "jakub-onderka/php-console-highlighter": "^0.3.2",
     "jakub-onderka/php-parallel-lint": "^0.9.2",
     "localheinz/composer-normalize": "^0.1.0",
@@ -63,6 +64,10 @@
       "@ensure-installed",
       "parallel-lint --exclude vendor ."
     ],
+    "infection": [
+      "@ensure-installed",
+      "infection --ansi --threads=4"
+    ],
     "qa-all": [
       "composer validate --ansi",
       "composer normalize --ansi",
@@ -70,12 +75,13 @@
       "@cs",
       "@unit"
     ],
-    "qa-all-coverage": [
+    "qa-all-extended": [
       "composer validate --ansi",
       "composer normalize --ansi",
       "@lint-php",
       "@cs",
-      "@unit-coverage"
+      "@unit-coverage",
+      "@infection"
     ],
     "qa-windows": [
       "@lint-php",
@@ -86,7 +92,7 @@
       "@unit"
     ],
     "qa-ci-extended": [
-      "@qa-all-coverage"
+      "@qa-all-extended"
     ],
     "qa-ci-windows": [
       "@qa-windows"

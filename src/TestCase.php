@@ -32,7 +32,7 @@ abstract class TestCase extends PHPUnitTestCase
      */
     private $tmpNamespace;
 
-    public function setUp()
+    protected function setUp()
     {
         parent::setUp();
 
@@ -50,7 +50,7 @@ abstract class TestCase extends PHPUnitTestCase
         $this->tmpNamespace = uniqid('PACTN');
     }
 
-    public function tearDown()
+    protected function tearDown()
     {
         parent::tearDown();
         $this->rmdir($this->baseTmpDir);

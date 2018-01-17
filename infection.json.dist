@@ -1,12 +1,11 @@
 {
+    "timeout": 120,
     "source": {
         "directories": [
             "src"
         ]
     },
-    "timeout": 10,
     "logs": {
-        "text": "humbuglog.txt",
-        "json": "humbuglog.json"
+        "text": "infection-log.txt"
     }
 }
