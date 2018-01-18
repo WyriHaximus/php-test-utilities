@@ -34,7 +34,10 @@
   "autoload-dev": {
     "psr-4": {
       "ApiClients\\Tests\\Tools\\TestUtilities\\": "tests/"
-    }
+    },
+    "files": [
+      "tests/bootstrap.php"
+    ]
   },
   "scripts": {
     "post-update-cmd": [
