@@ -9,20 +9,21 @@
     }
   ],
   "require": {
-    "php": "^7.0",
+    "php": "^7.1",
     "clue/block-react": "^1.1",
     "friendsofphp/php-cs-fixer": "^2.5",
     "infection/infection": "^0.6.2",
     "jakub-onderka/php-console-highlighter": "^0.3.2",
     "jakub-onderka/php-parallel-lint": "^0.9.2",
     "localheinz/composer-normalize": "^0.1.0",
+    "nunomaduro/collision": "^1.1",
     "phake/phake": "^3.0.1",
     "phpunit/phpunit": "^6.2"
   },
   "require-dev": {},
   "config": {
     "platform": {
-      "php": "7.0"
+      "php": "7.1"
     },
     "sort-packages": true
   },
