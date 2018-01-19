@@ -18,7 +18,7 @@
     "localheinz/composer-normalize": "^0.1.0",
     "nunomaduro/collision": "^1.1",
     "phake/phake": "^3.0.1",
-    "phpunit/phpunit": "^6.2"
+    "phpunit/phpunit": "^6.5"
   },
   "require-dev": {},
   "config": {

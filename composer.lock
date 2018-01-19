@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "cda7a9aaff0022c03936117a4813497f",
+    "content-hash": "6854ab2d4bb0e7688cc9d1a245b564ec",
     "packages": [
         {
             "name": "clue/block-react",
