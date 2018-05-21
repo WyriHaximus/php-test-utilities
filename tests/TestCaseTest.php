@@ -62,7 +62,7 @@ final class TestCaseTest extends TestCase
         mkdir($dir);
 
         for ($i = 0; $i < self::PENTIUM; $i++) {
-            static::assertCount($i, $this->getFilesInDirectory($this->getTmpDir()), $i);
+            static::assertCount($i, $this->getFilesInDirectory($this->getTmpDir()), (string)$i);
             file_put_contents($dir . $i, $int);
         }
 
