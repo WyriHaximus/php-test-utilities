@@ -10,6 +10,7 @@
   ],
   "require": {
     "php": "^7.2",
+    "api-clients/cs-fixer-config": "^1.0",
     "clue/block-react": "^1.1",
     "friendsofphp/php-cs-fixer": "^2.5",
     "infection/infection": "^0.8.2",
