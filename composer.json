@@ -13,7 +13,7 @@
     "api-clients/cs-fixer-config": "^1.0",
     "clue/block-react": "^1.1",
     "friendsofphp/php-cs-fixer": "^2.5",
-    "infection/infection": "^0.10.5",
+    "infection/infection": "^0.11.0",
     "jakub-onderka/php-console-highlighter": "^0.4",
     "jakub-onderka/php-parallel-lint": "^1.0.0",
     "localheinz/composer-normalize": "^0.9.0",
