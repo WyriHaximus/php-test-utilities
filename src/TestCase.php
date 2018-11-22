@@ -46,14 +46,16 @@ abstract class TestCase extends PHPUnitTestCase
             DIRECTORY_SEPARATOR;
         ;
 
-        \mkdir($this->tmpDir, 0777, true);
         $this->tmpNamespace = \uniqid('PACTN');
     }
 
     protected function tearDown(): void
     {
         parent::tearDown();
-        $this->rmdir($this->baseTmpDir);
+
+        if (\file_exists($this->baseTmpDir)) {
+            $this->rmdir($this->baseTmpDir);
+        }
     }
 
     /**
@@ -110,6 +112,10 @@ abstract class TestCase extends PHPUnitTestCase
      */
     protected function getTmpDir(): string
     {
+        if (!\file_exists($this->tmpDir)) {
+            \mkdir($this->tmpDir, 0777, true);
+        }
+
         return $this->tmpDir;
     }
 
