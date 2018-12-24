@@ -37,13 +37,13 @@ abstract class TestCase extends PHPUnitTestCase
         parent::setUp();
 
         $this->baseTmpDir = $this->getSysTempDir() .
-            DIRECTORY_SEPARATOR .
+            \DIRECTORY_SEPARATOR .
             'p-a-c-t-' .
             \uniqid() .
-            DIRECTORY_SEPARATOR;
+            \DIRECTORY_SEPARATOR;
         $this->tmpDir = $this->baseTmpDir .
             \uniqid() .
-            DIRECTORY_SEPARATOR;
+            \DIRECTORY_SEPARATOR;
         ;
 
         $this->tmpNamespace = \uniqid('PACTN');
@@ -78,7 +78,7 @@ abstract class TestCase extends PHPUnitTestCase
      */
     protected function getSysTempDir(): string
     {
-        if (\strtoupper(\substr(PHP_OS, 0, 3)) === 'WIN') {
+        if (\strtoupper(\substr(\PHP_OS, 0, 3)) === 'WIN') {
             return 'C:\\t\\';
         }
 
