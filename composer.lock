@@ -1,10 +1,10 @@
 {
     "_readme": [
         "This file locks the dependencies of your project to a known state",
-        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "a4781c484ab86b89a830bf7ac8eeeaec",
+    "content-hash": "7b528b4b86f159003aae660501ba72b0",
     "packages": [
         {
             "name": "api-clients/cs-fixer-config",
