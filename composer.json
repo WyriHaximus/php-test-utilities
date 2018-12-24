@@ -12,7 +12,7 @@
     "php": "^7.2",
     "api-clients/cs-fixer-config": "^1.1.1",
     "clue/block-react": "^1.1",
-    "friendsofphp/php-cs-fixer": "^2.5",
+    "friendsofphp/php-cs-fixer": "^2.13",
     "infection/infection": "^0.11.4",
     "jakub-onderka/php-console-highlighter": "^0.4",
     "jakub-onderka/php-parallel-lint": "^1.0.0",

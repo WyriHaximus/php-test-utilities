@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "a51e4a7c298f6ef8323005b9089d70d7",
+    "content-hash": "29b8115e84dab49927e65253298fdae3",
     "packages": [
         {
             "name": "api-clients/cs-fixer-config",
