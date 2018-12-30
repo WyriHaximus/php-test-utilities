@@ -92,6 +92,7 @@ abstract class TestCase extends PHPUnitTestCase
     {
         $directory = new FilesystemIterator($dir);
 
+        /** @var \SplFileInfo $node */
         foreach ($directory as $node) {
             if (\is_dir($node->getPathname())) {
                 $this->rmdir($node->getPathname());

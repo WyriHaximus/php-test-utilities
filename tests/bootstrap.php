@@ -1,6 +1,10 @@
 <?php
 
-if (function_exists('xdebug_set_filter')) {
+if (
+    function_exists('xdebug_set_filter') &&
+    defined('XDEBUG_FILTER_CODE_COVERAGE') &&
+    defined('XDEBUG_PATH_WHITELIST')
+) {
     xdebug_set_filter(
         XDEBUG_FILTER_CODE_COVERAGE,
         XDEBUG_PATH_WHITELIST,

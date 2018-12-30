@@ -19,6 +19,7 @@
     "jakub-onderka/php-parallel-lint": "^1.0.0",
     "localheinz/composer-normalize": "^1.0.0",
     "nunomaduro/collision": "^2.1",
+    "phpstan/phpstan": "^0.10.7",
     "phpunit/phpunit": "^7.5"
   },
   "require-dev": {},
@@ -73,6 +74,7 @@
       "composer normalize --ansi",
       "@lint-php",
       "@cs",
+      "@stan",
       "@unit"
     ],
     "qa-all-extended": [
@@ -80,6 +82,7 @@
       "composer normalize --ansi",
       "@lint-php",
       "@cs",
+      "@stan",
       "@unit-coverage",
       "@infection"
     ],
@@ -98,7 +101,12 @@
     "qa-windows": [
       "@lint-php",
       "@cs",
+      "@stan",
       "@unit"
+    ],
+    "stan": [
+      "@ensure-installed",
+      "phpstan analyse src tests --level max --ansi"
     ],
     "unit": [
       "@ensure-installed",
