@@ -1,5 +1,5 @@
 {
-  "name": "api-clients/test-utilities",
+  "name": "wyrihaximus/test-utilities",
   "description": "Test utilities for api-clients packages",
   "license": "MIT",
   "authors": [
@@ -11,7 +11,6 @@
   "require": {
     "php": "^7.2",
     "api-clients/cs-fixer-config": "^1.1.1",
-    "clue/block-react": "^1.3",
     "composer/composer": "^1.8",
     "friendsofphp/php-cs-fixer": "^2.14",
     "infection/infection": "^0.11.4",
@@ -31,12 +30,12 @@
   },
   "autoload": {
     "psr-4": {
-      "ApiClients\\Tools\\TestUtilities\\": "src/"
+      "WyriHaximus\\TestUtilities\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "ApiClients\\Tests\\Tools\\TestUtilities\\": "tests/"
+      "WyriHaximus\\Tests\\TestUtilities\\": "tests/"
     },
     "files": [
       "tests/bootstrap.php"

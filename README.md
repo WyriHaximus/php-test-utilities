@@ -1,29 +1,29 @@
 # Test utilities
 
-[![Build Status](https://travis-ci.org/php-api-clients/test-utilities.svg?branch=master)](https://travis-ci.org/php-api-clients/test-utilities)
-[![Latest Stable Version](https://poser.pugx.org/api-clients/test-utilities/v/stable.png)](https://packagist.org/packages/api-clients/test-utilities)
-[![Total Downloads](https://poser.pugx.org/api-clients/test-utilities/downloads.png)](https://packagist.org/packages/api-clients/test-utilities/stats)
-[![Code Coverage](https://scrutinizer-ci.com/g/php-api-clients/test-utilities/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/php-api-clients/test-utilities/?branch=master)
-[![License](https://poser.pugx.org/api-clients/test-utilities/license.png)](https://packagist.org/packages/api-clients/test-utilities)
-[![PHP 7 ready](http://php7ready.timesplinter.ch/php-api-clients/test-utilities/badge.svg)](https://appveyor-ci.org/php-api-clients/test-utilities)
+[![Build Status](https://travis-ci.com/WyriHaximus/php-test-utilities.svg?branch=master)](https://travis-ci.com/WyriHaximus/php-test-utilities)
+[![Latest Stable Version](https://poser.pugx.org/wyrihaximus/test-utilities/v/stable.png)](https://packagist.org/packages/wyrihaximus/test-utilities)
+[![Total Downloads](https://poser.pugx.org/wyrihaximus/test-utilities/downloads.png)](https://packagist.org/packages/wyrihaximus/test-utilities/stats)
+[![Code Coverage](https://scrutinizer-ci.com/g/WyriHaximus/php-test-utilities/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/WyriHaximus/php-test-utilities/?branch=master)
+[![License](https://poser.pugx.org/wyrihaximus/test-utilities/license.png)](https://packagist.org/packages/wyrihaximus/test-utilities)
+[![PHP 7 ready](http://php7ready.timesplinter.ch/WyriHaximus/php-test-utilities/badge.svg)](https://appveyor-ci.org/WyriHaximus/php-test-utilities)
 
 # Installation
 
 To install via [Composer](http://getcomposer.org/), use the command below, it will automatically detect the latest version and bind it with `^`.
 
 ```
-composer require api-clients/test-utilities 
+composer require wyrihaximus/test-utilities 
 ```
 
 # Usage
 
-Any test file can extend `ApiClients\Tools\TestUtilities\TestCase` and it comes with some goodies such as random namespaces and random directories to use for file storage related tests.
+Any test file can extend `WyriHaximus\TestUtilities\TestCase` and it comes with some goodies such as random namespaces and random directories to use for file storage related tests.
 
 # License
 
 The MIT License (MIT)
 
-Copyright (c) 2016 Cees-Jan Kiewiet
+Copyright (c) 2019 Cees-Jan Kiewiet
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
