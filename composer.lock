@@ -4,48 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4174a84f1c6c55baa9bf3cda2223abaa",
+    "content-hash": "431ce91f5c6c935c9e0a3f3dc1ff3444",
     "packages": [
-        {
-            "name": "api-clients/cs-fixer-config",
-            "version": "1.1.1",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/php-api-clients/cs-fixer-config.git",
-                "reference": "91df959c3d8ab7e1797d03e1fc47e2f48377cf6a"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/php-api-clients/cs-fixer-config/zipball/91df959c3d8ab7e1797d03e1fc47e2f48377cf6a",
-                "reference": "91df959c3d8ab7e1797d03e1fc47e2f48377cf6a",
-                "shasum": ""
-            },
-            "require": {
-                "friendsofphp/php-cs-fixer": "^2.5",
-                "php": "^7.2"
-            },
-            "require-dev": {
-                "api-clients/test-utilities": "^5.1"
-            },
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "ApiClients\\Tools\\CsFixerConfig\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Cees-Jan Kiewiet",
-                    "email": "ceesjank@gmail.com"
-                }
-            ],
-            "description": "friendsofphp/php-cs-fixer config",
-            "time": "2018-12-24T13:32:35+00:00"
-        },
         {
             "name": "composer/ca-bundle",
             "version": "1.1.3",
