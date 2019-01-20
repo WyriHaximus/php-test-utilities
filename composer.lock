@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "53477f0ebd60706dcb0848cc28fc9b47",
+    "content-hash": "4174a84f1c6c55baa9bf3cda2223abaa",
     "packages": [
         {
             "name": "api-clients/cs-fixer-config",
@@ -4123,7 +4123,7 @@
                 },
                 {
                     "name": "Gert de Pagter",
-                    "email": "backendtea@gmail.com"
+                    "email": "BackEndTea@gmail.com"
                 }
             ],
             "description": "Symfony polyfill for ctype functions",
@@ -4557,6 +4557,49 @@
                 "validate"
             ],
             "time": "2018-12-25T11:19:39+00:00"
+        },
+        {
+            "name": "wyrihaximus/cs-fixer-config",
+            "version": "1.0.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/WyriHaximus/php-cs-fixer-config.git",
+                "reference": "a36a4f35c8b499252518ec6094a1de5f010fc999"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/WyriHaximus/php-cs-fixer-config/zipball/a36a4f35c8b499252518ec6094a1de5f010fc999",
+                "reference": "a36a4f35c8b499252518ec6094a1de5f010fc999",
+                "shasum": ""
+            },
+            "require": {
+                "friendsofphp/php-cs-fixer": "^2.14",
+                "php": "^7.2"
+            },
+            "require-dev": {
+                "wyrihaximus/test-utilities": "^1.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "WyriHaximus\\CsFixerConfig\\": "src/"
+                },
+                "files": [
+                    "src/rules_include.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Cees-Jan Kiewiet",
+                    "email": "ceesjank@gmail.com"
+                }
+            ],
+            "description": "friendsofphp/php-cs-fixer config",
+            "time": "2019-01-20T17:38:15+00:00"
         }
     ],
     "packages-dev": [],

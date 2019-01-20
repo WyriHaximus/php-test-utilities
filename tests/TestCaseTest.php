@@ -4,6 +4,9 @@ namespace WyriHaximus\Tests\TestUtilities;
 
 use WyriHaximus\TestUtilities\TestCase;
 
+/**
+ * @internal
+ */
 final class TestCaseTest extends TestCase
 {
     const PENTIUM = 66;
@@ -27,12 +30,12 @@ final class TestCaseTest extends TestCase
     {
         for ($i = 0; $i <= self::PENTIUM; $i++) {
             yield [
-                (string) \random_int($i * $i, PHP_INT_MAX),
+                (string) \random_int($i * $i, \PHP_INT_MAX),
             ];
         }
     }
 
-    public function testRecursiveDirectoryCreation()
+    public function testRecursiveDirectoryCreation(): void
     {
         static::assertFileExists($this->getTmpDir());
     }
@@ -40,34 +43,34 @@ final class TestCaseTest extends TestCase
     /**
      * @dataProvider provideTemporaryDirectory
      */
-    public function testTemporaryDirectoryAndGetFilesInDirectory(string $int)
+    public function testTemporaryDirectoryAndGetFilesInDirectory(string $int): void
     {
         static::assertNotSame($this->getTmpDir(), $this->previousTemporaryDirectory);
 
-        $dir = $this->getTmpDir() . $this->getRandomNameSpace() . DIRECTORY_SEPARATOR;
-        mkdir($dir);
+        $dir = $this->getTmpDir() . $this->getRandomNameSpace() . \DIRECTORY_SEPARATOR;
+        \mkdir($dir);
 
         for ($i = 0; $i < self::PENTIUM; $i++) {
             static::assertCount($i, $this->getFilesInDirectory($this->getTmpDir()), (string)$i);
-            file_put_contents($dir . $i, $int);
+            \file_put_contents($dir . $i, $int);
         }
 
         static::assertCount(self::PENTIUM, $this->getFilesInDirectory($this->getTmpDir()));
 
         foreach ($this->getFilesInDirectory($this->getTmpDir()) as $file) {
-            static::assertSame($int, file_get_contents($file));
+            static::assertSame($int, \file_get_contents($file));
         }
     }
 
     /**
      * @dataProvider provideTrueFalse
      */
-    public function testTrueFalse(bool $bool)
+    public function testTrueFalse(bool $bool): void
     {
         static::assertInternalType('bool', $bool);
     }
 
-    public function testGetSysTempDir()
+    public function testGetSysTempDir(): void
     {
         self::assertFileExists($this->getSysTempDir());
     }
