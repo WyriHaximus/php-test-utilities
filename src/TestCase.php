@@ -143,4 +143,12 @@ abstract class TestCase extends PHPUnitTestCase
 
         return $files;
     }
+
+    protected static function waitUntilTheNextSecond(): void
+    {
+        $now = \time();
+        do {
+            \usleep(50);
+        } while ($now === \time());
+    }
 }

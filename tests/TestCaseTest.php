@@ -74,4 +74,11 @@ final class TestCaseTest extends TestCase
     {
         self::assertFileExists($this->getSysTempDir());
     }
+
+    public function testWaitUntilTheNextSecond(): void
+    {
+        $now = \time();
+        static::waitUntilTheNextSecond();
+        self::assertSame($now + 1, \time());
+    }
 }
