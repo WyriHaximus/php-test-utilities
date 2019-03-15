@@ -67,7 +67,7 @@ final class TestCaseTest extends TestCase
      */
     public function testTrueFalse(bool $bool): void
     {
-        static::assertInternalType('bool', $bool);
+        static::assertIsBool($bool);
     }
 
     public function testGetSysTempDir(): void
