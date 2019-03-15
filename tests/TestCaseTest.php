@@ -26,7 +26,7 @@ final class TestCaseTest extends TestCase
         parent::tearDown();
     }
 
-    public function provideTemporaryDirectory()
+    public function provideTemporaryDirectory(): iterable
     {
         for ($i = 0; $i <= self::PENTIUM; $i++) {
             yield [
@@ -64,8 +64,9 @@ final class TestCaseTest extends TestCase
 
     /**
      * @dataProvider provideTrueFalse
+     * @param mixed $bool
      */
-    public function testTrueFalse(bool $bool): void
+    public function testTrueFalse($bool): void
     {
         static::assertIsBool($bool);
     }
