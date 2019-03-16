@@ -19,7 +19,8 @@
     "nunomaduro/collision": "^2.1",
     "phpstan/phpstan": "^0.10.7 || ^0.11.0",
     "phpunit/phpunit": "^7.5 || ^8.0",
-    "wyrihaximus/cs-fixer-config": "^1.0.1"
+    "wyrihaximus/cs-fixer-config": "^1.0.1",
+    "wyrihaximus/phpstan-rules-wrapper": "^1.0"
   },
   "require-dev": {},
   "config": {
@@ -105,7 +106,7 @@
     ],
     "stan": [
       "@ensure-installed",
-      "phpstan analyse src tests --level max --ansi"
+      "phpstan analyse src tests --level max --ansi -c phpstan.neon"
     ],
     "unit": [
       "@ensure-installed",
