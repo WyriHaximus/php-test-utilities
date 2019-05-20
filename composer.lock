@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "cc81bef538c8365e38d9b355972ff746",
+    "content-hash": "5bd30b09f8f2d539a6e8043a5bc3e995",
     "packages": [
         {
             "name": "composer/ca-bundle",
@@ -642,16 +642,16 @@
         },
         {
             "name": "infection/infection",
-            "version": "0.12.2",
+            "version": "0.13.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/infection/infection.git",
-                "reference": "0c028b4b69bbead4b9d6702b36c0d25b9e016785"
+                "reference": "add7355edff8229195e4311a9c83cc6b42224d8a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/infection/infection/zipball/0c028b4b69bbead4b9d6702b36c0d25b9e016785",
-                "reference": "0c028b4b69bbead4b9d6702b36c0d25b9e016785",
+                "url": "https://api.github.com/repos/infection/infection/zipball/add7355edff8229195e4311a9c83cc6b42224d8a",
+                "reference": "add7355edff8229195e4311a9c83cc6b42224d8a",
                 "shasum": ""
             },
             "require": {
@@ -660,7 +660,7 @@
                 "ext-json": "*",
                 "ext-libxml": "*",
                 "justinrainbow/json-schema": "^5.2",
-                "nikic/php-parser": "^4.1",
+                "nikic/php-parser": "^4.2.1",
                 "ocramius/package-versions": "^1.2",
                 "padraic/phar-updater": "^1.0.4",
                 "php": "^7.1.3",
@@ -669,7 +669,7 @@
                 "symfony/console": "^3.4 || ^4.0",
                 "symfony/filesystem": "^3.4 || ^4.0",
                 "symfony/finder": "^3.4 || ^4.0",
-                "symfony/process": "^3.4|| ^4.0",
+                "symfony/process": "^3.4 || ^4.0",
                 "symfony/yaml": "^3.4 || ^4.0",
                 "webmozart/assert": "^1.3"
             },
@@ -678,7 +678,7 @@
                 "symfony/process": "3.4.2"
             },
             "require-dev": {
-                "phpunit/phpunit": "^6.2"
+                "phpunit/phpunit": "^7.5"
             },
             "bin": [
                 "bin/infection"
@@ -727,7 +727,7 @@
                 "testing",
                 "unit testing"
             ],
-            "time": "2019-02-10T18:24:30+00:00"
+            "time": "2019-05-18T15:24:49+00:00"
         },
         {
             "name": "jakub-onderka/php-console-color",
@@ -4252,16 +4252,16 @@
         },
         {
             "name": "symfony/contracts",
-            "version": "v1.0.2",
+            "version": "v1.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/contracts.git",
-                "reference": "1aa7ab2429c3d594dd70689604b5cf7421254cdf"
+                "reference": "d3636025e8253c6144358ec0a62773cae588395b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/contracts/zipball/1aa7ab2429c3d594dd70689604b5cf7421254cdf",
-                "reference": "1aa7ab2429c3d594dd70689604b5cf7421254cdf",
+                "url": "https://api.github.com/repos/symfony/contracts/zipball/d3636025e8253c6144358ec0a62773cae588395b",
+                "reference": "d3636025e8253c6144358ec0a62773cae588395b",
                 "shasum": ""
             },
             "require": {
@@ -4269,19 +4269,22 @@
             },
             "require-dev": {
                 "psr/cache": "^1.0",
-                "psr/container": "^1.0"
+                "psr/container": "^1.0",
+                "symfony/polyfill-intl-idn": "^1.10"
             },
             "suggest": {
                 "psr/cache": "When using the Cache contracts",
                 "psr/container": "When using the Service contracts",
                 "symfony/cache-contracts-implementation": "",
+                "symfony/event-dispatcher-implementation": "",
+                "symfony/http-client-contracts-implementation": "",
                 "symfony/service-contracts-implementation": "",
                 "symfony/translation-contracts-implementation": ""
             },
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "1.0-dev"
+                    "dev-master": "1.1-dev"
                 }
             },
             "autoload": {
@@ -4316,7 +4319,7 @@
                 "interoperability",
                 "standards"
             ],
-            "time": "2018-12-05T08:06:11+00:00"
+            "time": "2019-04-27T14:29:50+00:00"
         },
         {
             "name": "symfony/event-dispatcher",
@@ -4867,16 +4870,16 @@
         },
         {
             "name": "symfony/yaml",
-            "version": "v4.2.4",
+            "version": "v4.2.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/yaml.git",
-                "reference": "761fa560a937fd7686e5274ff89dcfa87a5047df"
+                "reference": "6712daf03ee25b53abb14e7e8e0ede1a770efdb1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/yaml/zipball/761fa560a937fd7686e5274ff89dcfa87a5047df",
-                "reference": "761fa560a937fd7686e5274ff89dcfa87a5047df",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/6712daf03ee25b53abb14e7e8e0ede1a770efdb1",
+                "reference": "6712daf03ee25b53abb14e7e8e0ede1a770efdb1",
                 "shasum": ""
             },
             "require": {
@@ -4922,7 +4925,7 @@
             ],
             "description": "Symfony Yaml Component",
             "homepage": "https://symfony.com",
-            "time": "2019-02-23T15:17:42+00:00"
+            "time": "2019-03-30T15:58:42+00:00"
         },
         {
             "name": "thecodingmachine/phpstan-safe-rule",
