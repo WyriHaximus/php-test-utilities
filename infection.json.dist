@@ -7,5 +7,43 @@
     },
     "logs": {
         "text": "infection-log.txt"
+    },
+    "mutators": {
+        "@default": true,
+        "FunctionCallRemoval": {
+            "ignore": [
+                "WyriHaximus\\TestUtilities\\TestCase::waitUntilTheNextSecond"
+            ]
+        },
+        "MethodCallRemoval": {
+            "ignore": [
+                "WyriHaximus\\TestUtilities\\TestCase::tearDown"
+            ]
+        },
+        "Continue_": {
+            "ignore": [
+                "WyriHaximus\\TestUtilities\\TestCase::rmdir"
+            ]
+        },
+        "TrueValue": {
+            "ignore": [
+                "WyriHaximus\\TestUtilities\\TestCase::provideTrueFalse"
+            ]
+        },
+        "FalseValue": {
+            "ignore": [
+                "WyriHaximus\\TestUtilities\\TestCase::provideTrueFalse"
+            ]
+        },
+        "PublicVisibility": {
+            "ignore": [
+                "WyriHaximus\\TestUtilities\\TestCase::provideTrueFalse"
+            ]
+        },
+        "Identical": {
+            "ignore": [
+                "WyriHaximus\\TestUtilities\\TestCase::getSysTempDir"
+            ]
+        }
     }
 }

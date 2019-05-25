@@ -63,7 +63,7 @@
     "ensure-installed": "composer install --ansi -n -q",
     "infection": [
       "@ensure-installed",
-      "infection --ansi --threads=4"
+      "infection --ansi --min-msi=100 --min-covered-msi=100 --threads=32"
     ],
     "lint-php": [
       "@ensure-installed",
@@ -75,7 +75,8 @@
       "@lint-php",
       "@cs",
       "@stan",
-      "@unit"
+      "@unit",
+      "@infection"
     ],
     "qa-all-extended": [
       "composer validate --ansi",
