@@ -10,6 +10,10 @@ use RecursiveIteratorIterator;
 abstract class TestCase extends PHPUnitTestCase
 {
     const DEFAULT_AWAIT_TIMEOUT = 60;
+    const WIN_START = 0;
+    const WIN_END = 3;
+    const USLEEP = 50;
+    const DEFAULT_MODE = 0777;
 
     /**
      * @var string
@@ -28,8 +32,6 @@ abstract class TestCase extends PHPUnitTestCase
 
     protected function setUp(): void
     {
-        parent::setUp();
-
         $this->baseTmpDir = $this->getSysTempDir() .
             \DIRECTORY_SEPARATOR .
             'p-a-c-t-' .
@@ -45,8 +47,6 @@ abstract class TestCase extends PHPUnitTestCase
 
     protected function tearDown(): void
     {
-        parent::tearDown();
-
         if (\file_exists($this->baseTmpDir)) {
             $this->rmdir($this->baseTmpDir);
         }
@@ -72,7 +72,7 @@ abstract class TestCase extends PHPUnitTestCase
      */
     protected function getSysTempDir(): string
     {
-        if (\strtoupper(\substr(\PHP_OS, 0, 3)) === 'WIN') {
+        if (\strtoupper(\substr(\PHP_OS, self::WIN_START, self::WIN_END)) === 'WIN') {
             return 'C:\\t\\';
         }
 
@@ -108,7 +108,7 @@ abstract class TestCase extends PHPUnitTestCase
     protected function getTmpDir(): string
     {
         if (!\file_exists($this->tmpDir)) {
-            \mkdir($this->tmpDir, 0777, true);
+            \mkdir($this->tmpDir, self::DEFAULT_MODE, true);
         }
 
         return $this->tmpDir;
@@ -148,7 +148,9 @@ abstract class TestCase extends PHPUnitTestCase
     {
         $now = \time();
         do {
-            \usleep(50);
+            // @codeCoverageIgnoreStart
+            \usleep(self::USLEEP);
+            // @codeCoverageIgnoreEnd
         } while ($now === \time());
     }
 }

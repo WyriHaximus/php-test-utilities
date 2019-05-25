@@ -82,4 +82,19 @@ final class TestCaseTest extends TestCase
         static::waitUntilTheNextSecond();
         self::assertSame($now + 1, \time());
     }
+
+    public function testRmDir(): void
+    {
+        $tmpDir = $this->getSysTempDir() .
+            \DIRECTORY_SEPARATOR .
+            'p-a-c-t-' .
+            \uniqid() .
+            \DIRECTORY_SEPARATOR;
+
+        \mkdir($tmpDir);
+
+        self::assertDirectoryExists($tmpDir);
+        $this->rmdir($tmpDir);
+        self::assertDirectoryNotExists($tmpDir);
+    }
 }
