@@ -30,6 +30,11 @@
                 "WyriHaximus\\TestUtilities\\TestCase::provideTrueFalse"
             ]
         },
+        "ArrayItemRemoval": {
+            "ignore": [
+                "WyriHaximus\\TestUtilities\\TestCase::provideTrueFalse"
+            ]
+        },
         "FalseValue": {
             "ignore": [
                 "WyriHaximus\\TestUtilities\\TestCase::provideTrueFalse"
@@ -41,6 +46,11 @@
             ]
         },
         "Identical": {
+            "ignore": [
+                "WyriHaximus\\TestUtilities\\TestCase::getSysTempDir"
+            ]
+        },
+        "UnwrapStrToUpper": {
             "ignore": [
                 "WyriHaximus\\TestUtilities\\TestCase::getSysTempDir"
             ]
