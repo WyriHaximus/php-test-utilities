@@ -19,6 +19,8 @@
     "nunomaduro/collision": "^2.1 || ^3.0",
     "phpstan/phpstan": "^0.10.7 || ^0.11.0",
     "phpunit/phpunit": "^7.5 || ^8.0",
+    "psalm/plugin-phpunit": "^0.6.0",
+    "vimeo/psalm": "^3.4",
     "wyrihaximus/cs-fixer-config": "^1.0.1",
     "wyrihaximus/phpstan-rules-wrapper": "^1.0"
   },
@@ -69,12 +71,17 @@
       "@ensure-installed",
       "parallel-lint --exclude vendor ."
     ],
+    "psalm": [
+      "@ensure-installed",
+      "psalm --threads=32"
+    ],
     "qa-all": [
       "composer validate --ansi",
       "composer normalize --ansi",
       "@lint-php",
       "@cs",
       "@stan",
+      "@psalm",
       "@unit",
       "@infection"
     ],
@@ -84,6 +91,7 @@
       "@lint-php",
       "@cs",
       "@stan",
+      "@psalm",
       "@unit-coverage",
       "@infection"
     ],
@@ -98,12 +106,6 @@
     ],
     "qa-contrib": [
       "@qa-all"
-    ],
-    "qa-windows": [
-      "@lint-php",
-      "@cs",
-      "@stan",
-      "@unit"
     ],
     "stan": [
       "@ensure-installed",
