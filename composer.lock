@@ -1806,7 +1806,7 @@
                     "homepage": "https://nette.org/contributors"
                 }
             ],
-            "description": "🔍 Nette Finder: find files and directories with an intuitive API.",
+            "description": "? Nette Finder: find files and directories with an intuitive API.",
             "homepage": "https://nette.org",
             "keywords": [
                 "filesystem",
@@ -1866,7 +1866,7 @@
                     "homepage": "https://nette.org/contributors"
                 }
             ],
-            "description": "🍸 Nette NEON: encodes and decodes NEON file format.",
+            "description": "? Nette NEON: encodes and decodes NEON file format.",
             "homepage": "http://ne-on.org",
             "keywords": [
                 "export",
@@ -5674,16 +5674,16 @@
         },
         {
             "name": "vimeo/psalm",
-            "version": "3.4.0",
+            "version": "3.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/vimeo/psalm.git",
-                "reference": "99e6cd819f829babf50c5852d6f62d40b1fec9d9"
+                "reference": "f327d75116a15e88431668c36b9613f1e3dd62a4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vimeo/psalm/zipball/99e6cd819f829babf50c5852d6f62d40b1fec9d9",
-                "reference": "99e6cd819f829babf50c5852d6f62d40b1fec9d9",
+                "url": "https://api.github.com/repos/vimeo/psalm/zipball/f327d75116a15e88431668c36b9613f1e3dd62a4",
+                "reference": "f327d75116a15e88431668c36b9613f1e3dd62a4",
                 "shasum": ""
             },
             "require": {
@@ -5753,7 +5753,7 @@
                 "inspection",
                 "php"
             ],
-            "time": "2019-06-03T16:30:20+00:00"
+            "time": "2019-06-05T12:50:24+00:00"
         },
         {
             "name": "webmozart/assert",
