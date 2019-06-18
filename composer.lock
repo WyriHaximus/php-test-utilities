@@ -5723,16 +5723,16 @@
         },
         {
             "name": "vimeo/psalm",
-            "version": "3.4.4",
+            "version": "3.4.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/vimeo/psalm.git",
-                "reference": "c21e9917fa05ba4d97da464725471f53ab4fe0d8"
+                "reference": "a0866da88e605adaa648e9f1ad37f4990650f55c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vimeo/psalm/zipball/c21e9917fa05ba4d97da464725471f53ab4fe0d8",
-                "reference": "c21e9917fa05ba4d97da464725471f53ab4fe0d8",
+                "url": "https://api.github.com/repos/vimeo/psalm/zipball/a0866da88e605adaa648e9f1ad37f4990650f55c",
+                "reference": "a0866da88e605adaa648e9f1ad37f4990650f55c",
                 "shasum": ""
             },
             "require": {
@@ -5742,7 +5742,7 @@
                 "felixfbecker/advanced-json-rpc": "^3.0.3",
                 "felixfbecker/language-server-protocol": "^1.2",
                 "netresearch/jsonmapper": "^1.0",
-                "nikic/php-parser": "^4.0.2 || ^4.1",
+                "nikic/php-parser": "^4.2",
                 "ocramius/package-versions": "^1.2",
                 "openlss/lib-array2xml": "^1.0",
                 "php": "^7.1",
@@ -5803,7 +5803,7 @@
                 "inspection",
                 "php"
             ],
-            "time": "2019-06-10T18:41:21+00:00"
+            "time": "2019-06-16T16:45:02+00:00"
         },
         {
             "name": "webmozart/assert",
