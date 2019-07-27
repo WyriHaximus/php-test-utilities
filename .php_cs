@@ -1,6 +1,6 @@
 <?php declare(strict_types=1);
 
-use WyriHaximus\CsFixerConfig\PhpCsFixerConfig;
+use WyriHaximus\TestUtilities\PhpCsFixerConfigFactory;
 
 return (function ()
 {
@@ -9,12 +9,5 @@ return (function ()
         __DIR__ . DIRECTORY_SEPARATOR . 'tests',
     ];
 
-    return PhpCsFixerConfig::create()
-        ->setFinder(
-            PhpCsFixer\Finder::create()
-                ->in($paths)
-                ->append($paths)
-        )
-        ->setUsingCache(false)
-    ;
+    return PhpCsFixerConfigFactory::create($paths);
 })();

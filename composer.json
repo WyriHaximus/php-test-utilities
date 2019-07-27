@@ -12,6 +12,7 @@
     "php": "^7.2",
     "composer/composer": "^1.8",
     "friendsofphp/php-cs-fixer": "^2.14",
+    "icanhazstring/composer-unused": "^0.5.6",
     "infection/infection": "^0.11.4 || ^0.12.0 || ^0.13.0",
     "jakub-onderka/php-console-highlighter": "^0.4",
     "jakub-onderka/php-parallel-lint": "^1.0.0",
@@ -30,6 +31,23 @@
       "php": "7.2"
     },
     "sort-packages": true
+  },
+  "extra": {
+    "unused": [
+      "php",
+      "composer/composer",
+      "friendsofphp/php-cs-fixer",
+      "icanhazstring/composer-unused",
+      "infection/infection",
+      "jakub-onderka/php-console-highlighter",
+      "jakub-onderka/php-parallel-lint",
+      "nunomaduro/collision",
+      "phpstan/phpstan",
+      "phpunit/phpunit",
+      "psalm/plugin-phpunit",
+      "vimeo/psalm",
+      "wyrihaximus/phpstan-rules-wrapper"
+    ]
   },
   "autoload": {
     "psr-4": {
@@ -78,6 +96,7 @@
     "qa-all": [
       "composer validate --ansi",
       "composer normalize --ansi",
+      "composer unused --ansi",
       "@lint-php",
       "@cs",
       "@stan",
@@ -88,6 +107,7 @@
     "qa-all-extended": [
       "composer validate --ansi",
       "composer normalize --ansi",
+      "composer unused --ansi",
       "@lint-php",
       "@cs",
       "@stan",
