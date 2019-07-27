@@ -28,6 +28,9 @@ cs-fix:
 infection:
 	composer infection
 
+composer-require-checker:
+	composer run-script composer-require-checker --timeout=0
+
 unit:
 	composer run-script unit --timeout=0
 
