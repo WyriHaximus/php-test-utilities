@@ -42,6 +42,7 @@
       "infection/infection",
       "jakub-onderka/php-console-highlighter",
       "jakub-onderka/php-parallel-lint",
+      "maglnet/composer-require-checker",
       "nunomaduro/collision",
       "phpstan/phpstan",
       "phpunit/phpunit",
