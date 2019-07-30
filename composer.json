@@ -76,7 +76,7 @@
     ],
     "composer-require-checker": [
       "@ensure-installed",
-      "composer-require-checker --ansi -vvv"
+      "composer-require-checker --ignore-parse-errors --ansi -vvv"
     ],
     "cs": [
       "@ensure-installed",
