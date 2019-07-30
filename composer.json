@@ -17,6 +17,7 @@
     "jakub-onderka/php-console-highlighter": "^0.4",
     "jakub-onderka/php-parallel-lint": "^1.0.0",
     "localheinz/composer-normalize": "^1.0.0",
+    "maglnet/composer-require-checker": "^2.0",
     "nunomaduro/collision": "^2.1 || ^3.0",
     "phpstan/phpstan": "^0.10.7 || ^0.11.0",
     "phpunit/phpunit": "^7.5 || ^8.0",
@@ -41,6 +42,7 @@
       "infection/infection",
       "jakub-onderka/php-console-highlighter",
       "jakub-onderka/php-parallel-lint",
+      "maglnet/composer-require-checker",
       "nunomaduro/collision",
       "phpstan/phpstan",
       "phpunit/phpunit",
@@ -72,6 +74,10 @@
     "ci-coverage": [
       "if [ -f ./build/logs/clover.xml ]; then wget https://scrutinizer-ci.com/ocular.phar && php ocular.phar code-coverage:upload --format=php-clover ./build/logs/clover.xml; fi"
     ],
+    "composer-require-checker": [
+      "@ensure-installed",
+      "composer-require-checker --ignore-parse-errors --ansi -vvv"
+    ],
     "cs": [
       "@ensure-installed",
       "php-cs-fixer fix --config=.php_cs --ansi --dry-run --diff --verbose --allow-risky=yes --show-progress=estimating"
@@ -102,7 +108,8 @@
       "@stan",
       "@psalm",
       "@unit",
-      "@infection"
+      "@infection",
+      "@composer-require-checker"
     ],
     "qa-all-extended": [
       "composer validate --ansi",
@@ -113,7 +120,8 @@
       "@stan",
       "@psalm",
       "@unit-coverage",
-      "@infection"
+      "@infection",
+      "@composer-require-checker"
     ],
     "qa-ci": [
       "@unit"
