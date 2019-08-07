@@ -6,6 +6,10 @@ use FilesystemIterator;
 use PHPUnit\Framework\TestCase as PHPUnitTestCase;
 use RecursiveDirectoryIterator;
 use RecursiveIteratorIterator;
+use function Safe\unlink;
+use function Safe\substr;
+use function Safe\mkdir;
+use function Safe\rmdir;
 
 abstract class TestCase extends PHPUnitTestCase
 {
@@ -53,7 +57,7 @@ abstract class TestCase extends PHPUnitTestCase
     }
 
     /**
-     * @return array
+     * @return array<int, array<int, bool>>
      */
     public function provideTrueFalse(): array
     {
@@ -72,7 +76,7 @@ abstract class TestCase extends PHPUnitTestCase
      */
     protected function getSysTempDir(): string
     {
-        if (\strtoupper(\substr(\PHP_OS, self::WIN_START, self::WIN_END)) === 'WIN') {
+        if (\strtoupper(substr(\PHP_OS, self::WIN_START, self::WIN_END)) === 'WIN') {
             return 'C:\\t\\';
         }
 
@@ -94,12 +98,12 @@ abstract class TestCase extends PHPUnitTestCase
             }
 
             if (\is_file($node->getPathname())) {
-                \unlink($node->getPathname());
+                unlink($node->getPathname());
                 continue;
             }
         }
 
-        \rmdir($dir);
+        rmdir($dir);
     }
 
     /**
@@ -108,7 +112,7 @@ abstract class TestCase extends PHPUnitTestCase
     protected function getTmpDir(): string
     {
         if (!\file_exists($this->tmpDir)) {
-            \mkdir($this->tmpDir, self::DEFAULT_MODE, true);
+            mkdir($this->tmpDir, self::DEFAULT_MODE, true);
         }
 
         return $this->tmpDir;
@@ -124,7 +128,7 @@ abstract class TestCase extends PHPUnitTestCase
 
     /**
      * @param  string $path
-     * @return array
+     * @return string[]
      */
     protected function getFilesInDirectory(string $path): array
     {

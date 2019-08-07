@@ -3,6 +3,9 @@
 namespace WyriHaximus\Tests\TestUtilities;
 
 use WyriHaximus\TestUtilities\TestCase;
+use function Safe\mkdir;
+use function Safe\file_put_contents;
+use function Safe\file_get_contents;
 
 /**
  * @internal
@@ -48,17 +51,17 @@ final class TestCaseTest extends TestCase
         static::assertNotSame($this->getTmpDir(), $this->previousTemporaryDirectory);
 
         $dir = $this->getTmpDir() . $this->getRandomNameSpace() . \DIRECTORY_SEPARATOR;
-        \mkdir($dir);
+        mkdir($dir);
 
         for ($i = 0; $i < self::PENTIUM; $i++) {
             static::assertCount($i, $this->getFilesInDirectory($this->getTmpDir()), (string)$i);
-            \file_put_contents($dir . $i, $int);
+            file_put_contents($dir . $i, $int);
         }
 
         static::assertCount(self::PENTIUM, $this->getFilesInDirectory($this->getTmpDir()));
 
         foreach ($this->getFilesInDirectory($this->getTmpDir()) as $file) {
-            static::assertSame($int, \file_get_contents($file));
+            static::assertSame($int, file_get_contents($file));
         }
     }
 
@@ -91,7 +94,7 @@ final class TestCaseTest extends TestCase
             \uniqid() .
             \DIRECTORY_SEPARATOR;
 
-        \mkdir($tmpDir);
+        mkdir($tmpDir);
 
         self::assertDirectoryExists($tmpDir);
         $this->rmdir($tmpDir);

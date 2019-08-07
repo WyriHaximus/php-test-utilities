@@ -2,6 +2,8 @@
 
 namespace WyriHaximus\Tests\TestUtilities;
 
+use function Safe\sort;
+use function Safe\glob;
 use SplFileInfo;
 use WyriHaximus\TestUtilities\PhpCsFixerConfigFactory;
 use WyriHaximus\TestUtilities\TestCase;
@@ -20,10 +22,10 @@ final class PhpCsFixerConfigFactoryTest extends TestCase
         $keys = \array_filter(\array_keys(\array_map(function (SplFileInfo $fileInfo) {
             return $fileInfo->getFilename();
         }, \iterator_to_array($finder))), 'is_string');
-        \sort($keys);
+        sort($keys);
         /** @var array $files */
-        $files = \glob(__DIR__ . '/*');
-        \sort($files);
+        $files = glob(__DIR__ . '/*');
+        sort($files);
         self::assertSame($files, $keys);
     }
 }

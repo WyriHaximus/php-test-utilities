@@ -9,5 +9,7 @@ return (function ()
         __DIR__ . DIRECTORY_SEPARATOR . 'tests',
     ];
 
-    return PhpCsFixerConfigFactory::create($paths);
+    return PhpCsFixerConfigFactory::create($paths)->setRules([
+        'native_function_invocation' => false,
+    ]);
 })();
