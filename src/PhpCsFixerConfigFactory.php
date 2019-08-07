@@ -10,6 +10,9 @@ final class PhpCsFixerConfigFactory
 {
     private const USE_CACHE = false;
 
+    /**
+     * @param string[] $paths
+     */
     public static function create(array $paths): ConfigInterface
     {
         /** @var \Traversable $finder */
