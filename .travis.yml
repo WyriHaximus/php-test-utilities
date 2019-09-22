@@ -10,20 +10,20 @@ matrix:
   allow_failures:
     - php: nightly
   include:
-    - php: 7.2
+    - php: 7.3
       env:
         - qaExtended=true
     - php: nightly
       env:
         - dropPlatform=false
-    - php: 7.2
+    - php: 7.3
       env:
         - dependencies=lowest
     - php: nightly
       env:
         - dependencies=lowest
         - dropPlatform=false
-    - php: 7.2
+    - php: 7.3
       env:
         - dependencies=highest
     - php: nightly
