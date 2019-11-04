@@ -870,29 +870,30 @@
         },
         {
             "name": "icanhazstring/composer-unused",
-            "version": "0.6.1",
+            "version": "0.6.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/icanhazstring/composer-unused.git",
-                "reference": "4119d398f25a1971acfe1ce6cf3652201c8b975e"
+                "reference": "88b59a0672b5f80ac7d4d9aaf595da4256d7b237"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/icanhazstring/composer-unused/zipball/4119d398f25a1971acfe1ce6cf3652201c8b975e",
-                "reference": "4119d398f25a1971acfe1ce6cf3652201c8b975e",
+                "url": "https://api.github.com/repos/icanhazstring/composer-unused/zipball/88b59a0672b5f80ac7d4d9aaf595da4256d7b237",
+                "reference": "88b59a0672b5f80ac7d4d9aaf595da4256d7b237",
                 "shasum": ""
             },
             "require": {
                 "composer-plugin-api": "^1.1.0",
                 "ext-json": "*",
                 "nikic/php-parser": "^4.2",
-                "php": "^7.1",
+                "php": ">=7.1",
                 "psr/container": "^1.0",
                 "psr/log": "^1.1",
                 "symfony/finder": "^4.2"
             },
             "require-dev": {
                 "composer/composer": "^1.8",
+                "ext-zend-opcache": "*",
                 "jangregor/phpstan-prophecy": "^0.3.0",
                 "phpstan/phpstan": "^0.11.4",
                 "phpunit/phpunit": "^7.0",
@@ -926,7 +927,7 @@
                 "plugin",
                 "unused"
             ],
-            "time": "2019-10-24T17:04:12+00:00"
+            "time": "2019-10-31T17:26:50+00:00"
         },
         {
             "name": "infection/infection",
@@ -2354,16 +2355,16 @@
         },
         {
             "name": "nikic/php-parser",
-            "version": "v4.2.4",
+            "version": "v4.2.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/nikic/PHP-Parser.git",
-                "reference": "97e59c7a16464196a8b9c77c47df68e4a39a45c4"
+                "reference": "b76bbc3c51f22c570648de48e8c2d941ed5e2cf2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/97e59c7a16464196a8b9c77c47df68e4a39a45c4",
-                "reference": "97e59c7a16464196a8b9c77c47df68e4a39a45c4",
+                "url": "https://api.github.com/repos/nikic/PHP-Parser/zipball/b76bbc3c51f22c570648de48e8c2d941ed5e2cf2",
+                "reference": "b76bbc3c51f22c570648de48e8c2d941ed5e2cf2",
                 "shasum": ""
             },
             "require": {
@@ -2371,6 +2372,7 @@
                 "php": ">=7.0"
             },
             "require-dev": {
+                "ircmaxell/php-yacc": "0.0.4",
                 "phpunit/phpunit": "^6.5 || ^7.0 || ^8.0"
             },
             "bin": [
@@ -2401,7 +2403,7 @@
                 "parser",
                 "php"
             ],
-            "time": "2019-09-01T07:51:21+00:00"
+            "time": "2019-10-25T18:33:07+00:00"
         },
         {
             "name": "nunomaduro/collision",
