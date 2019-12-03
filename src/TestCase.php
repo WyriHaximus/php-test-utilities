@@ -6,98 +6,92 @@ use FilesystemIterator;
 use PHPUnit\Framework\TestCase as PHPUnitTestCase;
 use RecursiveDirectoryIterator;
 use RecursiveIteratorIterator;
-use function Safe\unlink;
-use function Safe\substr;
+use SplFileInfo;
+use function assert;
+use function file_exists;
+use function is_dir;
+use function is_file;
 use function Safe\mkdir;
 use function Safe\rmdir;
+use function Safe\substr;
+use function Safe\unlink;
+use function strtoupper;
+use function sys_get_temp_dir;
+use function time;
+use function uniqid;
+use function usleep;
+use const DIRECTORY_SEPARATOR;
+use const PHP_OS;
 
 abstract class TestCase extends PHPUnitTestCase
 {
-    const DEFAULT_AWAIT_TIMEOUT = 60;
-    const WIN_START = 0;
-    const WIN_END = 3;
-    const USLEEP = 50;
-    const DEFAULT_MODE = 0777;
+    public const DEFAULT_AWAIT_TIMEOUT = 60;
+    public const WIN_START             = 0;
+    public const WIN_END               = 3;
+    public const USLEEP                = 50;
+    public const DEFAULT_MODE          = 0777;
 
-    /**
-     * @var string
-     */
-    private $baseTmpDir;
+    private string $baseTmpDir;
 
-    /**
-     * @var string
-     */
-    private $tmpDir;
+    private string $tmpDir;
 
-    /**
-     * @var string
-     */
-    private $tmpNamespace;
+    private string $tmpNamespace;
 
     protected function setUp(): void
     {
         $this->baseTmpDir = $this->getSysTempDir() .
-            \DIRECTORY_SEPARATOR .
+            DIRECTORY_SEPARATOR .
             'p-a-c-t-' .
-            \uniqid() .
-            \DIRECTORY_SEPARATOR;
-        $this->tmpDir = $this->baseTmpDir .
-            \uniqid() .
-            \DIRECTORY_SEPARATOR;
-        ;
+            uniqid() .
+            DIRECTORY_SEPARATOR;
+        $this->tmpDir     = $this->baseTmpDir .
+            uniqid() .
+            DIRECTORY_SEPARATOR;
 
-        $this->tmpNamespace = \uniqid('PACTN');
+        $this->tmpNamespace = uniqid('PACTN');
     }
 
     protected function tearDown(): void
     {
-        if (\file_exists($this->baseTmpDir)) {
-            $this->rmdir($this->baseTmpDir);
+        if (! file_exists($this->baseTmpDir)) {
+            return;
         }
+
+        $this->rmdir($this->baseTmpDir);
     }
 
     /**
      * @return array<int, array<int, bool>>
      */
-    public function provideTrueFalse(): array
+    final public function provideTrueFalse(): array
     {
         return [
-            [
-                true,
-            ],
-            [
-                false,
-            ],
+            [true],
+            [false],
         ];
     }
 
-    /**
-     * @return string
-     */
-    protected function getSysTempDir(): string
+    final protected function getSysTempDir(): string
     {
-        if (\strtoupper(substr(\PHP_OS, self::WIN_START, self::WIN_END)) === 'WIN') {
+        if (strtoupper(substr(PHP_OS, self::WIN_START, self::WIN_END)) === 'WIN') {
             return 'C:\\t\\';
         }
 
-        return \sys_get_temp_dir();
+        return sys_get_temp_dir();
     }
 
-    /**
-     * @param string $dir
-     */
-    protected function rmdir(string $dir): void
+    final protected function rmdir(string $dir): void
     {
         $directory = new FilesystemIterator($dir);
 
-        /** @var \SplFileInfo $node */
         foreach ($directory as $node) {
-            if (\is_dir($node->getPathname())) {
+            assert($node instanceof SplFileInfo);
+            if (is_dir($node->getPathname())) {
                 $this->rmdir($node->getPathname());
                 continue;
             }
 
-            if (\is_file($node->getPathname())) {
+            if (is_file($node->getPathname())) {
                 unlink($node->getPathname());
                 continue;
             }
@@ -106,31 +100,24 @@ abstract class TestCase extends PHPUnitTestCase
         rmdir($dir);
     }
 
-    /**
-     * @return string
-     */
-    protected function getTmpDir(): string
+    final protected function getTmpDir(): string
     {
-        if (!\file_exists($this->tmpDir)) {
+        if (! file_exists($this->tmpDir)) {
             mkdir($this->tmpDir, self::DEFAULT_MODE, true);
         }
 
         return $this->tmpDir;
     }
 
-    /**
-     * @return string
-     */
-    protected function getRandomNameSpace(): string
+    final protected function getRandomNameSpace(): string
     {
         return $this->tmpNamespace;
     }
 
     /**
-     * @param  string $path
      * @return string[]
      */
-    protected function getFilesInDirectory(string $path): array
+    final protected function getFilesInDirectory(string $path): array
     {
         $files = [];
 
@@ -138,7 +125,7 @@ abstract class TestCase extends PHPUnitTestCase
         $directory = new RecursiveIteratorIterator($directory);
 
         foreach ($directory as $node) {
-            if (!\is_file($node->getPathname())) {
+            if (! is_file($node->getPathname())) {
                 continue;
             }
 
@@ -148,13 +135,13 @@ abstract class TestCase extends PHPUnitTestCase
         return $files;
     }
 
-    protected static function waitUntilTheNextSecond(): void
+    final protected static function waitUntilTheNextSecond(): void
     {
-        $now = \time();
+        $now = time();
         do {
             // @codeCoverageIgnoreStart
-            \usleep(self::USLEEP);
+            usleep(self::USLEEP);
             // @codeCoverageIgnoreEnd
-        } while ($now === \time());
+        } while ($now === time());
     }
 }

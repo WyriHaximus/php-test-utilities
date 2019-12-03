@@ -9,28 +9,27 @@
     }
   ],
   "require": {
-    "php": "^7.3",
+    "php": "^7.4",
     "composer/composer": "^1.8",
-    "friendsofphp/php-cs-fixer": "^2.14",
-    "icanhazstring/composer-unused": "^0.6.2 || ^0.7.0",
-    "infection/infection": "^0.14.0 || ^0.15.0",
+    "ergebnis/composer-normalize": "^2.0",
+    "icanhazstring/composer-unused": "^0.7",
+    "infection/infection": "^0.15.3",
     "jakub-onderka/php-console-highlighter": "^0.4",
-    "jakub-onderka/php-parallel-lint": "^1.0.0",
-    "localheinz/composer-normalize": "^1.0.0 || ^2.0.0",
+    "jakub-onderka/php-parallel-lint": "^1.0",
     "maglnet/composer-require-checker": "^2.0",
     "nunomaduro/collision": "^3.0",
-    "phpstan/phpstan": "^0.11.0",
+    "phpstan/phpstan": "^0.12.3",
     "phpunit/phpunit": "^8.0",
-    "psalm/plugin-phpunit": "^0.7 || ^0.8",
-    "thecodingmachine/safe": "^0.1.16",
+    "psalm/plugin-phpunit": "^0.8",
+    "squizlabs/php_codesniffer": "^3.4.2",
+    "thecodingmachine/safe": "^1.0",
     "vimeo/psalm": "^3.4",
-    "wyrihaximus/cs-fixer-config": "^1.0.1",
-    "wyrihaximus/phpstan-rules-wrapper": "^1.0"
+    "wyrihaximus/coding-standard": "^1.0.0-alpha1",
+    "wyrihaximus/phpstan-rules-wrapper": "^1.2"
   },
-  "require-dev": {},
   "config": {
     "platform": {
-      "php": "7.3"
+      "php": "7.4"
     },
     "sort-packages": true
   },
@@ -48,6 +47,7 @@
       "phpstan/phpstan",
       "phpunit/phpunit",
       "psalm/plugin-phpunit",
+      "slevomat/coding-standard",
       "vimeo/psalm",
       "wyrihaximus/phpstan-rules-wrapper"
     ]
@@ -71,82 +71,6 @@
     ],
     "post-update-cmd": [
       "composer normalize"
-    ],
-    "ci-coverage": [
-      "if [ -f ./build/logs/clover.xml ]; then wget https://scrutinizer-ci.com/ocular.phar && php ocular.phar code-coverage:upload --format=php-clover ./build/logs/clover.xml; fi"
-    ],
-    "composer-require-checker": [
-      "@ensure-installed",
-      "composer-require-checker --ignore-parse-errors --ansi -vvv"
-    ],
-    "cs": [
-      "@ensure-installed",
-      "php-cs-fixer fix --config=.php_cs --ansi --dry-run --diff --verbose --allow-risky=yes --show-progress=estimating"
-    ],
-    "cs-fix": [
-      "@ensure-installed",
-      "php-cs-fixer fix --config=.php_cs --ansi --verbose --allow-risky=yes --show-progress=estimating"
-    ],
-    "ensure-installed": "composer install --ansi -n -q",
-    "infection": [
-      "@ensure-installed",
-      "infection --ansi --min-msi=100 --min-covered-msi=100 --threads=32"
-    ],
-    "lint-php": [
-      "@ensure-installed",
-      "parallel-lint --exclude vendor ."
-    ],
-    "psalm": [
-      "@ensure-installed",
-      "psalm --threads=32"
-    ],
-    "qa-all": [
-      "composer validate --ansi",
-      "composer normalize --ansi",
-      "composer unused --ansi",
-      "@lint-php",
-      "@cs",
-      "@stan",
-      "@psalm",
-      "@unit",
-      "@infection",
-      "@composer-require-checker"
-    ],
-    "qa-all-extended": [
-      "composer validate --ansi",
-      "composer normalize --ansi",
-      "composer unused --ansi",
-      "@lint-php",
-      "@cs",
-      "@stan",
-      "@psalm",
-      "@unit-coverage",
-      "@infection",
-      "@composer-require-checker"
-    ],
-    "qa-ci": [
-      "@unit"
-    ],
-    "qa-ci-extended": [
-      "@qa-all-extended"
-    ],
-    "qa-ci-windows": [
-      "@qa-windows"
-    ],
-    "qa-contrib": [
-      "@qa-all"
-    ],
-    "stan": [
-      "@ensure-installed",
-      "phpstan analyse src tests --level max --ansi -c phpstan.neon"
-    ],
-    "unit": [
-      "@ensure-installed",
-      "phpunit --colors=always -c phpunit.xml.dist"
-    ],
-    "unit-coverage": [
-      "@ensure-installed",
-      "phpunit --colors=always -c phpunit.xml.dist --coverage-text --coverage-html covHtml --coverage-clover ./build/logs/clover.xml"
     ]
   }
 }
