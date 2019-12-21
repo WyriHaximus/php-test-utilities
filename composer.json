@@ -12,7 +12,7 @@
     "php": "^7.3",
     "composer/composer": "^1.8",
     "friendsofphp/php-cs-fixer": "^2.14",
-    "icanhazstring/composer-unused": "^0.6.2",
+    "icanhazstring/composer-unused": "^0.6.2 || ^0.7.0",
     "infection/infection": "^0.14.0 || ^0.15.0",
     "jakub-onderka/php-console-highlighter": "^0.4",
     "jakub-onderka/php-parallel-lint": "^1.0.0",
