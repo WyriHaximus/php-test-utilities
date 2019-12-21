@@ -21,7 +21,7 @@
     "nunomaduro/collision": "^3.0",
     "phpstan/phpstan": "^0.11.0",
     "phpunit/phpunit": "^8.0",
-    "psalm/plugin-phpunit": "^0.7",
+    "psalm/plugin-phpunit": "^0.7 || ^0.8",
     "thecodingmachine/safe": "^0.1.16",
     "vimeo/psalm": "^3.4",
     "wyrihaximus/cs-fixer-config": "^1.0.1",
