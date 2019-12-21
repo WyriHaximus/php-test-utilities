@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "da9d063a9c3c60f309df7552089c0ab5",
+    "content-hash": "7955f5ea357066e3d4c1c634743a5424",
     "packages": [
         {
             "name": "amphp/amp",
@@ -870,20 +870,21 @@
         },
         {
             "name": "icanhazstring/composer-unused",
-            "version": "0.6.2",
+            "version": "0.7.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/icanhazstring/composer-unused.git",
-                "reference": "88b59a0672b5f80ac7d4d9aaf595da4256d7b237"
+                "url": "https://github.com/composer-unused/composer-unused.git",
+                "reference": "2ee2746d8fcd02914571d490ddbd17869f695385"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/icanhazstring/composer-unused/zipball/88b59a0672b5f80ac7d4d9aaf595da4256d7b237",
-                "reference": "88b59a0672b5f80ac7d4d9aaf595da4256d7b237",
+                "url": "https://api.github.com/repos/composer-unused/composer-unused/zipball/2ee2746d8fcd02914571d490ddbd17869f695385",
+                "reference": "2ee2746d8fcd02914571d490ddbd17869f695385",
                 "shasum": ""
             },
             "require": {
                 "composer-plugin-api": "^1.1.0",
+                "composer/composer": "^1.9",
                 "ext-json": "*",
                 "nikic/php-parser": "^4.2",
                 "php": ">=7.1",
@@ -892,7 +893,6 @@
                 "symfony/finder": "^4.2"
             },
             "require-dev": {
-                "composer/composer": "^1.8",
                 "ext-zend-opcache": "*",
                 "jangregor/phpstan-prophecy": "^0.3.0",
                 "phpstan/phpstan": "^0.11.4",
@@ -900,6 +900,9 @@
                 "roave/security-advisories": "dev-master",
                 "squizlabs/php_codesniffer": "^3.4"
             },
+            "bin": [
+                "bin/composer-unused"
+            ],
             "type": "composer-plugin",
             "extra": {
                 "class": "Icanhazstring\\Composer\\Unused\\UnusedPlugin"
@@ -920,14 +923,14 @@
                 }
             ],
             "description": "Show unused packages by scanning your code",
-            "homepage": "https://github.com/icanhazstring/composer-unused",
+            "homepage": "https://github.com/composer-unused/composer-unused",
             "keywords": [
                 "composer",
                 "php-parser",
                 "plugin",
                 "unused"
             ],
-            "time": "2019-10-31T17:26:50+00:00"
+            "time": "2019-12-09T08:16:06+00:00"
         },
         {
             "name": "infection/infection",
@@ -1384,6 +1387,7 @@
                 "json",
                 "normalizer"
             ],
+            "abandoned": "ergebnis/composer-json-normalizer",
             "time": "2019-01-09T14:43:16+00:00"
         },
         {
@@ -1449,6 +1453,7 @@
                 "normalizer",
                 "plugin"
             ],
+            "abandoned": "ergebnis/composer-normalize",
             "time": "2019-09-07T10:12:23+00:00"
         },
         {
@@ -1552,6 +1557,7 @@
                 "json",
                 "normalizer"
             ],
+            "abandoned": "ergebnis/json-normalizer",
             "time": "2018-10-07T17:36:39+00:00"
         },
         {
@@ -1601,6 +1607,7 @@
                 "json",
                 "printer"
             ],
+            "abandoned": "ergebnis/json-printer",
             "time": "2018-08-11T23:54:50+00:00"
         },
         {
@@ -1661,6 +1668,7 @@
                 "phpstan-extreme-rules",
                 "phpstan-rules"
             ],
+            "abandoned": "ergebnis/phpstan-rules",
             "time": "2019-05-22T20:35:17+00:00"
         },
         {
@@ -4870,7 +4878,7 @@
         },
         {
             "name": "symfony/finder",
-            "version": "v4.4.1",
+            "version": "v4.4.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/finder.git",
