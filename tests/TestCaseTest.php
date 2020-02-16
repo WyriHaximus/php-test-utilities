@@ -3,21 +3,23 @@
 namespace WyriHaximus\Tests\TestUtilities;
 
 use WyriHaximus\TestUtilities\TestCase;
-use function Safe\mkdir;
-use function Safe\file_put_contents;
+use function random_int;
 use function Safe\file_get_contents;
+use function Safe\file_put_contents;
+use function Safe\mkdir;
+use function time;
+use function uniqid;
+use const DIRECTORY_SEPARATOR;
+use const PHP_INT_MAX;
 
 /**
  * @internal
  */
 final class TestCaseTest extends TestCase
 {
-    const PENTIUM = 66;
+    public const PENTIUM = 66;
 
-    /**
-     * @var string
-     */
-    private $previousTemporaryDirectory = '';
+    private string $previousTemporaryDirectory = '';
 
     protected function setUp(): void
     {
@@ -29,11 +31,14 @@ final class TestCaseTest extends TestCase
         parent::tearDown();
     }
 
+    /**
+     * @return array<int, string>
+     */
     public function provideTemporaryDirectory(): iterable
     {
         for ($i = 0; $i <= self::PENTIUM; $i++) {
             yield [
-                (string) \random_int($i * $i, \PHP_INT_MAX),
+                (string) random_int($i * $i, PHP_INT_MAX),
             ];
         }
     }
@@ -50,11 +55,11 @@ final class TestCaseTest extends TestCase
     {
         static::assertNotSame($this->getTmpDir(), $this->previousTemporaryDirectory);
 
-        $dir = $this->getTmpDir() . $this->getRandomNameSpace() . \DIRECTORY_SEPARATOR;
+        $dir = $this->getTmpDir() . $this->getRandomNameSpace() . DIRECTORY_SEPARATOR;
         mkdir($dir);
 
         for ($i = 0; $i < self::PENTIUM; $i++) {
-            static::assertCount($i, $this->getFilesInDirectory($this->getTmpDir()), (string)$i);
+            static::assertCount($i, $this->getFilesInDirectory($this->getTmpDir()), (string) $i);
             file_put_contents($dir . $i, $int);
         }
 
@@ -66,8 +71,9 @@ final class TestCaseTest extends TestCase
     }
 
     /**
-     * @dataProvider provideTrueFalse
      * @param mixed $bool
+     *
+     * @dataProvider provideTrueFalse
      */
     public function testTrueFalse($bool): void
     {
@@ -81,18 +87,18 @@ final class TestCaseTest extends TestCase
 
     public function testWaitUntilTheNextSecond(): void
     {
-        $now = \time();
+        $now = time();
         static::waitUntilTheNextSecond();
-        self::assertSame($now + 1, \time());
+        self::assertSame($now + 1, time());
     }
 
     public function testRmDir(): void
     {
         $tmpDir = $this->getSysTempDir() .
-            \DIRECTORY_SEPARATOR .
+            DIRECTORY_SEPARATOR .
             'p-a-c-t-' .
-            \uniqid() .
-            \DIRECTORY_SEPARATOR;
+            uniqid() .
+            DIRECTORY_SEPARATOR;
 
         mkdir($tmpDir);
 
