@@ -1320,6 +1320,7 @@
             ],
             "description": "This tool check syntax of PHP files about 20x faster than serial check.",
             "homepage": "https://github.com/JakubOnderka/PHP-Parallel-Lint",
+            "abandoned": "php-parallel-lint/php-parallel-lint",
             "time": "2018-02-24T15:31:20+00:00"
         },
         {
@@ -4572,16 +4573,16 @@
         },
         {
             "name": "thecodingmachine/safe",
-            "version": "v1.0.3",
+            "version": "v1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thecodingmachine/safe.git",
-                "reference": "6662d0bef91fe5d44178cb2c38d51c5d16b65d23"
+                "reference": "f440677bad66c0ef42fa3f875bf05718028af5d3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thecodingmachine/safe/zipball/6662d0bef91fe5d44178cb2c38d51c5d16b65d23",
-                "reference": "6662d0bef91fe5d44178cb2c38d51c5d16b65d23",
+                "url": "https://api.github.com/repos/thecodingmachine/safe/zipball/f440677bad66c0ef42fa3f875bf05718028af5d3",
+                "reference": "f440677bad66c0ef42fa3f875bf05718028af5d3",
                 "shasum": ""
             },
             "require": {
@@ -4700,7 +4701,7 @@
                 "MIT"
             ],
             "description": "PHP core functions that throw exceptions instead of returning FALSE on error",
-            "time": "2020-01-20T08:44:36+00:00"
+            "time": "2020-03-24T13:59:42+00:00"
         },
         {
             "name": "theseer/tokenizer",
