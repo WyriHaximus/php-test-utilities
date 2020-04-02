@@ -13,7 +13,7 @@
     "composer/composer": "^1.8",
     "ergebnis/composer-normalize": "^2.0",
     "icanhazstring/composer-unused": "^0.7",
-    "infection/infection": "^0.15.3",
+    "infection/infection": "^0.15.3 || ^0.16.0",
     "jakub-onderka/php-console-highlighter": "^0.4",
     "jakub-onderka/php-parallel-lint": "^1.0",
     "maglnet/composer-require-checker": "^2.0",
