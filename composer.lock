@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c70c4f3365d1b4c871b63cef5248e5f4",
+    "content-hash": "bfd04c07004c9a7ac8bfcf4dc48f33ff",
     "packages": [
         {
             "name": "amphp/amp",
@@ -1400,6 +1400,7 @@
                 }
             ],
             "description": "Highlight PHP code in terminal",
+            "abandoned": "php-parallel-lint/php-console-highlighter",
             "time": "2018-09-29T18:48:56+00:00"
         },
         {
