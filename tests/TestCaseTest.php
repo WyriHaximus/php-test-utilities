@@ -104,6 +104,6 @@ final class TestCaseTest extends TestCase
 
         self::assertDirectoryExists($tmpDir);
         $this->rmdir($tmpDir);
-        self::assertDirectoryNotExists($tmpDir);
+        self::assertDirectoryDoesNotExist($tmpDir);
     }
 }
