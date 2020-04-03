@@ -18,7 +18,7 @@
     "jakub-onderka/php-parallel-lint": "^1.0",
     "maglnet/composer-require-checker": "^2.0",
     "nunomaduro/collision": "^3.0",
-    "phpstan/phpstan": "^0.12.3",
+    "phpstan/phpstan": "^0.12.14",
     "phpunit/phpunit": "^9.0",
     "psalm/plugin-phpunit": "^0.9",
     "squizlabs/php_codesniffer": "^3.4.2",
