@@ -10,7 +10,7 @@ jobs:
         composer: [lowest, current, highest]
     runs-on: ubuntu-latest
     container:
-      image: wyrihaximusnet/php:${{ matrix.php }}-zts-alpine3.10-dev-root
+      image: wyrihaximusnet/php:${{ matrix.php }}-zts-alpine3.11-dev-root
     steps:
       - uses: actions/checkout@v1
       - name: Cache composer packages
@@ -36,7 +36,7 @@ jobs:
     needs: composer-install
     runs-on: ubuntu-latest
     container:
-      image: wyrihaximusnet/php:${{ matrix.php }}-zts-alpine3.10-dev-root
+      image: wyrihaximusnet/php:${{ matrix.php }}-zts-alpine3.11-dev-root
     steps:
       - uses: actions/checkout@v1
       - name: Cache composer packages
