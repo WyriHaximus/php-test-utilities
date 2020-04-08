@@ -4,6 +4,7 @@ namespace WyriHaximus\TestUtilities;
 
 use FilesystemIterator;
 use PHPUnit\Framework\TestCase as PHPUnitTestCase;
+use Prophecy\PhpUnit\ProphecyTrait;
 use RecursiveDirectoryIterator;
 use RecursiveIteratorIterator;
 use SplFileInfo;
@@ -25,6 +26,8 @@ use const PHP_OS;
 
 abstract class TestCase extends PHPUnitTestCase
 {
+    use ProphecyTrait;
+
     public const DEFAULT_AWAIT_TIMEOUT = 60;
     public const WIN_START             = 0;
     public const WIN_END               = 3;

@@ -18,6 +18,8 @@
     "nunomaduro/collision": "^4.0 || ^3.0",
     "php-parallel-lint/php-console-highlighter": "^0.4.0",
     "php-parallel-lint/php-parallel-lint": "^1.1",
+    "phpspec/prophecy": "^1.10",
+    "phpspec/prophecy-phpunit": "^2.0",
     "phpstan/phpstan": "^0.12.14",
     "phpunit/phpunit": "^9.1",
     "psalm/plugin-phpunit": "^0.9",
