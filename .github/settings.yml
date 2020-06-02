@@ -1,0 +1,73 @@
+repository:
+    private: false
+    has_issues: true
+    has_wiki: false
+    has_downloads: true
+    default_branch: master
+    allow_squash_merge: false
+    allow_merge_commit: true
+    allow_rebase_merge: false
+
+# Labels: define labels for Issues and Pull Requests
+labels:
+    - name: "Dependencies 📦"
+      color: 0025ff
+      description: "Pull requests that update a dependency file"
+    - name: "PHP 🐘"
+      color: 8892BF
+      description: "Hypertext Pre Processor"
+    - name: "Hacktoberfest 🎃"
+      color: 152347
+    - name: "Bug 🐞"
+      color: d73a4a
+      description: "Something isn't working"
+      oldname: bug
+    - name: "Duplicate ♊"
+      color: cfd3d7
+      description: "This issue or pull request already exists"
+      oldname: duplicate
+    - name: "Enhancement ✨"
+      color: a2eeef
+      description: "New feature or request"
+      oldname: enhancement
+    - name: "Good First Issue"
+      color: 7057ff
+      description: "Good for newcomers"
+      oldname: "good first issue"
+    - name: "Help Wanted"
+      color: 008672
+      description: "Extra attention is needed"
+      oldname: "help wanted"
+    - name: Invalid
+      color: e4e669
+      description: "This doesn't seem right"
+      oldname: invalid
+    - name: "Question ❓"
+      color: d876e3
+      description: "Further information is requested"
+      oldname: question
+    - name: "Will not be fixed 🛑"
+      color: ffffff
+      description: "This will not be worked on"
+      oldname: wontfix
+
+branches:
+    - name: master
+      protection:
+          required_pull_request_reviews:
+              required_approving_review_count: 1
+              dismiss_stale_reviews: true
+              require_code_owner_reviews: true
+          # Required. Require status checks to pass before merging. Set to null to disable
+          required_status_checks:
+              # Required. Require branches to be up to date before merging.
+              strict: true
+              # Required. The list of status checks to require in order to merge into this branch
+              contexts: []
+          # Required. Enforce all configured restrictions for administrators. Set to true to enforce required status checks for repository administrators. Set to null to disable.
+          enforce_admins: true
+          # Required. Restrict who can push to this branch. Team and user restrictions are only available for organization-owned repositories. Set to null to disable.
+          restrictions:
+              apps: []
+              users: []
+              teams: []
