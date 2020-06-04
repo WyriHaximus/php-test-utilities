@@ -1,0 +1,35 @@
+name: Set Milestone
+on:
+  pull_request:
+jobs:
+  set-milestone:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: 'Get Previous tag'
+        id: previoustag
+        uses: "WyriHaximus/github-action-get-previous-tag@master"
+        env:
+          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+      - name: 'Get next minor version'
+        id: semvers
+        uses: "WyriHaximus/github-action-next-semvers@master"
+        with:
+          version: ${{ steps.previoustag.outputs.tag }}
+      - name: 'Get Milestones'
+        uses: "WyriHaximus/github-action-get-milestones@master"
+        id: milestones
+        env:
+          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+      - run: printf "::set-output name=number::%s" $(printenv MILESTONES | jq --arg MILESTONE $(printenv MILESTONE) '.[]  | select(.title == $MILESTONE) | .number')
+        id: querymilestone
+        env:
+          MILESTONES: ${{ steps.milestones.outputs.milestones }}
+          MILESTONE: ${{ steps.semvers.outputs.minor }}
+      - name: 'Set Milestone'
+        uses: "WyriHaximus/github-action-set-milestone@master"
+        with:
+          issue_number: ${{ github.event.pull_request.number }}
+          milestone_number: ${{ steps.querymilestone.outputs.number }}
+        env:
+          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
