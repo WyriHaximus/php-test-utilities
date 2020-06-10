@@ -8,3 +8,4 @@ updates:
           - "Dependencies 📦"
           - "PHP 🐘"
       versioning-strategy: "widen"
+      open-pull-requests-limit: 1
