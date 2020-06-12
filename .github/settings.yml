@@ -50,6 +50,9 @@ labels:
       color: ffffff
       description: "This will not be worked on"
       oldname: wontfix
+    - name: "Sponsor Request ❤️"
+      color: fedbf0
+      description: "Issue/PR opened by sponsor"
 
 branches:
     - name: master
