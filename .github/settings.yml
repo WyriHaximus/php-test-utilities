@@ -16,6 +16,9 @@ labels:
     - name: "PHP 🐘"
       color: 8892BF
       description: "Hypertext Pre Processor"
+    - name: "Docker 🐳"
+      color: 0db7ed
+      description: "Pull requests that relate to Docker"
     - name: "Hacktoberfest 🎃"
       color: 152347
     - name: "Bug 🐞"
