@@ -13,12 +13,48 @@ labels:
     - name: "Dependencies 📦"
       color: 0025ff
       description: "Pull requests that update a dependency file"
+    - name: "Image 🖼"
+      color: 00ffff
+    - name: "HTML 👷‍♀️"
+      color: ffffff
+    - name: "CSS 👩‍🎨"
+      color: b3b3b3
+    - name: "JavaScript 🦏"
+      color: ffff00
+    - name: "Go 🐹"
+      color: 00ADD8
+    - name: "JSON 👨‍💼"
+      color: 00ADD8
+    - name: "NEON 🦹‍♂️"
+      color: CE3262
+    - name: "MarkDown 📝"
+      color: 000000
+    - name: "YAML 🍄"
+      color: ff1aff
+    - name: "Templates 🌲"
+      color: 009933
+    - name: "Helm ☸"
+      color: 091C84
+    - name: "Tests 🧪"
+      color: ffe6e6
+    - name: "Source 🔮"
+      color: e6ffe6
+    - name: "Configuration ⚙"
+      color: b3b3cc
     - name: "PHP 🐘"
       color: 8892BF
       description: "Hypertext Pre Processor"
     - name: "Docker 🐳"
       color: 0db7ed
       description: "Pull requests that relate to Docker"
+    - name: "CI 🚧"
+      color: ffff00
+    - name: "Feature 🏗"
+      color: 66ff99
+    - name: "Documentation 📚"
+      color: 6666ff
+    - name: "Security 🕵️‍♀️"
+      color: ff0000
     - name: "Hacktoberfest 🎃"
       color: 152347
     - name: "Bug 🐞"
