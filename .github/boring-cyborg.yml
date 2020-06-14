@@ -9,60 +9,43 @@ labelPRBasedOnFilePath:
     - Dockerfile*
     - .docker/**/*
   "Image 🖼":
-    - *.gif
-    - **/*.gif
-    - *.jpg
-    - **/*.jpg
-    - *.jpeg
-    - **/*.jpeg
-    - *.png
-    - **/*.png
-    - *.webp
-    - **/*.webp
+    - "**/*.gif"
+    - "**/*.jpg"
+    - "**/*.jpeg"
+    - "**/*.png"
+    - "**/*.webp"
   "CSS 👩‍🎨":
-    - *.css
-    - **/*.css
+    - "**/*.css"
   "HTML 👷‍♀️":
-    - *.htm
-    - **/*.htm
-    - *.html
-    - **/*.html
-  "NEON 🦹‍♂️":
-    - *.neon
-    - **/*.neon
+    - "**/*.htm"
+    - "**/*.html"
+  "NEON 🦹‍♂️
+    - "**/*.neon"
   "MarkDown 📝":
-    - *.md
-    - **/*.md
+    - "**/*.md"
   "YAML 🍄":
-    - *.yml
-    - **/*.yml
-    - *.yaml
-    - **/*.yaml
+    - "**/*.yml"
+    - "**/*.yaml"
   "JSON 👨‍💼":
-    - *.json
-    - **/*.json
+    - "**/*.json"
   "Go 🐹":
-    - *.go
-    - **/*.go
+    - "**/*.go"
   "JavaScript 🦏":
-    - *.js
-    - **/*.js
+    - "**/*.js"
     - package.json
     - package-lock.json
     - yarn.lock
   "PHP 🐘":
-    - *.php
-    - **/*.php
+    - "**/*.php"
     - composer.*
   "Configuration ⚙":
     - .github/*
   "CI 🚧":
     - .github/workflows/*
+    - .scrutinizer.yml
   "Templates 🌲":
-    - *.twig
-    - **/*.twig
-    - *.tpl
-    - **/*.tpl
+    - "**/*.twig"
+    - "**/*.tpl"
   "Helm ☸":
     - .helm/**/*
   "Tests 🧪":
@@ -71,4 +54,4 @@ labelPRBasedOnFilePath:
     - src/**/*
 
 labelerFlags:
-    labelOnPRUpdates: true
+  labelOnPRUpdates: true
