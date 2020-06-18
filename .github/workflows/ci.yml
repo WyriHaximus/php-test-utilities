@@ -7,7 +7,7 @@ jobs:
    runs-on: ubuntu-latest
    steps:
      - name: Lint Code Base
-       uses: github/super-linter@v2.0.0
+       uses: github/super-linter@v2
   composer-install:
     strategy:
       matrix:
