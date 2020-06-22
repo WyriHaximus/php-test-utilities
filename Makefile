@@ -12,7 +12,7 @@ else
 		"wyrihaximusnet/php:7.4-zts-alpine3.11-dev"
 endif
 
-all: lint cs-fix cs stan psalm unit infection composer-require-checker composer-unused
+all: lint cs-fix cs stan psalm unit infection composer-require-checker composer-unused backward-compatibility-check-ci
 
 lint:
 	$(DOCKER_RUN) vendor/bin/parallel-lint --exclude vendor .
@@ -43,3 +43,6 @@ composer-require-checker:
 
 composer-unused:
 	$(DOCKER_RUN) composer unused --ansi
+
+backward-compatibility-check:
+	$(DOCKER_RUN) vendor/bin/roave-backward-compatibility-check || true
