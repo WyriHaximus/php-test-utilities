@@ -1,14 +1,18 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace WyriHaximus\Tests\TestUtilities;
 
 use WyriHaximus\TestUtilities\TestCase;
+
 use function random_int;
 use function Safe\file_get_contents;
 use function Safe\file_put_contents;
 use function Safe\mkdir;
 use function time;
 use function uniqid;
+
 use const DIRECTORY_SEPARATOR;
 use const PHP_INT_MAX;
 

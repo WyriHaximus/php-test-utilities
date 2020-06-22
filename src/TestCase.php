@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace WyriHaximus\TestUtilities;
 
@@ -8,6 +10,7 @@ use Prophecy\PhpUnit\ProphecyTrait;
 use RecursiveDirectoryIterator;
 use RecursiveIteratorIterator;
 use SplFileInfo;
+
 use function assert;
 use function file_exists;
 use function is_dir;
@@ -21,6 +24,7 @@ use function sys_get_temp_dir;
 use function time;
 use function uniqid;
 use function usleep;
+
 use const DIRECTORY_SEPARATOR;
 use const PHP_OS;
 
