@@ -65,7 +65,6 @@ jobs:
           MILESTONE_DESCRIPTION: ${{ github.event.milestone.description }}
           CHANGELOG: ${{ needs.generate-changelog.outputs.changelog }}
       - name: Create Reference Release with Changelog
-        if: ${{ matrix.version == env.MILESTONE }}
         uses: fleskesvor/create-release@feature/support-target-commitish
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
