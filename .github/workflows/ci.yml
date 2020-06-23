@@ -38,7 +38,7 @@ jobs:
       matrix:
         php: [7.4]
         composer: [lowest, current, highest]
-        qa: [lint, cs, stan, psalm, unit-ci, infection, composer-require-checker, composer-unused]
+        qa: [lint, cs, stan, psalm, unit-ci, infection, composer-require-checker, composer-unused, backward-compatibility-check]
     needs: composer-install
     runs-on: ubuntu-latest
     container:
@@ -59,4 +59,7 @@ jobs:
       - name: Install Dependencies
         run: (test -f vendor && true ) || composer update --ansi --no-progress --no-interaction --prefer-dist -o
         if: matrix.composer == 'highest'
+      - name: Fetch Tags
+        run: git fetch --depth=1 origin +refs/tags/*:refs/tags/*
+        if: matrix.qa == 'backward-compatibility-check'
       - run: make ${{ matrix.qa }}
