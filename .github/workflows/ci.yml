@@ -3,11 +3,11 @@ on:
   push:
   pull_request:
 jobs:
-  lint:  
+  lint:
    runs-on: ubuntu-latest
    steps:
      - name: Lint Code Base
-       uses: github/super-linter@v2.0.0
+       uses: docker://github/super-linter:v2.2.0
   composer-install:
     strategy:
       matrix:
