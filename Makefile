@@ -44,9 +44,7 @@ psalm: ## Run static analysis (Psalm)
 
 unit: ## Run tests
 	$(DOCKER_RUN) vendor/bin/phpunit --colors=always -c phpunit.xml.dist --coverage-text --coverage-html covHtml --coverage-clover ./build/logs/clover.xml
-
-unit-ci: unit
-	if [ -f ./build/logs/clover.xml ]; then wget https://scrutinizer-ci.com/ocular.phar && sleep 3 && php ocular.phar code-coverage:upload --format=php-clover ./build/logs/clover.xml; fi
+	$(DOCKER_RUN) test -n "$(COVERALLS_REPO_TOKEN)" && test -n "$(COVERALLS_RUN_LOCALLY)" && test -f ./build/logs/clover.xml && vendor/bin/php-coveralls -v --coverage_clover ./build/logs/clover.xml --json_path ./build/logs/coveralls-upload.json || true
 
 infection: ## Run mutation testing
 	$(DOCKER_RUN) vendor/bin/infection --ansi --min-msi=100 --min-covered-msi=100 --threads=$(shell nproc)

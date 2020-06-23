@@ -3,7 +3,7 @@
 ![Continuous Integration](https://github.com/wyrihaximus/php-test-utilities/workflows/Continuous%20Integration/badge.svg)
 [![Latest Stable Version](https://poser.pugx.org/wyrihaximus/test-utilities/v/stable.png)](https://packagist.org/packages/wyrihaximus/test-utilities)
 [![Total Downloads](https://poser.pugx.org/wyrihaximus/test-utilities/downloads.png)](https://packagist.org/packages/wyrihaximus/test-utilities/stats)
-[![Code Coverage](https://scrutinizer-ci.com/g/WyriHaximus/php-test-utilities/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/WyriHaximus/php-test-utilities/?branch=master)
+[![Code Coverage](https://coveralls.io/repos/github/WyriHaximus/php-test-utilities/badge.svg?branchmaster)](https://coveralls.io/github/WyriHaximus/php-test-utilities?branch=master)
 [![Type Coverage](https://shepherd.dev/github/WyriHaximus/php-test-utilities/coverage.svg)](https://shepherd.dev/github/WyriHaximus/php-test-utilities)
 [![License](https://poser.pugx.org/wyrihaximus/test-utilities/license.png)](https://packagist.org/packages/wyrihaximus/test-utilities)
 
