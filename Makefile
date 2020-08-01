@@ -22,7 +22,7 @@ else
 		"wyrihaximusnet/php:7.4-nts-alpine3.12-dev"
 endif
 
-all: syntax-php cs-fix cs stan psalm unit infection composer-require-checker composer-unused backward-compatibility-check ## Runs everything
+all: syntax-php cs-fix cs stan psalm unit infection composer-require-checker composer-unused backward-compatibility-check
 
 syntax-php: ## Lint PHP syntax
 	$(DOCKER_RUN) vendor/bin/parallel-lint --exclude vendor .
@@ -57,6 +57,10 @@ composer-unused: ## Ensure we don't require any package we don't use in this pac
 backward-compatibility-check: ## Check code for backwards incompatible changes
 	$(DOCKER_RUN) vendor/bin/roave-backward-compatibility-check || true
 
+task-list-ci:
+	@grep -E '^[a-zA-Z0-9_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "%s\n", $$1}' | jq --raw-input --slurp -c 'split("\n")| .[0:-1]'
+
 help:
 	@printf "\033[33mUsage:\033[0m\n  make [target]\n\n\033[33mTargets:\033[0m\n"
+	@printf "  \033[32m%-32s\033[0m %s\n"  "all" "Runs everything"
 	@grep -E '^[a-zA-Z0-9_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "  \033[32m%-32s\033[0m %s\n", $$1, $$2}'
