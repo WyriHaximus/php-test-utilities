@@ -76,6 +76,6 @@ jobs:
         run: (test -f vendor && true ) || composer update --ansi --no-progress --no-interaction --prefer-dist -o
         if: matrix.composer == 'highest'
       - name: Fetch Tags
-        run: git fetch --depth=1 origin +refs/tags/*:refs/tags/*
+        run: git fetch --depth=1 origin +refs/tags/*:refs/tags/* || true
         if: matrix.check == 'backward-compatibility-check'
       - run: make ${{ matrix.check }}
