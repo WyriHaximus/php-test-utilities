@@ -4,6 +4,7 @@ SHELL=bash
 .PHONY: *
 
 DOCKER_CGROUP:=$(shell cat /proc/1/cgroup | grep docker | wc -l)
+COMPOSER_CACHE_DIR=$(shell composer config --global cache-dir -q || echo ${HOME}/.composer/cache)
 
 ifneq ("$(wildcard /.dockerenv)","")
     IN_DOCKER=TRUE
@@ -18,6 +19,7 @@ ifeq ("$(IN_DOCKER)","TRUE")
 else
 	DOCKER_RUN=docker run --rm -it \
 		-v "`pwd`:`pwd`" \
+		-v "${COMPOSER_CACHE_DIR}:/home/app/.composer/cache" \
 		-w "`pwd`" \
 		"wyrihaximusnet/php:7.4-nts-alpine3.12-dev"
 endif
