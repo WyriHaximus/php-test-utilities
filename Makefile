@@ -58,6 +58,9 @@ composer-unused: ## Ensure we don't require any package we don't use in this pac
 backward-compatibility-check: ## Check code for backwards incompatible changes
 	$(DOCKER_RUN) vendor/bin/roave-backward-compatibility-check || true
 
+shell: ## Provides Shell access in the expected environment ###
+	$(DOCKER_RUN) ash
+
 task-list-ci:
 	@grep -E '^[a-zA-Z0-9_-]+:.*?## .*$$' $(MAKEFILE_LIST) | grep -v "###" | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "%s\n", $$1}' | jq --raw-input --slurp -c 'split("\n")| .[0:-1]'
 
