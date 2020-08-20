@@ -24,7 +24,7 @@ else
 		"wyrihaximusnet/php:7.4-nts-alpine3.12-dev"
 endif
 
-all:
+all: ## Runs everything ###
 	@grep -E '^[a-zA-Z0-9_-]+:.*?## .*$$' $(MAKEFILE_LIST) | grep -v "###" | awk 'BEGIN {FS = ":.*?## "}; {printf "%s\n", $$1}' | xargs --open-tty $(MAKE)
 
 syntax-php: ## Lint PHP syntax
@@ -63,10 +63,9 @@ backward-compatibility-check: ## Check code for backwards incompatible changes
 shell: ## Provides Shell access in the expected environment ###
 	$(DOCKER_RUN) ash
 
-task-list-ci:
+task-list-ci: ## CI: Generate a JSON array of jobs to run, matches the commands run when running `make (|all)` ###
 	@grep -E '^[a-zA-Z0-9_-]+:.*?## .*$$' $(MAKEFILE_LIST) | grep -v "###" | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "%s\n", $$1}' | jq --raw-input --slurp -c 'split("\n")| .[0:-1]'
 
-help:
+help: ## Show this help ###
 	@printf "\033[33mUsage:\033[0m\n  make [target]\n\n\033[33mTargets:\033[0m\n"
-	@printf "  \033[32m%-32s\033[0m %s\n"  "all" "Runs everything"
 	@grep -E '^[a-zA-Z0-9_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "  \033[32m%-32s\033[0m %s\n", $$1, $$2}' | tr -d '#'
