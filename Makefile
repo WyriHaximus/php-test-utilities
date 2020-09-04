@@ -42,12 +42,12 @@ stan: ## Run static analysis (PHPStan)
 psalm: ## Run static analysis (Psalm)
 	$(DOCKER_RUN) vendor/bin/psalm --threads=$(shell nproc) --shepherd --stats
 
-unit: ## Run tests
+unit-testing: ## Run tests
 	$(DOCKER_RUN) vendor/bin/phpunit --colors=always -c phpunit.xml.dist --coverage-text --coverage-html covHtml --coverage-clover ./build/logs/clover.xml
 	$(DOCKER_RUN) test -n "$(COVERALLS_REPO_TOKEN)" && test -n "$(COVERALLS_RUN_LOCALLY)" && test -f ./build/logs/clover.xml && vendor/bin/php-coveralls -v --coverage_clover ./build/logs/clover.xml --json_path ./build/logs/coveralls-upload.json || true
 
-infection: ## Run mutation testing
-	$(DOCKER_RUN) vendor/bin/infection --ansi --min-msi=100 --min-covered-msi=100 --threads=$(shell nproc)
+mutation-testing: ## Run mutation testing
+	$(DOCKER_RUN) vendor/bin/roave-infection-static-analysis-plugin --ansi --min-msi=100 --min-covered-msi=100 --threads=$(shell nproc)
 
 composer-require-checker: ## Ensure we require every package used in this package directly
 	$(DOCKER_RUN) vendor/bin/composer-require-checker --ignore-parse-errors --ansi -vvv --config-file=composer-require-checker.json
