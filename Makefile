@@ -31,7 +31,7 @@ syntax-php: ## Lint PHP syntax
 	$(DOCKER_RUN) vendor/bin/parallel-lint --exclude vendor .
 
 cs-fix: ## Fix any automatically fixable code style issues
-	$(DOCKER_RUN) vendor/bin/phpcbf --parallel=$(shell nproc)
+	$(DOCKER_RUN) vendor/bin/phpcbf --parallel=$(shell nproc) || $(DOCKER_RUN) vendor/bin/phpcbf --parallel=$(shell nproc) || $(DOCKER_RUN) vendor/bin/phpcbf --parallel=$(shell nproc) -vvvv
 
 cs: ## Check the code for code style issues
 	$(DOCKER_RUN) vendor/bin/phpcs --parallel=$(shell nproc)
