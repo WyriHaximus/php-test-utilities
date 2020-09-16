@@ -1559,16 +1559,16 @@
         },
         {
             "name": "icanhazstring/composer-unused",
-            "version": "0.7.3",
+            "version": "0.7.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer-unused/composer-unused.git",
-                "reference": "f40efa620147b280736f25af8e98e8e647bc6137"
+                "reference": "a059112edcaa776f14c5a30a37b461d6bea5aecc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer-unused/composer-unused/zipball/f40efa620147b280736f25af8e98e8e647bc6137",
-                "reference": "f40efa620147b280736f25af8e98e8e647bc6137",
+                "url": "https://api.github.com/repos/composer-unused/composer-unused/zipball/a059112edcaa776f14c5a30a37b461d6bea5aecc",
+                "reference": "a059112edcaa776f14c5a30a37b461d6bea5aecc",
                 "shasum": ""
             },
             "require": {
@@ -1582,6 +1582,7 @@
                 "symfony/finder": "^4.2 || ^5.0"
             },
             "require-dev": {
+                "ext-ds": "*",
                 "ext-zend-opcache": "*",
                 "jangregor/phpstan-prophecy": "^0.6.2",
                 "phpspec/prophecy-phpunit": "^2.0",
@@ -1595,7 +1596,10 @@
             ],
             "type": "composer-plugin",
             "extra": {
-                "class": "Icanhazstring\\Composer\\Unused\\UnusedPlugin"
+                "class": "Icanhazstring\\Composer\\Unused\\UnusedPlugin",
+                "branch-alias": {
+                    "dev-main": "0.8.x-dev"
+                }
             },
             "autoload": {
                 "psr-4": {
@@ -1620,7 +1624,7 @@
                 "plugin",
                 "unused"
             ],
-            "time": "2020-05-21T14:37:51+00:00"
+            "time": "2020-09-15T15:27:55+00:00"
         },
         {
             "name": "infection/abstract-testframework-adapter",
