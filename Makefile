@@ -31,10 +31,10 @@ syntax-php: ## Lint PHP syntax
 	$(DOCKER_RUN) vendor/bin/parallel-lint --exclude vendor .
 
 cs-fix: ## Fix any automatically fixable code style issues
-	$(DOCKER_RUN) vendor/bin/phpcbf --parallel=$(shell nproc) || $(DOCKER_RUN) vendor/bin/phpcbf --parallel=$(shell nproc) || $(DOCKER_RUN) vendor/bin/phpcbf --parallel=$(shell nproc) -vvvv
+	$(DOCKER_RUN) vendor/bin/phpcbf --parallel=$(shell nproc) --cache=./var/.phpcs.cache.json || $(DOCKER_RUN) vendor/bin/phpcbf --parallel=$(shell nproc) --cache=./var/.phpcs.cache.json || $(DOCKER_RUN) vendor/bin/phpcbf --parallel=$(shell nproc) --cache=./var/.phpcs.cache.json -vvvv
 
 cs: ## Check the code for code style issues
-	$(DOCKER_RUN) vendor/bin/phpcs --parallel=$(shell nproc)
+	$(DOCKER_RUN) vendor/bin/phpcs --parallel=$(shell nproc) --cache=./var/.phpcs.cache.json
 
 stan: ## Run static analysis (PHPStan)
 	$(DOCKER_RUN) vendor/bin/phpstan analyse src tests --level max --ansi -c phpstan.neon
@@ -43,8 +43,8 @@ psalm: ## Run static analysis (Psalm)
 	$(DOCKER_RUN) vendor/bin/psalm --threads=$(shell nproc) --shepherd --stats
 
 unit-testing: ## Run tests
-	$(DOCKER_RUN) vendor/bin/phpunit --colors=always -c phpunit.xml.dist --coverage-text --coverage-html covHtml --coverage-clover ./build/logs/clover.xml
-	$(DOCKER_RUN) test -n "$(COVERALLS_REPO_TOKEN)" && test -n "$(COVERALLS_RUN_LOCALLY)" && test -f ./build/logs/clover.xml && vendor/bin/php-coveralls -v --coverage_clover ./build/logs/clover.xml --json_path ./build/logs/coveralls-upload.json || true
+	$(DOCKER_RUN) vendor/bin/phpunit --colors=always -c phpunit.xml.dist --coverage-text --coverage-html ./var/tests-unit-coverage-html --coverage-clover ./var/tests-unit-clover-coverage.xml
+	$(DOCKER_RUN) test -n "$(COVERALLS_REPO_TOKEN)" && test -n "$(COVERALLS_RUN_LOCALLY)" && test -f ./var/tests-unit-clover-coverage.xml && vendor/bin/php-coveralls -v --coverage_clover ./build/logs/clover.xml --json_path ./var/tests-unit-clover-coverage-upload.json || true
 
 mutation-testing: ## Run mutation testing
 	$(DOCKER_RUN) vendor/bin/roave-infection-static-analysis-plugin --ansi --min-msi=100 --min-covered-msi=100 --threads=$(shell nproc)
