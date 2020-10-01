@@ -57,10 +57,10 @@ unit-testing-raw: ## Run tests ###
 	test -n "$(COVERALLS_REPO_TOKEN)" && test -n "$(COVERALLS_RUN_LOCALLY)" && test -f ./var/tests-unit-clover-coverage.xml && ./vendor/bin/php-coveralls -v --coverage_clover ./build/logs/clover.xml --json_path ./var/tests-unit-clover-coverage-upload.json || true
 
 mutation-testing: ## Run mutation testing
-	$(DOCKER_RUN) vendor/bin/roave-infection-static-analysis-plugin --ansi --min-msi=100 --min-covered-msi=100 --threads=$(THREADS) --ignore-msi-with-no-mutations --psalm-config etc/qa/psalm.xml || vendor/bin/roave-infection-static-analysis-plugin --ansi --min-msi=100 --min-covered-msi=100 --threads=$(THREADS) --ignore-msi-with-no-mutations || (cat ./var/infection.log && false)
+	$(DOCKER_RUN) vendor/bin/roave-infection-static-analysis-plugin --ansi  --configuration=./etc/qa/ --threads=$(THREADS) --psalm-config etc/qa/psalm.xml || vendor/bin/roave-infection-static-analysis-plugin --ansi  --configuration=./etc/qa/ --threads=$(THREADS) || (cat ./var/infection.log && false)
 
 mutation-testing-raw: ## Run mutation testing ###
-	php vendor/roave/infection-static-analysis-plugin/bin/roave-infection-static-analysis-plugin --ansi --min-msi=100 --min-covered-msi=100 --threads=$(THREADS) --ignore-msi-with-no-mutations --psalm-config etc/qa/psalm.xml || php vendor/roave/infection-static-analysis-plugin/bin/roave-infection-static-analysis-plugin --ansi --min-msi=100 --min-covered-msi=100 --threads=$(THREADS) --ignore-msi-with-no-mutations || (cat ./var/infection.log && false)
+	php vendor/roave/infection-static-analysis-plugin/bin/roave-infection-static-analysis-plugin --ansi --configuration=./etc/qa/ --threads=$(THREADS) --psalm-config etc/qa/psalm.xml || php vendor/roave/infection-static-analysis-plugin/bin/roave-infection-static-analysis-plugin --ansi  --configuration=./etc/qa/ --threads=$(THREADS) || (cat ./var/infection.log && false)
 
 composer-require-checker: ## Ensure we require every package used in this package directly
 	$(DOCKER_RUN) vendor/bin/composer-require-checker --ignore-parse-errors --ansi -vvv --config-file=./etc/qa/composer-require-checker.json
