@@ -71,10 +71,7 @@
   "autoload-dev": {
     "psr-4": {
       "WyriHaximus\\Tests\\TestUtilities\\": "tests/"
-    },
-    "files": [
-      "tests/bootstrap.php"
-    ]
+    }
   },
   "scripts": {
     "post-install-cmd": [
