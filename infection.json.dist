@@ -54,5 +54,8 @@
                 "WyriHaximus\\TestUtilities\\TestCase::getSysTempDir"
             ]
         }
+    },
+    "phpUnit": {
+        "configDir": "./etc/qa/"
     }
 }
