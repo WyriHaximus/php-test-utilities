@@ -32,6 +32,9 @@
     "wyrihaximus/coding-standard": "^2.0.1",
     "wyrihaximus/phpstan-rules-wrapper": "^1.2"
   },
+  "conflict": {
+    "nikic/php-parser": ">=4.7"
+  },
   "config": {
     "platform": {
       "php": "7.4.7"
