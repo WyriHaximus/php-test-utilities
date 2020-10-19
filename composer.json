@@ -33,7 +33,7 @@
     "wyrihaximus/phpstan-rules-wrapper": "^1.2"
   },
   "conflict": {
-    "nikic/php-parser": ">=4.7"
+    "nikic/php-parser": ">=4.10"
   },
   "config": {
     "platform": {
