@@ -4,24 +4,25 @@ SHELL=bash
 .PHONY: *
 
 DOCKER_CGROUP:=$(shell cat /proc/1/cgroup | grep docker | wc -l)
-COMPOSER_CACHE_DIR=$(shell composer config --global cache-dir -q || echo ${HOME}/.composer/cache)
+COMPOSER_CACHE_DIR:=$(shell composer config --global cache-dir -q || echo ${HOME}/.composer/cache)
 
 ifneq ("$(wildcard /.dockerenv)","")
-    IN_DOCKER=TRUE
+    IN_DOCKER:=TRUE
 else ifneq ("$(DOCKER_CGROUP)","0")
-	IN_DOCKER=TRUE
+	IN_DOCKER:=TRUE
 else
-    IN_DOCKER=FALSe
+    IN_DOCKER:=FALSE
 endif
 
 ifeq ("$(IN_DOCKER)","TRUE")
-	DOCKER_RUN=
+	DOCKER_RUN:=
 else
-	DOCKER_RUN=docker run --rm -it \
+	PHP_VERSION:=$(shell docker run --rm -v "`pwd`:`pwd`" jess/jq jq -r -c '.config.platform.php' "`pwd`/composer.json" | php -r "echo str_replace('|', '.', explode('.', implode('|', explode('.', stream_get_contents(STDIN), 2)), 2)[0]);")
+	DOCKER_RUN:=docker run --rm -it \
 		-v "`pwd`:`pwd`" \
 		-v "${COMPOSER_CACHE_DIR}:/home/app/.composer/cache" \
 		-w "`pwd`" \
-		"wyrihaximusnet/php:7.4-nts-alpine3.12-dev"
+		"wyrihaximusnet/php:${PHP_VERSION}-nts-alpine3.12-dev"
 endif
 
 all: ## Runs everything ###
