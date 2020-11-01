@@ -6,13 +6,14 @@
     xsi:schemaLocation="https://getpsalm.org/schema/config ../../vendor/vimeo/psalm/config.xsd"
 >
     <projectFiles>
-        <directory name="src"/>
+        <directory name="../../src"/>
         <ignoreFiles>
-            <directory name="vendor"/>
+            <directory name="../../vendor"/>
         </ignoreFiles>
     </projectFiles>
 
     <issueHandlers>
+
         <LessSpecificReturnType errorLevel="error"/>
 
         <!-- level 3 issues - slightly lazy code writing, but provably low false-negatives -->
@@ -32,7 +33,6 @@
         <MissingReturnType errorLevel="error"/>
         <MissingPropertyType errorLevel="error"/>
         <InvalidDocblock errorLevel="error"/>
-        <MisplacedRequiredParam errorLevel="error"/>
 
         <PropertyNotSetInConstructor errorLevel="error"/>
         <MissingConstructor errorLevel="error"/>
