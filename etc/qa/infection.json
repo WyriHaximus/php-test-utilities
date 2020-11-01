@@ -56,6 +56,6 @@
         }
     },
     "phpUnit": {
-        "configDir": "./etc/qa/"
+        "configDir": "./"
     }
 }
