@@ -22,7 +22,7 @@ else
 		-v "`pwd`:`pwd`" \
 		-v "${COMPOSER_CACHE_DIR}:/home/app/.composer/cache" \
 		-w "`pwd`" \
-		"wyrihaximusnet/php:${PHP_VERSION}-nts-alpine3.12-dev"
+		"ghcr.io/wyrihaximusnet/php:${PHP_VERSION}-nts-alpine3.12-dev"
 endif
 
 all: ## Runs everything ###
