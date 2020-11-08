@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e5b0c71088cf7d1f47e94c943e5345cc",
+    "content-hash": "cebd5183c1ad442e3be7fca9d4c11a84",
     "packages": [
         {
             "name": "amphp/amp",
@@ -2207,6 +2207,47 @@
                 "requirements"
             ],
             "time": "2019-12-28T13:49:20+00:00"
+        },
+        {
+            "name": "mheap/phpunit-github-actions-printer",
+            "version": "v1.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mheap/phpunit-github-actions-printer.git",
+                "reference": "93107fd9eec7e5bffd122be8f1e6988cc525ac59"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mheap/phpunit-github-actions-printer/zipball/93107fd9eec7e5bffd122be8f1e6988cc525ac59",
+                "reference": "93107fd9eec7e5bffd122be8f1e6988cc525ac59",
+                "shasum": ""
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^9",
+                "squizlabs/php_codesniffer": "3.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "mheap\\GithubActionsReporter\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Michael Heap",
+                    "email": "m@michaelheap.com"
+                }
+            ],
+            "description": "PHPUnit Printer for adding test failures as annotations on GitHub Actions",
+            "support": {
+                "issues": "https://github.com/mheap/phpunit-github-actions-printer/issues",
+                "source": "https://github.com/mheap/phpunit-github-actions-printer/tree/v1.4.0"
+            },
+            "time": "2020-09-13T20:37:37+00:00"
         },
         {
             "name": "myclabs/deep-copy",
