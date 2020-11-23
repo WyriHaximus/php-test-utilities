@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c3cca3e7996bcfa9ad4144734f86ac9a",
+    "content-hash": "6504c0ed28ac535ca6554cdf03d55f9a",
     "packages": [
         {
             "name": "amphp/amp",
@@ -7791,16 +7791,16 @@
         },
         {
             "name": "wyrihaximus/coding-standard",
-            "version": "2.1.0",
+            "version": "2.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/WyriHaximus/php-coding-standard.git",
-                "reference": "af85c0c4c82b97a42756eaf880d26a19625c431a"
+                "reference": "a8700cabe22e31896ea8e36806d6777d17506302"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WyriHaximus/php-coding-standard/zipball/af85c0c4c82b97a42756eaf880d26a19625c431a",
-                "reference": "af85c0c4c82b97a42756eaf880d26a19625c431a",
+                "url": "https://api.github.com/repos/WyriHaximus/php-coding-standard/zipball/a8700cabe22e31896ea8e36806d6777d17506302",
+                "reference": "a8700cabe22e31896ea8e36806d6777d17506302",
                 "shasum": ""
             },
             "require": {
@@ -7818,7 +7818,7 @@
             "description": "WyriHaximus Coding Standard",
             "support": {
                 "issues": "https://github.com/WyriHaximus/php-coding-standard/issues",
-                "source": "https://github.com/WyriHaximus/php-coding-standard/tree/2.1.0"
+                "source": "https://github.com/WyriHaximus/php-coding-standard/tree/2.2.0"
             },
             "funding": [
                 {
@@ -7826,7 +7826,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2020-10-13T19:22:48+00:00"
+            "time": "2020-11-23T16:02:45+00:00"
         },
         {
             "name": "wyrihaximus/phpstan-rules-wrapper",
