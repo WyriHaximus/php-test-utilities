@@ -32,6 +32,9 @@
     "wyrihaximus/coding-standard": "^2.2.0",
     "wyrihaximus/phpstan-rules-wrapper": "^1.2.2"
   },
+  "conflict": {
+    "beberlei/assert": ">= 3.3"
+  },
   "config": {
     "platform": {
       "php": "7.4.7"
