@@ -3,6 +3,15 @@ on:
   push:
   pull_request:
 jobs:
+  generate-versions-strategy:
+    name: Generate Versions
+    runs-on: ubuntu-latest
+    outputs:
+      version: ${{ steps.generate-versions-strategy.outputs.version }}
+    steps:
+      - uses: actions/checkout@v1
+      - id: generate-versions-strategy
+        uses: WyriHaximus/github-action-composer-php-versions-in-range@main
   generate-checks-strategy:
     name: Generate Checks
     runs-on: ubuntu-latest
@@ -24,12 +33,14 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        php: [7.4, 8.0-rc]
+        php: ${{ fromJson(needs.generate-versions-strategy.outputs.version) }}
         composer: [lowest, current, highest]
-    needs: lint
+    needs:
+      - lint
+      - generate-versions-strategy
     runs-on: ubuntu-latest
     container:
-      image: ghcr.io/wyrihaximusnet/php:${{ matrix.php }}-nts-alpine3.12-dev-root
+      image: ghcr.io/wyrihaximusnet/php:${{ matrix.php }}-nts-buster-dev-root
     steps:
       - uses: actions/checkout@v1
       - name: Cache composer packages
@@ -50,15 +61,16 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        php: [7.4, 8.0-rc]
+        php: ${{ fromJson(needs.generate-versions-strategy.outputs.version) }}
         composer: [lowest, current, highest]
         check: ${{ fromJson(needs.generate-checks-strategy.outputs.check) }}
     needs:
       - composer-install
       - generate-checks-strategy
+      - generate-versions-strategy
     runs-on: ubuntu-latest
     container:
-      image: ghcr.io/wyrihaximusnet/php:${{ matrix.php }}-nts-alpine3.12-dev-root
+      image: ghcr.io/wyrihaximusnet/php:${{ matrix.php }}-nts-buster-dev-root
     steps:
       - uses: actions/checkout@v1
       - name: Cache composer packages
