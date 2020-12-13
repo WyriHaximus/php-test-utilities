@@ -48,7 +48,7 @@ unit-testing: ## Run tests
 	$(DOCKER_RUN) test -n "$(COVERALLS_REPO_TOKEN)" && test -n "$(COVERALLS_RUN_LOCALLY)" && test -f ./var/tests-unit-clover-coverage.xml && vendor/bin/php-coveralls -v --coverage_clover ./build/logs/clover.xml --json_path ./var/tests-unit-clover-coverage-upload.json || true
 
 mutation-testing: ## Run mutation testing
-	$(DOCKER_RUN) vendor/bin/roave-infection-static-analysis-plugin --ansi --min-msi=100 --min-covered-msi=100 --threads=$(shell nproc) --ignore-msi-with-no-mutations
+	$(DOCKER_RUN) vendor/bin/roave-infection-static-analysis-plugin --ansi --min-msi=100 --min-covered-msi=100 --threads=$(shell nproc) --ignore-msi-with-no-mutations || (cat ./var/infection.log && false)
 
 composer-require-checker: ## Ensure we require every package used in this package directly
 	$(DOCKER_RUN) vendor/bin/composer-require-checker --ignore-parse-errors --ansi -vvv --config-file=./etc/qa/composer-require-checker.json
