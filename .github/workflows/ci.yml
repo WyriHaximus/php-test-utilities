@@ -15,6 +15,8 @@ jobs:
   generate-checks-strategy:
     name: Generate Checks
     runs-on: ubuntu-latest
+    needs: 
+      - composer-install
     outputs:
       check: ${{ steps.generate-checks-strategy.outputs.check }}
     steps:
