@@ -3,25 +3,25 @@ on:
   push:
   pull_request:
 jobs:
-  generate-versions-strategy:
-    name: Generate Versions
+  supported-versions-matrix:
+    name: Supported Versions Matrix
     runs-on: ubuntu-latest
     outputs:
-      version: ${{ steps.generate-versions-strategy.outputs.version }}
+      version: ${{ steps.supported-versions-matrix.outputs.version }}
     steps:
       - uses: actions/checkout@v1
-      - id: generate-versions-strategy
+      - id: supported-versions-matrix
         uses: WyriHaximus/github-action-composer-php-versions-in-range@main
-  generate-checks-strategy:
-    name: Generate Checks
+  supported-checks-matrix:
+    name: Supported Checks Matrix
     runs-on: ubuntu-latest
     needs: 
       - composer-install
     outputs:
-      check: ${{ steps.generate-checks-strategy.outputs.check }}
+      check: ${{ steps.supported-checks-matrix.outputs.check }}
     steps:
       - uses: actions/checkout@v1
-      - id: generate-checks-strategy
+      - id: supported-checks-matrix
         name: Generate check
         run: |
           printf "Checks found: %s\r\n" $(make task-list-ci)
@@ -30,10 +30,10 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        php: ${{ fromJson(needs.generate-versions-strategy.outputs.version) }}
+        php: ${{ fromJson(needs.supported-versions-matrix.outputs.version) }}
         composer: [lowest, current, highest]
     needs:
-      - generate-versions-strategy
+      - supported-versions-matrix
     runs-on: ubuntu-latest
     container:
       image: ghcr.io/wyrihaximusnet/php:${{ matrix.php }}-nts-buster-dev-root
@@ -57,13 +57,13 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        php: ${{ fromJson(needs.generate-versions-strategy.outputs.version) }}
+        php: ${{ fromJson(needs.supported-versions-matrix.outputs.version) }}
         composer: [lowest, current, highest]
-        check: ${{ fromJson(needs.generate-checks-strategy.outputs.check) }}
+        check: ${{ fromJson(needs.supported-checks-matrix.outputs.check) }}
     needs:
       - composer-install
-      - generate-checks-strategy
-      - generate-versions-strategy
+      - supported-checks-matrix
+      - supported-versions-matrix
     runs-on: ubuntu-latest
     container:
       image: ghcr.io/wyrihaximusnet/php:${{ matrix.php }}-nts-buster-dev-root
