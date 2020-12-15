@@ -8,6 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     needs:
       - lint-yaml
+      - lint-json
     outputs:
       version: ${{ steps.supported-versions-matrix.outputs.version }}
     steps:
@@ -37,6 +38,7 @@ jobs:
         composer: [lowest, current, highest]
     needs:
       - lint-yaml
+      - lint-json
       - supported-versions-matrix
     runs-on: ubuntu-latest
     container:
@@ -142,10 +144,19 @@ jobs:
               line-length: disable
               document-start: disable
               truthy: disable
+  lint-json:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v1
+      - name: json-syntax-check
+        uses: limitusus/json-syntax-check@v1
+        with:
+          pattern: "\\.json$"
   check-mark:
     name: ✔️
     needs:
       - lint-yaml
+      - lint-json
       - qa
       - qodana
     runs-on: ubuntu-latest
