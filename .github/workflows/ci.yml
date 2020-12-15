@@ -122,3 +122,11 @@ jobs:
         run: |
           echo "❌ Qodana has failed"
           echo "Please contact our support team by email at qodana-support@jetbrains.com. Attach qodana-error-logs.zip to your message."
+  check-mark:
+    name: ✔️
+    needs:
+      - qa
+      - qodana
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "✔️"
