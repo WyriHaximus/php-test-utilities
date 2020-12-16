@@ -21,7 +21,7 @@
     "php-parallel-lint/php-parallel-lint": "^1.2.0",
     "phpspec/prophecy": "^1.12.1",
     "phpspec/prophecy-phpunit": "^2.0.1",
-    "phpstan/phpstan": "^0.12.62",
+    "phpstan/phpstan": "^0.12.63",
     "phpunit/phpunit": "^9.5.0",
     "psalm/plugin-phpunit": "^0.15.0",
     "roave/backward-compatibility-check": "^5.0.0",
