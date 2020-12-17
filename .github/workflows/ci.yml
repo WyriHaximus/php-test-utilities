@@ -134,6 +134,7 @@ jobs:
           echo "❌ Qodana has failed"
           echo "Please contact our support team by email at qodana-support@jetbrains.com. Attach qodana-error-logs.zip to your message."
   lint-yaml:
+    name: Lint YAML
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
@@ -147,6 +148,7 @@ jobs:
               document-start: disable
               truthy: disable
   lint-json:
+    name: Lint JSON
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
