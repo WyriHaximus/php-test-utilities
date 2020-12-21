@@ -19,7 +19,7 @@
     "php-coveralls/php-coveralls": "^2.4.2",
     "php-parallel-lint/php-console-highlighter": "^0.5",
     "php-parallel-lint/php-parallel-lint": "^1.2.0",
-    "phpspec/prophecy": "^1.12.1",
+    "phpspec/prophecy": "^1.12.2",
     "phpspec/prophecy-phpunit": "^2.0.1",
     "phpstan/phpstan": "^0.12.63",
     "phpunit/phpunit": "^9.5.0",
