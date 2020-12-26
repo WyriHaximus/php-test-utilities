@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1c45984f0b56537ed137ad8b2bbcd02f",
+    "content-hash": "ebb21cce115c871641889ed0e7d70406",
     "packages": [
         {
             "name": "amphp/amp",
@@ -2025,6 +2025,46 @@
                 "source": "https://github.com/infection/infection/tree/0.20.2"
             },
             "time": "2020-11-20T17:15:57+00:00"
+        },
+        {
+            "name": "jakobbuis/simple-slow-test-reporter",
+            "version": "v1.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/jakobbuis/simple-slow-test-reporter.git",
+                "reference": "7111cb24f4670ca455f5578710022311f78ef1c4"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/jakobbuis/simple-slow-test-reporter/zipball/7111cb24f4670ca455f5578710022311f78ef1c4",
+                "reference": "7111cb24f4670ca455f5578710022311f78ef1c4",
+                "shasum": ""
+            },
+            "require": {
+                "phpunit/phpunit": "^9.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "SSTR\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jakob Buis",
+                    "email": "jakob@jakobbuis.nl"
+                }
+            ],
+            "description": "Reports slow tests in your PHPUnit testsuite",
+            "support": {
+                "issues": "https://github.com/jakobbuis/simple-slow-test-reporter/issues",
+                "source": "https://github.com/jakobbuis/simple-slow-test-reporter/tree/v1.0.0"
+            },
+            "time": "2020-12-26T16:20:53+00:00"
         },
         {
             "name": "jangregor/phpstan-prophecy",
