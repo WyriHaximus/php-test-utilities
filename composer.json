@@ -11,7 +11,7 @@
   "require": {
     "php": "^8 || ^7.4",
     "composer/composer": "^1.10.19",
-    "ergebnis/composer-normalize": "^2.11.0",
+    "ergebnis/composer-normalize": "^2.13.0",
     "icanhazstring/composer-unused": "^0.7.5",
     "infection/infection": "^0.20.1",
     "jakobbuis/simple-slow-test-reporter": "^1.0",
