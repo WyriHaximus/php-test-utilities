@@ -46,12 +46,12 @@ jobs:
       - name: 'Select found or created Milestone'
         id: selectmilestone
         run: |
-            if [ $(echo ${QUERY_NUMBER} | wc -c) -eq 1 ] ; then
-              printf "::set-output name=number::%s" "${CREATED_NUMBER}"
-              exit 0
-            fi
+          if [ $(echo ${QUERY_NUMBER} | wc -c) -eq 1 ] ; then
+            printf "::set-output name=number::%s" "${CREATED_NUMBER}"
+            exit 0
+          fi
 
-            printf "::set-output name=number::%s" "${QUERY_NUMBER}"
+          printf "::set-output name=number::%s" "${QUERY_NUMBER}"
         env:
           CREATED_NUMBER: ${{ steps.createmilestone.outputs.number }}
           QUERY_NUMBER: ${{ steps.querymilestone.outputs.number }}
