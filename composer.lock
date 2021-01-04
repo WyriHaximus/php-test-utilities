@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7e27e14baa5b9f414bf02ac4e63e5b1a",
+    "content-hash": "f40c93d86fdb9bbc43dcde78d6803ed5",
     "packages": [
         {
             "name": "amphp/amp",
@@ -4720,27 +4720,27 @@
         },
         {
             "name": "roave/infection-static-analysis-plugin",
-            "version": "1.6.0",
+            "version": "1.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Roave/infection-static-analysis-plugin.git",
-                "reference": "4f2771c7750f450a8e144012ee77b4ad2da55394"
+                "reference": "d8e1351f995f6d1e6251ec526110e3382dd04ab5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/infection-static-analysis-plugin/zipball/4f2771c7750f450a8e144012ee77b4ad2da55394",
-                "reference": "4f2771c7750f450a8e144012ee77b4ad2da55394",
+                "url": "https://api.github.com/repos/Roave/infection-static-analysis-plugin/zipball/d8e1351f995f6d1e6251ec526110e3382dd04ab5",
+                "reference": "d8e1351f995f6d1e6251ec526110e3382dd04ab5",
                 "shasum": ""
             },
             "require": {
                 "infection/infection": "0.20.2",
                 "ocramius/package-versions": "^1.9.0 || ^2.0.0",
                 "php": "~7.4.7|~8.0.0",
-                "vimeo/psalm": "^4.2.1"
+                "vimeo/psalm": "^4.3.2"
             },
             "require-dev": {
                 "doctrine/coding-standard": "^8.2.0",
-                "phpunit/phpunit": "^9.4.3"
+                "phpunit/phpunit": "^9.5.0"
             },
             "bin": [
                 "bin/roave-infection-static-analysis-plugin"
@@ -4764,9 +4764,9 @@
             "description": "Static analysis on top of mutation testing - prevents escaped mutants from being invalid according to static analysis",
             "support": {
                 "issues": "https://github.com/Roave/infection-static-analysis-plugin/issues",
-                "source": "https://github.com/Roave/infection-static-analysis-plugin/tree/1.6.0"
+                "source": "https://github.com/Roave/infection-static-analysis-plugin/tree/1.7.0"
             },
-            "time": "2020-11-27T23:23:33+00:00"
+            "time": "2021-01-04T10:34:30+00:00"
         },
         {
             "name": "roave/signature",
@@ -6371,16 +6371,16 @@
         },
         {
             "name": "symfony/finder",
-            "version": "v5.2.0",
+            "version": "v5.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/finder.git",
-                "reference": "fd8305521692f27eae3263895d1ef1571c71a78d"
+                "reference": "0b9231a5922fd7287ba5b411893c0ecd2733e5ba"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/finder/zipball/fd8305521692f27eae3263895d1ef1571c71a78d",
-                "reference": "fd8305521692f27eae3263895d1ef1571c71a78d",
+                "url": "https://api.github.com/repos/symfony/finder/zipball/0b9231a5922fd7287ba5b411893c0ecd2733e5ba",
+                "reference": "0b9231a5922fd7287ba5b411893c0ecd2733e5ba",
                 "shasum": ""
             },
             "require": {
@@ -6412,7 +6412,7 @@
             "description": "Symfony Finder Component",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/finder/tree/v5.2.0"
+                "source": "https://github.com/symfony/finder/tree/v5.2.1"
             },
             "funding": [
                 {
@@ -6428,7 +6428,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-11-18T09:42:36+00:00"
+            "time": "2020-12-08T17:02:38+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
@@ -6918,16 +6918,16 @@
         },
         {
             "name": "symfony/process",
-            "version": "v5.2.0",
+            "version": "v5.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/process.git",
-                "reference": "240e74140d4d956265048f3025c0aecbbc302d54"
+                "reference": "bd8815b8b6705298beaa384f04fabd459c10bedd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/process/zipball/240e74140d4d956265048f3025c0aecbbc302d54",
-                "reference": "240e74140d4d956265048f3025c0aecbbc302d54",
+                "url": "https://api.github.com/repos/symfony/process/zipball/bd8815b8b6705298beaa384f04fabd459c10bedd",
+                "reference": "bd8815b8b6705298beaa384f04fabd459c10bedd",
                 "shasum": ""
             },
             "require": {
@@ -6960,7 +6960,7 @@
             "description": "Symfony Process Component",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/process/tree/v5.2.0"
+                "source": "https://github.com/symfony/process/tree/v5.2.1"
             },
             "funding": [
                 {
@@ -6976,7 +6976,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2020-11-02T15:47:15+00:00"
+            "time": "2020-12-08T17:03:37+00:00"
         },
         {
             "name": "symfony/service-contracts",
