@@ -143,6 +143,8 @@ jobs:
         with:
           config_data: |
             extends: default
+            ignore: |
+              /.git/
             rules:
               line-length: disable
               document-start: disable
