@@ -64,6 +64,7 @@ jobs:
         run: composer update --ansi --no-progress --no-interaction --prefer-dist -o
         if: matrix.composer == 'highest'
   qa:
+    name: Run ${{ matrix.check }} on PHP ${{ matrix.php }} with ${{ matrix.composer }} dependency preference
     strategy:
       fail-fast: false
       matrix:
