@@ -12,7 +12,7 @@ on:
 jobs:
   set-milestone:
     name: Set Milestone
-#    if: github.event.pull_request.milestone == null
+    if: github.event.pull_request.milestone == null
     runs-on: ubuntu-latest
     outputs:
       check: ${{ steps.generate-checks-strategy.outputs.check }}
