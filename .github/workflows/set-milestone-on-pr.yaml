@@ -12,7 +12,7 @@ on:
 jobs:
   set-milestone:
     name: Set Milestone
-    if: github.event.pull_request.milestone == null
+#    if: github.event.pull_request.milestone == null
     runs-on: ubuntu-latest
     outputs:
       check: ${{ steps.generate-checks-strategy.outputs.check }}
@@ -31,6 +31,12 @@ jobs:
       - name: 'Decide which version fits this PR'
         id: decidedversion
         run: |
+
+          if [ "$(jq '.sender.id' -r ${GITHUB_EVENT_PATH})" = "147145" ]; then
+            printf "::set-output name=version::%s" "${PATCH}"
+            exit 0
+          fi
+
           composer install --no-progress --ansi --no-interaction --prefer-dist -o -q
 
           if ! (./vendor/bin/roave-backward-compatibility-check); then
