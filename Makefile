@@ -3,15 +3,12 @@ SHELL=bash
 
 .PHONY: *
 
-DOCKER_CGROUP:=$(shell cat /proc/1/cgroup | grep docker | wc -l)
-COMPOSER_CACHE_DIR:=$(shell composer config --global cache-dir -q || echo ${HOME}/.composer/cache)
+COMPOSER_CACHE_DIR=$(shell composer config --global cache-dir -q || echo ${HOME}/.composer-php/cache)
 
-ifneq ("$(wildcard /.dockerenv)","")
-    IN_DOCKER:=TRUE
-else ifneq ("$(DOCKER_CGROUP)","0")
-	IN_DOCKER:=TRUE
+ifneq ("$(wildcard /.you-are-in-a-wyrihaximus.net-php-docker-image)","")
+    IN_DOCKER=TRUE
 else
-    IN_DOCKER:=FALSE
+    IN_DOCKER=FALSE
 endif
 
 ifeq ("$(IN_DOCKER)","TRUE")
@@ -56,8 +53,14 @@ composer-require-checker: ## Ensure we require every package used in this packag
 composer-unused: ## Ensure we don't require any package we don't use in this package directly
 	$(DOCKER_RUN) composer unused --ansi
 
+composer-install: ## Install dependencies
+	$(DOCKER_RUN) composer install --no-progress --ansi --no-interaction --prefer-dist -o
+
 backward-compatibility-check: ## Check code for backwards incompatible changes
-	$(DOCKER_RUN) vendor/bin/roave-backward-compatibility-check || true
+	$(MAKE) backward-compatibility-check-raw || true
+
+backward-compatibility-check-raw: ## Check code for backwards incompatible changes, doesn't ignore the failure ###
+	$(DOCKER_RUN) vendor/bin/roave-backward-compatibility-check
 
 shell: ## Provides Shell access in the expected environment ###
 	$(DOCKER_RUN) ash
