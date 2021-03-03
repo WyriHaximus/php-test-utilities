@@ -4,6 +4,8 @@ SHELL=bash
 .PHONY: *
 
 COMPOSER_CACHE_DIR=$(shell composer config --global cache-dir -q || echo ${HOME}/.composer-php/cache)
+COMPOSER_SHOW_EXTENSION_LIST=$(shell composer show -t | grep -o "\-\-\(ext-\).\+" | sort | uniq | cut -d- -f4- | tr -d '\n' | grep . | sed  '/^$$/d' | xargs | sed -e 's/ /, /g' | tr -cd '[:alnum:],' | sed 's/.$$//')
+SLIM_DOCKER_IMAGE=$(shell php -r 'echo count(array_intersect(["gd", "vips"], explode(",", "${COMPOSER_SHOW_EXTENSION_LIST}"))) > 0 ? "" : "-slim";')
 
 ifneq ("$(wildcard /.you-are-in-a-wyrihaximus.net-php-docker-image)","")
     IN_DOCKER=TRUE
@@ -19,7 +21,7 @@ else
 		-v "`pwd`:`pwd`" \
 		-v "${COMPOSER_CACHE_DIR}:/home/app/.composer/cache" \
 		-w "`pwd`" \
-		"ghcr.io/wyrihaximusnet/php:${PHP_VERSION}-nts-alpine3.12-dev"
+		"ghcr.io/wyrihaximusnet/php:${PHP_VERSION}-nts-alpine3.12${SLIM_DOCKER_IMAGE}-dev"
 endif
 
 all: ## Runs everything ###
