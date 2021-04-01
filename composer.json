@@ -10,7 +10,7 @@
   ],
   "require": {
     "php": "^8 || ^7.4",
-    "composer/composer": "^1.10.20",
+    "composer/composer": "^1.10.21",
     "ergebnis/composer-normalize": "^2.13.3",
     "icanhazstring/composer-unused": "^0.7.5",
     "infection/infection": "^0.20.2",
