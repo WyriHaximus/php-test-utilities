@@ -10,6 +10,8 @@ repository:
 
 # Labels: define labels for Issues and Pull Requests
 labels:
+  - name: "Dependabot 🤖"
+    color: 0366d6
   - name: "Dependencies 📦"
     color: 0025ff
     description: "Pull requests that update a dependency file"
