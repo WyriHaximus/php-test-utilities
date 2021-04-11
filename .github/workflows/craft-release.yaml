@@ -39,6 +39,7 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           milestone: ${{ env.MILESTONE }}
+          labels: "Bug 🐞,Dependencies 📦,Feature 🏗,Enhancement ✨"
       - name: Show changelog
         run: echo "${CHANGELOG}"
         env:
