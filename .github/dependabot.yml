@@ -6,6 +6,5 @@ updates:
       interval: "daily"
       time: "03:00"
     labels:
-      - "Dependencies 📦"
-      - "PHP 🐘"
+      - "Dependabot 🤖"
     versioning-strategy: "increase"
