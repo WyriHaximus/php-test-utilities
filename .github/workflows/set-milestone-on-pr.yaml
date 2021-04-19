@@ -48,6 +48,10 @@ jobs:
           MAJOR: ${{ steps.semvers.outputs.major }}
           MINOR: ${{ steps.semvers.outputs.minor }}
           PATCH: ${{ steps.semvers.outputs.patch }}
+      - name: 'Set Milestone through Chores.Dev'
+        uses: "chores-dev/set-milestone-action@main"
+        with:
+          milestone: ${{ steps.decidedversion.outputs.version }}
       - name: 'Get Milestones'
         uses: "WyriHaximus/github-action-get-milestones@master"
         id: milestones
