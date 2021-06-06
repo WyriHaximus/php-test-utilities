@@ -65,13 +65,11 @@ jobs:
         env:
           MILESTONE_DESCRIPTION: ${{ github.event.milestone.description }}
           CHANGELOG: ${{ needs.generate-changelog.outputs.changelog }}
-      - name: Create Reference Release with Changelog
-        uses: fleskesvor/create-release@feature/support-target-commitish
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Create Release with Changelog
+        uses: ncipollo/release-action@v1
         with:
-          tag_name: ${{ env.MILESTONE }}
-          release_name: ${{ env.MILESTONE }}
+          tag: ${{ env.MILESTONE }}
           body: ${{ steps.releasemessage.outputs.release_message }}
           draft: false
           prerelease: false
+          token: ${{ secrets.GITHUB_TOKEN }}
