@@ -19,6 +19,8 @@ jobs:
       - uses: actions/checkout@v1
       - id: supported-versions-matrix
         uses: WyriHaximus/github-action-composer-php-versions-in-range@v1
+        with:
+          upcomingReleases: true
   supported-checks-matrix:
     name: Supported Checks Matrix
     runs-on: ubuntu-latest
