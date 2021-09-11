@@ -77,8 +77,11 @@ backward-compatibility-check: ## Check code for backwards incompatible changes
 backward-compatibility-check-raw: ## Check code for backwards incompatible changes, doesn't ignore the failure ###
 	$(DOCKER_RUN) vendor/bin/roave-backward-compatibility-check
 
+validate-prefer-lowest: ## This validator will strictly compare the specified minimum versions of your composer.json with the ones actually used by the prefer-lowest composer update command option
+	$(DOCKER_RUN) vendor/bin/validate-prefer-lowest
+
 shell: ## Provides Shell access in the expected environment ###
-	$(DOCKER_RUN) ash
+	$(DOCKER_RUN) bash
 
 task-list-ci: ## CI: Generate a JSON array of jobs to run, matches the commands run when running `make (|all)` ###
 	@grep -E '^[a-zA-Z0-9_-]+:.*?## .*$$' $(MAKEFILE_LIST) | grep -v "###" | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "%s\n", $$1}' | jq --raw-input --slurp -c 'split("\n")| .[0:-1]'
