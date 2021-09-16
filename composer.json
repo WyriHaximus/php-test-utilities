@@ -47,6 +47,7 @@
     "unused": [
       "php",
       "composer/composer",
+      "dereuromark/composer-prefer-lowest",
       "friendsofphp/php-cs-fixer",
       "icanhazstring/composer-unused",
       "infection/infection",
