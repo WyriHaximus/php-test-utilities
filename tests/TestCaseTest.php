@@ -6,6 +6,7 @@ namespace WyriHaximus\Tests\TestUtilities;
 
 use WyriHaximus\TestUtilities\TestCase;
 
+use function func_get_args;
 use function random_int;
 use function Safe\file_get_contents;
 use function Safe\file_put_contents;
@@ -75,13 +76,11 @@ final class TestCaseTest extends TestCase
     }
 
     /**
-     * @param mixed $bool
-     *
      * @dataProvider provideTrueFalse
      */
-    public function testTrueFalse($bool): void
+    public function testTrueFalse(bool $bool): void
     {
-        static::assertIsBool($bool);
+        static::assertCount(1, func_get_args());
     }
 
     public function testGetSysTempDir(): void
