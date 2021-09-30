@@ -50,4 +50,8 @@
 
         <InvalidStringClass errorLevel="error"/>
     </issueHandlers>
-<plugins><pluginClass class="Psalm\PhpUnitPlugin\Plugin"/></plugins></psalm>
+    <plugins>
+        <pluginClass class="Psalm\PhpUnitPlugin\Plugin"/>
+        <pluginClass class="Orklah\PsalmInsaneComparison\Plugin"/>
+    </plugins>
+</psalm>
