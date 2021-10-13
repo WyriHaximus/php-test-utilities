@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2c3d48fbfaa1c1cdecede233c8a86096",
+    "content-hash": "87edcd150107e0e94a5f69d71fe14858",
     "packages": [
         {
             "name": "amphp/amp",
@@ -781,16 +781,16 @@
         },
         {
             "name": "dereuromark/composer-prefer-lowest",
-            "version": "0.1.8",
+            "version": "0.1.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dereuromark/composer-prefer-lowest.git",
-                "reference": "084072c52d55963fc3bd6168fe8abbab6121daf5"
+                "reference": "82cc0633e5f005973b36d61c8a98ac60fdce99c7"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dereuromark/composer-prefer-lowest/zipball/084072c52d55963fc3bd6168fe8abbab6121daf5",
-                "reference": "084072c52d55963fc3bd6168fe8abbab6121daf5",
+                "url": "https://api.github.com/repos/dereuromark/composer-prefer-lowest/zipball/82cc0633e5f005973b36d61c8a98ac60fdce99c7",
+                "reference": "82cc0633e5f005973b36d61c8a98ac60fdce99c7",
                 "shasum": ""
             },
             "require": {
@@ -824,9 +824,9 @@
             "description": "Checks prefer-lowest more strictly. Add-on for CI.",
             "support": {
                 "issues": "https://github.com/dereuromark/composer-prefer-lowest/issues",
-                "source": "https://github.com/dereuromark/composer-prefer-lowest/tree/0.1.8"
+                "source": "https://github.com/dereuromark/composer-prefer-lowest/tree/0.1.9"
             },
-            "time": "2021-09-08T12:42:46+00:00"
+            "time": "2021-10-12T20:44:59+00:00"
         },
         {
             "name": "dnoegel/php-xdg-base-dir",
