@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6d19c61fb5ba5dfcd5f30c9705838a51",
+    "content-hash": "c6cf586ed16dfde0360c3fe71abc85a6",
     "packages": [
         {
             "name": "amphp/amp",
@@ -781,26 +781,26 @@
         },
         {
             "name": "dereuromark/composer-prefer-lowest",
-            "version": "0.1.9",
+            "version": "0.1.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/dereuromark/composer-prefer-lowest.git",
-                "reference": "82cc0633e5f005973b36d61c8a98ac60fdce99c7"
+                "reference": "9290203cfc25d4a2d0605cb3119bb227aa1195d6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/dereuromark/composer-prefer-lowest/zipball/82cc0633e5f005973b36d61c8a98ac60fdce99c7",
-                "reference": "82cc0633e5f005973b36d61c8a98ac60fdce99c7",
+                "url": "https://api.github.com/repos/dereuromark/composer-prefer-lowest/zipball/9290203cfc25d4a2d0605cb3119bb227aa1195d6",
+                "reference": "9290203cfc25d4a2d0605cb3119bb227aa1195d6",
                 "shasum": ""
             },
             "require": {
-                "composer/semver": "^1.4",
+                "composer/semver": "^1.4 || ^2.0 || ^3.0",
                 "ext-json": "*",
-                "php": ">=7.2"
+                "php": ">=7.3"
             },
             "require-dev": {
                 "fig-r/psr2r-sniffer": "dev-master",
-                "phpunit/phpunit": "^8.5 || ^9.5"
+                "phpunit/phpunit": "^9.5"
             },
             "bin": [
                 "bin/validate-prefer-lowest"
@@ -824,9 +824,9 @@
             "description": "Checks prefer-lowest more strictly. Add-on for CI.",
             "support": {
                 "issues": "https://github.com/dereuromark/composer-prefer-lowest/issues",
-                "source": "https://github.com/dereuromark/composer-prefer-lowest/tree/0.1.9"
+                "source": "https://github.com/dereuromark/composer-prefer-lowest/tree/0.1.10"
             },
-            "time": "2021-10-12T20:44:59+00:00"
+            "time": "2021-11-02T02:20:22+00:00"
         },
         {
             "name": "dnoegel/php-xdg-base-dir",
