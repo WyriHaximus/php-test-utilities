@@ -10,7 +10,6 @@
   ],
   "require": {
     "php": "^8 || ^7.4",
-    "composer/composer": "^1.10.23",
     "dereuromark/composer-prefer-lowest": "^0.1.10",
     "ergebnis/composer-normalize": "^2.15.0",
     "icanhazstring/composer-unused": "^0.7.5",
@@ -47,7 +46,6 @@
   "extra": {
     "unused": [
       "php",
-      "composer/composer",
       "dereuromark/composer-prefer-lowest",
       "friendsofphp/php-cs-fixer",
       "icanhazstring/composer-unused",
