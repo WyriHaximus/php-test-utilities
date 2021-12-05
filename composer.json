@@ -11,7 +11,7 @@
   "require": {
     "php": "^8 || ^7.4",
     "dereuromark/composer-prefer-lowest": "^0.1.10",
-    "ergebnis/composer-normalize": "^2.16.0",
+    "ergebnis/composer-normalize": "^2.17.0",
     "icanhazstring/composer-unused": "^0.7.5",
     "infection/infection": "^0.20.2",
     "jakobbuis/simple-slow-test-reporter": "^1.0",
