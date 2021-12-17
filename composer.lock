@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ae7c8e77f09022c5f89cadaa85599774",
+    "content-hash": "f785d314011f7393c6862861a94d65de",
     "packages": [
         {
             "name": "amphp/amp",
@@ -1830,37 +1830,37 @@
         },
         {
             "name": "icanhazstring/composer-unused",
-            "version": "0.7.5",
+            "version": "0.7.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer-unused/composer-unused.git",
-                "reference": "c38aca9d85410d24359adf64e6d519b79604d9ce"
+                "reference": "97086da19c7434a42427df0cf47b21278609ffb8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer-unused/composer-unused/zipball/c38aca9d85410d24359adf64e6d519b79604d9ce",
-                "reference": "c38aca9d85410d24359adf64e6d519b79604d9ce",
+                "url": "https://api.github.com/repos/composer-unused/composer-unused/zipball/97086da19c7434a42427df0cf47b21278609ffb8",
+                "reference": "97086da19c7434a42427df0cf47b21278609ffb8",
                 "shasum": ""
             },
             "require": {
-                "composer-plugin-api": "^1.1 || ^2.0",
-                "composer/composer": "^1.1 || ^2.0@dev",
+                "composer-plugin-api": "^2.0",
                 "ext-json": "*",
-                "nikic/php-parser": "^4.2",
-                "php": ">=7.3",
-                "psr/container": "^1.0",
-                "psr/log": "^1.1",
+                "nikic/php-parser": "^4.13",
+                "php": ">=7.3 || ^8.0",
+                "psr/container": "^1.0 || ^2.0",
+                "psr/log": "^1.1 || ^2 || ^3",
                 "symfony/finder": "^4.2 || ^5.0"
             },
             "require-dev": {
+                "composer/composer": "^2.1",
                 "ext-ds": "*",
                 "ext-zend-opcache": "*",
-                "jangregor/phpstan-prophecy": "^0.6.2",
+                "jangregor/phpstan-prophecy": "^0.8.1",
                 "phpspec/prophecy-phpunit": "^2.0",
-                "phpstan/phpstan": "^0.12.14",
-                "phpunit/phpunit": "^9.0.1",
+                "phpstan/phpstan": "^0.12.99",
+                "phpunit/phpunit": "^9.5.10",
                 "roave/security-advisories": "dev-master",
-                "squizlabs/php_codesniffer": "^3.5"
+                "squizlabs/php_codesniffer": "^3.6"
             },
             "bin": [
                 "bin/composer-unused"
@@ -1896,7 +1896,17 @@
                 "issues": "https://github.com/composer-unused/composer-unused/issues",
                 "source": "https://github.com/composer-unused/composer-unused"
             },
-            "time": "2020-10-28T11:39:37+00:00"
+            "funding": [
+                {
+                    "url": "https://github.com/sponsors/icanhazstring",
+                    "type": "github"
+                },
+                {
+                    "url": "https://paypal.me/icanhazstring",
+                    "type": "other"
+                }
+            ],
+            "time": "2021-12-16T21:59:44+00:00"
         },
         {
             "name": "infection/abstract-testframework-adapter",
@@ -6620,20 +6630,21 @@
         },
         {
             "name": "symfony/finder",
-            "version": "v5.3.7",
+            "version": "v5.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/finder.git",
-                "reference": "a10000ada1e600d109a6c7632e9ac42e8bf2fb93"
+                "reference": "d2f29dac98e96a98be467627bd49c2efb1bc2590"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/finder/zipball/a10000ada1e600d109a6c7632e9ac42e8bf2fb93",
-                "reference": "a10000ada1e600d109a6c7632e9ac42e8bf2fb93",
+                "url": "https://api.github.com/repos/symfony/finder/zipball/d2f29dac98e96a98be467627bd49c2efb1bc2590",
+                "reference": "d2f29dac98e96a98be467627bd49c2efb1bc2590",
                 "shasum": ""
             },
             "require": {
                 "php": ">=7.2.5",
+                "symfony/deprecation-contracts": "^2.1|^3",
                 "symfony/polyfill-php80": "^1.16"
             },
             "type": "library",
@@ -6662,7 +6673,7 @@
             "description": "Finds files and directories via an intuitive fluent interface",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/finder/tree/v5.3.7"
+                "source": "https://github.com/symfony/finder/tree/v5.4.0"
             },
             "funding": [
                 {
@@ -6678,7 +6689,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-08-04T21:20:46+00:00"
+            "time": "2021-11-28T15:25:38+00:00"
         },
         {
             "name": "symfony/polyfill-ctype",
