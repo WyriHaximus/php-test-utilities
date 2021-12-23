@@ -118,9 +118,7 @@ jobs:
       - composer-install
       - supported-checks-matrix
       - supported-versions-matrix
-    runs-on: ubuntu-latest
-    container:
-      image: ghcr.io/wyrihaximusnet/php:${{ matrix.php }}-nts-buster-dev-root
+    runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v1
       - name: Download Composer Package Cache
@@ -133,7 +131,7 @@ jobs:
         run: git fetch --depth=1 origin +refs/tags/*:refs/tags/* || true
         if: matrix.check == 'backward-compatibility-check'
       - run: |
-         make unit-testing-raw mutation-testing-raw
+         make unit-testing-raw
         env:
           COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
           COVERALLS_RUN_LOCALLY: ${{ secrets.COVERALLS_RUN_LOCALLY }}
