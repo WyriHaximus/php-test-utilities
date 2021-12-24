@@ -37,7 +37,24 @@
   "conflict": {
     "beberlei/assert": ">= 3.3"
   },
+  "autoload": {
+    "psr-4": {
+      "WyriHaximus\\TestUtilities\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "WyriHaximus\\Tests\\TestUtilities\\": "tests/"
+    }
+  },
   "config": {
+    "allow-plugins": {
+      "composer/package-versions-deprecated": true,
+      "dealerdirect/phpcodesniffer-composer-installer": true,
+      "ergebnis/composer-normalize": true,
+      "icanhazstring/composer-unused": true,
+      "infection/extension-installer": true
+    },
     "platform": {
       "php": "7.4.7"
     },
@@ -66,16 +83,6 @@
       "vimeo/psalm",
       "wyrihaximus/phpstan-rules-wrapper"
     ]
-  },
-  "autoload": {
-    "psr-4": {
-      "WyriHaximus\\TestUtilities\\": "src/"
-    }
-  },
-  "autoload-dev": {
-    "psr-4": {
-      "WyriHaximus\\Tests\\TestUtilities\\": "tests/"
-    }
   },
   "scripts": {
     "post-install-cmd": [
