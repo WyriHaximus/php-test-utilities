@@ -70,7 +70,7 @@ jobs:
       matrix:
         os: [ubuntu-latest, windows-latest, macos-latest]
         php: ${{ fromJson(needs.supported-versions-matrix.outputs.version) }}
-        composer: [lowest, current, highest]
+        composer: [lowest, locked, highest]
     needs:
       - lint-yaml
       - lint-json
@@ -79,6 +79,10 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v1
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: ${{ matrix.php }}
+          coverage: pcov
       - uses: ramsey/composer-install@v2
         with:
           dependency-versions: ${{ matrix.composer }}
