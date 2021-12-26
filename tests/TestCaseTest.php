@@ -42,9 +42,12 @@ final class TestCaseTest extends TestCase
     public function provideTemporaryDirectory(): iterable
     {
         for ($i = 0; $i <= self::PENTIUM; $i++) {
-            yield [
-                (string) random_int($i * $i, PHP_INT_MAX),
-            ];
+            /**
+             * Resolves: Parameter #1 $min (int<min, 4356>) of function random_int expects lower number than parameter #2 $max (int<1, max>).
+             *
+             * @phpstan-ignore-next-line
+             */
+            yield [(string) random_int($i * $i, PHP_INT_MAX)];
         }
     }
 
