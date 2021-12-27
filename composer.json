@@ -13,7 +13,7 @@
     "dereuromark/composer-prefer-lowest": "^0.1.10",
     "ergebnis/composer-normalize": "^2.18.0",
     "icanhazstring/composer-unused": "^0.7.10",
-    "infection/infection": "^0.20.2",
+    "infection/infection": "^0.20.2 || ^0.25.5",
     "jakobbuis/simple-slow-test-reporter": "^1.0",
     "maglnet/composer-require-checker": "^3.8.0",
     "nunomaduro/collision": "^5.10.0",
@@ -33,9 +33,6 @@
     "vimeo/psalm": "^4.16.1",
     "wyrihaximus/coding-standard": "^2.7.0",
     "wyrihaximus/phpstan-rules-wrapper": "^2 || ^1.2.5"
-  },
-  "conflict": {
-    "beberlei/assert": ">= 3.3"
   },
   "autoload": {
     "psr-4": {
