@@ -120,6 +120,7 @@ jobs:
         with:
           php-version: ${{ matrix.php }}
           coverage: pcov
+          extensions: intl, sodium
       - uses: ramsey/composer-install@v2
         with:
           dependency-versions: ${{ matrix.composer }}
