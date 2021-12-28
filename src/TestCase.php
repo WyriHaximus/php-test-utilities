@@ -32,11 +32,12 @@ abstract class TestCase extends PHPUnitTestCase
 {
     use ProphecyTrait;
 
-    public const DEFAULT_AWAIT_TIMEOUT = 60;
-    public const WIN_START             = 0;
-    public const WIN_END               = 3;
-    public const USLEEP                = 50;
-    public const DEFAULT_MODE          = 0777;
+    public const WINDOWS_TEMP_DIR_PREFIX = 'C:\\t\\';
+    public const DEFAULT_AWAIT_TIMEOUT   = 60;
+    public const WIN_START               = 0;
+    public const WIN_END                 = 2;
+    public const USLEEP                  = 50;
+    public const DEFAULT_MODE            = 0777;
 
     private string $baseTmpDir;
 
@@ -48,14 +49,14 @@ abstract class TestCase extends PHPUnitTestCase
     {
         $this->baseTmpDir = $this->getSysTempDir() .
             DIRECTORY_SEPARATOR .
-            'p-a-c-t-' .
+            'w-h-p-t-u-' .
             uniqid() .
             DIRECTORY_SEPARATOR;
         $this->tmpDir     = $this->baseTmpDir .
             uniqid() .
             DIRECTORY_SEPARATOR;
 
-        $this->tmpNamespace = uniqid('PACTN');
+        $this->tmpNamespace = uniqid('WHPTU');
     }
 
     protected function tearDown(): void
@@ -81,7 +82,7 @@ abstract class TestCase extends PHPUnitTestCase
     final protected function getSysTempDir(): string
     {
         if (strtoupper(substr(PHP_OS, self::WIN_START, self::WIN_END)) === 'WIN') {
-            return 'C:\\t\\';
+            return self::WINDOWS_TEMP_DIR_PREFIX;
         }
 
         return sys_get_temp_dir();

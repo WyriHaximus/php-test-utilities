@@ -11,11 +11,16 @@ use function random_int;
 use function Safe\file_get_contents;
 use function Safe\file_put_contents;
 use function Safe\mkdir;
+use function Safe\substr;
+use function strpos;
+use function strtoupper;
+use function sys_get_temp_dir;
 use function time;
 use function uniqid;
 
 use const DIRECTORY_SEPARATOR;
 use const PHP_INT_MAX;
+use const PHP_OS;
 
 /**
  * @internal
@@ -61,6 +66,7 @@ final class TestCaseTest extends TestCase
      */
     public function testTemporaryDirectoryAndGetFilesInDirectory(string $int): void
     {
+        static::assertTrue(strtoupper(substr(PHP_OS, TestCase::WIN_START, TestCase::WIN_END)) === 'WIN' ? strpos(TestCase::WINDOWS_TEMP_DIR_PREFIX, sys_get_temp_dir()) === 0 : strpos($this->getTmpDir(), sys_get_temp_dir()) === 0);
         static::assertNotSame($this->getTmpDir(), $this->previousTemporaryDirectory);
 
         $dir = $this->getTmpDir() . $this->getRandomNameSpace() . DIRECTORY_SEPARATOR;
