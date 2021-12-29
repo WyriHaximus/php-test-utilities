@@ -11,6 +11,9 @@
         "json": "./var/infection.json",
         "perMutator": "./var/infection-per-mutator.md"
     },
+    "minMsi": 100,
+    "minCoveredMsi": 100,
+    "ignoreMsiWithNoMutations": true,
     "mutators": {
         "@default": true,
         "FunctionCallRemoval": {
@@ -52,6 +55,16 @@
         "UnwrapStrToUpper": {
             "ignore": [
                 "WyriHaximus\\TestUtilities\\TestCase::getSysTempDir"
+            ]
+        },
+        "Concat": {
+            "ignore": [
+                "WyriHaximus\\TestUtilities\\TestCase::setUp"
+            ]
+        },
+        "ConcatOperandRemoval": {
+            "ignore": [
+                "WyriHaximus\\TestUtilities\\TestCase::setUp"
             ]
         }
     },
