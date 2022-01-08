@@ -10,7 +10,6 @@
   ],
   "require": {
     "php": "^8",
-    "dereuromark/composer-prefer-lowest": "^0.1.10",
     "ergebnis/composer-normalize": "^2.23.0",
     "icanhazstring/composer-unused": "^0.7.12",
     "infection/infection": "^0.25.5",
