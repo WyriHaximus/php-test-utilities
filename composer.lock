@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f85e3907664c9d2106541063b0a0bdfe",
+    "content-hash": "1ed05d4ea1eebcacd46bef85c7b4b4db",
     "packages": [
         {
             "name": "amphp/amp",
@@ -917,55 +917,6 @@
                 "source": "https://github.com/dealerdirect/phpcodesniffer-composer-installer"
             },
             "time": "2020-12-07T18:04:37+00:00"
-        },
-        {
-            "name": "dereuromark/composer-prefer-lowest",
-            "version": "0.1.10",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/dereuromark/composer-prefer-lowest.git",
-                "reference": "9290203cfc25d4a2d0605cb3119bb227aa1195d6"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/dereuromark/composer-prefer-lowest/zipball/9290203cfc25d4a2d0605cb3119bb227aa1195d6",
-                "reference": "9290203cfc25d4a2d0605cb3119bb227aa1195d6",
-                "shasum": ""
-            },
-            "require": {
-                "composer/semver": "^1.4 || ^2.0 || ^3.0",
-                "ext-json": "*",
-                "php": ">=7.3"
-            },
-            "require-dev": {
-                "fig-r/psr2r-sniffer": "dev-master",
-                "phpunit/phpunit": "^9.5"
-            },
-            "bin": [
-                "bin/validate-prefer-lowest"
-            ],
-            "type": "library",
-            "autoload": {
-                "psr-4": {
-                    "ComposerPreferLowest\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Mark Scherer",
-                    "email": "euromark@web.de"
-                }
-            ],
-            "description": "Checks prefer-lowest more strictly. Add-on for CI.",
-            "support": {
-                "issues": "https://github.com/dereuromark/composer-prefer-lowest/issues",
-                "source": "https://github.com/dereuromark/composer-prefer-lowest/tree/0.1.10"
-            },
-            "time": "2021-11-02T02:20:22+00:00"
         },
         {
             "name": "dnoegel/php-xdg-base-dir",

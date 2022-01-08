@@ -77,9 +77,6 @@ backward-compatibility-check: ## Check code for backwards incompatible changes
 backward-compatibility-check-raw: ## Check code for backwards incompatible changes, doesn't ignore the failure ###
 	$(DOCKER_RUN) vendor/bin/roave-backward-compatibility-check
 
-validate-prefer-lowest: ## This validator will strictly compare the specified minimum versions of your composer.json with the ones actually used by the prefer-lowest composer update command option
-	$(DOCKER_RUN) vendor/bin/validate-prefer-lowest
-
 shell: ## Provides Shell access in the expected environment ###
 	$(DOCKER_RUN) bash
 
