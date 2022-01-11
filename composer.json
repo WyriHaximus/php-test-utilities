@@ -15,7 +15,7 @@
     "infection/infection": "^0.25.5",
     "jakobbuis/simple-slow-test-reporter": "^1.0",
     "maglnet/composer-require-checker": "^3.8.0",
-    "nunomaduro/collision": "^5.10.0",
+    "nunomaduro/collision": "^5.11.0",
     "orklah/psalm-insane-comparison": "^1.0.3",
     "php-coveralls/php-coveralls": "^2.5.2",
     "php-parallel-lint/php-console-highlighter": "^0.5",
