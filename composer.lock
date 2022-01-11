@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "44dacf94fcb5e0d455b01b8af77b7dbe",
+    "content-hash": "e4e54d413aecbee45c70ee6a4b7894d2",
     "packages": [
         {
             "name": "amphp/amp",
@@ -3214,16 +3214,16 @@
         },
         {
             "name": "orklah/psalm-insane-comparison",
-            "version": "v1.0.3",
+            "version": "v2.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/orklah/psalm-insane-comparison.git",
-                "reference": "770b9b5273afd16a25243c5895b6949c30dbaaea"
+                "reference": "659164543e044446e04e93ac54648e16a28310bf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/orklah/psalm-insane-comparison/zipball/770b9b5273afd16a25243c5895b6949c30dbaaea",
-                "reference": "770b9b5273afd16a25243c5895b6949c30dbaaea",
+                "url": "https://api.github.com/repos/orklah/psalm-insane-comparison/zipball/659164543e044446e04e93ac54648e16a28310bf",
+                "reference": "659164543e044446e04e93ac54648e16a28310bf",
                 "shasum": ""
             },
             "require": {
@@ -3262,9 +3262,9 @@
             "description": "Detects possible insane comparison (\"string\" == 0) to help migrate to PHP8",
             "support": {
                 "issues": "https://github.com/orklah/psalm-insane-comparison/issues",
-                "source": "https://github.com/orklah/psalm-insane-comparison/tree/v1.0.3"
+                "source": "https://github.com/orklah/psalm-insane-comparison/tree/v2.0.0"
             },
-            "time": "2021-01-12T17:01:14+00:00"
+            "time": "2022-01-10T17:38:52+00:00"
         },
         {
             "name": "pepakriz/phpstan-exception-rules",
