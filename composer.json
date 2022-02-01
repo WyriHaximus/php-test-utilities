@@ -10,7 +10,7 @@
   ],
   "require": {
     "php": "^8",
-    "ergebnis/composer-normalize": "^2.23.0",
+    "ergebnis/composer-normalize": "^2.23.1",
     "icanhazstring/composer-unused": "^0.7.12",
     "infection/infection": "^0.25.5",
     "jakobbuis/simple-slow-test-reporter": "^1.0",
