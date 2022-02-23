@@ -3678,21 +3678,21 @@
         },
         {
             "name": "php-standard-library/psalm-plugin",
-            "version": "1.1.3",
+            "version": "1.1.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/php-standard-library/psalm-plugin.git",
-                "reference": "99304b6b09d217602d8b0eaa4fc2123f34cb57e5"
+                "reference": "294e1cba8d6bd868f5e5291bde4848828b97968a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/php-standard-library/psalm-plugin/zipball/99304b6b09d217602d8b0eaa4fc2123f34cb57e5",
-                "reference": "99304b6b09d217602d8b0eaa4fc2123f34cb57e5",
+                "url": "https://api.github.com/repos/php-standard-library/psalm-plugin/zipball/294e1cba8d6bd868f5e5291bde4848828b97968a",
+                "reference": "294e1cba8d6bd868f5e5291bde4848828b97968a",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.4 || ^8.0",
-                "vimeo/psalm": "^4.6"
+                "vimeo/psalm": "^4.20 || ^5.0"
             },
             "require-dev": {
                 "friendsofphp/php-cs-fixer": "^2.18",
@@ -3723,9 +3723,9 @@
             "description": "Psalm plugin for the PHP Standard Library",
             "support": {
                 "issues": "https://github.com/php-standard-library/psalm-plugin/issues",
-                "source": "https://github.com/php-standard-library/psalm-plugin/tree/1.1.3"
+                "source": "https://github.com/php-standard-library/psalm-plugin/tree/1.1.4"
             },
-            "time": "2022-01-08T16:21:13+00:00"
+            "time": "2022-02-06T18:26:09+00:00"
         },
         {
             "name": "phpdocumentor/reflection-common",
