@@ -66,7 +66,7 @@ composer-require-checker: ## Ensure we require every package used in this packag
 	$(DOCKER_RUN) vendor/bin/composer-require-checker --ignore-parse-errors --ansi -vvv --config-file=./etc/qa/composer-require-checker.json
 
 composer-unused: ## Ensure we don't require any package we don't use in this package directly
-	$(DOCKER_RUN) composer unused --ansi
+	$(DOCKER_RUN) vendor/bin/composer-unused --ansi
 
 composer-install: ## Install dependencies
 	$(DOCKER_RUN) composer install --no-progress --ansi --no-interaction --prefer-dist -o
