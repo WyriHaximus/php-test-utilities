@@ -11,8 +11,8 @@
   "require": {
     "php": "^8",
     "ergebnis/composer-normalize": "^2.23.1",
-    "icanhazstring/composer-unused": "^0.7.12",
-    "infection/infection": "^0.25.5",
+    "icanhazstring/composer-unused": "^0.8.1",
+    "infection/infection": "^0.26.5",
     "jakobbuis/simple-slow-test-reporter": "^1.0",
     "maglnet/composer-require-checker": "^3.8.0",
     "nunomaduro/collision": "^5.11.0",
@@ -50,7 +50,8 @@
       "dealerdirect/phpcodesniffer-composer-installer": true,
       "ergebnis/composer-normalize": true,
       "icanhazstring/composer-unused": true,
-      "infection/extension-installer": true
+      "infection/extension-installer": true,
+      "composer-unused/composer-unused-plugin": true
     },
     "platform": {
       "php": "8.0.12"
@@ -59,26 +60,23 @@
   },
   "extra": {
     "unused": [
-      "php",
-      "dereuromark/composer-prefer-lowest",
-      "friendsofphp/php-cs-fixer",
+      "ergebnis/composer-normalize",
       "icanhazstring/composer-unused",
-      "infection/infection",
       "jakobbuis/simple-slow-test-reporter",
-      "php-coveralls/php-coveralls",
-      "php-parallel-lint/php-console-highlighter",
-      "php-parallel-lint/php-parallel-lint",
       "maglnet/composer-require-checker",
       "nunomaduro/collision",
       "orklah/psalm-insane-comparison",
+      "php-coveralls/php-coveralls",
+      "php-parallel-lint/php-console-highlighter",
+      "php-parallel-lint/php-parallel-lint",
       "php-standard-library/psalm-plugin",
+      "phpspec/prophecy",
+      "phpspec/prophecy-phpunit",
       "phpstan/phpstan",
-      "phpunit/phpunit",
       "psalm/plugin-phpunit",
       "roave/backward-compatibility-check",
       "roave/infection-static-analysis-plugin",
-      "slevomat/coding-standard",
-      "vimeo/psalm",
+      "wyrihaximus/coding-standard",
       "wyrihaximus/phpstan-rules-wrapper"
     ]
   },
