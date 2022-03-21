@@ -8972,22 +8972,23 @@
         },
         {
             "name": "wyrihaximus/phpstan-rules-wrapper",
-            "version": "2.0.2",
+            "version": "2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/WyriHaximus/php-phpstan-rules-wrapper.git",
-                "reference": "2a802e32417df05d7fd8caf30098c7a6d6523946"
+                "reference": "e980c8991836df501eda69eb8276ec6416508b04"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WyriHaximus/php-phpstan-rules-wrapper/zipball/2a802e32417df05d7fd8caf30098c7a6d6523946",
-                "reference": "2a802e32417df05d7fd8caf30098c7a6d6523946",
+                "url": "https://api.github.com/repos/WyriHaximus/php-phpstan-rules-wrapper/zipball/e980c8991836df501eda69eb8276ec6416508b04",
+                "reference": "e980c8991836df501eda69eb8276ec6416508b04",
                 "shasum": ""
             },
             "require": {
                 "ergebnis/phpstan-rules": "^1.0",
                 "jangregor/phpstan-prophecy": "^1.0",
                 "pepakriz/phpstan-exception-rules": "^0.12.0",
+                "php": "^8",
                 "phpstan/phpstan-deprecation-rules": "^1.0",
                 "phpstan/phpstan-php-parser": "^1.1",
                 "phpstan/phpstan-phpunit": "^1.0",
@@ -9009,7 +9010,7 @@
             "description": "🌯 PHPStan rules wrapper",
             "support": {
                 "issues": "https://github.com/WyriHaximus/php-phpstan-rules-wrapper/issues",
-                "source": "https://github.com/WyriHaximus/php-phpstan-rules-wrapper/tree/2.0.2"
+                "source": "https://github.com/WyriHaximus/php-phpstan-rules-wrapper/tree/2.1.0"
             },
             "funding": [
                 {
@@ -9017,7 +9018,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-03-20T23:39:37+00:00"
+            "time": "2022-03-21T09:41:34+00:00"
         }
     ],
     "packages-dev": [],
