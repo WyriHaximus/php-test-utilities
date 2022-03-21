@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c24470556c85c70ec00ba4ecf98c9007",
+    "content-hash": "a74821c73ae44044421d0af22c5624ea",
     "packages": [
         {
             "name": "amphp/amp",
@@ -8933,22 +8933,22 @@
         },
         {
             "name": "wyrihaximus/coding-standard",
-            "version": "2.8.0",
+            "version": "2.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/WyriHaximus/php-coding-standard.git",
-                "reference": "c3af51ffec5ef372d4bbdf6d6efb5c9c05658a7f"
+                "reference": "ec3e0f983185c00022211373d67bd390e82d2387"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WyriHaximus/php-coding-standard/zipball/c3af51ffec5ef372d4bbdf6d6efb5c9c05658a7f",
-                "reference": "c3af51ffec5ef372d4bbdf6d6efb5c9c05658a7f",
+                "url": "https://api.github.com/repos/WyriHaximus/php-coding-standard/zipball/ec3e0f983185c00022211373d67bd390e82d2387",
+                "reference": "ec3e0f983185c00022211373d67bd390e82d2387",
                 "shasum": ""
             },
             "require": {
                 "dealerdirect/phpcodesniffer-composer-installer": "^0.7.1",
                 "doctrine/coding-standard": "^9.0.0",
-                "php": "^8 || ^7.4",
+                "php": "^8",
                 "slevomat/coding-standard": "^7.0.14",
                 "squizlabs/php_codesniffer": "^3.6.0"
             },
@@ -8960,7 +8960,7 @@
             "description": "WyriHaximus Coding Standard",
             "support": {
                 "issues": "https://github.com/WyriHaximus/php-coding-standard/issues",
-                "source": "https://github.com/WyriHaximus/php-coding-standard/tree/2.8.0"
+                "source": "https://github.com/WyriHaximus/php-coding-standard/tree/2.9.0"
             },
             "funding": [
                 {
@@ -8968,7 +8968,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-03-08T07:19:19+00:00"
+            "time": "2022-03-21T10:33:22+00:00"
         },
         {
             "name": "wyrihaximus/phpstan-rules-wrapper",
