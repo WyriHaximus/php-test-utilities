@@ -11,7 +11,7 @@
   "require": {
     "php": "^8",
     "ergebnis/composer-normalize": "^2.24.1",
-    "icanhazstring/composer-unused": "^0.8.1",
+    "icanhazstring/composer-unused": "^0.8.2",
     "infection/infection": "^0.26.5",
     "jakobbuis/simple-slow-test-reporter": "^1.0",
     "maglnet/composer-require-checker": "^3.8.0",

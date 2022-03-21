@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a74821c73ae44044421d0af22c5624ea",
+    "content-hash": "023c2fc734265114f7ff47f3f48acab8",
     "packages": [
         {
             "name": "amphp/amp",
@@ -354,16 +354,16 @@
         },
         {
             "name": "composer-unused/symbol-parser",
-            "version": "0.1.7",
+            "version": "0.1.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer-unused/symbol-parser.git",
-                "reference": "a3b045d1090cb0bac2680c85f0e53bbb2a597b69"
+                "reference": "605be0cb0049341c8f35b94a11f1cba68c8f930b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer-unused/symbol-parser/zipball/a3b045d1090cb0bac2680c85f0e53bbb2a597b69",
-                "reference": "a3b045d1090cb0bac2680c85f0e53bbb2a597b69",
+                "url": "https://api.github.com/repos/composer-unused/symbol-parser/zipball/605be0cb0049341c8f35b94a11f1cba68c8f930b",
+                "reference": "605be0cb0049341c8f35b94a11f1cba68c8f930b",
                 "shasum": ""
             },
             "require": {
@@ -377,7 +377,7 @@
             "require-dev": {
                 "ext-ds": "*",
                 "phpstan/phpstan": "^1.4",
-                "phpunit/phpunit": "^9.5.13",
+                "phpunit/phpunit": "^9.5.18",
                 "roave/security-advisories": "dev-master",
                 "squizlabs/php_codesniffer": "^3.6.2",
                 "symfony/serializer": "^5.4"
@@ -419,7 +419,7 @@
                     "type": "other"
                 }
             ],
-            "time": "2022-02-15T20:12:38+00:00"
+            "time": "2022-03-09T17:46:04+00:00"
         },
         {
             "name": "composer/ca-bundle",
@@ -2102,21 +2102,21 @@
         },
         {
             "name": "icanhazstring/composer-unused",
-            "version": "0.8.1",
+            "version": "0.8.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer-unused/composer-unused.git",
-                "reference": "4e49276c9682ea32b9c4cf6186185c7c69b7ffd6"
+                "reference": "a86c29b51d41ed0087085c36cd9948d9952cd9cf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer-unused/composer-unused/zipball/4e49276c9682ea32b9c4cf6186185c7c69b7ffd6",
-                "reference": "4e49276c9682ea32b9c4cf6186185c7c69b7ffd6",
+                "url": "https://api.github.com/repos/composer-unused/composer-unused/zipball/a86c29b51d41ed0087085c36cd9948d9952cd9cf",
+                "reference": "a86c29b51d41ed0087085c36cd9948d9952cd9cf",
                 "shasum": ""
             },
             "require": {
                 "composer-unused/contracts": "^0.2",
-                "composer-unused/symbol-parser": "^0.1.7",
+                "composer-unused/symbol-parser": "^0.1.8",
                 "nikic/php-parser": "^4.13",
                 "ondram/ci-detector": "^4.1",
                 "php": "^7.4 || ^8.0",
@@ -2136,7 +2136,7 @@
                 "jangregor/phpstan-prophecy": "^0.8.1",
                 "phpspec/prophecy-phpunit": "^2.0.1",
                 "phpstan/phpstan": "^0.12.99",
-                "phpunit/phpunit": "^9.5.13",
+                "phpunit/phpunit": "^9.5.19",
                 "roave/security-advisories": "dev-master",
                 "squizlabs/php_codesniffer": "^3.6"
             },
@@ -2180,7 +2180,7 @@
                     "type": "other"
                 }
             ],
-            "time": "2022-02-15T20:22:44+00:00"
+            "time": "2022-03-16T06:01:46+00:00"
         },
         {
             "name": "infection/abstract-testframework-adapter",
@@ -7052,16 +7052,16 @@
         },
         {
             "name": "symfony/dependency-injection",
-            "version": "v6.0.5",
+            "version": "v6.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/dependency-injection.git",
-                "reference": "481846cbd2441cf3444340ee53486fc24da525bd"
+                "reference": "a296611f599d0b28e7af88798f830f9cb4d1e8e6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/481846cbd2441cf3444340ee53486fc24da525bd",
-                "reference": "481846cbd2441cf3444340ee53486fc24da525bd",
+                "url": "https://api.github.com/repos/symfony/dependency-injection/zipball/a296611f599d0b28e7af88798f830f9cb4d1e8e6",
+                "reference": "a296611f599d0b28e7af88798f830f9cb4d1e8e6",
                 "shasum": ""
             },
             "require": {
@@ -7120,7 +7120,7 @@
             "description": "Allows you to standardize and centralize the way objects are constructed in your application",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/dependency-injection/tree/v6.0.5"
+                "source": "https://github.com/symfony/dependency-injection/tree/v6.0.6"
             },
             "funding": [
                 {
@@ -7136,7 +7136,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-02-24T10:01:27+00:00"
+            "time": "2022-03-02T12:58:14+00:00"
         },
         {
             "name": "symfony/deprecation-contracts",
@@ -7823,7 +7823,7 @@
         },
         {
             "name": "symfony/polyfill-php81",
-            "version": "v1.24.0",
+            "version": "v1.25.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php81.git",
@@ -7882,7 +7882,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-php81/tree/v1.24.0"
+                "source": "https://github.com/symfony/polyfill-php81/tree/v1.25.0"
             },
             "funding": [
                 {
@@ -7963,16 +7963,16 @@
         },
         {
             "name": "symfony/serializer",
-            "version": "v6.0.5",
+            "version": "v6.0.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/serializer.git",
-                "reference": "c26ce23c36879d243909bb604585bd81351df416"
+                "reference": "ba979f0e66df001e2c30e98d9249eb9994d3589c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/serializer/zipball/c26ce23c36879d243909bb604585bd81351df416",
-                "reference": "c26ce23c36879d243909bb604585bd81351df416",
+                "url": "https://api.github.com/repos/symfony/serializer/zipball/ba979f0e66df001e2c30e98d9249eb9994d3589c",
+                "reference": "ba979f0e66df001e2c30e98d9249eb9994d3589c",
                 "shasum": ""
             },
             "require": {
@@ -8044,7 +8044,7 @@
             "description": "Handles serializing and deserializing data structures, including object graphs, into array structures or other formats like XML and JSON.",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/serializer/tree/v6.0.5"
+                "source": "https://github.com/symfony/serializer/tree/v6.0.6"
             },
             "funding": [
                 {
@@ -8060,7 +8060,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-02-24T10:01:27+00:00"
+            "time": "2022-03-02T12:58:14+00:00"
         },
         {
             "name": "symfony/service-contracts",
