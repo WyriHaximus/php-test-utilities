@@ -499,16 +499,16 @@
         },
         {
             "name": "composer/composer",
-            "version": "2.2.7",
+            "version": "2.2.9",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/composer.git",
-                "reference": "061d154dfdde157cbf453c4695e6af21c0e93903"
+                "reference": "07eccf080ad63d55d95a7c9133506db7d9029264"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/composer/zipball/061d154dfdde157cbf453c4695e6af21c0e93903",
-                "reference": "061d154dfdde157cbf453c4695e6af21c0e93903",
+                "url": "https://api.github.com/repos/composer/composer/zipball/07eccf080ad63d55d95a7c9133506db7d9029264",
+                "reference": "07eccf080ad63d55d95a7c9133506db7d9029264",
                 "shasum": ""
             },
             "require": {
@@ -578,7 +578,7 @@
             "support": {
                 "irc": "ircs://irc.libera.chat:6697/composer",
                 "issues": "https://github.com/composer/composer/issues",
-                "source": "https://github.com/composer/composer/tree/2.2.7"
+                "source": "https://github.com/composer/composer/tree/2.2.9"
             },
             "funding": [
                 {
@@ -594,7 +594,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-02-25T10:12:27+00:00"
+            "time": "2022-03-15T21:13:37+00:00"
         },
         {
             "name": "composer/metadata-minifier",
@@ -738,16 +738,16 @@
         },
         {
             "name": "composer/semver",
-            "version": "3.2.9",
+            "version": "3.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/semver.git",
-                "reference": "a951f614bd64dcd26137bc9b7b2637ddcfc57649"
+                "reference": "5d8e574bb0e69188786b8ef77d43341222a41a71"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/semver/zipball/a951f614bd64dcd26137bc9b7b2637ddcfc57649",
-                "reference": "a951f614bd64dcd26137bc9b7b2637ddcfc57649",
+                "url": "https://api.github.com/repos/composer/semver/zipball/5d8e574bb0e69188786b8ef77d43341222a41a71",
+                "reference": "5d8e574bb0e69188786b8ef77d43341222a41a71",
                 "shasum": ""
             },
             "require": {
@@ -799,7 +799,7 @@
             "support": {
                 "irc": "irc://irc.freenode.org/composer",
                 "issues": "https://github.com/composer/semver/issues",
-                "source": "https://github.com/composer/semver/tree/3.2.9"
+                "source": "https://github.com/composer/semver/tree/3.3.1"
             },
             "funding": [
                 {
@@ -815,7 +815,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-02-04T13:58:43+00:00"
+            "time": "2022-03-16T11:22:07+00:00"
         },
         {
             "name": "composer/spdx-licenses",
@@ -5329,26 +5329,26 @@
         },
         {
             "name": "roave/backward-compatibility-check",
-            "version": "6.2.0",
+            "version": "6.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Roave/BackwardCompatibilityCheck.git",
-                "reference": "079f2a6448a0aea73128f1aade0c93cb21ac55f9"
+                "reference": "2e51abb171a77a8c5292a2a46b71f31163b18758"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/BackwardCompatibilityCheck/zipball/079f2a6448a0aea73128f1aade0c93cb21ac55f9",
-                "reference": "079f2a6448a0aea73128f1aade0c93cb21ac55f9",
+                "url": "https://api.github.com/repos/Roave/BackwardCompatibilityCheck/zipball/2e51abb171a77a8c5292a2a46b71f31163b18758",
+                "reference": "2e51abb171a77a8c5292a2a46b71f31163b18758",
                 "shasum": ""
             },
             "require": {
                 "azjezz/psl": "^1.9.3",
-                "composer/composer": "^2.2.7",
+                "composer/composer": "^2.2.9",
                 "ext-json": "*",
                 "nikolaposa/version": "^4.1.0",
                 "ocramius/package-versions": "^2.5.1",
                 "php": "~8.0.0 || ~8.1.0",
-                "roave/better-reflection": "^5.2.0",
+                "roave/better-reflection": "^5.3.0",
                 "symfony/console": "^5.4.5"
             },
             "conflict": {
@@ -5357,9 +5357,9 @@
             "require-dev": {
                 "doctrine/coding-standard": "^9.0.0",
                 "php-standard-library/psalm-plugin": "^1.1.5",
-                "phpunit/phpunit": "^9.5.18",
+                "phpunit/phpunit": "^9.5.19",
                 "psalm/plugin-phpunit": "^0.16.1",
-                "roave/infection-static-analysis-plugin": "^1.17",
+                "roave/infection-static-analysis-plugin": "^1.18",
                 "roave/security-advisories": "dev-master",
                 "squizlabs/php_codesniffer": "^3.6.2",
                 "vimeo/psalm": "^4.22.0"
@@ -5390,22 +5390,22 @@
             "description": "Tool to compare two revisions of a public API to check for BC breaks",
             "support": {
                 "issues": "https://github.com/Roave/BackwardCompatibilityCheck/issues",
-                "source": "https://github.com/Roave/BackwardCompatibilityCheck/tree/6.2.0"
+                "source": "https://github.com/Roave/BackwardCompatibilityCheck/tree/6.3.0"
             },
-            "time": "2022-03-08T16:03:18+00:00"
+            "time": "2022-03-23T15:26:26+00:00"
         },
         {
             "name": "roave/better-reflection",
-            "version": "5.2.0",
+            "version": "5.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Roave/BetterReflection.git",
-                "reference": "661ef079e23fee517b5eccd12bbd582de0903263"
+                "reference": "e2e9062ec1c0f6bc95ee29a5d4277ecb708aaf4d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/BetterReflection/zipball/661ef079e23fee517b5eccd12bbd582de0903263",
-                "reference": "661ef079e23fee517b5eccd12bbd582de0903263",
+                "url": "https://api.github.com/repos/Roave/BetterReflection/zipball/e2e9062ec1c0f6bc95ee29a5d4277ecb708aaf4d",
+                "reference": "e2e9062ec1c0f6bc95ee29a5d4277ecb708aaf4d",
                 "shasum": ""
             },
             "require": {
@@ -5420,10 +5420,10 @@
             },
             "require-dev": {
                 "doctrine/coding-standard": "^9.0.0",
-                "phpstan/phpstan": "^1.4.6",
+                "phpstan/phpstan": "^1.4.10",
                 "phpunit/phpunit": "^9.5.13",
-                "roave/infection-static-analysis-plugin": "^1.17.0",
-                "vimeo/psalm": "^4.21"
+                "roave/infection-static-analysis-plugin": "^1.18.0",
+                "vimeo/psalm": "^4.22"
             },
             "suggest": {
                 "composer/composer": "Required to use the ComposerSourceLocator"
@@ -5463,9 +5463,9 @@
             "description": "Better Reflection - an improved code reflection API",
             "support": {
                 "issues": "https://github.com/Roave/BetterReflection/issues",
-                "source": "https://github.com/Roave/BetterReflection/tree/5.2.0"
+                "source": "https://github.com/Roave/BetterReflection/tree/5.3.0"
             },
-            "time": "2022-02-27T19:04:55+00:00"
+            "time": "2022-03-22T15:47:53+00:00"
         },
         {
             "name": "roave/infection-static-analysis-plugin",
