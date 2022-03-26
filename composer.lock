@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4751dad959d1d62ffccaa4deba0f29d6",
+    "content-hash": "b0d96a9e981314ca8ec492f19d426e46",
     "packages": [
         {
             "name": "amphp/amp",
@@ -6758,16 +6758,16 @@
         },
         {
             "name": "slevomat/coding-standard",
-            "version": "7.0.19",
+            "version": "7.0.20",
             "source": {
                 "type": "git",
                 "url": "https://github.com/slevomat/coding-standard.git",
-                "reference": "bef66a43815bbf9b5f49775e9ded3f7c6ba0cc37"
+                "reference": "cbfadfe34c2c29473bf1e891306b3950b3b4350b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/slevomat/coding-standard/zipball/bef66a43815bbf9b5f49775e9ded3f7c6ba0cc37",
-                "reference": "bef66a43815bbf9b5f49775e9ded3f7c6ba0cc37",
+                "url": "https://api.github.com/repos/slevomat/coding-standard/zipball/cbfadfe34c2c29473bf1e891306b3950b3b4350b",
+                "reference": "cbfadfe34c2c29473bf1e891306b3950b3b4350b",
                 "shasum": ""
             },
             "require": {
@@ -6779,11 +6779,11 @@
             "require-dev": {
                 "phing/phing": "2.17.2",
                 "php-parallel-lint/php-parallel-lint": "1.3.2",
-                "phpstan/phpstan": "1.4.6",
+                "phpstan/phpstan": "1.4.10|1.5.0",
                 "phpstan/phpstan-deprecation-rules": "1.0.0",
                 "phpstan/phpstan-phpunit": "1.0.0",
                 "phpstan/phpstan-strict-rules": "1.1.0",
-                "phpunit/phpunit": "7.5.20|8.5.21|9.5.16"
+                "phpunit/phpunit": "7.5.20|8.5.21|9.5.19"
             },
             "type": "phpcodesniffer-standard",
             "extra": {
@@ -6803,7 +6803,7 @@
             "description": "Slevomat Coding Standard for PHP_CodeSniffer complements Consistence Coding Standard by providing sniffs with additional checks.",
             "support": {
                 "issues": "https://github.com/slevomat/coding-standard/issues",
-                "source": "https://github.com/slevomat/coding-standard/tree/7.0.19"
+                "source": "https://github.com/slevomat/coding-standard/tree/7.0.20"
             },
             "funding": [
                 {
@@ -6815,7 +6815,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-03-01T18:01:41+00:00"
+            "time": "2022-03-25T09:43:20+00:00"
         },
         {
             "name": "squizlabs/php_codesniffer",
@@ -8933,16 +8933,16 @@
         },
         {
             "name": "wyrihaximus/coding-standard",
-            "version": "2.9.0",
+            "version": "2.10.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/WyriHaximus/php-coding-standard.git",
-                "reference": "ec3e0f983185c00022211373d67bd390e82d2387"
+                "reference": "870e50a2e4e8d2bd75d37ccc09831ed7e9978181"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WyriHaximus/php-coding-standard/zipball/ec3e0f983185c00022211373d67bd390e82d2387",
-                "reference": "ec3e0f983185c00022211373d67bd390e82d2387",
+                "url": "https://api.github.com/repos/WyriHaximus/php-coding-standard/zipball/870e50a2e4e8d2bd75d37ccc09831ed7e9978181",
+                "reference": "870e50a2e4e8d2bd75d37ccc09831ed7e9978181",
                 "shasum": ""
             },
             "require": {
@@ -8960,7 +8960,7 @@
             "description": "WyriHaximus Coding Standard",
             "support": {
                 "issues": "https://github.com/WyriHaximus/php-coding-standard/issues",
-                "source": "https://github.com/WyriHaximus/php-coding-standard/tree/2.9.0"
+                "source": "https://github.com/WyriHaximus/php-coding-standard/tree/2.10.0"
             },
             "funding": [
                 {
@@ -8968,7 +8968,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-03-21T10:33:22+00:00"
+            "time": "2022-03-26T10:08:00+00:00"
         },
         {
             "name": "wyrihaximus/phpstan-rules-wrapper",
