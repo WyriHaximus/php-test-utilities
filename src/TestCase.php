@@ -129,8 +129,10 @@ abstract class TestCase extends PHPUnitTestCase
     {
         $files = [];
 
-        $directory = new RecursiveDirectoryIterator($path);
-        $directory = new RecursiveIteratorIterator($directory);
+        /**
+         * @var iterable<SplFileInfo>
+         */
+        $directory = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($path));
 
         foreach ($directory as $node) {
             if (! is_file($node->getPathname())) {
