@@ -14,7 +14,7 @@ jobs:
     steps:
       ## Use v1 as it will do a full checkout, where v2 will only do a partial and not fetch all heads, two of which
       ## we need to create the diff between the PR's branch and the PR's target branch.
-      - uses: actions/checkout@v1
+      - uses: actions/checkout@v3
       - name: Comment composer.lock diff
         uses: WyriHaximus/github-action-composer.lock-diff@v1
         env:
