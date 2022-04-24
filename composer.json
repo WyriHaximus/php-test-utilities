@@ -12,7 +12,7 @@
     "php": "^8",
     "ergebnis/composer-normalize": "^2.25.2",
     "icanhazstring/composer-unused": "^0.8.2",
-    "infection/infection": "^0.26.5",
+    "infection/infection": "^0.26.6",
     "jakobbuis/simple-slow-test-reporter": "^1.0",
     "maglnet/composer-require-checker": "^3.8.0",
     "nunomaduro/collision": "^5.11.0",
@@ -20,19 +20,19 @@
     "php-coveralls/php-coveralls": "^2.5.2",
     "php-parallel-lint/php-console-highlighter": "^1.0",
     "php-parallel-lint/php-parallel-lint": "^1.3.2",
-    "php-standard-library/psalm-plugin": "^1.1",
+    "php-standard-library/psalm-plugin": "^1.1.5",
     "phpspec/prophecy": "^1.15",
     "phpspec/prophecy-phpunit": "^2.0.1",
     "phpstan/phpstan": "^1.5.7",
-    "phpunit/phpunit": "^9.5.19",
+    "phpunit/phpunit": "^9.5.20",
     "psalm/plugin-phpunit": "^0.16.1",
-    "roave/backward-compatibility-check": "^6",
+    "roave/backward-compatibility-check": "^6.4.0",
     "roave/infection-static-analysis-plugin": "^1.18.0",
     "squizlabs/php_codesniffer": "^3.6.2",
     "thecodingmachine/safe": "^1.3.3",
-    "vimeo/psalm": "^4.21",
+    "vimeo/psalm": "^4.22",
     "wyrihaximus/coding-standard": "^2.10.0",
-    "wyrihaximus/phpstan-rules-wrapper": "^2"
+    "wyrihaximus/phpstan-rules-wrapper": "^2.2"
   },
   "autoload": {
     "psr-4": {
@@ -49,7 +49,6 @@
       "composer/package-versions-deprecated": true,
       "dealerdirect/phpcodesniffer-composer-installer": true,
       "ergebnis/composer-normalize": true,
-      "icanhazstring/composer-unused": true,
       "infection/extension-installer": true,
       "composer-unused/composer-unused-plugin": true
     },
@@ -57,26 +56,6 @@
       "php": "8.0.12"
     },
     "sort-packages": true
-  },
-  "extra": {
-    "unused": [
-      "ergebnis/composer-normalize",
-      "icanhazstring/composer-unused",
-      "jakobbuis/simple-slow-test-reporter",
-      "maglnet/composer-require-checker",
-      "nunomaduro/collision",
-      "orklah/psalm-insane-comparison",
-      "php-coveralls/php-coveralls",
-      "php-parallel-lint/php-console-highlighter",
-      "php-parallel-lint/php-parallel-lint",
-      "php-standard-library/psalm-plugin",
-      "phpstan/phpstan",
-      "psalm/plugin-phpunit",
-      "roave/backward-compatibility-check",
-      "roave/infection-static-analysis-plugin",
-      "wyrihaximus/coding-standard",
-      "wyrihaximus/phpstan-rules-wrapper"
-    ]
   },
   "scripts": {
     "post-install-cmd": [
