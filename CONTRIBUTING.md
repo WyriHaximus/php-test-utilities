@@ -28,7 +28,7 @@ Before committing and submitting your pull request make sure it passes PSR2 codi
 
 Push to your fork and [submit a pull request][pr].
 
-[pr]: https://help.github.com/articles/creating-a-pull-request/
+[pr]: https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request
 
 At this point you're waiting on me. I like to at least comment on pull requests
 within a day or two. I may suggest some changes or improvements or alternatives.
