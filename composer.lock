@@ -4412,16 +4412,16 @@
         },
         {
             "name": "phpstan/phpstan-strict-rules",
-            "version": "1.2.1",
+            "version": "1.2.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan-strict-rules.git",
-                "reference": "f3ca6464eae640a556c69a02b3b77a2507475d2f"
+                "reference": "0c82c96f2a55d8b91bbc7ee6512c94f68a206b43"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan-strict-rules/zipball/f3ca6464eae640a556c69a02b3b77a2507475d2f",
-                "reference": "f3ca6464eae640a556c69a02b3b77a2507475d2f",
+                "url": "https://api.github.com/repos/phpstan/phpstan-strict-rules/zipball/0c82c96f2a55d8b91bbc7ee6512c94f68a206b43",
+                "reference": "0c82c96f2a55d8b91bbc7ee6512c94f68a206b43",
                 "shasum": ""
             },
             "require": {
@@ -4454,9 +4454,9 @@
             "description": "Extra strict and opinionated rules for PHPStan",
             "support": {
                 "issues": "https://github.com/phpstan/phpstan-strict-rules/issues",
-                "source": "https://github.com/phpstan/phpstan-strict-rules/tree/1.2.1"
+                "source": "https://github.com/phpstan/phpstan-strict-rules/tree/1.2.3"
             },
-            "time": "2022-04-28T07:20:18+00:00"
+            "time": "2022-05-04T15:20:40+00:00"
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -8968,16 +8968,16 @@
         },
         {
             "name": "wyrihaximus/phpstan-rules-wrapper",
-            "version": "2.3.0",
+            "version": "2.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/WyriHaximus/php-phpstan-rules-wrapper.git",
-                "reference": "9fc1928c6434bc89eed03969719ddfc461dea6a5"
+                "reference": "11d6a9f9da3917004f255320a862eedd537eed7b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WyriHaximus/php-phpstan-rules-wrapper/zipball/9fc1928c6434bc89eed03969719ddfc461dea6a5",
-                "reference": "9fc1928c6434bc89eed03969719ddfc461dea6a5",
+                "url": "https://api.github.com/repos/WyriHaximus/php-phpstan-rules-wrapper/zipball/11d6a9f9da3917004f255320a862eedd537eed7b",
+                "reference": "11d6a9f9da3917004f255320a862eedd537eed7b",
                 "shasum": ""
             },
             "require": {
@@ -9006,7 +9006,7 @@
             "description": "🌯 PHPStan rules wrapper",
             "support": {
                 "issues": "https://github.com/WyriHaximus/php-phpstan-rules-wrapper/issues",
-                "source": "https://github.com/WyriHaximus/php-phpstan-rules-wrapper/tree/2.3.0"
+                "source": "https://github.com/WyriHaximus/php-phpstan-rules-wrapper/tree/2.4.0"
             },
             "funding": [
                 {
@@ -9014,7 +9014,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-04-27T22:54:22+00:00"
+            "time": "2022-05-05T06:14:19+00:00"
         }
     ],
     "packages-dev": [],
