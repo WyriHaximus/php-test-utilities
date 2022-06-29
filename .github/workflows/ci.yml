@@ -27,6 +27,7 @@ jobs:
       - lint-json
     outputs:
       version: ${{ steps.supported-versions-matrix.outputs.version }}
+      upcoming: ${{ steps.supported-versions-matrix.outputs.upcoming }}
     steps:
       - uses: actions/checkout@v3
       - id: supported-versions-matrix
@@ -70,6 +71,7 @@ jobs:
         run: |
           echo "{\"repositories\": [{\"name\": \"${{ matrix.package-name }}\",\"type\": \"path\",\"url\": \"./checked_out_package\"}]}" > composer.json
       - name: Require package
+        if: needs.supported-versions-matrix.outputs.upcoming != matrix.php
         run: |
           composer require "${{ matrix.package-name }}:dev-${GITHUB_SHA}" --no-progress --ansi --no-interaction --prefer-dist -o -vvv || composer require "${{ matrix.package-name }}:dev-${GITHUB_REF_NAME}" --no-progress --ansi --no-interaction --prefer-dist -o -vvv
   qa:
@@ -96,7 +98,13 @@ jobs:
       - name: Fetch Tags
         run: git fetch --depth=1 origin +refs/tags/*:refs/tags/* || true
         if: matrix.check == 'backward-compatibility-check'
+      - run: make ${{ matrix.check }} || true
+        if: needs.supported-versions-matrix.outputs.upcoming == matrix.php
+        env:
+          COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
+          COVERALLS_RUN_LOCALLY: ${{ secrets.COVERALLS_RUN_LOCALLY }}
       - run: make ${{ matrix.check }}
+        if: needs.supported-versions-matrix.outputs.upcoming != matrix.php
         env:
           COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
           COVERALLS_RUN_LOCALLY: ${{ secrets.COVERALLS_RUN_LOCALLY }}
@@ -124,8 +132,13 @@ jobs:
       - uses: ramsey/composer-install@v2
         with:
           dependency-versions: ${{ matrix.composer }}
-      - run: |
-         make unit-testing-raw
+      - run: make unit-testing-raw || true
+        if: needs.supported-versions-matrix.outputs.upcoming == matrix.php
+        env:
+          COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
+          COVERALLS_RUN_LOCALLY: ${{ secrets.COVERALLS_RUN_LOCALLY }}
+      - run: make unit-testing-raw
+        if: needs.supported-versions-matrix.outputs.upcoming != matrix.php
         env:
           COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
           COVERALLS_RUN_LOCALLY: ${{ secrets.COVERALLS_RUN_LOCALLY }}
