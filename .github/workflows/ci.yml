@@ -73,7 +73,8 @@ jobs:
       - name: Require package
         if: needs.supported-versions-matrix.outputs.upcoming != matrix.php
         run: |
-          composer require "${{ matrix.package-name }}:dev-${GITHUB_SHA}" --no-progress --ansi --no-interaction --prefer-dist -o -vvv || composer require "${{ matrix.package-name }}:dev-${GITHUB_REF_NAME}" --no-progress --ansi --no-interaction --prefer-dist -o -vvv
+          composer config --no-plugins "allow-plugins.*/*" true
+          composer require "${{ matrix.package-name }}:dev-${GITHUB_SHA}" --no-progress --ansi --no-interaction --prefer-dist --no-plugins -o -vvv || composer require "${{ matrix.package-name }}:dev-${GITHUB_REF_NAME}" --no-progress --ansi --no-interaction --prefer-dist --no-plugins -o -vvv
   qa:
     name: Run ${{ matrix.check }} on PHP ${{ matrix.php }} with ${{ matrix.composer }} dependency preference
     strategy:
