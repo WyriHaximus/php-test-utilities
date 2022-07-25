@@ -22,7 +22,7 @@ Any test file can extend `WyriHaximus\TestUtilities\TestCase` and it comes with 
 
 The MIT License (MIT)
 
-Copyright (c) 2021 Cees-Jan Kiewiet
+Copyright (c) 2022 Cees-Jan Kiewiet
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
