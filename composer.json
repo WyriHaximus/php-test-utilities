@@ -14,7 +14,7 @@
     "icanhazstring/composer-unused": "^0.8.2",
     "infection/infection": "^0.26.5",
     "jakobbuis/simple-slow-test-reporter": "^1.0",
-    "maglnet/composer-require-checker": "^4.0.0 || ^3.8.0",
+    "maglnet/composer-require-checker": "^4.2.0",
     "nunomaduro/collision": "^6.0.0 || ^5.11.0",
     "orklah/psalm-insane-comparison": "^2.0.0",
     "php-coveralls/php-coveralls": "^2.5.2",
