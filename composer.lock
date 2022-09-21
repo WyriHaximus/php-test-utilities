@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0aca7c623b4ad2fd5a668a7dde15784f",
+    "content-hash": "83ada2d4b44d27ac2f770240d7c9f81a",
     "packages": [
         {
             "name": "amphp/amp",
@@ -8612,16 +8612,16 @@
         },
         {
             "name": "thecodingmachine/safe",
-            "version": "v2.2.3",
+            "version": "v2.3.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thecodingmachine/safe.git",
-                "reference": "e454a3142d2197694d1fda291a4462ccd3f66e12"
+                "reference": "b141ff557fafcd00a475298883e567fc06bd95dd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thecodingmachine/safe/zipball/e454a3142d2197694d1fda291a4462ccd3f66e12",
-                "reference": "e454a3142d2197694d1fda291a4462ccd3f66e12",
+                "url": "https://api.github.com/repos/thecodingmachine/safe/zipball/b141ff557fafcd00a475298883e567fc06bd95dd",
+                "reference": "b141ff557fafcd00a475298883e567fc06bd95dd",
                 "shasum": ""
             },
             "require": {
@@ -8645,6 +8645,7 @@
                     "deprecated/array.php",
                     "deprecated/datetime.php",
                     "deprecated/libevent.php",
+                    "deprecated/misc.php",
                     "deprecated/password.php",
                     "deprecated/mssql.php",
                     "deprecated/stats.php",
@@ -8744,9 +8745,9 @@
             "description": "PHP core functions that throw exceptions instead of returning FALSE on error",
             "support": {
                 "issues": "https://github.com/thecodingmachine/safe/issues",
-                "source": "https://github.com/thecodingmachine/safe/tree/v2.2.3"
+                "source": "https://github.com/thecodingmachine/safe/tree/v2.3.1"
             },
-            "time": "2022-08-04T14:05:49+00:00"
+            "time": "2022-09-20T12:01:26+00:00"
         },
         {
             "name": "theseer/tokenizer",
