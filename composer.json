@@ -24,7 +24,7 @@
     "phpspec/prophecy": "^1.15",
     "phpspec/prophecy-phpunit": "^2.0.1",
     "phpstan/phpstan": "^1.8.5",
-    "phpunit/phpunit": "^9.5.24",
+    "phpunit/phpunit": "^9.5.25",
     "psalm/plugin-phpunit": "^0.17.0",
     "roave/backward-compatibility-check": "^7.1.0",
     "roave/infection-static-analysis-plugin": "^1.23.0",
