@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "88710f6bdaf47277ddefe414372fe7e4",
+    "content-hash": "7248b6fa1e5badae0b194246ec20b090",
     "packages": [
         {
             "name": "amphp/amp",
@@ -354,32 +354,33 @@
         },
         {
             "name": "composer-unused/symbol-parser",
-            "version": "0.1.9",
+            "version": "0.1.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer-unused/symbol-parser.git",
-                "reference": "d16e5607d55041ae6135ed07a7935675010d971b"
+                "reference": "b57dc7924b8017c47087bf2fd6b125c1facdee47"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer-unused/symbol-parser/zipball/d16e5607d55041ae6135ed07a7935675010d971b",
-                "reference": "d16e5607d55041ae6135ed07a7935675010d971b",
+                "url": "https://api.github.com/repos/composer-unused/symbol-parser/zipball/b57dc7924b8017c47087bf2fd6b125c1facdee47",
+                "reference": "b57dc7924b8017c47087bf2fd6b125c1facdee47",
                 "shasum": ""
             },
             "require": {
                 "composer-unused/contracts": "^0.1 || ^0.2",
-                "nikic/php-parser": "^4.13",
+                "nikic/php-parser": "^4.15",
                 "php": "^7.4 || ^8.0",
+                "phpstan/phpdoc-parser": "^1.8",
                 "psr/container": "^1.0 || ^2.0",
                 "psr/log": "^1.1 || ^2 || ^3",
-                "symfony/finder": "4.4 || ^5.3 || ^6.0"
+                "symfony/finder": "^4.4 || ^5.3 || ^6.0"
             },
             "require-dev": {
                 "ext-ds": "*",
-                "phpstan/phpstan": "^1.6",
-                "phpunit/phpunit": "^9.5.20",
+                "phpstan/phpstan": "^1.8",
+                "phpunit/phpunit": "^9.5.25",
                 "roave/security-advisories": "dev-master",
-                "squizlabs/php_codesniffer": "^3.6.2",
+                "squizlabs/php_codesniffer": "^3.7.1",
                 "symfony/serializer": "^5.4"
             },
             "type": "library",
@@ -419,7 +420,7 @@
                     "type": "other"
                 }
             ],
-            "time": "2022-05-03T17:31:36+00:00"
+            "time": "2022-10-07T12:49:32+00:00"
         },
         {
             "name": "composer/ca-bundle",
@@ -2137,24 +2138,26 @@
         },
         {
             "name": "icanhazstring/composer-unused",
-            "version": "0.8.3",
+            "version": "0.8.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer-unused/composer-unused.git",
-                "reference": "d1d0c6707215767ca423c44b6ea954025c0feab3"
+                "reference": "af9085d2058333d26559b334c536c40fb04e28d3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer-unused/composer-unused/zipball/d1d0c6707215767ca423c44b6ea954025c0feab3",
-                "reference": "d1d0c6707215767ca423c44b6ea954025c0feab3",
+                "url": "https://api.github.com/repos/composer-unused/composer-unused/zipball/af9085d2058333d26559b334c536c40fb04e28d3",
+                "reference": "af9085d2058333d26559b334c536c40fb04e28d3",
                 "shasum": ""
             },
             "require": {
                 "composer-unused/contracts": "^0.2",
-                "composer-unused/symbol-parser": "^0.1.9",
+                "composer-unused/symbol-parser": "^0.1.10",
+                "ext-json": "*",
                 "nikic/php-parser": "^4.15",
                 "ondram/ci-detector": "^4.1",
                 "php": "^7.4 || ^8.0",
+                "phpstan/phpdoc-parser": "^1.10",
                 "psr/container": "^1.0 || ^2.0",
                 "psr/log": "^1.1 || ^2 || ^3",
                 "symfony/config": "^4.4 || ^5.4 || ^6.0",
@@ -2215,7 +2218,7 @@
                     "type": "other"
                 }
             ],
-            "time": "2022-09-30T12:49:24+00:00"
+            "time": "2022-10-13T05:46:37+00:00"
         },
         {
             "name": "infection/abstract-testframework-adapter",
@@ -4186,16 +4189,16 @@
         },
         {
             "name": "phpstan/phpdoc-parser",
-            "version": "1.7.0",
+            "version": "1.13.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpdoc-parser.git",
-                "reference": "367a8d9d5f7da2a0136422d27ce8840583926955"
+                "reference": "33aefcdab42900e36366d0feab6206e2dd68f947"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/367a8d9d5f7da2a0136422d27ce8840583926955",
-                "reference": "367a8d9d5f7da2a0136422d27ce8840583926955",
+                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/33aefcdab42900e36366d0feab6206e2dd68f947",
+                "reference": "33aefcdab42900e36366d0feab6206e2dd68f947",
                 "shasum": ""
             },
             "require": {
@@ -4225,9 +4228,9 @@
             "description": "PHPDoc parser with support for nullable, intersection and generic types",
             "support": {
                 "issues": "https://github.com/phpstan/phpdoc-parser/issues",
-                "source": "https://github.com/phpstan/phpdoc-parser/tree/1.7.0"
+                "source": "https://github.com/phpstan/phpdoc-parser/tree/1.13.0"
             },
-            "time": "2022-08-09T12:23:23+00:00"
+            "time": "2022-10-21T09:57:39+00:00"
         },
         {
             "name": "phpstan/phpstan",
@@ -7041,16 +7044,16 @@
         },
         {
             "name": "symfony/console",
-            "version": "v6.0.13",
+            "version": "v6.0.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "8f14753b865651c2aad107ef97475740a9b0730f"
+                "reference": "1f89cab8d52c84424f798495b3f10342a7b1a070"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/8f14753b865651c2aad107ef97475740a9b0730f",
-                "reference": "8f14753b865651c2aad107ef97475740a9b0730f",
+                "url": "https://api.github.com/repos/symfony/console/zipball/1f89cab8d52c84424f798495b3f10342a7b1a070",
+                "reference": "1f89cab8d52c84424f798495b3f10342a7b1a070",
                 "shasum": ""
             },
             "require": {
@@ -7116,7 +7119,7 @@
                 "terminal"
             ],
             "support": {
-                "source": "https://github.com/symfony/console/tree/v6.0.13"
+                "source": "https://github.com/symfony/console/tree/v6.0.14"
             },
             "funding": [
                 {
@@ -7132,7 +7135,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-09-03T14:23:25+00:00"
+            "time": "2022-10-07T08:02:12+00:00"
         },
         {
             "name": "symfony/dependency-injection",
@@ -8047,16 +8050,16 @@
         },
         {
             "name": "symfony/serializer",
-            "version": "v6.0.13",
+            "version": "v6.0.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/serializer.git",
-                "reference": "296f6191bf50adae99cf520564158d05cff9b8f1"
+                "reference": "d3bea0f239aca9589224a84150066da5495e9e11"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/serializer/zipball/296f6191bf50adae99cf520564158d05cff9b8f1",
-                "reference": "296f6191bf50adae99cf520564158d05cff9b8f1",
+                "url": "https://api.github.com/repos/symfony/serializer/zipball/d3bea0f239aca9589224a84150066da5495e9e11",
+                "reference": "d3bea0f239aca9589224a84150066da5495e9e11",
                 "shasum": ""
             },
             "require": {
@@ -8128,7 +8131,7 @@
             "description": "Handles serializing and deserializing data structures, including object graphs, into array structures or other formats like XML and JSON.",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/serializer/tree/v6.0.13"
+                "source": "https://github.com/symfony/serializer/tree/v6.0.14"
             },
             "funding": [
                 {
@@ -8144,7 +8147,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-09-29T11:04:19+00:00"
+            "time": "2022-10-11T15:20:43+00:00"
         },
         {
             "name": "symfony/service-contracts",
@@ -8292,16 +8295,16 @@
         },
         {
             "name": "symfony/string",
-            "version": "v6.0.13",
+            "version": "v6.0.14",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/string.git",
-                "reference": "65e99fb179e7241606377e4042cd2161f3dd1c05"
+                "reference": "3db7da820a6e4a584b714b3933c34c6a7db4d86c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/string/zipball/65e99fb179e7241606377e4042cd2161f3dd1c05",
-                "reference": "65e99fb179e7241606377e4042cd2161f3dd1c05",
+                "url": "https://api.github.com/repos/symfony/string/zipball/3db7da820a6e4a584b714b3933c34c6a7db4d86c",
+                "reference": "3db7da820a6e4a584b714b3933c34c6a7db4d86c",
                 "shasum": ""
             },
             "require": {
@@ -8357,7 +8360,7 @@
                 "utf8"
             ],
             "support": {
-                "source": "https://github.com/symfony/string/tree/v6.0.13"
+                "source": "https://github.com/symfony/string/tree/v6.0.14"
             },
             "funding": [
                 {
@@ -8373,7 +8376,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2022-09-02T08:05:03+00:00"
+            "time": "2022-10-10T09:34:08+00:00"
         },
         {
             "name": "symfony/yaml",
