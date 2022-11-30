@@ -1,4 +1,6 @@
 parameters:
+	ignoreErrors:
+		- '#https:\/\/github.com\/sebastianbergmann\/phpunit\/issues\/4141#'
 	ergebnis:
 		classesAllowedToBeExtended:
 			- WyriHaximus\TestUtilities\TestCase
