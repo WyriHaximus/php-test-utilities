@@ -14,16 +14,32 @@ env:
   FALLBACK_TAG: not_found
   DEPENDABOT_APP_ID: 49699333
 jobs:
+  supported-versions-matrix:
+    name: Supported Versions Matrix
+    runs-on: ubuntu-latest
+    outputs:
+      highest: ${{ steps.supported-versions-matrix.outputs.highest }}
+    steps:
+      - uses: actions/checkout@v3
+      - id: supported-versions-matrix
+        uses: WyriHaximus/github-action-composer-php-versions-in-range@v1
+        with:
+          upcomingReleases: true
   set-milestone:
+    needs:
+      - supported-versions-matrix
     name: Set Milestone
     if: github.event.pull_request.milestone == null
     runs-on: ubuntu-latest
+    container:
+      image: ghcr.io/wyrihaximusnet/php:${{ needs.supported-versions-matrix.outputs.highest }}-nts-alpine-dev-root
     outputs:
       check: ${{ steps.generate-checks-strategy.outputs.check }}
     steps:
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0 # Required due to the way Git works, without it this action won't be able to find any or the correct tags
+          set-safe-directory: ${{ env.GITHUB_WORKSPACE }}
       - name: 'Get Previous tag'
         id: previoustag
         uses: "WyriHaximus/github-action-get-previous-tag@v1"
