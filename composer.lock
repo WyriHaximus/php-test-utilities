@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4b1c34df06bbe2be77375375b4bd40d4",
+    "content-hash": "39c65f1aba86b8c92edd00df073d6ad6",
     "packages": [
         {
             "name": "amphp/amp",
@@ -2894,16 +2894,16 @@
         },
         {
             "name": "maglnet/composer-require-checker",
-            "version": "4.2.0",
+            "version": "4.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/maglnet/ComposerRequireChecker.git",
-                "reference": "fb2a69aa2b7307541233536f179275e99451b339"
+                "reference": "45a6a59b923fe6408011005260ccd94ee60dbcb1"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/maglnet/ComposerRequireChecker/zipball/fb2a69aa2b7307541233536f179275e99451b339",
-                "reference": "fb2a69aa2b7307541233536f179275e99451b339",
+                "url": "https://api.github.com/repos/maglnet/ComposerRequireChecker/zipball/45a6a59b923fe6408011005260ccd94ee60dbcb1",
+                "reference": "45a6a59b923fe6408011005260ccd94ee60dbcb1",
                 "shasum": ""
             },
             "require": {
@@ -2922,7 +2922,7 @@
                 "phing/phing": "^2.17.0",
                 "phpstan/phpstan": "^1.2.0",
                 "phpunit/phpunit": "^9.5.10",
-                "roave/infection-static-analysis-plugin": "1.13.x-dev as 1.13.0",
+                "roave/infection-static-analysis-plugin": "^1.23",
                 "vimeo/psalm": "^4.15"
             },
             "bin": [
@@ -2968,9 +2968,9 @@
             ],
             "support": {
                 "issues": "https://github.com/maglnet/ComposerRequireChecker/issues",
-                "source": "https://github.com/maglnet/ComposerRequireChecker/tree/4.2.0"
+                "source": "https://github.com/maglnet/ComposerRequireChecker/tree/4.4.0"
             },
-            "time": "2022-08-30T09:36:29+00:00"
+            "time": "2022-12-14T08:48:46+00:00"
         },
         {
             "name": "myclabs/deep-copy",
