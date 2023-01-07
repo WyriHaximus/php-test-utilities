@@ -50,6 +50,7 @@ jobs:
           printf "::set-output name=check::%s" $(make task-list-ci)
   can-require:
     name: Test we can require "${{ matrix.package-name }}" on PHP ${{ matrix.php }}
+    continue-on-error: ${{ needs.supported-versions-matrix.outputs.upcoming == matrix.php }}
     strategy:
       fail-fast: false
       matrix:
@@ -71,12 +72,12 @@ jobs:
         run: |
           echo "{\"repositories\": [{\"name\": \"${{ matrix.package-name }}\",\"type\": \"path\",\"url\": \"./checked_out_package\"}]}" > composer.json
       - name: Require package
-        if: needs.supported-versions-matrix.outputs.upcoming != matrix.php
         run: |
           composer config --no-plugins "allow-plugins.*/*" true
           composer require "${{ matrix.package-name }}:dev-${GITHUB_SHA}" --no-progress --ansi --no-interaction --prefer-dist --no-plugins -o -vvv || composer require "${{ matrix.package-name }}:dev-${GITHUB_REF_NAME}" --no-progress --ansi --no-interaction --prefer-dist --no-plugins -o -vvv
   qa:
     name: Run ${{ matrix.check }} on PHP ${{ matrix.php }} with ${{ matrix.composer }} dependency preference
+    continue-on-error: ${{ needs.supported-versions-matrix.outputs.upcoming != matrix.php }}
     strategy:
       fail-fast: false
       matrix:
@@ -99,18 +100,13 @@ jobs:
       - name: Fetch Tags
         run: git fetch --depth=1 origin +refs/tags/*:refs/tags/* || true
         if: matrix.check == 'backward-compatibility-check'
-      - run: make ${{ matrix.check }} || true
-        if: needs.supported-versions-matrix.outputs.upcoming == matrix.php
-        env:
-          COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
-          COVERALLS_RUN_LOCALLY: ${{ secrets.COVERALLS_RUN_LOCALLY }}
       - run: make ${{ matrix.check }}
-        if: needs.supported-versions-matrix.outputs.upcoming != matrix.php
         env:
           COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
           COVERALLS_RUN_LOCALLY: ${{ secrets.COVERALLS_RUN_LOCALLY }}
   tests-directly-on-os:
     name: Run tests on PHP ${{ matrix.php }} with ${{ matrix.composer }} dependency preference (${{ matrix.os }})
+    continue-on-error: ${{ needs.supported-versions-matrix.outputs.upcoming != matrix.php }}
     strategy:
       fail-fast: false
       matrix:
@@ -133,13 +129,7 @@ jobs:
       - uses: ramsey/composer-install@v2
         with:
           dependency-versions: ${{ matrix.composer }}
-      - run: make unit-testing-raw || true
-        if: needs.supported-versions-matrix.outputs.upcoming == matrix.php
-        env:
-          COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
-          COVERALLS_RUN_LOCALLY: ${{ secrets.COVERALLS_RUN_LOCALLY }}
       - run: make unit-testing-raw
-        if: needs.supported-versions-matrix.outputs.upcoming != matrix.php
         env:
           COVERALLS_REPO_TOKEN: ${{ secrets.COVERALLS_REPO_TOKEN }}
           COVERALLS_RUN_LOCALLY: ${{ secrets.COVERALLS_RUN_LOCALLY }}
