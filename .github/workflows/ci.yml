@@ -93,12 +93,12 @@ jobs:
       image: ghcr.io/wyrihaximusnet/php:${{ matrix.php }}-nts-buster-dev-root
     steps:
       - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0 # Required due to the way Git works, without it this action won't be able to find any or the correct tags
+          set-safe-directory: ${{ env.GITHUB_WORKSPACE }}
       - uses: ramsey/composer-install@v2
         with:
           dependency-versions: ${{ matrix.composer }}
-      - name: Fetch Tags
-        run: git fetch --depth=1 origin +refs/tags/*:refs/tags/* || true
-        if: matrix.check == 'backward-compatibility-check'
       - run: make ${{ matrix.check }} || true
         if: needs.supported-versions-matrix.outputs.upcoming == matrix.php
         env:
