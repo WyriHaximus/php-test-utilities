@@ -95,10 +95,10 @@ jobs:
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0 # Required due to the way Git works, without it this action won't be able to find any or the correct tags
-          set-safe-directory: ${{ env.GITHUB_WORKSPACE }}
       - uses: ramsey/composer-install@v2
         with:
           dependency-versions: ${{ matrix.composer }}
+      - run: git config --global --add safe.directory $GITHUB_WORKSPACE # Do this ourself because `actions/checkout@v3 doesn't succeed in doing this
       - run: make ${{ matrix.check }} || true
         if: needs.supported-versions-matrix.outputs.upcoming == matrix.php
         env:
