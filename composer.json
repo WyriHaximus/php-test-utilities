@@ -31,7 +31,7 @@
     "squizlabs/php_codesniffer": "^3.7.1",
     "thecodingmachine/safe": "^2.4.0",
     "vimeo/psalm": "^5.6.0",
-    "wyrihaximus/coding-standard": "^2.11.0",
+    "wyrihaximus/coding-standard": "^2.12.0",
     "wyrihaximus/phpstan-rules-wrapper": "^2.8.0"
   },
   "conflict": {
