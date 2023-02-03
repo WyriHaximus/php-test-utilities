@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9964a643c73841392ffb8bc5270a9ced",
+    "content-hash": "491d54b5a5c27da570f31ff9457da4e6",
     "packages": [
         {
             "name": "amphp/amp",
@@ -4382,16 +4382,16 @@
         },
         {
             "name": "phpstan/phpdoc-parser",
-            "version": "1.15.3",
+            "version": "1.16.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpdoc-parser.git",
-                "reference": "61800f71a5526081d1b5633766aa88341f1ade76"
+                "reference": "57090cfccbfaa639e703c007486d605a6e80f56d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/61800f71a5526081d1b5633766aa88341f1ade76",
-                "reference": "61800f71a5526081d1b5633766aa88341f1ade76",
+                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/57090cfccbfaa639e703c007486d605a6e80f56d",
+                "reference": "57090cfccbfaa639e703c007486d605a6e80f56d",
                 "shasum": ""
             },
             "require": {
@@ -4421,9 +4421,9 @@
             "description": "PHPDoc parser with support for nullable, intersection and generic types",
             "support": {
                 "issues": "https://github.com/phpstan/phpdoc-parser/issues",
-                "source": "https://github.com/phpstan/phpdoc-parser/tree/1.15.3"
+                "source": "https://github.com/phpstan/phpdoc-parser/tree/1.16.0"
             },
-            "time": "2022-12-20T20:56:55+00:00"
+            "time": "2023-01-29T14:41:23+00:00"
         },
         {
             "name": "phpstan/phpstan",
@@ -9596,16 +9596,16 @@
         },
         {
             "name": "wyrihaximus/coding-standard",
-            "version": "2.11.0",
+            "version": "2.12.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/WyriHaximus/php-coding-standard.git",
-                "reference": "5ca5721d98254cdc9a7df967f19dac4271c91a94"
+                "reference": "f06ea49917eb0a5ea0e055babdcff77690ff4f6e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WyriHaximus/php-coding-standard/zipball/5ca5721d98254cdc9a7df967f19dac4271c91a94",
-                "reference": "5ca5721d98254cdc9a7df967f19dac4271c91a94",
+                "url": "https://api.github.com/repos/WyriHaximus/php-coding-standard/zipball/f06ea49917eb0a5ea0e055babdcff77690ff4f6e",
+                "reference": "f06ea49917eb0a5ea0e055babdcff77690ff4f6e",
                 "shasum": ""
             },
             "require": {
@@ -9623,7 +9623,7 @@
             "description": "WyriHaximus Coding Standard",
             "support": {
                 "issues": "https://github.com/WyriHaximus/php-coding-standard/issues",
-                "source": "https://github.com/WyriHaximus/php-coding-standard/tree/2.11.0"
+                "source": "https://github.com/WyriHaximus/php-coding-standard/tree/2.12.0"
             },
             "funding": [
                 {
@@ -9631,7 +9631,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-05-06T18:16:32+00:00"
+            "time": "2023-01-09T17:50:04+00:00"
         },
         {
             "name": "wyrihaximus/phpstan-rules-wrapper",
