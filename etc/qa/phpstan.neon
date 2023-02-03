@@ -8,3 +8,4 @@ parameters:
 
 includes:
 	- ../../vendor/wyrihaximus/phpstan-rules-wrapper/wrapper.neon
+	- phar://phpstan.phar/conf/bleedingEdge.neon

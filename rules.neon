@@ -5,3 +5,4 @@ parameters:
 
 includes:
 	- ../phpstan-rules-wrapper/wrapper.neon
+	- phar://phpstan.phar/conf/bleedingEdge.neon
