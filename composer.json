@@ -28,7 +28,7 @@
     "psalm/plugin-phpunit": "^0.18.4",
     "roave/backward-compatibility-check": "^8.3.0",
     "roave/infection-static-analysis-plugin": "^1.28.0",
-    "squizlabs/php_codesniffer": "^3.7.1",
+    "squizlabs/php_codesniffer": "^3.7.2",
     "thecodingmachine/safe": "^2.4.0",
     "vimeo/psalm": "^5.6.0",
     "wyrihaximus/coding-standard": "^2.12.0",
