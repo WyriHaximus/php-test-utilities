@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7e6de922373dc1a167b07e7efe8ab3ea",
+    "content-hash": "a72076bca2b43e6205d3d75cef7d640f",
     "packages": [
         {
             "name": "amphp/amp",
@@ -1958,16 +1958,16 @@
         },
         {
             "name": "fidry/cpu-core-counter",
-            "version": "0.5.1",
+            "version": "0.4.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/theofidry/cpu-core-counter.git",
-                "reference": "b58e5a3933e541dc286cc91fc4f3898bbc6f1623"
+                "reference": "79261cc280aded96d098e1b0e0ba0c4881b432c2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/theofidry/cpu-core-counter/zipball/b58e5a3933e541dc286cc91fc4f3898bbc6f1623",
-                "reference": "b58e5a3933e541dc286cc91fc4f3898bbc6f1623",
+                "url": "https://api.github.com/repos/theofidry/cpu-core-counter/zipball/79261cc280aded96d098e1b0e0ba0c4881b432c2",
+                "reference": "79261cc280aded96d098e1b0e0ba0c4881b432c2",
                 "shasum": ""
             },
             "require": {
@@ -2007,7 +2007,7 @@
             ],
             "support": {
                 "issues": "https://github.com/theofidry/cpu-core-counter/issues",
-                "source": "https://github.com/theofidry/cpu-core-counter/tree/0.5.1"
+                "source": "https://github.com/theofidry/cpu-core-counter/tree/0.4.1"
             },
             "funding": [
                 {
@@ -2015,7 +2015,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-12-24T12:35:10+00:00"
+            "time": "2022-12-16T22:01:02+00:00"
         },
         {
             "name": "filp/whoops",
@@ -2693,16 +2693,16 @@
         },
         {
             "name": "infection/infection",
-            "version": "0.26.16",
+            "version": "0.26.20",
             "source": {
                 "type": "git",
                 "url": "https://github.com/infection/infection.git",
-                "reference": "d646aafe530ba21b8479694cd151570c93c72312"
+                "reference": "37dd2f590bec3d0058e11dbeefc8f93fc9132c62"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/infection/infection/zipball/d646aafe530ba21b8479694cd151570c93c72312",
-                "reference": "d646aafe530ba21b8479694cd151570c93c72312",
+                "url": "https://api.github.com/repos/infection/infection/zipball/37dd2f590bec3d0058e11dbeefc8f93fc9132c62",
+                "reference": "37dd2f590bec3d0058e11dbeefc8f93fc9132c62",
                 "shasum": ""
             },
             "require": {
@@ -2713,31 +2713,35 @@
                 "ext-json": "*",
                 "ext-libxml": "*",
                 "ext-mbstring": "*",
+                "fidry/cpu-core-counter": "^0.4.0",
                 "infection/abstract-testframework-adapter": "^0.5.0",
                 "infection/extension-installer": "^0.1.0",
                 "infection/include-interceptor": "^0.2.5",
                 "justinrainbow/json-schema": "^5.2.10",
-                "nikic/php-parser": "^4.13.2",
+                "nikic/php-parser": "^4.15.1",
                 "ondram/ci-detector": "^4.1.0",
-                "php": "^8.0",
+                "php": "^8.1",
                 "sanmai/later": "^0.1.1",
                 "sanmai/pipeline": "^5.1 || ^6",
-                "sebastian/diff": "^3.0.2 || ^4.0",
+                "sebastian/diff": "^3.0.2 || ^4.0 || ^5.0",
                 "symfony/console": "^5.4 || ^6.0",
                 "symfony/filesystem": "^5.4 || ^6.0",
                 "symfony/finder": "^5.4 || ^6.0",
                 "symfony/process": "^5.4 || ^6.0",
                 "thecodingmachine/safe": "^2.1.2",
-                "webmozart/assert": "^1.3"
+                "webmozart/assert": "^1.11"
             },
             "conflict": {
+                "antecedent/patchwork": "<2.1.25",
                 "dg/bypass-finals": "<1.4.1",
-                "phpunit/php-code-coverage": ">9 <9.1.4"
+                "phpunit/php-code-coverage": ">9,<9.1.4 || >9.2.17,<9.2.21"
             },
             "require-dev": {
                 "brianium/paratest": "^6.3",
                 "ext-simplexml": "*",
+                "fidry/makefile": "^0.2.0",
                 "helmich/phpunit-json-assert": "^3.0",
+                "phpspec/prophecy": "^1.15",
                 "phpspec/prophecy-phpunit": "^2.0",
                 "phpstan/extension-installer": "^1.1.0",
                 "phpstan/phpstan": "^1.3.0",
@@ -2803,7 +2807,7 @@
             ],
             "support": {
                 "issues": "https://github.com/infection/infection/issues",
-                "source": "https://github.com/infection/infection/tree/0.26.16"
+                "source": "https://github.com/infection/infection/tree/0.26.20"
             },
             "funding": [
                 {
@@ -2815,7 +2819,7 @@
                     "type": "open_collective"
                 }
             ],
-            "time": "2022-10-22T10:07:33+00:00"
+            "time": "2023-04-14T21:39:46+00:00"
         },
         {
             "name": "jakobbuis/simple-slow-test-reporter",
@@ -3241,16 +3245,16 @@
         },
         {
             "name": "netresearch/jsonmapper",
-            "version": "v4.1.0",
+            "version": "v4.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/cweiske/jsonmapper.git",
-                "reference": "cfa81ea1d35294d64adb9c68aa4cb9e92400e53f"
+                "reference": "f60565f8c0566a31acf06884cdaa591867ecc956"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/cweiske/jsonmapper/zipball/cfa81ea1d35294d64adb9c68aa4cb9e92400e53f",
-                "reference": "cfa81ea1d35294d64adb9c68aa4cb9e92400e53f",
+                "url": "https://api.github.com/repos/cweiske/jsonmapper/zipball/f60565f8c0566a31acf06884cdaa591867ecc956",
+                "reference": "f60565f8c0566a31acf06884cdaa591867ecc956",
                 "shasum": ""
             },
             "require": {
@@ -3286,9 +3290,9 @@
             "support": {
                 "email": "cweiske@cweiske.de",
                 "issues": "https://github.com/cweiske/jsonmapper/issues",
-                "source": "https://github.com/cweiske/jsonmapper/tree/v4.1.0"
+                "source": "https://github.com/cweiske/jsonmapper/tree/v4.2.0"
             },
-            "time": "2022-12-08T20:46:14+00:00"
+            "time": "2023-04-09T17:37:40+00:00"
         },
         {
             "name": "nette/utils",
@@ -4616,16 +4620,16 @@
         },
         {
             "name": "phpstan/phpdoc-parser",
-            "version": "1.16.1",
+            "version": "1.19.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpdoc-parser.git",
-                "reference": "e27e92d939e2e3636f0a1f0afaba59692c0bf571"
+                "reference": "178b33aa1c8b8d7725f0abee618ef47337e607ce"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/e27e92d939e2e3636f0a1f0afaba59692c0bf571",
-                "reference": "e27e92d939e2e3636f0a1f0afaba59692c0bf571",
+                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/178b33aa1c8b8d7725f0abee618ef47337e607ce",
+                "reference": "178b33aa1c8b8d7725f0abee618ef47337e607ce",
                 "shasum": ""
             },
             "require": {
@@ -4655,9 +4659,9 @@
             "description": "PHPDoc parser with support for nullable, intersection and generic types",
             "support": {
                 "issues": "https://github.com/phpstan/phpdoc-parser/issues",
-                "source": "https://github.com/phpstan/phpdoc-parser/tree/1.16.1"
+                "source": "https://github.com/phpstan/phpdoc-parser/tree/1.19.0"
             },
-            "time": "2023-02-07T18:11:17+00:00"
+            "time": "2023-04-17T13:16:52+00:00"
         },
         {
             "name": "phpstan/phpstan",
@@ -5998,28 +6002,28 @@
         },
         {
             "name": "roave/infection-static-analysis-plugin",
-            "version": "1.28.0",
+            "version": "1.30.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Roave/infection-static-analysis-plugin.git",
-                "reference": "3724bbe9afe0dc1eddb2fb2c425d4acd64cb9c10"
+                "reference": "23579f3f35262daa26ae3b2133212393f4bd8d36"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/infection-static-analysis-plugin/zipball/3724bbe9afe0dc1eddb2fb2c425d4acd64cb9c10",
-                "reference": "3724bbe9afe0dc1eddb2fb2c425d4acd64cb9c10",
+                "url": "https://api.github.com/repos/Roave/infection-static-analysis-plugin/zipball/23579f3f35262daa26ae3b2133212393f4bd8d36",
+                "reference": "23579f3f35262daa26ae3b2133212393f4bd8d36",
                 "shasum": ""
             },
             "require": {
-                "infection/infection": "0.26.16",
+                "infection/infection": "0.26.20",
                 "ocramius/package-versions": "^2.7.0",
                 "php": "~8.1.0 || ~8.2.0",
                 "sanmai/later": "^0.1.2",
                 "vimeo/psalm": "^4.30.0 || ^5.0.0"
             },
             "require-dev": {
-                "doctrine/coding-standard": "^11.0.0",
-                "phpunit/phpunit": "^9.5.27"
+                "doctrine/coding-standard": "^11.1.0",
+                "phpunit/phpunit": "^10.1.0"
             },
             "bin": [
                 "bin/roave-infection-static-analysis-plugin"
@@ -6043,9 +6047,9 @@
             "description": "Static analysis on top of mutation testing - prevents escaped mutants from being invalid according to static analysis",
             "support": {
                 "issues": "https://github.com/Roave/infection-static-analysis-plugin/issues",
-                "source": "https://github.com/Roave/infection-static-analysis-plugin/tree/1.28.0"
+                "source": "https://github.com/Roave/infection-static-analysis-plugin/tree/1.30.0"
             },
-            "time": "2022-12-30T16:05:23+00:00"
+            "time": "2023-04-16T17:22:34+00:00"
         },
         {
             "name": "roave/signature",
@@ -6147,26 +6151,26 @@
         },
         {
             "name": "sanmai/pipeline",
-            "version": "v6.3",
+            "version": "v6.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/sanmai/pipeline.git",
-                "reference": "929b115ca58d62b6b2574702df1ebde4562c7c43"
+                "reference": "dd7c3c890b6d2d40a2ea1cf0d49281c17832de2d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sanmai/pipeline/zipball/929b115ca58d62b6b2574702df1ebde4562c7c43",
-                "reference": "929b115ca58d62b6b2574702df1ebde4562c7c43",
+                "url": "https://api.github.com/repos/sanmai/pipeline/zipball/dd7c3c890b6d2d40a2ea1cf0d49281c17832de2d",
+                "reference": "dd7c3c890b6d2d40a2ea1cf0d49281c17832de2d",
                 "shasum": ""
             },
             "require": {
-                "php": "^7.1 || ^8.0"
+                "php": "^7.4 || ^8.0"
             },
             "require-dev": {
                 "ergebnis/composer-normalize": "^2.8",
                 "friendsofphp/php-cs-fixer": "^3",
                 "infection/infection": ">=0.10.5",
-                "league/pipeline": "^1.0 || ^0.3",
+                "league/pipeline": "^0.3 || ^1.0",
                 "phan/phan": ">=1.1",
                 "php-coveralls/php-coveralls": "^2.4.1",
                 "phpstan/phpstan": ">=0.10",
@@ -6200,7 +6204,7 @@
             "description": "General-purpose collections pipeline",
             "support": {
                 "issues": "https://github.com/sanmai/pipeline/issues",
-                "source": "https://github.com/sanmai/pipeline/tree/v6.3"
+                "source": "https://github.com/sanmai/pipeline/tree/v6.5"
             },
             "funding": [
                 {
@@ -6208,7 +6212,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2022-11-30T06:07:06+00:00"
+            "time": "2023-04-15T00:28:41+00:00"
         },
         {
             "name": "sebastian/cli-parser",
@@ -7607,16 +7611,16 @@
         },
         {
             "name": "symfony/console",
-            "version": "v6.2.7",
+            "version": "v6.2.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/console.git",
-                "reference": "cbad09eb8925b6ad4fb721c7a179344dc4a19d45"
+                "reference": "3582d68a64a86ec25240aaa521ec8bc2342b369b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/console/zipball/cbad09eb8925b6ad4fb721c7a179344dc4a19d45",
-                "reference": "cbad09eb8925b6ad4fb721c7a179344dc4a19d45",
+                "url": "https://api.github.com/repos/symfony/console/zipball/3582d68a64a86ec25240aaa521ec8bc2342b369b",
+                "reference": "3582d68a64a86ec25240aaa521ec8bc2342b369b",
                 "shasum": ""
             },
             "require": {
@@ -7678,12 +7682,12 @@
             "homepage": "https://symfony.com",
             "keywords": [
                 "cli",
-                "command line",
+                "command-line",
                 "console",
                 "terminal"
             ],
             "support": {
-                "source": "https://github.com/symfony/console/tree/v6.2.7"
+                "source": "https://github.com/symfony/console/tree/v6.2.8"
             },
             "funding": [
                 {
@@ -7699,7 +7703,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-02-25T17:00:03+00:00"
+            "time": "2023-03-29T21:42:15+00:00"
         },
         {
             "name": "symfony/dependency-injection",
@@ -8555,16 +8559,16 @@
         },
         {
             "name": "symfony/process",
-            "version": "v6.2.7",
+            "version": "v6.2.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/process.git",
-                "reference": "680e8a2ea6b3f87aecc07a6a65a203ae573d1902"
+                "reference": "75ed64103df4f6615e15a7fe38b8111099f47416"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/process/zipball/680e8a2ea6b3f87aecc07a6a65a203ae573d1902",
-                "reference": "680e8a2ea6b3f87aecc07a6a65a203ae573d1902",
+                "url": "https://api.github.com/repos/symfony/process/zipball/75ed64103df4f6615e15a7fe38b8111099f47416",
+                "reference": "75ed64103df4f6615e15a7fe38b8111099f47416",
                 "shasum": ""
             },
             "require": {
@@ -8596,7 +8600,7 @@
             "description": "Executes commands in sub-processes",
             "homepage": "https://symfony.com",
             "support": {
-                "source": "https://github.com/symfony/process/tree/v6.2.7"
+                "source": "https://github.com/symfony/process/tree/v6.2.8"
             },
             "funding": [
                 {
@@ -8612,7 +8616,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-02-24T10:42:00+00:00"
+            "time": "2023-03-09T16:20:02+00:00"
         },
         {
             "name": "symfony/property-access",
@@ -9033,16 +9037,16 @@
         },
         {
             "name": "symfony/string",
-            "version": "v6.2.7",
+            "version": "v6.2.8",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/string.git",
-                "reference": "67b8c1eec78296b85dc1c7d9743830160218993d"
+                "reference": "193e83bbd6617d6b2151c37fff10fa7168ebddef"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/string/zipball/67b8c1eec78296b85dc1c7d9743830160218993d",
-                "reference": "67b8c1eec78296b85dc1c7d9743830160218993d",
+                "url": "https://api.github.com/repos/symfony/string/zipball/193e83bbd6617d6b2151c37fff10fa7168ebddef",
+                "reference": "193e83bbd6617d6b2151c37fff10fa7168ebddef",
                 "shasum": ""
             },
             "require": {
@@ -9099,7 +9103,7 @@
                 "utf8"
             ],
             "support": {
-                "source": "https://github.com/symfony/string/tree/v6.2.7"
+                "source": "https://github.com/symfony/string/tree/v6.2.8"
             },
             "funding": [
                 {
@@ -9115,7 +9119,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2023-02-24T10:42:00+00:00"
+            "time": "2023-03-20T16:06:02+00:00"
         },
         {
             "name": "symfony/var-exporter",
@@ -9379,16 +9383,16 @@
         },
         {
             "name": "thecodingmachine/safe",
-            "version": "v2.4.0",
+            "version": "v2.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/thecodingmachine/safe.git",
-                "reference": "e788f3d09dcd36f806350aedb77eac348fafadd3"
+                "reference": "3115ecd6b4391662b4931daac4eba6b07a2ac1f0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/thecodingmachine/safe/zipball/e788f3d09dcd36f806350aedb77eac348fafadd3",
-                "reference": "e788f3d09dcd36f806350aedb77eac348fafadd3",
+                "url": "https://api.github.com/repos/thecodingmachine/safe/zipball/3115ecd6b4391662b4931daac4eba6b07a2ac1f0",
+                "reference": "3115ecd6b4391662b4931daac4eba6b07a2ac1f0",
                 "shasum": ""
             },
             "require": {
@@ -9512,9 +9516,9 @@
             "description": "PHP core functions that throw exceptions instead of returning FALSE on error",
             "support": {
                 "issues": "https://github.com/thecodingmachine/safe/issues",
-                "source": "https://github.com/thecodingmachine/safe/tree/v2.4.0"
+                "source": "https://github.com/thecodingmachine/safe/tree/v2.5.0"
             },
-            "time": "2022-10-07T14:02:17+00:00"
+            "time": "2023-04-05T11:54:14+00:00"
         },
         {
             "name": "theseer/tokenizer",
@@ -9621,16 +9625,16 @@
         },
         {
             "name": "vimeo/psalm",
-            "version": "5.8.0",
+            "version": "5.9.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/vimeo/psalm.git",
-                "reference": "9cf4f60a333f779ad3bc704a555920e81d4fdcda"
+                "reference": "8b9ad1eb9e8b7d3101f949291da2b9f7767cd163"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vimeo/psalm/zipball/9cf4f60a333f779ad3bc704a555920e81d4fdcda",
-                "reference": "9cf4f60a333f779ad3bc704a555920e81d4fdcda",
+                "url": "https://api.github.com/repos/vimeo/psalm/zipball/8b9ad1eb9e8b7d3101f949291da2b9f7767cd163",
+                "reference": "8b9ad1eb9e8b7d3101f949291da2b9f7767cd163",
                 "shasum": ""
             },
             "require": {
@@ -9662,6 +9666,7 @@
                 "psalm/psalm": "self.version"
             },
             "require-dev": {
+                "amphp/phpunit-util": "^2.0",
                 "bamarni/composer-bin-plugin": "^1.4",
                 "brianium/paratest": "^6.9",
                 "ext-curl": "*",
@@ -9720,9 +9725,9 @@
             ],
             "support": {
                 "issues": "https://github.com/vimeo/psalm/issues",
-                "source": "https://github.com/vimeo/psalm/tree/5.8.0"
+                "source": "https://github.com/vimeo/psalm/tree/5.9.0"
             },
-            "time": "2023-03-09T04:14:35+00:00"
+            "time": "2023-03-29T21:38:21+00:00"
         },
         {
             "name": "webmozart/assert",
