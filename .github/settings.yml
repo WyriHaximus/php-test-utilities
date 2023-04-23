@@ -10,6 +10,8 @@ repository:
 
 # Labels: define labels for Issues and Pull Requests
 labels:
+  - name: "Deprecations 👋"
+    color: ff7700
   - name: "Dependabot 🤖"
     color: 0366d6
   - name: "Dependencies 📦"
