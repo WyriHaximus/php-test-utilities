@@ -3,6 +3,10 @@
   "packageRules": [
     {
       "managers": ["composer"],
+      "rangeStrategy": "in-range-only"
+    },
+    {
+      "managers": ["composer"],
       "rangeStrategy": "bump"
     },
     {
@@ -15,6 +19,8 @@
     "config:base",
     ":widenPeerDependencies",
     ":rebaseStalePrs",
+    ":prHourlyLimitNone",
+    ":prConcurrentLimitNone",
     "group:phpstan"
   ]
 }
