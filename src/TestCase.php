@@ -68,9 +68,7 @@ abstract class TestCase extends PHPUnitTestCase
         $this->rmdir($this->baseTmpDir);
     }
 
-    /**
-     * @return array<int, array<int, bool>>
-     */
+    /** @return array<int, array<int, bool>> */
     final public function provideTrueFalse(): array
     {
         return [
@@ -99,10 +97,11 @@ abstract class TestCase extends PHPUnitTestCase
                 continue;
             }
 
-            if (is_file($node->getPathname())) {
-                unlink($node->getPathname());
+            if (! is_file($node->getPathname())) {
                 continue;
             }
+
+            unlink($node->getPathname());
         }
 
         rmdir($dir);
@@ -122,16 +121,12 @@ abstract class TestCase extends PHPUnitTestCase
         return $this->tmpNamespace;
     }
 
-    /**
-     * @return string[]
-     */
+    /** @return array<string> */
     final protected function getFilesInDirectory(string $path): array
     {
         $files = [];
 
-        /**
-         * @var iterable<SplFileInfo>
-         */
+        /** @var iterable<SplFileInfo> $directory */
         $directory = new RecursiveIteratorIterator(new RecursiveDirectoryIterator($path));
 
         foreach ($directory as $node) {

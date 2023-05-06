@@ -22,9 +22,7 @@ use const DIRECTORY_SEPARATOR;
 use const PHP_INT_MAX;
 use const PHP_OS;
 
-/**
- * @internal
- */
+/** @internal */
 final class TestCaseTest extends TestCase
 {
     public const PENTIUM = 66;
@@ -41,9 +39,7 @@ final class TestCaseTest extends TestCase
         parent::tearDown();
     }
 
-    /**
-     * @return array<int, string>
-     */
+    /** @return array<int, string> */
     public function provideTemporaryDirectory(): iterable
     {
         for ($i = 0; $i <= self::PENTIUM; $i++) {
@@ -61,9 +57,7 @@ final class TestCaseTest extends TestCase
         static::assertFileExists($this->getTmpDir());
     }
 
-    /**
-     * @dataProvider provideTemporaryDirectory
-     */
+    /** @dataProvider provideTemporaryDirectory */
     public function testTemporaryDirectoryAndGetFilesInDirectory(string $int): void
     {
         static::assertTrue(strtoupper(substr(PHP_OS, TestCase::WIN_START, TestCase::WIN_END)) === 'WIN' ? strpos(TestCase::WINDOWS_TEMP_DIR_PREFIX, sys_get_temp_dir()) === 0 : strpos($this->getTmpDir(), sys_get_temp_dir()) === 0);
@@ -84,9 +78,7 @@ final class TestCaseTest extends TestCase
         }
     }
 
-    /**
-     * @dataProvider provideTrueFalse
-     */
+    /** @dataProvider provideTrueFalse */
     public function testTrueFalse(bool $bool): void
     {
         static::assertCount(1, func_get_args());
