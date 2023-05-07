@@ -17,4 +17,4 @@ permissions:
   contents: read
 jobs:
   comment-composer-lock-diff:
-    uses: WyriHaximus/github-workflows/.github/workflows/composer-diff.yaml@composer-diff
+    uses: WyriHaximus/github-workflows/.github/workflows/composer-diff.yaml@main
