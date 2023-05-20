@@ -11,7 +11,7 @@
   "require": {
     "php": "^8.2",
     "ergebnis/composer-normalize": "^2.31.0",
-    "icanhazstring/composer-unused": "^0.8.7",
+    "icanhazstring/composer-unused": "^0.8.8",
     "infection/infection": "^0.26.21",
     "jakobbuis/simple-slow-test-reporter": "^1.0",
     "maglnet/composer-require-checker": "^4.6.0",
@@ -71,6 +71,7 @@
       "nunomaduro/collision",
       "orklah/psalm-insane-comparison",
       "php-coveralls/php-coveralls",
+      "php-parallel-lint/php-console-highlighter",
       "php-parallel-lint/php-parallel-lint",
       "php-standard-library/psalm-plugin",
       "phpstan/phpstan",
