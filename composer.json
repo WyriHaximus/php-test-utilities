@@ -71,6 +71,7 @@
       "nunomaduro/collision",
       "orklah/psalm-insane-comparison",
       "php-coveralls/php-coveralls",
+      "php-parallel-lint/php-console-highlighter",
       "php-parallel-lint/php-parallel-lint",
       "php-standard-library/psalm-plugin",
       "phpstan/phpstan",
