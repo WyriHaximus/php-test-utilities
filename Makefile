@@ -82,6 +82,15 @@ backward-compatibility-check-raw: ## Check code for backwards incompatible chang
 shell: ## Provides Shell access in the expected environment ####
 	$(DOCKER_RUN) bash
 
+install: ## Install dependencies ####
+	$(DOCKER_RUN) composer install
+
+update: ## Update dependencies ####
+	$(DOCKER_RUN) composer update -W
+
+outdated: ## Show outdated dependencies ####
+	$(DOCKER_RUN) composer outdated
+
 task-list-ci: ## CI: Generate a JSON array of jobs to run, matches the commands run when running `make (|all)` ####
 	@grep -E '^[a-zA-Z0-9_-]+:.*?## .*$$' $(MAKEFILE_LIST) | grep -v "###" | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "%s\n", $$1}' | jq --raw-input --slurp -c 'split("\n")| .[0:-1]'
 
