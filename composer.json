@@ -32,7 +32,7 @@
     "thecodingmachine/safe": "^2.5.0",
     "vimeo/psalm": "^5.12.0",
     "wyrihaximus/coding-standard": "^2.14.0",
-    "wyrihaximus/phpstan-rules-wrapper": "^2.13.0"
+    "wyrihaximus/phpstan-rules-wrapper": "^2.14.0"
   },
   "conflict": {
     "symfony/dependency-injection": "<5.0.0"
