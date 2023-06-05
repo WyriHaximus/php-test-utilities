@@ -13,6 +13,16 @@
       "managers": ["composer"],
       "matchPackageNames": ["php"],
       "enabled": false
+    },
+    {
+      "groupName": "Infection packages",
+      "matchDatasources": [
+        "packagist"
+      ],
+      "matchPackagePatterns": [
+        "^infection/infection$",
+        "^roave/infection-static-analysis-plugin$"
+      ]
     }
   ],
   "extends": [
