@@ -23,7 +23,7 @@
     "php-standard-library/psalm-plugin": "^1.1.5 || ^2.2.1",
     "phpspec/prophecy": "^1.17",
     "phpspec/prophecy-phpunit": "^2.0.1",
-    "phpstan/phpstan": "^1.10.15",
+    "phpstan/phpstan": "^1.10.16",
     "phpunit/phpunit": "^9.6.8",
     "psalm/plugin-phpunit": "^0.18.4",
     "roave/backward-compatibility-check": "^8.3.0",
