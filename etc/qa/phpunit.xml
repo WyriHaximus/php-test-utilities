@@ -10,7 +10,4 @@
             <directory suffix=".php">../../src/</directory>
         </whitelist>
     </filter>
-    <extensions>
-        <extension class="SSTR\SlowTestReporter" />
-    </extensions>
 </phpunit>
