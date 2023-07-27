@@ -13,7 +13,6 @@
     "ergebnis/composer-normalize": "^2.33.0",
     "icanhazstring/composer-unused": "^0.8.10",
     "infection/infection": "^0.27.0",
-    "jakobbuis/simple-slow-test-reporter": "^1.0",
     "maglnet/composer-require-checker": "^4.6.0",
     "nunomaduro/collision": "^7.1.0",
     "orklah/psalm-insane-comparison": "^2.2.0",
