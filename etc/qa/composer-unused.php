@@ -11,6 +11,7 @@ return static function (Configuration $config): Configuration {
     return $config
         ->addNamedFilter(NamedFilter::fromString('brandembassy/mockery-tools'))
         ->addNamedFilter(NamedFilter::fromString('ergebnis/composer-normalize'))
+        ->addNamedFilter(NamedFilter::fromString('ergebnis/phpunit-slow-test-detector'))
         ->addNamedFilter(NamedFilter::fromString('icanhazstring/composer-unused'))
         ->addNamedFilter(NamedFilter::fromString('infection/infection'))
         ->addNamedFilter(NamedFilter::fromString('maglnet/composer-require-checker'))
