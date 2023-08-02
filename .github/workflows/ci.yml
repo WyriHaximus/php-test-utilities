@@ -6,9 +6,16 @@ on:
       - 'master'
       - 'refs/heads/v[0-9]+.[0-9]+.[0-9]+'
   pull_request:
+    types:
+      - opened
+      - labeled
+      - unlabeled
+      - synchronize
+      - reopened
 ## This workflow needs the `pull-request` permissions to work for the package diffing
 ## Refs: https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions#permissions
 permissions:
+  issues: write
   pull-requests: write
   contents: read
 jobs:
