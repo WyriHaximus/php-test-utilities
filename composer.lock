@@ -9725,16 +9725,16 @@
         },
         {
             "name": "wyrihaximus/phpstan-rules-wrapper",
-            "version": "3.0.0",
+            "version": "3.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/WyriHaximus/php-phpstan-rules-wrapper.git",
-                "reference": "16bcf692411eaae54953fe6a946b385e254fd47d"
+                "reference": "bdc92999aaf504abbc82fb138b31b111858ed69e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WyriHaximus/php-phpstan-rules-wrapper/zipball/16bcf692411eaae54953fe6a946b385e254fd47d",
-                "reference": "16bcf692411eaae54953fe6a946b385e254fd47d",
+                "url": "https://api.github.com/repos/WyriHaximus/php-phpstan-rules-wrapper/zipball/bdc92999aaf504abbc82fb138b31b111858ed69e",
+                "reference": "bdc92999aaf504abbc82fb138b31b111858ed69e",
                 "shasum": ""
             },
             "require": {
@@ -9763,7 +9763,7 @@
             "description": "🌯 PHPStan rules wrapper",
             "support": {
                 "issues": "https://github.com/WyriHaximus/php-phpstan-rules-wrapper/issues",
-                "source": "https://github.com/WyriHaximus/php-phpstan-rules-wrapper/tree/3.0.0"
+                "source": "https://github.com/WyriHaximus/php-phpstan-rules-wrapper/tree/3.1.0"
             },
             "funding": [
                 {
@@ -9771,7 +9771,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-07-22T03:17:18+00:00"
+            "time": "2023-09-07T20:30:10+00:00"
         }
     ],
     "packages-dev": [],
@@ -9787,5 +9787,5 @@
     "platform-overrides": {
         "php": "8.2.13"
     },
-    "plugin-api-version": "2.3.0"
+    "plugin-api-version": "2.6.0"
 }
