@@ -63,10 +63,12 @@
   },
   "scripts": {
     "post-install-cmd": [
-      "composer normalize"
+      "composer normalize",
+      "composer update --lock --no-scripts"
     ],
     "post-update-cmd": [
-      "composer normalize"
+      "composer normalize",
+      "composer update --lock --no-scripts"
     ]
   }
 }
