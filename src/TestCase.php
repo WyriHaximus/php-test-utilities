@@ -7,7 +7,6 @@ namespace WyriHaximus\TestUtilities;
 use FilesystemIterator;
 use Mockery\Adapter\Phpunit\MockeryPHPUnitIntegration;
 use PHPUnit\Framework\TestCase as PHPUnitTestCase;
-use Prophecy\PhpUnit\ProphecyTrait;
 use RecursiveDirectoryIterator;
 use RecursiveIteratorIterator;
 use SplFileInfo;
@@ -31,7 +30,6 @@ use const PHP_OS;
 
 abstract class TestCase extends PHPUnitTestCase
 {
-    use ProphecyTrait;
     use MockeryPHPUnitIntegration;
 
     public const WINDOWS_TEMP_DIR_PREFIX = 'C:\\t\\';
