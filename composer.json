@@ -34,7 +34,7 @@
     "thecodingmachine/safe": "^2.5.0",
     "vimeo/psalm": "^5.15.0",
     "wyrihaximus/coding-standard": "^2.14.0",
-    "wyrihaximus/phpstan-rules-wrapper": "^3.2.0"
+    "wyrihaximus/phpstan-rules-wrapper": "^3.3.0"
   },
   "conflict": {
     "composer/compoer": "<2.6.0",
