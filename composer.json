@@ -10,7 +10,7 @@
   ],
   "require": {
     "php": "^8.2",
-    "brandembassy/mockery-tools": "^3.21",
+    "brandembassy/mockery-tools": "^3.21.1",
     "ergebnis/composer-normalize": "^2.37.0",
     "icanhazstring/composer-unused": "^0.8.10",
     "infection/infection": "^0.27.0",
