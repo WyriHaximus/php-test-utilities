@@ -12,3 +12,6 @@ composer.lock export-ignore
 infection.json.dist export-ignore
 Makefile export-ignore
 README.md export-ignore
+
+# Diffing
+*.php diff=php
