@@ -16,7 +16,7 @@
     "infection/infection": "^0.27.0",
     "maglnet/composer-require-checker": "^4.7.1",
     "mockery/mockery": "^1.6.6",
-    "nunomaduro/collision": "^7.9.0",
+    "nunomaduro/collision": "^7.10.0",
     "orklah/psalm-insane-comparison": "^2.2.0",
     "php-coveralls/php-coveralls": "^2.6.0",
     "php-parallel-lint/php-console-highlighter": "^1.0",
