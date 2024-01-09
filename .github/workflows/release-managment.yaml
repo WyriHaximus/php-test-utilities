@@ -19,7 +19,10 @@ permissions:
   pull-requests: write
 jobs:
   release-managment:
-    name: Create Release
+    concurrency: 
+      group: release-management
+      cancel-in-progress: false
+    name: Release Management
     uses: WyriHaximus/github-workflows/.github/workflows/package-release-managment.yaml@main
     with:
       milestone: ${{ github.event.milestone.title }}
