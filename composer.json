@@ -30,7 +30,7 @@
     "roave/infection-static-analysis-plugin": "^1.33.0",
     "squizlabs/php_codesniffer": "^3.9.0",
     "thecodingmachine/safe": "^2.5.0",
-    "vimeo/psalm": "^5.22.2",
+    "vimeo/psalm": "^5.23.1",
     "wyrihaximus/coding-standard": "^2.14.0",
     "wyrihaximus/phpstan-rules-wrapper": "^3.3.0"
   },
