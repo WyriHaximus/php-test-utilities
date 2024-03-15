@@ -25,7 +25,7 @@
     "phpstan/phpstan": "^1.10.61",
     "phpunit/phpunit": "^9.6.17",
     "psalm/plugin-mockery": "^1.1",
-    "psalm/plugin-phpunit": "^0.18.4",
+    "psalm/plugin-phpunit": "^0.19.0",
     "roave/backward-compatibility-check": "^8.6.0",
     "roave/infection-static-analysis-plugin": "^1.33.0",
     "squizlabs/php_codesniffer": "^3.9.0",
