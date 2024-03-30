@@ -22,7 +22,7 @@
     "php-parallel-lint/php-console-highlighter": "^1.0",
     "php-parallel-lint/php-parallel-lint": "^1.4.0",
     "php-standard-library/psalm-plugin": "^1.1.5 || ^2.2.1",
-    "phpstan/phpstan": "^1.10.61",
+    "phpstan/phpstan": "^1.10.66",
     "phpunit/phpunit": "^9.6.18",
     "psalm/plugin-mockery": "^1.1",
     "psalm/plugin-phpunit": "^0.19.0",
