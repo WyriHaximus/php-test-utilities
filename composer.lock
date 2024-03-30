@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9b0fc1ecb1ec89db39e83a09149b8b81",
+    "content-hash": "cc4262d76166db76a50845d280cf674d",
     "packages": [
         {
             "name": "amphp/amp",
@@ -4561,25 +4561,25 @@
         },
         {
             "name": "orklah/psalm-insane-comparison",
-            "version": "v2.2.0",
+            "version": "v2.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/orklah/psalm-insane-comparison.git",
-                "reference": "f0e44bf31678d189c8ee4556598d0ad6e3f853c9"
+                "reference": "d9e608e787e5ae1c994ae07095eea26029d6d0bd"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/orklah/psalm-insane-comparison/zipball/f0e44bf31678d189c8ee4556598d0ad6e3f853c9",
-                "reference": "f0e44bf31678d189c8ee4556598d0ad6e3f853c9",
+                "url": "https://api.github.com/repos/orklah/psalm-insane-comparison/zipball/d9e608e787e5ae1c994ae07095eea26029d6d0bd",
+                "reference": "d9e608e787e5ae1c994ae07095eea26029d6d0bd",
                 "shasum": ""
             },
             "require": {
                 "ext-simplexml": "*",
-                "php": "^7.3|^8.0"
+                "php": "^7.3|^8.0",
+                "vimeo/psalm": "^4|^5|dev-master"
             },
             "require-dev": {
-                "nikic/php-parser": "^4.0",
-                "vimeo/psalm": "^4.0|^5"
+                "nikic/php-parser": "^4.0|^5"
             },
             "type": "psalm-plugin",
             "extra": {
@@ -4609,9 +4609,9 @@
             "description": "Detects possible insane comparison (\"string\" == 0) to help migrate to PHP8",
             "support": {
                 "issues": "https://github.com/orklah/psalm-insane-comparison/issues",
-                "source": "https://github.com/orklah/psalm-insane-comparison/tree/v2.2.0"
+                "source": "https://github.com/orklah/psalm-insane-comparison/tree/v2.3.0"
             },
-            "time": "2023-01-06T09:06:11+00:00"
+            "time": "2024-03-20T21:49:45+00:00"
         },
         {
             "name": "pepakriz/phpstan-exception-rules",
