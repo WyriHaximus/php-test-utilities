@@ -69,7 +69,7 @@ abstract class TestCase extends PHPUnitTestCase
     }
 
     /** @return array<int, array<int, bool>> */
-    final public function provideTrueFalse(): array
+    final public static function provideTrueFalse(): array
     {
         return [
             [true],

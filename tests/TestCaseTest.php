@@ -40,7 +40,7 @@ final class TestCaseTest extends TestCase
     }
 
     /** @return array<int, string> */
-    public function provideTemporaryDirectory(): iterable
+    public static function provideTemporaryDirectory(): iterable
     {
         for ($i = 0; $i <= self::PENTIUM; $i++) {
             /**
@@ -79,7 +79,7 @@ final class TestCaseTest extends TestCase
     }
 
     /** @dataProvider provideTrueFalse */
-    public function testTrueFalse(bool $bool): void
+    public static function testTrueFalse(bool $bool): void
     {
         static::assertCount(1, func_get_args());
     }
