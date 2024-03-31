@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "da211128755fca6bf6da3e3d62703ef0",
+    "content-hash": "28a055b846a1bc378066143515670e53",
     "packages": [
         {
             "name": "amphp/amp",
@@ -11003,28 +11003,28 @@
         },
         {
             "name": "wyrihaximus/phpstan-rules-wrapper",
-            "version": "3.3.0",
+            "version": "3.4.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/WyriHaximus/php-phpstan-rules-wrapper.git",
-                "reference": "8e65ee7749a3e10100f0abec58b7e53ee540c43d"
+                "reference": "b0bb67516c0fd59b3da99035b2313098ba06549d"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WyriHaximus/php-phpstan-rules-wrapper/zipball/8e65ee7749a3e10100f0abec58b7e53ee540c43d",
-                "reference": "8e65ee7749a3e10100f0abec58b7e53ee540c43d",
+                "url": "https://api.github.com/repos/WyriHaximus/php-phpstan-rules-wrapper/zipball/b0bb67516c0fd59b3da99035b2313098ba06549d",
+                "reference": "b0bb67516c0fd59b3da99035b2313098ba06549d",
                 "shasum": ""
             },
             "require": {
-                "ergebnis/phpstan-rules": "^2.1.0",
+                "ergebnis/phpstan-rules": "^2.2.0",
                 "jangregor/phpstan-prophecy": "^1.0",
                 "pepakriz/phpstan-exception-rules": "^0.12.0",
                 "php": "^8.2",
                 "phpstan/phpstan-deprecation-rules": "^1.1.4",
-                "phpstan/phpstan-mockery": "^1.1",
+                "phpstan/phpstan-mockery": "^1.1.2",
                 "phpstan/phpstan-php-parser": "^1.1",
-                "phpstan/phpstan-phpunit": "^1.3.14",
-                "phpstan/phpstan-strict-rules": "^1.5.1",
+                "phpstan/phpstan-phpunit": "^1.3.16",
+                "phpstan/phpstan-strict-rules": "^1.5.2",
                 "thecodingmachine/phpstan-safe-rule": "^1.2",
                 "thecodingmachine/phpstan-strict-rules": "^1.0"
             },
@@ -11042,7 +11042,7 @@
             "description": "🌯 PHPStan rules wrapper",
             "support": {
                 "issues": "https://github.com/WyriHaximus/php-phpstan-rules-wrapper/issues",
-                "source": "https://github.com/WyriHaximus/php-phpstan-rules-wrapper/tree/3.3.0"
+                "source": "https://github.com/WyriHaximus/php-phpstan-rules-wrapper/tree/3.4.0"
             },
             "funding": [
                 {
@@ -11050,7 +11050,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2023-09-26T09:07:47+00:00"
+            "time": "2024-03-31T09:21:41+00:00"
         }
     ],
     "packages-dev": [],
