@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a26015438e87f9e264b4cbc4e2105c8c",
+    "content-hash": "9541918919e3e95cd0c03701f0973ef3",
     "packages": [
         {
             "name": "amphp/amp",
@@ -10886,16 +10886,16 @@
         },
         {
             "name": "wyrihaximus/phpstan-rules-wrapper",
-            "version": "4.1.0",
+            "version": "5.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/WyriHaximus/php-phpstan-rules-wrapper.git",
-                "reference": "04a5962a8a18c5529ed1ff054cb356f03da3f2db"
+                "reference": "74e00e425a022be762817068207e4d625e4f4f7e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WyriHaximus/php-phpstan-rules-wrapper/zipball/04a5962a8a18c5529ed1ff054cb356f03da3f2db",
-                "reference": "04a5962a8a18c5529ed1ff054cb356f03da3f2db",
+                "url": "https://api.github.com/repos/WyriHaximus/php-phpstan-rules-wrapper/zipball/74e00e425a022be762817068207e4d625e4f4f7e",
+                "reference": "74e00e425a022be762817068207e4d625e4f4f7e",
                 "shasum": ""
             },
             "require": {
@@ -10923,7 +10923,7 @@
             "description": "🌯 PHPStan rules wrapper",
             "support": {
                 "issues": "https://github.com/WyriHaximus/php-phpstan-rules-wrapper/issues",
-                "source": "https://github.com/WyriHaximus/php-phpstan-rules-wrapper/tree/4.1.0"
+                "source": "https://github.com/WyriHaximus/php-phpstan-rules-wrapper/tree/5.0.0"
             },
             "funding": [
                 {
@@ -10931,7 +10931,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-04-06T13:34:40+00:00"
+            "time": "2024-04-06T13:45:50+00:00"
         }
     ],
     "packages-dev": [],
