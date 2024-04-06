@@ -9,6 +9,7 @@ use Mockery\Adapter\Phpunit\MockeryPHPUnitIntegration;
 use PHPUnit\Framework\TestCase as PHPUnitTestCase;
 use RecursiveDirectoryIterator;
 use RecursiveIteratorIterator;
+use Safe\Exceptions\FilesystemException;
 use SplFileInfo;
 
 use function assert;
@@ -86,6 +87,7 @@ abstract class TestCase extends PHPUnitTestCase
         return sys_get_temp_dir();
     }
 
+    /** @throws FilesystemException */
     final protected function rmdir(string $dir): void
     {
         $directory = new FilesystemIterator($dir);
@@ -107,6 +109,7 @@ abstract class TestCase extends PHPUnitTestCase
         rmdir($dir);
     }
 
+    /** @throws FilesystemException */
     final protected function getTmpDir(): string
     {
         if (! file_exists($this->tmpDir)) {

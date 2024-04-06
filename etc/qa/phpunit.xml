@@ -10,7 +10,8 @@
       <directory suffix=".php">../../src/</directory>
     </include>
   </source>
-    <extensions>
-         <bootstrap class="Ergebnis\PHPUnit\SlowTestDetector\Extension"/>
-    </extensions>
+  <extensions>
+     <bootstrap class="Ergebnis\PHPUnit\SlowTestDetector\Extension"/>
+  </extensions>
 </phpunit>
+
