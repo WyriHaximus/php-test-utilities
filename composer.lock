@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9541918919e3e95cd0c03701f0973ef3",
+    "content-hash": "2db1f1c0a3a7f1a194010a54cf765db9",
     "packages": [
         {
             "name": "amphp/amp",
@@ -4544,63 +4544,6 @@
                 "source": "https://github.com/orklah/psalm-insane-comparison/tree/v2.3.0"
             },
             "time": "2024-03-20T21:49:45+00:00"
-        },
-        {
-            "name": "pepakriz/phpstan-exception-rules",
-            "version": "v0.12.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/pepakriz/phpstan-exception-rules.git",
-                "reference": "c5f3fe501e5a6c57c33fb678ad9278131bc1b9bd"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/pepakriz/phpstan-exception-rules/zipball/c5f3fe501e5a6c57c33fb678ad9278131bc1b9bd",
-                "reference": "c5f3fe501e5a6c57c33fb678ad9278131bc1b9bd",
-                "shasum": ""
-            },
-            "require": {
-                "nikic/php-parser": "^4.13",
-                "php": ">=7.1",
-                "phpstan/phpstan": "^1.0"
-            },
-            "require-dev": {
-                "nette/utils": "^3.0",
-                "php-parallel-lint/php-console-highlighter": "^0.4.0",
-                "php-parallel-lint/php-parallel-lint": "^1.2.0",
-                "phpstan/phpstan-nette": "^1.0",
-                "phpstan/phpstan-phpunit": "^1.0",
-                "phpstan/phpstan-strict-rules": "^1.0",
-                "phpunit/phpunit": "^7.5.6 || ^9.4.2",
-                "slevomat/coding-standard": "^6.4.1",
-                "squizlabs/php_codesniffer": "~3.5.2"
-            },
-            "type": "phpstan-extension",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "0.12-dev"
-                },
-                "phpstan": {
-                    "includes": [
-                        "extension.neon"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Pepakriz\\PHPStanExceptionRules\\": "src"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "Exception rules for PHPStan",
-            "support": {
-                "issues": "https://github.com/pepakriz/phpstan-exception-rules/issues",
-                "source": "https://github.com/pepakriz/phpstan-exception-rules/tree/v0.12.0"
-            },
-            "time": "2021-11-07T19:03:56+00:00"
         },
         {
             "name": "phar-io/manifest",
@@ -10886,21 +10829,20 @@
         },
         {
             "name": "wyrihaximus/phpstan-rules-wrapper",
-            "version": "5.0.0",
+            "version": "6.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/WyriHaximus/php-phpstan-rules-wrapper.git",
-                "reference": "74e00e425a022be762817068207e4d625e4f4f7e"
+                "reference": "e4b43719286e4f5ecd83771293a1a41ffcdeb111"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WyriHaximus/php-phpstan-rules-wrapper/zipball/74e00e425a022be762817068207e4d625e4f4f7e",
-                "reference": "74e00e425a022be762817068207e4d625e4f4f7e",
+                "url": "https://api.github.com/repos/WyriHaximus/php-phpstan-rules-wrapper/zipball/e4b43719286e4f5ecd83771293a1a41ffcdeb111",
+                "reference": "e4b43719286e4f5ecd83771293a1a41ffcdeb111",
                 "shasum": ""
             },
             "require": {
                 "ergebnis/phpstan-rules": "^2.2.0",
-                "pepakriz/phpstan-exception-rules": "^0.12.0",
                 "php": "^8.2",
                 "phpstan/phpstan-deprecation-rules": "^1.1.4",
                 "phpstan/phpstan-mockery": "^1.1.2",
@@ -10923,7 +10865,7 @@
             "description": "🌯 PHPStan rules wrapper",
             "support": {
                 "issues": "https://github.com/WyriHaximus/php-phpstan-rules-wrapper/issues",
-                "source": "https://github.com/WyriHaximus/php-phpstan-rules-wrapper/tree/5.0.0"
+                "source": "https://github.com/WyriHaximus/php-phpstan-rules-wrapper/tree/6.0.0"
             },
             "funding": [
                 {
@@ -10931,7 +10873,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-04-06T13:45:50+00:00"
+            "time": "2024-04-08T19:27:48+00:00"
         }
     ],
     "packages-dev": [],
