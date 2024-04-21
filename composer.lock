@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0db9fe27420b6ba06ed9f60492d7bc98",
+    "content-hash": "2b7dcc047a5deda20de2e6968a886640",
     "packages": [
         {
             "name": "amphp/amp",
@@ -5387,16 +5387,16 @@
         },
         {
             "name": "phpstan/phpstan-strict-rules",
-            "version": "1.5.3",
+            "version": "1.5.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan-strict-rules.git",
-                "reference": "568210bd301f94a0d4b1e5a0808c374c1b9cf11b"
+                "reference": "2e193a07651a6f4be3baa44ddb21d822681f5918"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan-strict-rules/zipball/568210bd301f94a0d4b1e5a0808c374c1b9cf11b",
-                "reference": "568210bd301f94a0d4b1e5a0808c374c1b9cf11b",
+                "url": "https://api.github.com/repos/phpstan/phpstan-strict-rules/zipball/2e193a07651a6f4be3baa44ddb21d822681f5918",
+                "reference": "2e193a07651a6f4be3baa44ddb21d822681f5918",
                 "shasum": ""
             },
             "require": {
@@ -5430,9 +5430,9 @@
             "description": "Extra strict and opinionated rules for PHPStan",
             "support": {
                 "issues": "https://github.com/phpstan/phpstan-strict-rules/issues",
-                "source": "https://github.com/phpstan/phpstan-strict-rules/tree/1.5.3"
+                "source": "https://github.com/phpstan/phpstan-strict-rules/tree/1.5.5"
             },
-            "time": "2024-04-06T07:43:25+00:00"
+            "time": "2024-04-19T15:12:26+00:00"
         },
         {
             "name": "phpunit/php-code-coverage",
@@ -10825,16 +10825,16 @@
         },
         {
             "name": "wyrihaximus/phpstan-rules-wrapper",
-            "version": "6.0.0",
+            "version": "6.0.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/WyriHaximus/php-phpstan-rules-wrapper.git",
-                "reference": "e4b43719286e4f5ecd83771293a1a41ffcdeb111"
+                "reference": "b8b4dcf99d96494b42feb5afe1cdea8b5b5b6fbe"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WyriHaximus/php-phpstan-rules-wrapper/zipball/e4b43719286e4f5ecd83771293a1a41ffcdeb111",
-                "reference": "e4b43719286e4f5ecd83771293a1a41ffcdeb111",
+                "url": "https://api.github.com/repos/WyriHaximus/php-phpstan-rules-wrapper/zipball/b8b4dcf99d96494b42feb5afe1cdea8b5b5b6fbe",
+                "reference": "b8b4dcf99d96494b42feb5afe1cdea8b5b5b6fbe",
                 "shasum": ""
             },
             "require": {
@@ -10843,7 +10843,7 @@
                 "phpstan/phpstan-deprecation-rules": "^1.1.4",
                 "phpstan/phpstan-mockery": "^1.1.2",
                 "phpstan/phpstan-phpunit": "^1.3.16",
-                "phpstan/phpstan-strict-rules": "^1.5.3",
+                "phpstan/phpstan-strict-rules": "^1.5.5",
                 "thecodingmachine/phpstan-safe-rule": "^1.2",
                 "thecodingmachine/phpstan-strict-rules": "^1.0"
             },
@@ -10861,7 +10861,7 @@
             "description": "🌯 PHPStan rules wrapper",
             "support": {
                 "issues": "https://github.com/WyriHaximus/php-phpstan-rules-wrapper/issues",
-                "source": "https://github.com/WyriHaximus/php-phpstan-rules-wrapper/tree/6.0.0"
+                "source": "https://github.com/WyriHaximus/php-phpstan-rules-wrapper/tree/6.0.1"
             },
             "funding": [
                 {
@@ -10869,7 +10869,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-04-08T19:27:48+00:00"
+            "time": "2024-04-20T21:08:05+00:00"
         }
     ],
     "packages-dev": [],
