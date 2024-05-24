@@ -70,6 +70,12 @@ composer-require-checker: ## Ensure we require every package used in this packag
 composer-unused: ## Ensure we don't require any package we don't use in this package directly
 	$(DOCKER_RUN) vendor/bin/composer-unused --ansi --configuration=./etc/qa/composer-unused.php
 
+libyear: ## Calculate how many libyear this package is behind with dependencies
+	$(DOCKER_RUN) vendor/bin/libyear
+
+libyear-number: ## Calculate how many libyear this package is behind with dependencies - number only ####
+	$(DOCKER_RUN) vendor/bin/libyear | tail -n1 | sed 's/[^0-9.]*//g'
+
 composer-install: ## Install dependencies
 	$(DOCKER_RUN) composer install --no-progress --ansi --no-interaction --prefer-dist -o
 
