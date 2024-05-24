@@ -10,6 +10,7 @@ use Webmozart\Glob\Glob;
 return static function (Configuration $config): Configuration {
     return $config
         ->addNamedFilter(NamedFilter::fromString('brandembassy/mockery-tools'))
+        ->addNamedFilter(NamedFilter::fromString('ecoapm/libyear'))
         ->addNamedFilter(NamedFilter::fromString('ergebnis/composer-normalize'))
         ->addNamedFilter(NamedFilter::fromString('ergebnis/phpunit-slow-test-detector'))
         ->addNamedFilter(NamedFilter::fromString('icanhazstring/composer-unused'))
