@@ -16,7 +16,6 @@ return static function (Configuration $config): Configuration {
         ->addNamedFilter(NamedFilter::fromString('icanhazstring/composer-unused'))
         ->addNamedFilter(NamedFilter::fromString('infection/infection'))
         ->addNamedFilter(NamedFilter::fromString('maglnet/composer-require-checker'))
-        ->addNamedFilter(NamedFilter::fromString('nunomaduro/collision'))
         ->addNamedFilter(NamedFilter::fromString('orklah/psalm-insane-comparison'))
         ->addNamedFilter(NamedFilter::fromString('php-coveralls/php-coveralls'))
         ->addNamedFilter(NamedFilter::fromString('php-parallel-lint/php-console-highlighter'))
