@@ -5,5 +5,4 @@ parameters:
 				- WyriHaximus\TestUtilities\TestCase
 
 includes:
-	- ../phpstan-rules-wrapper/wrapper.neon
 	- phar://phpstan.phar/conf/bleedingEdge.neon

@@ -25,7 +25,7 @@ use const PHP_OS;
 /** @internal */
 final class TestCaseTest extends TestCase
 {
-    public const PENTIUM = 66;
+    public const int PENTIUM = 66;
 
     private string $previousTemporaryDirectory = '';
 
