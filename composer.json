@@ -24,7 +24,7 @@
     "php-parallel-lint/php-console-highlighter": "^1.0",
     "php-parallel-lint/php-parallel-lint": "^1.4.0",
     "php-standard-library/psalm-plugin": "^1.1.5 || ^2.2.1",
-    "phpstan/phpstan": "^1.12.2",
+    "phpstan/phpstan": "^1.12.4",
     "phpunit/phpunit": "^10.5.32",
     "psalm/plugin-mockery": "^1.1",
     "psalm/plugin-phpunit": "^0.19.0",
@@ -34,7 +34,7 @@
     "thecodingmachine/safe": "^2.5.0",
     "vimeo/psalm": "^5.25.0",
     "wyrihaximus/coding-standard": "^2.14.0",
-    "wyrihaximus/phpstan-rules-wrapper": "^6.1.0"
+    "wyrihaximus/phpstan-rules-wrapper": "^6.3.0"
   },
   "conflict": {
     "composer/compoer": "<2.6.0",
