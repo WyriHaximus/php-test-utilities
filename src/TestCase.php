@@ -32,12 +32,12 @@ abstract class TestCase extends PHPUnitTestCase
 {
     use MockeryPHPUnitIntegration;
 
-    public const WINDOWS_TEMP_DIR_PREFIX = 'C:\\t\\';
-    public const DEFAULT_AWAIT_TIMEOUT   = 60;
-    public const WIN_START               = 0;
-    public const WIN_END                 = 2;
-    public const USLEEP                  = 50;
-    public const DEFAULT_MODE            = 0777;
+    public const string WINDOWS_TEMP_DIR_PREFIX = 'C:\\t\\';
+    public const int DEFAULT_AWAIT_TIMEOUT      = 60;
+    public const int WIN_START                  = 0;
+    public const int WIN_END                    = 2;
+    public const int USLEEP                     = 50;
+    public const int DEFAULT_MODE               = 0777;
 
     private string $baseTmpDir;
 
