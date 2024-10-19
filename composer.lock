@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1d0a95e9e8b44b05ea4ca7215c414aea",
+    "content-hash": "84e526422a5a77ec9ce8a7fe19bdc370",
     "packages": [
         {
             "name": "amphp/amp",
@@ -9386,118 +9386,6 @@
             "time": "2024-09-17T12:49:58+00:00"
         },
         {
-            "name": "thecodingmachine/phpstan-safe-rule",
-            "version": "v1.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/thecodingmachine/phpstan-safe-rule.git",
-                "reference": "8a7b88e0d54f209a488095085f183e9174c40e1e"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/thecodingmachine/phpstan-safe-rule/zipball/8a7b88e0d54f209a488095085f183e9174c40e1e",
-                "reference": "8a7b88e0d54f209a488095085f183e9174c40e1e",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7.1 || ^8.0",
-                "phpstan/phpstan": "^1.0",
-                "thecodingmachine/safe": "^1.0 || ^2.0"
-            },
-            "require-dev": {
-                "php-coveralls/php-coveralls": "^2.1",
-                "phpunit/phpunit": "^7.5.2 || ^8.0",
-                "squizlabs/php_codesniffer": "^3.4"
-            },
-            "type": "phpstan-extension",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.1-dev"
-                },
-                "phpstan": {
-                    "includes": [
-                        "phpstan-safe-rule.neon"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "TheCodingMachine\\Safe\\PHPStan\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "David Négrier",
-                    "email": "d.negrier@thecodingmachine.com"
-                }
-            ],
-            "description": "A PHPStan rule to detect safety issues. Must be used in conjunction with thecodingmachine/safe",
-            "support": {
-                "issues": "https://github.com/thecodingmachine/phpstan-safe-rule/issues",
-                "source": "https://github.com/thecodingmachine/phpstan-safe-rule/tree/v1.2.0"
-            },
-            "time": "2022-01-17T10:12:29+00:00"
-        },
-        {
-            "name": "thecodingmachine/phpstan-strict-rules",
-            "version": "v1.0.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/thecodingmachine/phpstan-strict-rules.git",
-                "reference": "2ba8fa8b328c45f3b149c05def5bf96793c594b6"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/thecodingmachine/phpstan-strict-rules/zipball/2ba8fa8b328c45f3b149c05def5bf96793c594b6",
-                "reference": "2ba8fa8b328c45f3b149c05def5bf96793c594b6",
-                "shasum": ""
-            },
-            "require": {
-                "php": "^7.1|^8.0",
-                "phpstan/phpstan": "^1.0"
-            },
-            "require-dev": {
-                "php-coveralls/php-coveralls": "^2.1",
-                "phpunit/phpunit": "^7.1"
-            },
-            "type": "phpstan-extension",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.0-dev"
-                },
-                "phpstan": {
-                    "includes": [
-                        "phpstan-strict-rules.neon"
-                    ]
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "TheCodingMachine\\PHPStan\\": "src/"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "David Négrier",
-                    "email": "d.negrier@thecodingmachine.com"
-                }
-            ],
-            "description": "A set of additional rules for PHPStan based on best practices followed at TheCodingMachine",
-            "support": {
-                "issues": "https://github.com/thecodingmachine/phpstan-strict-rules/issues",
-                "source": "https://github.com/thecodingmachine/phpstan-strict-rules/tree/v1.0.0"
-            },
-            "time": "2021-11-08T09:10:49+00:00"
-        },
-        {
             "name": "thecodingmachine/safe",
             "version": "v2.5.0",
             "source": {
@@ -9688,16 +9576,16 @@
         },
         {
             "name": "tomasvotruba/type-coverage",
-            "version": "0.3.1",
+            "version": "1.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/TomasVotruba/type-coverage.git",
-                "reference": "dd47f9506346d12b741b0ca6f98f9d748ca982d5"
+                "reference": "01498b5cef67fa433e2f9f38b696d0ecd5131dca"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/TomasVotruba/type-coverage/zipball/dd47f9506346d12b741b0ca6f98f9d748ca982d5",
-                "reference": "dd47f9506346d12b741b0ca6f98f9d748ca982d5",
+                "url": "https://api.github.com/repos/TomasVotruba/type-coverage/zipball/01498b5cef67fa433e2f9f38b696d0ecd5131dca",
+                "reference": "01498b5cef67fa433e2f9f38b696d0ecd5131dca",
                 "shasum": ""
             },
             "require": {
@@ -9729,7 +9617,7 @@
             ],
             "support": {
                 "issues": "https://github.com/TomasVotruba/type-coverage/issues",
-                "source": "https://github.com/TomasVotruba/type-coverage/tree/0.3.1"
+                "source": "https://github.com/TomasVotruba/type-coverage/tree/1.0.0"
             },
             "funding": [
                 {
@@ -9741,7 +9629,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-06-14T15:11:04+00:00"
+            "time": "2024-10-01T15:41:12+00:00"
         },
         {
             "name": "vimeo/psalm",
@@ -10055,16 +9943,16 @@
         },
         {
             "name": "wyrihaximus/phpstan-rules-wrapper",
-            "version": "7.1.0",
+            "version": "8.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/WyriHaximus/php-phpstan-rules-wrapper.git",
-                "reference": "1a643d884dfb9b8c37484549cedcd523cf66e5a9"
+                "reference": "ec5cba63f2bcff7ce6ba96f4ebd7829a4a11739c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WyriHaximus/php-phpstan-rules-wrapper/zipball/1a643d884dfb9b8c37484549cedcd523cf66e5a9",
-                "reference": "1a643d884dfb9b8c37484549cedcd523cf66e5a9",
+                "url": "https://api.github.com/repos/WyriHaximus/php-phpstan-rules-wrapper/zipball/ec5cba63f2bcff7ce6ba96f4ebd7829a4a11739c",
+                "reference": "ec5cba63f2bcff7ce6ba96f4ebd7829a4a11739c",
                 "shasum": ""
             },
             "require": {
@@ -10075,9 +9963,7 @@
                 "phpstan/phpstan-mockery": "^1.1.3",
                 "phpstan/phpstan-phpunit": "^1.4.0",
                 "phpstan/phpstan-strict-rules": "^1.6.1",
-                "thecodingmachine/phpstan-safe-rule": "^1.2",
-                "thecodingmachine/phpstan-strict-rules": "^1.0",
-                "tomasvotruba/type-coverage": "^0.3.1",
+                "tomasvotruba/type-coverage": "^1.0.0",
                 "yamadashy/phpstan-friendly-formatter": "^1.1.2"
             },
             "type": "library",
@@ -10101,7 +9987,7 @@
             "description": "🌯 PHPStan rules wrapper",
             "support": {
                 "issues": "https://github.com/WyriHaximus/php-phpstan-rules-wrapper/issues",
-                "source": "https://github.com/WyriHaximus/php-phpstan-rules-wrapper/tree/7.1.0"
+                "source": "https://github.com/WyriHaximus/php-phpstan-rules-wrapper/tree/8.0.0"
             },
             "funding": [
                 {
@@ -10109,7 +9995,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2024-09-24T13:57:26+00:00"
+            "time": "2024-10-19T20:15:56+00:00"
         },
         {
             "name": "yamadashy/phpstan-friendly-formatter",
