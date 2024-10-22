@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "dab6c806c61d7e6f51f5ebef5380abcf",
+    "content-hash": "278d3419ec5f1e87dc169f5932f1b6a4",
     "packages": [
         {
             "name": "amphp/amp",
@@ -9978,6 +9978,39 @@
             "time": "2023-05-06T11:54:10+00:00"
         },
         {
+            "name": "wyrihaximus/makefiles",
+            "version": "dev-main",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/WyriHaximus/Makefiles.git",
+                "reference": "4c1c5ee08ca84897e09822b19c6011b76b684f2d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/WyriHaximus/Makefiles/zipball/4c1c5ee08ca84897e09822b19c6011b76b684f2d",
+                "reference": "4c1c5ee08ca84897e09822b19c6011b76b684f2d",
+                "shasum": ""
+            },
+            "default-branch": true,
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Cees-Jan Kiewiet",
+                    "email": "ceesjank@gmail.com"
+                }
+            ],
+            "description": "🛠️ Test utilities for api-clients packages",
+            "support": {
+                "issues": "https://github.com/WyriHaximus/Makefiles/issues",
+                "source": "https://github.com/WyriHaximus/Makefiles/tree/main"
+            },
+            "time": "2024-12-07T21:03:15+00:00"
+        },
+        {
             "name": "wyrihaximus/phpstan-rules-wrapper",
             "version": "8.0.0",
             "source": {
@@ -10098,7 +10131,9 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {},
+    "stability-flags": {
+        "wyrihaximus/makefiles": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
