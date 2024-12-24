@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "d0d776965c121a1cbd04464b30e71c8b",
+    "content-hash": "0e9377c12bcb37f252287ea86b53fdbc",
     "packages": [
         {
             "name": "azjezz/psl",
@@ -2788,16 +2788,16 @@
         },
         {
             "name": "maglnet/composer-require-checker",
-            "version": "4.13.0",
+            "version": "4.14.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/maglnet/ComposerRequireChecker.git",
-                "reference": "3f998740566e3e9b3f7321167fd2f4fd645129da"
+                "reference": "b6d5acd89d0de1727c1188157fa99552c39d1dfb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/maglnet/ComposerRequireChecker/zipball/3f998740566e3e9b3f7321167fd2f4fd645129da",
-                "reference": "3f998740566e3e9b3f7321167fd2f4fd645129da",
+                "url": "https://api.github.com/repos/maglnet/ComposerRequireChecker/zipball/b6d5acd89d0de1727c1188157fa99552c39d1dfb",
+                "reference": "b6d5acd89d0de1727c1188157fa99552c39d1dfb",
                 "shasum": ""
             },
             "require": {
@@ -2813,8 +2813,8 @@
                 "doctrine/coding-standard": "^12.0.0",
                 "ext-zend-opcache": "*",
                 "phing/phing": "^2.17.4",
-                "phpstan/phpstan": "^1.12.6",
-                "phpunit/phpunit": "^10.5.36",
+                "phpstan/phpstan": "^1.12.10",
+                "phpunit/phpunit": "^10.5.38",
                 "psalm/plugin-phpunit": "^0.19.0",
                 "roave/infection-static-analysis-plugin": "^1.35.0",
                 "spatie/temporary-directory": "^2.2.1",
@@ -2863,9 +2863,9 @@
             ],
             "support": {
                 "issues": "https://github.com/maglnet/ComposerRequireChecker/issues",
-                "source": "https://github.com/maglnet/ComposerRequireChecker/tree/4.13.0"
+                "source": "https://github.com/maglnet/ComposerRequireChecker/tree/4.14.0"
             },
-            "time": "2024-10-18T08:08:55+00:00"
+            "time": "2024-11-13T02:00:19+00:00"
         },
         {
             "name": "mockery/mockery",
@@ -9073,13 +9073,13 @@
     "packages-dev": [],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {},
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
         "php": "^8.3"
     },
-    "platform-dev": [],
+    "platform-dev": {},
     "platform-overrides": {
         "php": "8.3.13"
     },
