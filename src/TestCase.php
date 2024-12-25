@@ -33,7 +33,6 @@ abstract class TestCase extends PHPUnitTestCase
     use MockeryPHPUnitIntegration;
 
     public const string WINDOWS_TEMP_DIR_PREFIX = 'C:\\t\\';
-    public const int DEFAULT_AWAIT_TIMEOUT      = 60;
     public const int WIN_START                  = 0;
     public const int WIN_END                    = 2;
     public const int USLEEP                     = 50;
@@ -68,13 +67,11 @@ abstract class TestCase extends PHPUnitTestCase
         $this->rmdir($this->baseTmpDir);
     }
 
-    /** @return array<int, array<int, bool>> */
-    final public static function provideTrueFalse(): array
+    /** @return iterable<array<bool>> */
+    final public static function provideTrueFalse(): iterable
     {
-        return [
-            [true],
-            [false],
-        ];
+        yield 'true' => [true];
+        yield 'false' => [false];
     }
 
     final protected function getSysTempDir(): string
@@ -121,7 +118,7 @@ abstract class TestCase extends PHPUnitTestCase
         return $this->tmpNamespace;
     }
 
-    /** @return array<string> */
+    /** @return list<string> */
     final protected function getFilesInDirectory(string $path): array
     {
         $files = [];

@@ -79,9 +79,17 @@ final class TestCaseTest extends TestCase
     }
 
     /** @dataProvider provideTrueFalse */
-    public static function testTrueFalse(bool $bool): void
+    public function testTrueOrFalse(bool $bool): void
     {
         static::assertCount(1, func_get_args());
+    }
+
+    public function testTrueAndFalse(): void
+    {
+        static::assertSame(
+            ['true' => [true], 'false' => [false]],
+            [...self::provideTrueFalse()],
+        );
     }
 
     public function testGetSysTempDir(): void
