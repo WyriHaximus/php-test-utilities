@@ -87,7 +87,7 @@ abstract class TestCase extends PHPUnitTestCase
         $directory = new FilesystemIterator($dir);
 
         foreach ($directory as $node) {
-            if (!$node instanceof SplFileInfo) {
+            if (! $node instanceof SplFileInfo) {
                 continue;
             }
 

@@ -61,9 +61,6 @@ mutation-testing: ## Run mutation testing
 mutation-testing-raw: ## Run mutation testing ####
 	php vendor/roave/infection-static-analysis-plugin/bin/infection --ansi --log-verbosity=all --threads=$(THREADS) || (cat ./var/infection.log && false)
 
-composer-unused: ## Ensure we don't require any package we don't use in this package directly
-	$(DOCKER_RUN) vendor/bin/composer-unused --ansi --configuration=./etc/qa/composer-unused.php
-
 libyear: ## Calculate how many libyear this package is behind with dependencies
 	$(DOCKER_RUN) vendor/bin/libyear
 
