@@ -60,12 +60,22 @@
         },
         "Concat": {
             "ignore": [
+                "WyriHaximus\\TestUtilities\\TestCase::getTmpDir",
+                "WyriHaximus\\TestUtilities\\TestCase::rmdir",
                 "WyriHaximus\\TestUtilities\\TestCase::setUp"
             ]
         },
         "ConcatOperandRemoval": {
             "ignore": [
+                "WyriHaximus\\TestUtilities\\TestCase::getTmpDir",
+                "WyriHaximus\\TestUtilities\\TestCase::rmdir",
                 "WyriHaximus\\TestUtilities\\TestCase::setUp"
+            ]
+        },
+        "Throw_": {
+            "ignore": [
+                "WyriHaximus\\TestUtilities\\TestCase::getTmpDir",
+                "WyriHaximus\\TestUtilities\\TestCase::rmdir"
             ]
         }
     },

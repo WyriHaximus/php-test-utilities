@@ -11,18 +11,17 @@ use RecursiveDirectoryIterator;
 use RecursiveIteratorIterator;
 use SplFileInfo;
 
-use function assert;
 use function file_exists;
 use function is_dir;
 use function is_file;
-use function Safe\mkdir;
-use function Safe\rmdir;
-use function Safe\unlink;
+use function mkdir;
+use function rmdir;
 use function strtoupper;
 use function substr;
 use function sys_get_temp_dir;
 use function time;
 use function uniqid;
+use function unlink;
 use function usleep;
 
 use const DIRECTORY_SEPARATOR;
@@ -88,7 +87,10 @@ abstract class TestCase extends PHPUnitTestCase
         $directory = new FilesystemIterator($dir);
 
         foreach ($directory as $node) {
-            assert($node instanceof SplFileInfo);
+            if (!$node instanceof SplFileInfo) {
+                continue;
+            }
+
             if (is_dir($node->getPathname())) {
                 $this->rmdir($node->getPathname());
                 continue;
@@ -98,16 +100,22 @@ abstract class TestCase extends PHPUnitTestCase
                 continue;
             }
 
-            unlink($node->getPathname());
+            if (unlink($node->getPathname()) !== true) {
+                throw ErrorExceptionFactory::create('Error deleting file: ' . $node->getPathname());
+            }
         }
 
-        rmdir($dir);
+        if (@rmdir($dir) !== true) {
+            throw ErrorExceptionFactory::create('Error deleting directory: ' . $dir);
+        }
     }
 
     final protected function getTmpDir(): string
     {
         if (! file_exists($this->tmpDir)) {
-            mkdir($this->tmpDir, self::DEFAULT_MODE, true);
+            if (@mkdir($this->tmpDir, self::DEFAULT_MODE, true) !== true) {
+                throw ErrorExceptionFactory::create('Error creating directory: ' . $this->tmpDir);
+            }
         }
 
         return $this->tmpDir;
