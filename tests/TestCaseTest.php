@@ -26,7 +26,6 @@ use const DIRECTORY_SEPARATOR;
 use const PHP_INT_MAX;
 use const PHP_OS;
 
-/** @internal */
 final class TestCaseTest extends TestCase
 {
     public const int PENTIUM = 66;

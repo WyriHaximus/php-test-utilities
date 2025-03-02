@@ -12,18 +12,18 @@
     "php": "^8.3",
     "ecoapm/libyear": "^2.3",
     "ergebnis/composer-normalize": "^2.45.0",
-    "ergebnis/phpunit-slow-test-detector": "^2.17.0",
-    "infection/infection": "^0.29.10",
+    "ergebnis/phpunit-slow-test-detector": "^2.19.0",
+    "infection/infection": "^0.29.14",
     "mockery/mockery": "^1.6.12",
     "php-coveralls/php-coveralls": "^2.7.0",
     "php-parallel-lint/php-console-highlighter": "^1.0",
     "php-parallel-lint/php-parallel-lint": "^1.4.0",
-    "phpstan/phpstan": "^2.0.4",
-    "phpunit/phpunit": "^10.5.40",
-    "roave/backward-compatibility-check": "^8.10.0",
-    "squizlabs/php_codesniffer": "^3.11.2",
-    "wyrihaximus/coding-standard": "^2.15.0",
-    "wyrihaximus/phpstan-rules-wrapper": "^10.0.0"
+    "phpstan/phpstan": "^2.1.6",
+    "phpunit/phpunit": "^10.5.45",
+    "roave/backward-compatibility-check": "^8.13.0",
+    "squizlabs/php_codesniffer": "^3.11.3",
+    "wyrihaximus/coding-standard": "^2.16.0",
+    "wyrihaximus/phpstan-rules-wrapper": "^10.3.0"
   },
   "conflict": {
     "composer/compoer": "<2.6.0",
@@ -53,6 +53,13 @@
       "php": "8.3.13"
     },
     "sort-packages": true
+  },
+  "extra": {
+    "phpstan": {
+      "includes": [
+        "extension.neon"
+      ]
+    }
   },
   "scripts": {
     "post-install-cmd": [
