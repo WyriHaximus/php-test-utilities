@@ -64,6 +64,9 @@ mutation-testing-raw: ## Run mutation testing ####
 composer-require-checker: ## Ensure we require every package used in this package directly
 	$(DOCKER_RUN) vendor/bin/composer-require-checker --ignore-parse-errors --ansi -vvv --config-file=./etc/qa/composer-require-checker.json
 
+composer-unused: ## Ensure we don't require any package we don't use in this package directly
+	$(DOCKER_RUN) vendor/bin/composer-unused --ansi --configuration=./etc/qa/composer-unused.php
+
 libyear: ## Calculate how many libyear this package is behind with dependencies
 	$(DOCKER_RUN) vendor/bin/libyear
 
