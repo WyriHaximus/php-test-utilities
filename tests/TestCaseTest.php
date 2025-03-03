@@ -4,8 +4,11 @@ declare(strict_types=1);
 
 namespace WyriHaximus\Tests\TestUtilities;
 
+use PHPUnit\Framework\Attributes\Test;
+use RuntimeException;
 use WyriHaximus\TestUtilities\TestCase;
 
+use function chmod;
 use function func_get_args;
 use function random_int;
 use function Safe\file_get_contents;
@@ -16,6 +19,7 @@ use function strtoupper;
 use function substr;
 use function sys_get_temp_dir;
 use function time;
+use function touch;
 use function uniqid;
 
 use const DIRECTORY_SEPARATOR;
@@ -117,5 +121,28 @@ final class TestCaseTest extends TestCase
         self::assertDirectoryExists($tmpDir);
         $this->rmdir($tmpDir);
         self::assertDirectoryDoesNotExist($tmpDir);
+    }
+
+    #[Test]
+    public function failRmDir(): void
+    {
+        $tmpDir = $this->getSysTempDir() .
+            DIRECTORY_SEPARATOR .
+            'p-a-c-t-' .
+            uniqid() .
+            DIRECTORY_SEPARATOR;
+
+        self::expectException(RuntimeException::class);
+        self::expectExceptionMessage('Error deleting directory: ' . $tmpDir . ' with error: rmdir(' . $tmpDir . '): Directory not empty');
+
+        mkdir($tmpDir);
+        touch($tmpDir . '__FILE__');
+
+        self::assertDirectoryExists($tmpDir);
+        self::assertFileExists($tmpDir . '__FILE__');
+
+        chmod($tmpDir, 0444);
+
+        $this->rmdir($tmpDir);
     }
 }
