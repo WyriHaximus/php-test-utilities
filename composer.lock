@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6e037f3322d9da36c355ccc7ef802a18",
+    "content-hash": "f35f0b321237a834d600f8104fd38f14",
     "packages": [
         {
             "name": "azjezz/psl",
@@ -3562,16 +3562,16 @@
         },
         {
             "name": "phpstan/phpstan",
-            "version": "2.1.6",
+            "version": "2.1.7",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpstan.git",
-                "reference": "6eaec7c6c9e90dcfe46ad1e1ffa5171e2dab641c"
+                "reference": "12567f91a74036d56ba0af6d56c8e73ac0e8d850"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/6eaec7c6c9e90dcfe46ad1e1ffa5171e2dab641c",
-                "reference": "6eaec7c6c9e90dcfe46ad1e1ffa5171e2dab641c",
+                "url": "https://api.github.com/repos/phpstan/phpstan/zipball/12567f91a74036d56ba0af6d56c8e73ac0e8d850",
+                "reference": "12567f91a74036d56ba0af6d56c8e73ac0e8d850",
                 "shasum": ""
             },
             "require": {
@@ -3616,7 +3616,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-02-19T15:46:42+00:00"
+            "time": "2025-03-05T13:43:55+00:00"
         },
         {
             "name": "phpstan/phpstan-deprecation-rules",
@@ -6049,16 +6049,16 @@
         },
         {
             "name": "shipmonk/dead-code-detector",
-            "version": "0.8.1",
+            "version": "0.9.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/shipmonk-rnd/dead-code-detector.git",
-                "reference": "1935d9b58b92ce8d2522d8c72ef310de4d0c3508"
+                "reference": "febeb01b669e130d99784b35e9035563726804d5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/shipmonk-rnd/dead-code-detector/zipball/1935d9b58b92ce8d2522d8c72ef310de4d0c3508",
-                "reference": "1935d9b58b92ce8d2522d8c72ef310de4d0c3508",
+                "url": "https://api.github.com/repos/shipmonk-rnd/dead-code-detector/zipball/febeb01b669e130d99784b35e9035563726804d5",
+                "reference": "febeb01b669e130d99784b35e9035563726804d5",
                 "shasum": ""
             },
             "require": {
@@ -6067,20 +6067,20 @@
             },
             "require-dev": {
                 "doctrine/orm": "^2.19 || ^3.0",
-                "editorconfig-checker/editorconfig-checker": "^10.3.0",
-                "ergebnis/composer-normalize": "^2.28",
+                "editorconfig-checker/editorconfig-checker": "^10.6.0",
+                "ergebnis/composer-normalize": "^2.45.0",
                 "nette/application": "^3.1",
                 "nette/component-model": "^3.0",
                 "nette/utils": "^3.0 || ^4.0",
-                "nikic/php-parser": "^5.3.1",
-                "phpstan/phpstan-phpunit": "^2.0.0",
-                "phpstan/phpstan-strict-rules": "^2.0.0",
-                "phpstan/phpstan-symfony": "^2.0.0",
-                "phpunit/phpunit": "^9.6.21",
-                "shipmonk/composer-dependency-analyser": "^1.8.1",
-                "shipmonk/name-collision-detector": "^2.0.0",
-                "shipmonk/phpstan-rules": "^4.0.0",
-                "slevomat/coding-standard": "^8.15.0",
+                "nikic/php-parser": "^5.4.0",
+                "phpstan/phpstan-phpunit": "^2.0.4",
+                "phpstan/phpstan-strict-rules": "^2.0.3",
+                "phpstan/phpstan-symfony": "^2.0.2",
+                "phpunit/phpunit": "^9.6.22",
+                "shipmonk/composer-dependency-analyser": "^1.8.2",
+                "shipmonk/name-collision-detector": "^2.1.1",
+                "shipmonk/phpstan-rules": "^4.1.0",
+                "slevomat/coding-standard": "^8.16.0",
                 "symfony/contracts": "^2.5 || ^3.0",
                 "symfony/event-dispatcher": "^5.4 || ^6.0 || ^7.0",
                 "symfony/http-kernel": "^5.4 || ^6.0 || ^7.0",
@@ -6103,7 +6103,7 @@
             "license": [
                 "MIT"
             ],
-            "description": "Dead code detector to find unused PHP code via PHPStan extension. Can automatically remove dead PHP code. Supports libraries like Symfony, Doctrine, PHPUnit etc. Detects dead cycles.",
+            "description": "Dead code detector to find unused PHP code via PHPStan extension. Can automatically remove dead PHP code. Supports libraries like Symfony, Doctrine, PHPUnit etc. Detects dead cycles. Can detect dead code that is tested.",
             "keywords": [
                 "PHPStan",
                 "dead code",
@@ -6112,9 +6112,9 @@
             ],
             "support": {
                 "issues": "https://github.com/shipmonk-rnd/dead-code-detector/issues",
-                "source": "https://github.com/shipmonk-rnd/dead-code-detector/tree/0.8.1"
+                "source": "https://github.com/shipmonk-rnd/dead-code-detector/tree/0.9.1"
             },
-            "time": "2025-01-22T10:23:04+00:00"
+            "time": "2025-03-05T15:05:39+00:00"
         },
         {
             "name": "shipmonk/phpstan-rules",
@@ -8002,28 +8002,28 @@
         },
         {
             "name": "wyrihaximus/phpstan-rules-wrapper",
-            "version": "10.3.0",
+            "version": "10.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/WyriHaximus/php-phpstan-rules-wrapper.git",
-                "reference": "66f50d7d3bdd38f87f5bfbff2ae3d8028235d583"
+                "reference": "de0d4ea06c3e0dda40c4993333f6c503b5673b02"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WyriHaximus/php-phpstan-rules-wrapper/zipball/66f50d7d3bdd38f87f5bfbff2ae3d8028235d583",
-                "reference": "66f50d7d3bdd38f87f5bfbff2ae3d8028235d583",
+                "url": "https://api.github.com/repos/WyriHaximus/php-phpstan-rules-wrapper/zipball/de0d4ea06c3e0dda40c4993333f6c503b5673b02",
+                "reference": "de0d4ea06c3e0dda40c4993333f6c503b5673b02",
                 "shasum": ""
             },
             "require": {
                 "ergebnis/phpstan-rules": "^2.8.0",
                 "php": "^8.3",
                 "phpstan/extension-installer": "^1.4.3",
-                "phpstan/phpstan": "^2.1.6",
+                "phpstan/phpstan": "^2.1.7",
                 "phpstan/phpstan-deprecation-rules": "^2.0.1",
                 "phpstan/phpstan-mockery": "^2.0.0",
                 "phpstan/phpstan-phpunit": "^2.0.4",
                 "phpstan/phpstan-strict-rules": "^2.0.3",
-                "shipmonk/dead-code-detector": "^0.8.1",
+                "shipmonk/dead-code-detector": "^0.9.1",
                 "shipmonk/phpstan-rules": "^4.1.0",
                 "tomasvotruba/type-coverage": "^2.0.2",
                 "yamadashy/phpstan-friendly-formatter": "^1.2.0"
@@ -8049,7 +8049,7 @@
             "description": "🌯 PHPStan rules wrapper",
             "support": {
                 "issues": "https://github.com/WyriHaximus/php-phpstan-rules-wrapper/issues",
-                "source": "https://github.com/WyriHaximus/php-phpstan-rules-wrapper/tree/10.3.0"
+                "source": "https://github.com/WyriHaximus/php-phpstan-rules-wrapper/tree/10.5.0"
             },
             "funding": [
                 {
@@ -8057,7 +8057,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-03-02T19:08:30+00:00"
+            "time": "2025-03-05T16:47:49+00:00"
         },
         {
             "name": "yamadashy/phpstan-friendly-formatter",

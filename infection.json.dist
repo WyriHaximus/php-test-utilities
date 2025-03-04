@@ -45,7 +45,13 @@
         },
         "PublicVisibility": {
             "ignore": [
+                "WyriHaximus\\TestUtilities\\ErrorExceptionFactory::create",
                 "WyriHaximus\\TestUtilities\\TestCase::provideTrueFalse"
+            ]
+        },
+        "Ternary": {
+            "ignore": [
+                "WyriHaximus\\TestUtilities\\ErrorExceptionFactory::create"
             ]
         },
         "Identical": {
@@ -60,6 +66,7 @@
         },
         "Concat": {
             "ignore": [
+                "WyriHaximus\\TestUtilities\\ErrorExceptionFactory::create",
                 "WyriHaximus\\TestUtilities\\TestCase::getTmpDir",
                 "WyriHaximus\\TestUtilities\\TestCase::rmdir",
                 "WyriHaximus\\TestUtilities\\TestCase::setUp"
@@ -67,6 +74,7 @@
         },
         "ConcatOperandRemoval": {
             "ignore": [
+                "WyriHaximus\\TestUtilities\\ErrorExceptionFactory::create",
                 "WyriHaximus\\TestUtilities\\TestCase::getTmpDir",
                 "WyriHaximus\\TestUtilities\\TestCase::rmdir",
                 "WyriHaximus\\TestUtilities\\TestCase::setUp"

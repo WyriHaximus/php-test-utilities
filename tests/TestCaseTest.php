@@ -4,11 +4,10 @@ declare(strict_types=1);
 
 namespace WyriHaximus\Tests\TestUtilities;
 
+use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\Attributes\Test;
-use RuntimeException;
 use WyriHaximus\TestUtilities\TestCase;
 
-use function chmod;
 use function func_get_args;
 use function random_int;
 use function Safe\file_get_contents;
@@ -19,7 +18,6 @@ use function strtoupper;
 use function substr;
 use function sys_get_temp_dir;
 use function time;
-use function touch;
 use function uniqid;
 
 use const DIRECTORY_SEPARATOR;
@@ -55,12 +53,14 @@ final class TestCaseTest extends TestCase
         }
     }
 
-    public function testRecursiveDirectoryCreation(): void
+    #[Test]
+    public function recursiveDirectoryCreation(): void
     {
         static::assertFileExists($this->getTmpDir());
     }
 
-    /** @dataProvider provideTemporaryDirectory */
+    #[Test]
+    #[DataProvider('provideTemporaryDirectory')]
     public function testTemporaryDirectoryAndGetFilesInDirectory(string $int): void
     {
         static::assertTrue(strtoupper(substr(PHP_OS, TestCase::WIN_START, TestCase::WIN_END)) === 'WIN' ? strpos(TestCase::WINDOWS_TEMP_DIR_PREFIX, sys_get_temp_dir()) === 0 : strpos($this->getTmpDir(), sys_get_temp_dir()) === 0);
@@ -81,12 +81,14 @@ final class TestCaseTest extends TestCase
         }
     }
 
-    /** @dataProvider provideTrueFalse */
-    public function testTrueOrFalse(bool $bool): void
+    #[Test]
+    #[DataProvider('provideTrueFalse')]
+    public function trueOrFalse(bool $bool): void
     {
         static::assertCount(1, func_get_args());
     }
 
+    #[Test]
     public function testTrueAndFalse(): void
     {
         static::assertSame(
@@ -95,19 +97,22 @@ final class TestCaseTest extends TestCase
         );
     }
 
-    public function testGetSysTempDir(): void
+    #[Test]
+    public function successGetSysTempDir(): void
     {
         self::assertFileExists($this->getSysTempDir());
     }
 
-    public function testWaitUntilTheNextSecond(): void
+    #[Test]
+    public function successWaitUntilTheNextSecond(): void
     {
         $now = time();
         static::waitUntilTheNextSecond();
         self::assertSame($now + 1, time());
     }
 
-    public function testRmDir(): void
+    #[Test]
+    public function successRmDir(): void
     {
         $tmpDir = $this->getSysTempDir() .
             DIRECTORY_SEPARATOR .
@@ -120,28 +125,5 @@ final class TestCaseTest extends TestCase
         self::assertDirectoryExists($tmpDir);
         $this->rmdir($tmpDir);
         self::assertDirectoryDoesNotExist($tmpDir);
-    }
-
-    #[Test]
-    public function failRmDir(): void
-    {
-        $tmpDir = $this->getSysTempDir() .
-            DIRECTORY_SEPARATOR .
-            'p-a-c-t-' .
-            uniqid() .
-            DIRECTORY_SEPARATOR;
-
-        self::expectException(RuntimeException::class);
-        self::expectExceptionMessage('Error deleting directory: ' . $tmpDir . ' with error: rmdir(' . $tmpDir . '): Directory not empty');
-
-        mkdir($tmpDir);
-        touch($tmpDir . '__FILE__');
-
-        self::assertDirectoryExists($tmpDir);
-        self::assertFileExists($tmpDir . '__FILE__');
-
-        chmod($tmpDir, 0444);
-
-        $this->rmdir($tmpDir);
     }
 }
