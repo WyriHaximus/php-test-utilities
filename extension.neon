@@ -1,0 +1,8 @@
+parameters:
+	ergebnis:
+		noExtends:
+			classesAllowedToBeExtended:
+				- WyriHaximus\TestUtilities\TestCase
+
+includes:
+	- phar://phpstan.phar/conf/bleedingEdge.neon
