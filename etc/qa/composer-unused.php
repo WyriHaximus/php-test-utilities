@@ -20,6 +20,7 @@ return static function (Configuration $config): Configuration {
         ->addNamedFilter(NamedFilter::fromString('php-parallel-lint/php-parallel-lint'))
         ->addNamedFilter(NamedFilter::fromString('phpstan/phpstan'))
         ->addNamedFilter(NamedFilter::fromString('roave/backward-compatibility-check'))
+        ->addNamedFilter(NamedFilter::fromString('roave/infection-static-analysis-plugin'))
         ->addNamedFilter(NamedFilter::fromString('squizlabs/php_codesniffer'))
         ->addNamedFilter(NamedFilter::fromString('wyrihaximus/coding-standard'))
         ->addNamedFilter(NamedFilter::fromString('wyrihaximus/phpstan-rules-wrapper'));
