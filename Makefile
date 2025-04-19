@@ -23,7 +23,7 @@ else
 		-v "`pwd`:`pwd`" \
 		-v "${COMPOSER_CACHE_DIR}:${COMPOSER_CONTAINER_CACHE_DIR}" \
 		-w "`pwd`" \
-		${CONTAINER_NAME}
+		"${CONTAINER_NAME}"
 endif
 
 ifneq (,$(findstring icrosoft,$(shell cat /proc/version)))
@@ -59,7 +59,7 @@ mutation-testing: ## Run mutation testing
 	$(DOCKER_RUN) vendor/bin/infection --ansi --log-verbosity=all --threads=$(THREADS) || (cat ./var/infection.log && false)
 
 mutation-testing-raw: ## Run mutation testing ####
-	php vendor/roave/infection-static-analysis-plugin/bin/infection --ansi --log-verbosity=all --threads=$(THREADS) || (cat ./var/infection.log && false)
+	vendor/bin/infection --ansi --log-verbosity=all --threads=$(THREADS) || (cat ./var/infection.log && false)
 
 composer-require-checker: ## Ensure we require every package used in this package directly
 	$(DOCKER_RUN) vendor/bin/composer-require-checker --ignore-parse-errors --ansi -vvv --config-file=./etc/qa/composer-require-checker.json
@@ -67,14 +67,8 @@ composer-require-checker: ## Ensure we require every package used in this packag
 composer-unused: ## Ensure we don't require any package we don't use in this package directly
 	$(DOCKER_RUN) vendor/bin/composer-unused --ansi --configuration=./etc/qa/composer-unused.php
 
-libyear: ## Calculate how many libyear this package is behind with dependencies
+libyear: ### Calculate how many libyear this package is behind with dependencies
 	$(DOCKER_RUN) vendor/bin/libyear
-
-libyear-number: ## Calculate how many libyear this package is behind with dependencies - number only ####
-	$(DOCKER_RUN) vendor/bin/libyear | tail -n1 | sed 's/[^0-9.]*//g'
-
-composer-install: ## Install dependencies
-	$(DOCKER_RUN) composer install --no-progress --ansi --no-interaction --prefer-dist -o
 
 backward-compatibility-check: ## Check code for backwards incompatible changes
 	$(MAKE) backward-compatibility-check-raw || true
@@ -82,21 +76,28 @@ backward-compatibility-check: ## Check code for backwards incompatible changes
 backward-compatibility-check-raw: ## Check code for backwards incompatible changes, doesn't ignore the failure ###
 	$(DOCKER_RUN) vendor/bin/roave-backward-compatibility-check
 
-shell: ## Provides Shell access in the expected environment ####
-	$(DOCKER_RUN) bash
-
-install: ## Install dependencies ####
+install: ### Install dependencies ####
 	$(DOCKER_RUN) composer install
 
-update: ## Update dependencies ####
+update: ### Update dependencies ####
 	$(DOCKER_RUN) composer update -W
 
-outdated: ## Show outdated dependencies ####
+outdated: ### Show outdated dependencies ####
 	$(DOCKER_RUN) composer outdated
 
-task-list-ci: ## CI: Generate a JSON array of jobs to run, matches the commands run when running `make (|all)` ####
-	@grep -E '^[a-zA-Z0-9_-]+:.*?## .*$$' $(MAKEFILE_LIST) | grep -v "###" | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "%s\n", $$1}' | jq --raw-input --slurp -c 'split("\n")| .[0:-1]'
+shell: ## Provides Shell access in the expected environment ####
+	$(DOCKER_RUN) bash
 
 help: ## Show this help ####
 	@printf "\033[33mUsage:\033[0m\n  make [target]\n\n\033[33mTargets:\033[0m\n"
 	@grep -E '^[a-zA-Z0-9_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "  \033[32m%-32s\033[0m %s\n", $$1, $$2}' | tr -d '#'
+
+task-list-ci: ## CI: Generate a JSON array of jobs to run, matches the commands run when running `make (|all)` ####
+	@grep -E '^[a-zA-Z0-9_-]+:.*?## .*$$' $(MAKEFILE_LIST) | grep -v "###" | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "%s\n", $$1}' | jq --raw-input --slurp -c 'split("\n")| .[0:-1]'
+
+#task-list-ci: ## CI: Generate a JSON array of jobs to run, matches the commands run when running `make (|all)` ####
+#	@grep -E '^[a-zA-Z0-9_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sed 's/[^:]*://' | grep "##\%##" | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "%s\n", $$1}' | jq --raw-input --slurp -c 'split("\n")| .[0:-1]'
+#
+#task-list-ci-targeted: ## CI: Generate a JSON array of jobs to run, matches the commands run when running `make (|all)` ####
+#	@grep -E '^[a-zA-Z0-9_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sed 's/[^:]*://' | grep -v "###" | grep -v "##\%##"  | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "%s\n", $$1}' | jq --raw-input --slurp -c 'split("\n")| .[0:-1]'
+
