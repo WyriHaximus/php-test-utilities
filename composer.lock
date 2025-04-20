@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "83b325ffcf18fc1c401abc1565710dfe",
+    "content-hash": "d3e9284c2c8c8f5906733a10f37b416b",
     "packages": [
         {
             "name": "azjezz/psl",
@@ -8991,16 +8991,16 @@
     "packages-dev": [
         {
             "name": "wyrihaximus/makefiles",
-            "version": "0.1.0",
+            "version": "0.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/WyriHaximus/Makefiles.git",
-                "reference": "01bcd277aa8cc2c657b9f1bee801ec1b87952d27"
+                "reference": "c793d9545f0f40a00f8d698a333823cb51440942"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WyriHaximus/Makefiles/zipball/01bcd277aa8cc2c657b9f1bee801ec1b87952d27",
-                "reference": "01bcd277aa8cc2c657b9f1bee801ec1b87952d27",
+                "url": "https://api.github.com/repos/WyriHaximus/Makefiles/zipball/c793d9545f0f40a00f8d698a333823cb51440942",
+                "reference": "c793d9545f0f40a00f8d698a333823cb51440942",
                 "shasum": ""
             },
             "require": {
@@ -9033,7 +9033,7 @@
             "description": "🛠️ Test utilities for api-clients packages",
             "support": {
                 "issues": "https://github.com/WyriHaximus/Makefiles/issues",
-                "source": "https://github.com/WyriHaximus/Makefiles/tree/0.1.0"
+                "source": "https://github.com/WyriHaximus/Makefiles/tree/0.2.0"
             },
             "funding": [
                 {
@@ -9041,7 +9041,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-04-19T21:28:30+00:00"
+            "time": "2025-04-20T12:50:35+00:00"
         }
     ],
     "aliases": [],
