@@ -25,7 +25,7 @@
     "roave/backward-compatibility-check": "^8.13.0",
     "squizlabs/php_codesniffer": "^3.12.2",
     "wyrihaximus/coding-standard": "^2.16.0",
-    "wyrihaximus/phpstan-rules-wrapper": "^10.7.0"
+    "wyrihaximus/phpstan-rules-wrapper": "^10.8.0"
   },
   "require-dev": {
     "wyrihaximus/makefiles": "^0.2.0"
