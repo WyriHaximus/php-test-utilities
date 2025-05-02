@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "39240392522d56aa2bff4e2152be247a",
+    "content-hash": "450706d072f02620d24ec3f251d605e5",
     "packages": [
         {
             "name": "azjezz/psl",
@@ -9077,25 +9077,25 @@
     "packages-dev": [
         {
             "name": "wyrihaximus/makefiles",
-            "version": "0.3.2",
+            "version": "0.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/WyriHaximus/Makefiles.git",
-                "reference": "d77fd31af578749caa36ac6337f03e5ae90d9bcb"
+                "reference": "7f6ae4da7d56a66c5c11360055e123cae5fcceaf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WyriHaximus/Makefiles/zipball/d77fd31af578749caa36ac6337f03e5ae90d9bcb",
-                "reference": "d77fd31af578749caa36ac6337f03e5ae90d9bcb",
+                "url": "https://api.github.com/repos/WyriHaximus/Makefiles/zipball/7f6ae4da7d56a66c5c11360055e123cae5fcceaf",
+                "reference": "7f6ae4da7d56a66c5c11360055e123cae5fcceaf",
                 "shasum": ""
             },
             "require": {
                 "composer-plugin-api": "^2",
-                "ext-json": "^8.2",
-                "php": "^8.2"
+                "ext-json": "^8.3",
+                "php": "^8.3"
             },
             "require-dev": {
-                "wyrihaximus/async-test-utilities": "^8.0.5"
+                "wyrihaximus/test-utilities": "^7.0.0"
             },
             "type": "composer-plugin",
             "extra": {
@@ -9119,7 +9119,7 @@
             "description": "🛠️ Test utilities for api-clients packages",
             "support": {
                 "issues": "https://github.com/WyriHaximus/Makefiles/issues",
-                "source": "https://github.com/WyriHaximus/Makefiles/tree/0.3.2"
+                "source": "https://github.com/WyriHaximus/Makefiles/tree/0.3.3"
             },
             "funding": [
                 {
@@ -9127,7 +9127,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-05-01T16:22:10+00:00"
+            "time": "2025-05-02T06:08:02+00:00"
         }
     ],
     "aliases": [],
