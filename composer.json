@@ -28,7 +28,7 @@
     "wyrihaximus/phpstan-rules-wrapper": "^10.8.0"
   },
   "require-dev": {
-    "wyrihaximus/makefiles": "^0.3.1"
+    "wyrihaximus/makefiles": "^0.3.2"
   },
   "conflict": {
     "composer/pcre": "<3.3.2"
