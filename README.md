@@ -16,13 +16,35 @@ composer require wyrihaximus/test-utilities
 
 # Usage
 
-Any test file can extend `WyriHaximus\TestUtilities\TestCase` and it comes with some goodies such as random namespaces and random directories to use for file storage related tests.
+## PHPStan
+
+Some defaults to make working with this package easier with PHPStan have been added to exposed as an extension config.
+
+## PHPUnit
+
+Any test file can extend `WyriHaximus\TestUtilities\TestCase` and it comes with some goodies such as random namespaces
+and random directories to use for file storage related tests.
+
+## Rector
+
+A `RectorConfig` is provided with defaults including where `etc`, `src`, and `tests` are. It also converts all
+doc tags to attributes that it's aware of.
+
+```php
+<?php
+
+declare(strict_types=1);
+
+use WyriHaximus\TestUtilities\RectorConfig;
+
+return RectorConfig::configure(dirname(__DIR__, 2));
+```
 
 # License
 
 The MIT License (MIT)
 
-Copyright (c) 2024 Cees-Jan Kiewiet
+Copyright (c) 2025 Cees-Jan Kiewiet
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
