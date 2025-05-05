@@ -100,22 +100,20 @@ abstract class TestCase extends PHPUnitTestCase
                 continue;
             }
 
-            if (unlink($node->getPathname()) !== true) {
+            if (! unlink($node->getPathname())) {
                 throw ErrorExceptionFactory::create('Error deleting file: ' . $node->getPathname());
             }
         }
 
-        if (@rmdir($dir) !== true) {
+        if (! @rmdir($dir)) {
             throw ErrorExceptionFactory::create('Error deleting directory: ' . $dir);
         }
     }
 
     final protected function getTmpDir(): string
     {
-        if (! file_exists($this->tmpDir)) {
-            if (@mkdir($this->tmpDir, self::DEFAULT_MODE, true) !== true) {
-                throw ErrorExceptionFactory::create('Error creating directory: ' . $this->tmpDir);
-            }
+        if (! file_exists($this->tmpDir) && ! @mkdir($this->tmpDir, self::DEFAULT_MODE, true)) {
+            throw ErrorExceptionFactory::create('Error creating directory: ' . $this->tmpDir);
         }
 
         return $this->tmpDir;

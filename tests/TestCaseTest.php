@@ -4,6 +4,7 @@ declare(strict_types=1);
 
 namespace WyriHaximus\Tests\TestUtilities;
 
+use Override;
 use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\Attributes\Test;
 use WyriHaximus\TestUtilities\TestCase;
@@ -13,7 +14,7 @@ use function random_int;
 use function Safe\file_get_contents;
 use function Safe\file_put_contents;
 use function Safe\mkdir;
-use function strpos;
+use function str_starts_with;
 use function strtoupper;
 use function substr;
 use function sys_get_temp_dir;
@@ -30,11 +31,13 @@ final class TestCaseTest extends TestCase
 
     private string $previousTemporaryDirectory = '';
 
+    #[Override]
     protected function setUp(): void
     {
         parent::setUp();
     }
 
+    #[Override]
     protected function tearDown(): void
     {
         parent::tearDown();
@@ -63,7 +66,7 @@ final class TestCaseTest extends TestCase
     #[DataProvider('provideTemporaryDirectory')]
     public function testTemporaryDirectoryAndGetFilesInDirectory(string $int): void
     {
-        static::assertTrue(strtoupper(substr(PHP_OS, TestCase::WIN_START, TestCase::WIN_END)) === 'WIN' ? strpos(TestCase::WINDOWS_TEMP_DIR_PREFIX, sys_get_temp_dir()) === 0 : strpos($this->getTmpDir(), sys_get_temp_dir()) === 0);
+        static::assertTrue(strtoupper(substr(PHP_OS, TestCase::WIN_START, TestCase::WIN_END)) === 'WIN' ? str_starts_with(TestCase::WINDOWS_TEMP_DIR_PREFIX, sys_get_temp_dir()) : str_starts_with($this->getTmpDir(), sys_get_temp_dir()));
         static::assertNotSame($this->getTmpDir(), $this->previousTemporaryDirectory);
 
         $dir = $this->getTmpDir() . $this->getRandomNameSpace() . DIRECTORY_SEPARATOR;
