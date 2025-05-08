@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6f6469d8356575ec6106a52879928080",
+    "content-hash": "ed0e49ea3b0a4234e4cdfe800732aa22",
     "packages": [
         {
             "name": "azjezz/psl",
@@ -6468,16 +6468,16 @@
         },
         {
             "name": "shipmonk/phpstan-rules",
-            "version": "4.1.1",
+            "version": "4.1.2",
             "source": {
                 "type": "git",
                 "url": "https://github.com/shipmonk-rnd/phpstan-rules.git",
-                "reference": "bf6c46320f1c1405fa715fcec462f0a6da417703"
+                "reference": "7517d6ee50ea03b41e4cf317e3db9ff1cb16f382"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/shipmonk-rnd/phpstan-rules/zipball/bf6c46320f1c1405fa715fcec462f0a6da417703",
-                "reference": "bf6c46320f1c1405fa715fcec462f0a6da417703",
+                "url": "https://api.github.com/repos/shipmonk-rnd/phpstan-rules/zipball/7517d6ee50ea03b41e4cf317e3db9ff1cb16f382",
+                "reference": "7517d6ee50ea03b41e4cf317e3db9ff1cb16f382",
                 "shasum": ""
             },
             "require": {
@@ -6520,9 +6520,9 @@
             ],
             "support": {
                 "issues": "https://github.com/shipmonk-rnd/phpstan-rules/issues",
-                "source": "https://github.com/shipmonk-rnd/phpstan-rules/tree/4.1.1"
+                "source": "https://github.com/shipmonk-rnd/phpstan-rules/tree/4.1.2"
             },
-            "time": "2025-03-12T08:22:29+00:00"
+            "time": "2025-05-05T15:45:44+00:00"
         },
         {
             "name": "slevomat/coding-standard",
@@ -9014,29 +9014,29 @@
         },
         {
             "name": "wyrihaximus/phpstan-rules-wrapper",
-            "version": "10.9.0",
+            "version": "10.10.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/WyriHaximus/php-phpstan-rules-wrapper.git",
-                "reference": "c9f0112edcdbf43adab60f878b239bd726249b4e"
+                "reference": "9d44b0316203ef611620e2865681001888c5b91e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WyriHaximus/php-phpstan-rules-wrapper/zipball/c9f0112edcdbf43adab60f878b239bd726249b4e",
-                "reference": "c9f0112edcdbf43adab60f878b239bd726249b4e",
+                "url": "https://api.github.com/repos/WyriHaximus/php-phpstan-rules-wrapper/zipball/9d44b0316203ef611620e2865681001888c5b91e",
+                "reference": "9d44b0316203ef611620e2865681001888c5b91e",
                 "shasum": ""
             },
             "require": {
                 "ergebnis/phpstan-rules": "^2.8.0",
                 "php": "^8.3",
                 "phpstan/extension-installer": "^1.4.3",
-                "phpstan/phpstan": "^2.1.13",
+                "phpstan/phpstan": "^2.1.14",
                 "phpstan/phpstan-deprecation-rules": "^2.0.2",
                 "phpstan/phpstan-mockery": "^2.0.0",
                 "phpstan/phpstan-phpunit": "^2.0.6",
                 "phpstan/phpstan-strict-rules": "^2.0.4",
                 "shipmonk/dead-code-detector": "^0.11.0",
-                "shipmonk/phpstan-rules": "^4.1.1",
+                "shipmonk/phpstan-rules": "^4.1.2",
                 "staabm/phpstan-psr3": "^1.0.3",
                 "tomasvotruba/type-coverage": "^2.0.2",
                 "yamadashy/phpstan-friendly-formatter": "^1.2.0"
@@ -9062,7 +9062,7 @@
             "description": "🌯 PHPStan rules wrapper",
             "support": {
                 "issues": "https://github.com/WyriHaximus/php-phpstan-rules-wrapper/issues",
-                "source": "https://github.com/WyriHaximus/php-phpstan-rules-wrapper/tree/10.9.0"
+                "source": "https://github.com/WyriHaximus/php-phpstan-rules-wrapper/tree/10.10.0"
             },
             "funding": [
                 {
@@ -9070,7 +9070,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-04-28T17:07:47+00:00"
+            "time": "2025-05-07T16:07:52+00:00"
         },
         {
             "name": "yamadashy/phpstan-friendly-formatter",
