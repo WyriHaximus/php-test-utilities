@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "50463642c36036339e7b39060ef79e17",
+    "content-hash": "d0fdb4d28f454b66dbea18d562bf4870",
     "packages": [
         {
             "name": "azjezz/psl",
@@ -6554,16 +6554,16 @@
         },
         {
             "name": "slevomat/coding-standard",
-            "version": "8.18.1",
+            "version": "8.19.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/slevomat/coding-standard.git",
-                "reference": "06b18b3f64979ab31d27c37021838439f3ed5919"
+                "reference": "458d665acd49009efebd7e0cb385d71ae9ac3220"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/slevomat/coding-standard/zipball/06b18b3f64979ab31d27c37021838439f3ed5919",
-                "reference": "06b18b3f64979ab31d27c37021838439f3ed5919",
+                "url": "https://api.github.com/repos/slevomat/coding-standard/zipball/458d665acd49009efebd7e0cb385d71ae9ac3220",
+                "reference": "458d665acd49009efebd7e0cb385d71ae9ac3220",
                 "shasum": ""
             },
             "require": {
@@ -6603,7 +6603,7 @@
             ],
             "support": {
                 "issues": "https://github.com/slevomat/coding-standard/issues",
-                "source": "https://github.com/slevomat/coding-standard/tree/8.18.1"
+                "source": "https://github.com/slevomat/coding-standard/tree/8.19.1"
             },
             "funding": [
                 {
@@ -6615,7 +6615,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-05-22T14:32:30+00:00"
+            "time": "2025-06-09T17:53:57+00:00"
         },
         {
             "name": "squizlabs/php_codesniffer",
@@ -9004,23 +9004,23 @@
         },
         {
             "name": "wyrihaximus/coding-standard",
-            "version": "2.18.2",
+            "version": "2.20.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/WyriHaximus/php-coding-standard.git",
-                "reference": "9c47baba4a0d9cdab65d83778b904f7c850b1113"
+                "reference": "74a8261a384ad283b2e2ccb67b53d066f684f4b2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WyriHaximus/php-coding-standard/zipball/9c47baba4a0d9cdab65d83778b904f7c850b1113",
-                "reference": "9c47baba4a0d9cdab65d83778b904f7c850b1113",
+                "url": "https://api.github.com/repos/WyriHaximus/php-coding-standard/zipball/74a8261a384ad283b2e2ccb67b53d066f684f4b2",
+                "reference": "74a8261a384ad283b2e2ccb67b53d066f684f4b2",
                 "shasum": ""
             },
             "require": {
                 "dealerdirect/phpcodesniffer-composer-installer": "^1.0.0",
                 "doctrine/coding-standard": "^13.0.1",
                 "php": "^8.2",
-                "slevomat/coding-standard": "^8.18.1",
+                "slevomat/coding-standard": "^8.19.1",
                 "squizlabs/php_codesniffer": "^3.13.0"
             },
             "type": "phpcodesniffer-standard",
@@ -9031,7 +9031,7 @@
             "description": "WyriHaximus Coding Standard",
             "support": {
                 "issues": "https://github.com/WyriHaximus/php-coding-standard/issues",
-                "source": "https://github.com/WyriHaximus/php-coding-standard/tree/2.18.2"
+                "source": "https://github.com/WyriHaximus/php-coding-standard/tree/2.20.0"
             },
             "funding": [
                 {
@@ -9039,7 +9039,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-05-26T16:17:09+00:00"
+            "time": "2025-06-11T17:46:27+00:00"
         },
         {
             "name": "wyrihaximus/phpstan-rules-wrapper",
