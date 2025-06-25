@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "dd7d6cc1d20184f9c68296b24e8ff860",
+    "content-hash": "f0ee4374abf2ade073033cb4c530ae2d",
     "packages": [
         {
             "name": "azjezz/psl",
@@ -1628,16 +1628,16 @@
         },
         {
             "name": "ergebnis/phpstan-rules",
-            "version": "2.10.4",
+            "version": "2.10.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ergebnis/phpstan-rules.git",
-                "reference": "78c7646be7c229c6c23b02883b0015d36227150f"
+                "reference": "719a53e793e2417da46d497f21fb8d2f007ecb78"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ergebnis/phpstan-rules/zipball/78c7646be7c229c6c23b02883b0015d36227150f",
-                "reference": "78c7646be7c229c6c23b02883b0015d36227150f",
+                "url": "https://api.github.com/repos/ergebnis/phpstan-rules/zipball/719a53e793e2417da46d497f21fb8d2f007ecb78",
+                "reference": "719a53e793e2417da46d497f21fb8d2f007ecb78",
                 "shasum": ""
             },
             "require": {
@@ -1698,7 +1698,7 @@
                 "security": "https://github.com/ergebnis/phpstan-rules/blob/main/.github/SECURITY.md",
                 "source": "https://github.com/ergebnis/phpstan-rules"
             },
-            "time": "2025-06-07T08:06:40+00:00"
+            "time": "2025-06-23T17:35:58+00:00"
         },
         {
             "name": "ergebnis/phpunit-slow-test-detector",
@@ -9043,20 +9043,20 @@
         },
         {
             "name": "wyrihaximus/phpstan-rules-wrapper",
-            "version": "10.14.0",
+            "version": "10.15.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/WyriHaximus/php-phpstan-rules-wrapper.git",
-                "reference": "82a58fa2d19cf1e45764bd0220e7d3dbb97e7a70"
+                "reference": "3f7fd7d32227f793219a8cbe39f4515da9609805"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WyriHaximus/php-phpstan-rules-wrapper/zipball/82a58fa2d19cf1e45764bd0220e7d3dbb97e7a70",
-                "reference": "82a58fa2d19cf1e45764bd0220e7d3dbb97e7a70",
+                "url": "https://api.github.com/repos/WyriHaximus/php-phpstan-rules-wrapper/zipball/3f7fd7d32227f793219a8cbe39f4515da9609805",
+                "reference": "3f7fd7d32227f793219a8cbe39f4515da9609805",
                 "shasum": ""
             },
             "require": {
-                "ergebnis/phpstan-rules": "^2.10.4",
+                "ergebnis/phpstan-rules": "^2.10.5",
                 "php": "^8.3",
                 "phpstan/extension-installer": "^1.4.3",
                 "phpstan/phpstan": "^2.1.17",
@@ -9091,7 +9091,7 @@
             "description": "🌯 PHPStan rules wrapper",
             "support": {
                 "issues": "https://github.com/WyriHaximus/php-phpstan-rules-wrapper/issues",
-                "source": "https://github.com/WyriHaximus/php-phpstan-rules-wrapper/tree/10.14.0"
+                "source": "https://github.com/WyriHaximus/php-phpstan-rules-wrapper/tree/10.15.0"
             },
             "funding": [
                 {
@@ -9099,7 +9099,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-06-11T17:24:56+00:00"
+            "time": "2025-06-24T05:36:17+00:00"
         },
         {
             "name": "yamadashy/phpstan-friendly-formatter",
