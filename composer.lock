@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "bce266183978a1d70960b4d32e2175b6",
+    "content-hash": "767357f88f50dc4f5c2f5b12147d2977",
     "packages": [
         {
             "name": "azjezz/psl",
@@ -6422,16 +6422,16 @@
         },
         {
             "name": "shipmonk/dead-code-detector",
-            "version": "0.12.3",
+            "version": "0.12.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/shipmonk-rnd/dead-code-detector.git",
-                "reference": "f3b909bb3708bb11e66434a9e08526fc9f27a15e"
+                "reference": "295d04aef9db30dd18411a43c3d5f5aaa300acb2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/shipmonk-rnd/dead-code-detector/zipball/f3b909bb3708bb11e66434a9e08526fc9f27a15e",
-                "reference": "f3b909bb3708bb11e66434a9e08526fc9f27a15e",
+                "url": "https://api.github.com/repos/shipmonk-rnd/dead-code-detector/zipball/295d04aef9db30dd18411a43c3d5f5aaa300acb2",
+                "reference": "295d04aef9db30dd18411a43c3d5f5aaa300acb2",
                 "shasum": ""
             },
             "require": {
@@ -6452,10 +6452,10 @@
                 "phpstan/phpstan-strict-rules": "^2.0.3",
                 "phpstan/phpstan-symfony": "^2.0.2",
                 "phpunit/phpunit": "^9.6.22",
+                "shipmonk/coding-standard": "^0.1.3",
                 "shipmonk/composer-dependency-analyser": "^1.8.2",
                 "shipmonk/name-collision-detector": "^2.1.1",
                 "shipmonk/phpstan-rules": "^4.1.0",
-                "slevomat/coding-standard": "^8.16.0",
                 "symfony/contracts": "^2.5 || ^3.0",
                 "symfony/dependency-injection": "^5.4 || ^6.0 || ^7.0",
                 "symfony/doctrine-bridge": "^5.4 || ^6.0 || ^7.0",
@@ -6491,9 +6491,9 @@
             ],
             "support": {
                 "issues": "https://github.com/shipmonk-rnd/dead-code-detector/issues",
-                "source": "https://github.com/shipmonk-rnd/dead-code-detector/tree/0.12.3"
+                "source": "https://github.com/shipmonk-rnd/dead-code-detector/tree/0.12.4"
             },
-            "time": "2025-06-11T13:33:40+00:00"
+            "time": "2025-06-26T11:00:18+00:00"
         },
         {
             "name": "shipmonk/phpstan-rules",
@@ -9044,16 +9044,16 @@
         },
         {
             "name": "wyrihaximus/phpstan-rules-wrapper",
-            "version": "10.15.0",
+            "version": "10.16.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/WyriHaximus/php-phpstan-rules-wrapper.git",
-                "reference": "3f7fd7d32227f793219a8cbe39f4515da9609805"
+                "reference": "d796adcf18f08b9d6e18d9d7aea08bc18c72aa5a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WyriHaximus/php-phpstan-rules-wrapper/zipball/3f7fd7d32227f793219a8cbe39f4515da9609805",
-                "reference": "3f7fd7d32227f793219a8cbe39f4515da9609805",
+                "url": "https://api.github.com/repos/WyriHaximus/php-phpstan-rules-wrapper/zipball/d796adcf18f08b9d6e18d9d7aea08bc18c72aa5a",
+                "reference": "d796adcf18f08b9d6e18d9d7aea08bc18c72aa5a",
                 "shasum": ""
             },
             "require": {
@@ -9065,7 +9065,7 @@
                 "phpstan/phpstan-mockery": "^2.0.0",
                 "phpstan/phpstan-phpunit": "^2.0.6",
                 "phpstan/phpstan-strict-rules": "^2.0.4",
-                "shipmonk/dead-code-detector": "^0.12.3",
+                "shipmonk/dead-code-detector": "^0.12.4",
                 "shipmonk/phpstan-rules": "^4.1.4",
                 "staabm/phpstan-psr3": "^1.0.3",
                 "tomasvotruba/type-coverage": "^2.0.2",
@@ -9092,7 +9092,7 @@
             "description": "🌯 PHPStan rules wrapper",
             "support": {
                 "issues": "https://github.com/WyriHaximus/php-phpstan-rules-wrapper/issues",
-                "source": "https://github.com/WyriHaximus/php-phpstan-rules-wrapper/tree/10.15.0"
+                "source": "https://github.com/WyriHaximus/php-phpstan-rules-wrapper/tree/10.16.0"
             },
             "funding": [
                 {
@@ -9100,7 +9100,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-06-24T05:36:17+00:00"
+            "time": "2025-07-05T16:57:52+00:00"
         },
         {
             "name": "yamadashy/phpstan-friendly-formatter",
