@@ -12,7 +12,6 @@ return static fn (Configuration $config): Configuration => $config
     ->addNamedFilter(NamedFilter::fromString('icanhazstring/composer-unused'))
     ->addNamedFilter(NamedFilter::fromString('infection/infection'))
     ->addNamedFilter(NamedFilter::fromString('maglnet/composer-require-checker'))
-    ->addNamedFilter(NamedFilter::fromString('php-coveralls/php-coveralls'))
     ->addNamedFilter(NamedFilter::fromString('php-parallel-lint/php-console-highlighter'))
     ->addNamedFilter(NamedFilter::fromString('php-parallel-lint/php-parallel-lint'))
     ->addNamedFilter(NamedFilter::fromString('phpstan/phpstan'))
