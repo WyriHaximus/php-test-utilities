@@ -19,7 +19,7 @@
     "mockery/mockery": "^1.6.12",
     "php-parallel-lint/php-console-highlighter": "^1.0",
     "php-parallel-lint/php-parallel-lint": "^1.4.0",
-    "phpstan/phpstan": "^2.1.18",
+    "phpstan/phpstan": "^2.1.21",
     "phpunit/phpunit": "^12.2.2",
     "rector/rector": "^2.1.2",
     "roave/backward-compatibility-check": "^8.14.0",
