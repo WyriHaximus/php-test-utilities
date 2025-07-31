@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a23b990e2459e3b5454426f6d9fe3293",
+    "content-hash": "9b9fc7a9b84cee4dc20d8acb3cb90a88",
     "packages": [
         {
             "name": "azjezz/psl",
@@ -926,25 +926,27 @@
         },
         {
             "name": "composer/xdebug-handler",
-            "version": "2.0.2",
+            "version": "3.0.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer/xdebug-handler.git",
-                "reference": "84674dd3a7575ba617f5a76d7e9e29a7d3891339"
+                "reference": "6c1925561632e83d60a44492e0b344cf48ab85ef"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer/xdebug-handler/zipball/84674dd3a7575ba617f5a76d7e9e29a7d3891339",
-                "reference": "84674dd3a7575ba617f5a76d7e9e29a7d3891339",
+                "url": "https://api.github.com/repos/composer/xdebug-handler/zipball/6c1925561632e83d60a44492e0b344cf48ab85ef",
+                "reference": "6c1925561632e83d60a44492e0b344cf48ab85ef",
                 "shasum": ""
             },
             "require": {
-                "php": "^5.3.2 || ^7.0 || ^8.0",
+                "composer/pcre": "^1 || ^2 || ^3",
+                "php": "^7.2.5 || ^8.0",
                 "psr/log": "^1 || ^2 || ^3"
             },
             "require-dev": {
-                "phpstan/phpstan": "^0.12.55",
-                "symfony/phpunit-bridge": "^4.2 || ^5"
+                "phpstan/phpstan": "^1.0",
+                "phpstan/phpstan-strict-rules": "^1.1",
+                "phpunit/phpunit": "^8.5 || ^9.6 || ^10.5"
             },
             "type": "library",
             "autoload": {
@@ -968,9 +970,9 @@
                 "performance"
             ],
             "support": {
-                "irc": "irc://irc.freenode.org/composer",
+                "irc": "ircs://irc.libera.chat:6697/composer",
                 "issues": "https://github.com/composer/xdebug-handler/issues",
-                "source": "https://github.com/composer/xdebug-handler/tree/2.0.2"
+                "source": "https://github.com/composer/xdebug-handler/tree/3.0.5"
             },
             "funding": [
                 {
@@ -986,7 +988,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-07-31T17:03:58+00:00"
+            "time": "2024-05-06T16:37:16+00:00"
         },
         {
             "name": "dealerdirect/phpcodesniffer-composer-installer",
@@ -1817,22 +1819,23 @@
         },
         {
             "name": "icanhazstring/composer-unused",
-            "version": "0.9.3",
+            "version": "0.9.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/composer-unused/composer-unused.git",
-                "reference": "da5212b085d279ddeca19e007edf98e93b867724"
+                "reference": "28070aae000ad09b1b4952f2d446c5efb96ab71c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/composer-unused/composer-unused/zipball/da5212b085d279ddeca19e007edf98e93b867724",
-                "reference": "da5212b085d279ddeca19e007edf98e93b867724",
+                "url": "https://api.github.com/repos/composer-unused/composer-unused/zipball/28070aae000ad09b1b4952f2d446c5efb96ab71c",
+                "reference": "28070aae000ad09b1b4952f2d446c5efb96ab71c",
                 "shasum": ""
             },
             "require": {
                 "composer-runtime-api": "^2.0",
                 "composer-unused/contracts": "^0.3",
                 "composer-unused/symbol-parser": "^0.3.1",
+                "composer/xdebug-handler": "^3.0",
                 "ext-json": "*",
                 "nikic/php-parser": "^5.0",
                 "ondram/ci-detector": "^4.1",
@@ -1913,7 +1916,7 @@
                     "type": "other"
                 }
             ],
-            "time": "2025-04-10T06:53:16+00:00"
+            "time": "2025-07-29T18:30:11+00:00"
         },
         {
             "name": "infection/abstract-testframework-adapter",

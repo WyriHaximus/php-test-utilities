@@ -12,7 +12,7 @@
     "php": "^8.3",
     "ergebnis/composer-normalize": "^2.47.0",
     "ergebnis/phpunit-slow-test-detector": "^2.19.1",
-    "icanhazstring/composer-unused": "^0.9.3",
+    "icanhazstring/composer-unused": "^0.9.4",
     "infection/infection": "^0.29.14",
     "maglnet/composer-require-checker": "^4.16.1",
     "mockery/mockery": "^1.6.12",
