@@ -6,7 +6,6 @@ use ComposerUnused\ComposerUnused\Configuration\Configuration;
 use ComposerUnused\ComposerUnused\Configuration\NamedFilter;
 
 return static fn (Configuration $config): Configuration => $config
-    ->addNamedFilter(NamedFilter::fromString('ecoapm/libyear'))
     ->addNamedFilter(NamedFilter::fromString('ergebnis/composer-normalize'))
     ->addNamedFilter(NamedFilter::fromString('ergebnis/phpunit-slow-test-detector'))
     ->addNamedFilter(NamedFilter::fromString('icanhazstring/composer-unused'))

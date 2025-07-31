@@ -74,9 +74,6 @@ composer-require-checker: ## Ensure we require every package used in this packag
 composer-unused: ## Ensure we don't require any package we don't use in this package directly ##*C*##
 	$(DOCKER_RUN) vendor/bin/composer-unused --ansi --configuration=./etc/qa/composer-unused.php
 
-libyear: ### Calculate how many libyear this package is behind with dependencies
-	$(DOCKER_RUN) vendor/bin/libyear
-
 backward-compatibility-check: ## Check code for backwards incompatible changes ##*C*##
 	$(MAKE) backward-compatibility-check-raw || true
 
