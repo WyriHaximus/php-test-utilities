@@ -9,7 +9,7 @@
     }
   ],
   "require": {
-    "php": "^8.3",
+    "php": "^8.4.11",
     "ergebnis/composer-normalize": "^2.47.0",
     "ergebnis/phpunit-slow-test-detector": "^2.19.1",
     "icanhazstring/composer-unused": "^0.9.4",
