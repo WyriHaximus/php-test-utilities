@@ -72,12 +72,10 @@
   },
   "scripts": {
     "post-install-cmd": [
-      "composer normalize",
-      "composer update --lock --no-scripts"
+      "make on-install-or-update || true"
     ],
     "post-update-cmd": [
-      "composer normalize",
-      "composer update --lock --no-scripts"
+      "make on-install-or-update || true"
     ]
   }
 }
