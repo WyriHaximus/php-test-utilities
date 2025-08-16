@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "32b3b553c59c151b5d4d9d70cfbf107c",
+    "content-hash": "f6d98af13b61ae26874abf88b1753e10",
     "packages": [
         {
             "name": "azjezz/psl",
@@ -8164,16 +8164,16 @@
         },
         {
             "name": "wyrihaximus/phpstan-rules-wrapper",
-            "version": "10.18.0",
+            "version": "10.19.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/WyriHaximus/php-phpstan-rules-wrapper.git",
-                "reference": "0406ff82d33c46600da519e9e6b22b35f9dc1d87"
+                "reference": "bab4604c4388df7668ce57bf50b316ceed98f01a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WyriHaximus/php-phpstan-rules-wrapper/zipball/0406ff82d33c46600da519e9e6b22b35f9dc1d87",
-                "reference": "0406ff82d33c46600da519e9e6b22b35f9dc1d87",
+                "url": "https://api.github.com/repos/WyriHaximus/php-phpstan-rules-wrapper/zipball/bab4604c4388df7668ce57bf50b316ceed98f01a",
+                "reference": "bab4604c4388df7668ce57bf50b316ceed98f01a",
                 "shasum": ""
             },
             "require": {
@@ -8185,7 +8185,7 @@
                 "phpstan/phpstan-mockery": "^2.0.0",
                 "phpstan/phpstan-phpunit": "^2.0.7",
                 "phpstan/phpstan-strict-rules": "^2.0.6",
-                "shipmonk/dead-code-detector": "^0.13.1",
+                "shipmonk/dead-code-detector": "^0.13.2",
                 "shipmonk/phpstan-rules": "^4.1.5",
                 "staabm/phpstan-psr3": "^1.0.3",
                 "tomasvotruba/type-coverage": "^2.0.2",
@@ -8212,7 +8212,7 @@
             "description": "🌯 PHPStan rules wrapper",
             "support": {
                 "issues": "https://github.com/WyriHaximus/php-phpstan-rules-wrapper/issues",
-                "source": "https://github.com/WyriHaximus/php-phpstan-rules-wrapper/tree/10.18.0"
+                "source": "https://github.com/WyriHaximus/php-phpstan-rules-wrapper/tree/10.19.0"
             },
             "funding": [
                 {
@@ -8220,7 +8220,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-08-13T07:25:49+00:00"
+            "time": "2025-08-14T19:54:06+00:00"
         },
         {
             "name": "yamadashy/phpstan-friendly-formatter",
