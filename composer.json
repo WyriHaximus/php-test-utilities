@@ -9,7 +9,7 @@
     }
   ],
   "require": {
-    "php": "^8.3",
+    "php": "^8.4",
     "ergebnis/composer-normalize": "^2.47.0",
     "ergebnis/phpunit-slow-test-detector": "^2.19.1",
     "icanhazstring/composer-unused": "^0.9.4",
@@ -59,7 +59,7 @@
       "wyrihaximus/makefiles": true
     },
     "platform": {
-      "php": "8.3.13"
+      "php": "8.4.13"
     },
     "sort-packages": true
   },
