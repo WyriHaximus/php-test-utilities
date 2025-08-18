@@ -76,17 +76,31 @@ final class Installer implements PluginInterface, EventSubscriberInterface
             return;
         }
 
-        if (array_key_exists('name', $json) && $json['name'] === 'wyrihaximus/test-utilities') {
-            self::addMakeOnInstallOrUpdate($event->getIO(), $rootPackagePath);
-
-            return;
-        }
-
         if (! array_key_exists('require-dev', $json)) {
             return;
         }
 
         if (! is_array($json['require-dev'])) {
+            return;
+        }
+
+        $hasMakefiles = false;
+        foreach (array_keys($json['require-dev']) as $package) {
+            if ($package === 'wyrihaximus/makefiles') {
+                $hasMakefiles = true;
+                break;
+            }
+        }
+
+        if (! $hasMakefiles) {
+            return;
+        }
+
+        unset($hasMakefiles);
+
+        if (array_key_exists('name', $json) && $json['name'] === 'wyrihaximus/test-utilities') {
+            self::addMakeOnInstallOrUpdate($event->getIO(), $rootPackagePath);
+
             return;
         }
 
@@ -150,7 +164,7 @@ final class Installer implements PluginInterface, EventSubscriberInterface
                 $replacementComposerJsonString = preg_replace('/^(  +?)\\1(?=[^ ])/m', '$1', $replacementComposerJsonString);
                 if (is_string($replacementComposerJsonString)) {
                     $io->write('<info>wyrihaximus/test-utilities:</info> Writing new <fg=cyan>composer.json</>');
-                    file_put_contents($rootPackagePath . '/composer.json', $replacementComposerJsonString);
+                    file_put_contents($rootPackagePath . '/composer.json', $replacementComposerJsonString . "\r\n");
                 }
             }
         }
