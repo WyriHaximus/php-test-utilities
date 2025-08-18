@@ -125,14 +125,22 @@ final class Installer implements PluginInterface, EventSubscriberInterface
 
         $composerJson     = json_decode($composerJsonString, true);
         $composerJsonHash = hash('sha512', (string) json_encode($composerJson, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT));
-        if (is_array($composerJson) && array_key_exists('scripts', $composerJson) && is_array($composerJson['scripts'])) {
-            if (array_key_exists('post-install-cmd', $composerJson['scripts'])) {
-                $composerJson['scripts']['post-install-cmd'] = self::addMakeOnInstallOrUpdateToScriptsSectionAndRemoveCommandsItReplaces($composerJson['scripts']['post-install-cmd']);
+        if (is_array($composerJson)) {
+            if (! (array_key_exists('scripts', $composerJson) && is_array($composerJson['scripts']))) {
+                $composerJson['scripts'] = [];
             }
 
-            if (array_key_exists('post-update-cmd', $composerJson['scripts'])) {
-                $composerJson['scripts']['post-update-cmd'] = self::addMakeOnInstallOrUpdateToScriptsSectionAndRemoveCommandsItReplaces($composerJson['scripts']['post-update-cmd']);
+            if (! array_key_exists('post-install-cmd', $composerJson['scripts'])) {
+                $composerJson['scripts']['post-install-cmd'] = [];
             }
+
+            $composerJson['scripts']['post-install-cmd'] = self::addMakeOnInstallOrUpdateToScriptsSectionAndRemoveCommandsItReplaces($composerJson['scripts']['post-install-cmd']);
+
+            if (! array_key_exists('post-update-cmd', $composerJson['scripts'])) {
+                $composerJson['scripts']['post-update-cmd'] = [];
+            }
+
+            $composerJson['scripts']['post-update-cmd'] = self::addMakeOnInstallOrUpdateToScriptsSectionAndRemoveCommandsItReplaces($composerJson['scripts']['post-update-cmd']);
         }
 
         $replacementComposerJsonString = json_encode($composerJson, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
