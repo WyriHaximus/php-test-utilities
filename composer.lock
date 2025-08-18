@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "0e1c695069fe2b1b315f39cde62d7458",
+    "content-hash": "04a531f922fcc77d94b60537b6f38771",
     "packages": [
         {
             "name": "azjezz/psl",
@@ -8451,23 +8451,23 @@
         },
         {
             "name": "wyrihaximus/coding-standard",
-            "version": "2.20.2",
+            "version": "2.21.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/WyriHaximus/php-coding-standard.git",
-                "reference": "d0c2f84134653a85d4990c107243c3ea4ea3ef16"
+                "reference": "73bf38ace6202ac067073f3a773950e6b92f44fc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WyriHaximus/php-coding-standard/zipball/d0c2f84134653a85d4990c107243c3ea4ea3ef16",
-                "reference": "d0c2f84134653a85d4990c107243c3ea4ea3ef16",
+                "url": "https://api.github.com/repos/WyriHaximus/php-coding-standard/zipball/73bf38ace6202ac067073f3a773950e6b92f44fc",
+                "reference": "73bf38ace6202ac067073f3a773950e6b92f44fc",
                 "shasum": ""
             },
             "require": {
-                "dealerdirect/phpcodesniffer-composer-installer": "^1.0.0",
+                "dealerdirect/phpcodesniffer-composer-installer": "^1.1.2",
                 "doctrine/coding-standard": "^13.0.1",
-                "php": "^8.2",
-                "slevomat/coding-standard": "^8.19.1",
+                "php": "^8.4",
+                "slevomat/coding-standard": "^8.20.0",
                 "squizlabs/php_codesniffer": "^3.13.2"
             },
             "type": "phpcodesniffer-standard",
@@ -8478,7 +8478,7 @@
             "description": "WyriHaximus Coding Standard",
             "support": {
                 "issues": "https://github.com/WyriHaximus/php-coding-standard/issues",
-                "source": "https://github.com/WyriHaximus/php-coding-standard/tree/2.20.2"
+                "source": "https://github.com/WyriHaximus/php-coding-standard/tree/2.21.0"
             },
             "funding": [
                 {
@@ -8486,7 +8486,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-06-23T00:31:09+00:00"
+            "time": "2025-08-16T22:08:23+00:00"
         },
         {
             "name": "wyrihaximus/phpstan-rules-wrapper",
