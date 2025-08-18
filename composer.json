@@ -2,6 +2,7 @@
   "name": "wyrihaximus/test-utilities",
   "description": "\ud83d\udee0\ufe0f Test utilities for api-clients packages",
   "license": "MIT",
+  "type": "composer-plugin",
   "authors": [
     {
       "name": "Cees-Jan Kiewiet",
@@ -10,6 +11,9 @@
   ],
   "require": {
     "php": "^8.4",
+    "ext-hash": "^8.4",
+    "ext-json": "^8.4",
+    "composer-plugin-api": "^2",
     "ergebnis/composer-normalize": "^2.47.0",
     "ergebnis/phpunit-slow-test-detector": "^2.19.1",
     "icanhazstring/composer-unused": "^0.9.4",
@@ -31,7 +35,7 @@
   },
   "conflict": {
     "composer/pcre": "<3.3.2",
-    "wyrihaximus/makefiles": "<0.4.0"
+    "wyrihaximus/makefiles": "<0.5.0"
   },
   "suggest": {
     "wyrihaximus/async-test-utilities": "The recommended addition to this package when building ReactPHP packages and projects.",
@@ -64,6 +68,7 @@
     "sort-packages": true
   },
   "extra": {
+    "class": "WyriHaximus\\TestUtilities\\Composer\\Installer",
     "phpstan": {
       "includes": [
         "extension.neon"
@@ -75,6 +80,10 @@
       "make on-install-or-update || true"
     ],
     "post-update-cmd": [
+      "make on-install-or-update || true"
+    ],
+    "pre-autoload-dump": [
+      "WyriHaximus\\TestUtilities\\Composer\\Installer::findEventListeners",
       "make on-install-or-update || true"
     ]
   }

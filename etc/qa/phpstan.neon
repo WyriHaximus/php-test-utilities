@@ -10,6 +10,9 @@ parameters:
 		-
 			message: '#Error suppression via "@" should not be used.#'
 			path: ../../src/TestCase.php
+		-
+			message: '#Parameter \#1 \$scriptsSection of static method WyriHaximus\\TestUtilities\\Composer\\Installer::addMakeOnInstallOrUpdateToScriptsSectionAndRemoveCommandsItReplaces\(\) expects array<int, string>, mixed given.#'
+			path: ../../src/Composer/Installer.php
 
 includes:
 	- ../../extension.neon
