@@ -20,11 +20,13 @@ use function file_get_contents;
 use function file_put_contents;
 use function hash;
 use function hash_equals;
+use function in_array;
 use function is_array;
 use function is_string;
 use function json_decode;
 use function json_encode;
 use function preg_replace;
+use function strtolower;
 
 use const DIRECTORY_SEPARATOR;
 use const JSON_PRETTY_PRINT;
@@ -104,11 +106,28 @@ final class Installer implements PluginInterface, EventSubscriberInterface
             return;
         }
 
-        foreach (array_keys($json['require-dev']) as $package) {
-            if ($package === 'wyrihaximus/test-utilities') {
-                self::addMakeOnInstallOrUpdate($event->getIO(), $rootPackagePath);
+        foreach (['require', 'require-dev'] as $key) {
+            if (! is_array($json[$key])) {
+                continue;
+            }
 
-                return;
+            foreach (array_keys($json[$key]) as $package) {
+                if (
+                    in_array(
+                        strtolower($package),
+                        [
+                            'wyrihaximus/test-utilities',
+                            'wyrihaximus/async-test-utilities',
+                            'wyrihaximus/compress-test-utilities',
+                            'wyrihaximus/react-mutex-test-utilities',
+                        ],
+                        true,
+                    )
+                ) {
+                    self::addMakeOnInstallOrUpdate($event->getIO(), $rootPackagePath);
+
+                    break;
+                }
             }
         }
     }
