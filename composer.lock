@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "1ca8640048d020a2f38675b1e180f000",
+    "content-hash": "30480eaa95f4c29424bd4c53779da569",
     "packages": [
         {
             "name": "azjezz/psl",
@@ -6207,16 +6207,16 @@
         },
         {
             "name": "squizlabs/php_codesniffer",
-            "version": "3.13.2",
+            "version": "3.13.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/PHPCSStandards/PHP_CodeSniffer.git",
-                "reference": "5b5e3821314f947dd040c70f7992a64eac89025c"
+                "reference": "5be16e10d07a2b0c629a8fc52c653fd57458bdf8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/PHPCSStandards/PHP_CodeSniffer/zipball/5b5e3821314f947dd040c70f7992a64eac89025c",
-                "reference": "5b5e3821314f947dd040c70f7992a64eac89025c",
+                "url": "https://api.github.com/repos/PHPCSStandards/PHP_CodeSniffer/zipball/5be16e10d07a2b0c629a8fc52c653fd57458bdf8",
+                "reference": "5be16e10d07a2b0c629a8fc52c653fd57458bdf8",
                 "shasum": ""
             },
             "require": {
@@ -6287,7 +6287,7 @@
                     "type": "thanks_dev"
                 }
             ],
-            "time": "2025-06-17T22:17:01+00:00"
+            "time": "2025-09-04T19:19:52+00:00"
         },
         {
             "name": "staabm/phpstan-psr3",
