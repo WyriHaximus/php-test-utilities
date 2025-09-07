@@ -59,28 +59,28 @@ final class TestCaseTest extends TestCase
     #[Test]
     public function recursiveDirectoryCreation(): void
     {
-        static::assertFileExists($this->getTmpDir());
+        self::assertFileExists($this->getTmpDir());
     }
 
     #[Test]
     #[DataProvider('provideTemporaryDirectory')]
     public function testTemporaryDirectoryAndGetFilesInDirectory(string $int): void
     {
-        static::assertTrue(strtoupper(substr(PHP_OS, TestCase::WIN_START, TestCase::WIN_END)) === 'WIN' ? str_starts_with(TestCase::WINDOWS_TEMP_DIR_PREFIX, sys_get_temp_dir()) : str_starts_with($this->getTmpDir(), sys_get_temp_dir()));
-        static::assertNotSame($this->getTmpDir(), $this->previousTemporaryDirectory);
+        self::assertTrue(strtoupper(substr(PHP_OS, TestCase::WIN_START, TestCase::WIN_END)) === 'WIN' ? str_starts_with(TestCase::WINDOWS_TEMP_DIR_PREFIX, sys_get_temp_dir()) : str_starts_with($this->getTmpDir(), sys_get_temp_dir()));
+        self::assertNotSame($this->getTmpDir(), $this->previousTemporaryDirectory);
 
         $dir = $this->getTmpDir() . $this->getRandomNameSpace() . DIRECTORY_SEPARATOR;
         mkdir($dir);
 
         for ($i = 0; $i < self::PENTIUM; $i++) {
-            static::assertCount($i, $this->getFilesInDirectory($this->getTmpDir()), (string) $i);
+            self::assertCount($i, $this->getFilesInDirectory($this->getTmpDir()), (string) $i);
             file_put_contents($dir . $i, $int);
         }
 
-        static::assertCount(self::PENTIUM, $this->getFilesInDirectory($this->getTmpDir()));
+        self::assertCount(self::PENTIUM, $this->getFilesInDirectory($this->getTmpDir()));
 
         foreach ($this->getFilesInDirectory($this->getTmpDir()) as $file) {
-            static::assertSame($int, file_get_contents($file));
+            self::assertSame($int, file_get_contents($file));
         }
     }
 
@@ -88,13 +88,13 @@ final class TestCaseTest extends TestCase
     #[DataProvider('provideTrueFalse')]
     public function trueOrFalse(bool $bool): void
     {
-        static::assertCount(1, func_get_args());
+        self::assertCount(1, func_get_args());
     }
 
     #[Test]
     public function testTrueAndFalse(): void
     {
-        static::assertSame(
+        self::assertSame(
             ['true' => [true], 'false' => [false]],
             [...self::provideTrueFalse()],
         );
@@ -110,7 +110,7 @@ final class TestCaseTest extends TestCase
     public function successWaitUntilTheNextSecond(): void
     {
         $now = time();
-        static::waitUntilTheNextSecond();
+        self::waitUntilTheNextSecond();
         self::assertSame($now + 1, time());
     }
 
