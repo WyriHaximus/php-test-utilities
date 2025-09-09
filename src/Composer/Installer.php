@@ -114,7 +114,7 @@ final class Installer implements PluginInterface, EventSubscriberInterface
             foreach (array_keys($json[$key]) as $package) {
                 if (
                     in_array(
-                        strtolower($package),
+                        strtolower((string) $package),
                         [
                             'wyrihaximus/test-utilities',
                             'wyrihaximus/async-test-utilities',
