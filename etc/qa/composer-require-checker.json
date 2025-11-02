@@ -6,7 +6,8 @@
     "Rector\\Configuration\\RectorConfigBuilder", "Rector\\Config\\RectorConfig",
     "Composer\\Composer", "Composer\\Config", "Composer\\EventDispatcher\\EventSubscriberInterface",
     "Composer\\IO\\IOInterface", "Composer\\Package\\RootPackageInterface", "Composer\\Plugin\\PluginInterface",
-    "Composer\\Script\\Event", "Composer\\Script\\ScriptEvents", "JetBrains\\PHPStormStub\\PhpStormStubsMap"
+    "Composer\\Script\\Event", "Composer\\Script\\ScriptEvents", "JetBrains\\PHPStormStub\\PhpStormStubsMap",
+    "Rector\\PHPUnit\\CodeQuality\\Rector\\ClassMethod\\ReplaceTestFunctionPrefixWithAttributeRector"
   ],
   "php-core-extensions" : [
     "Core",

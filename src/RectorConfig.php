@@ -6,6 +6,7 @@ namespace WyriHaximus\TestUtilities;
 
 use Rector\Config;
 use Rector\Configuration\RectorConfigBuilder;
+use Rector\PHPUnit\CodeQuality\Rector\ClassMethod\ReplaceTestFunctionPrefixWithAttributeRector;
 
 final class RectorConfig
 {
@@ -23,6 +24,9 @@ final class RectorConfig
                 codeQuality: true,
                 typeDeclarations: true,
             )
-            ->withPhpSets();
+            ->withPhpSets()
+            ->withRules([
+                ReplaceTestFunctionPrefixWithAttributeRector::class,
+            ]);
     }
 }
