@@ -6,6 +6,7 @@ namespace WyriHaximus\TestUtilities;
 
 use Rector\Config;
 use Rector\Configuration\RectorConfigBuilder;
+use Rector\Php71\Rector\FuncCall\RemoveExtraParametersRector;
 use Rector\PHPUnit\CodeQuality\Rector\ClassMethod\ReplaceTestFunctionPrefixWithAttributeRector;
 
 final class RectorConfig
@@ -27,6 +28,8 @@ final class RectorConfig
             ->withPhpSets()
             ->withRules([
                 ReplaceTestFunctionPrefixWithAttributeRector::class,
+            ])->withSkip([
+                RemoveExtraParametersRector::class,
             ]);
     }
 }
