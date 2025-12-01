@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4470955811acb4046dd8adf5c8dd35d2",
+    "content-hash": "d37f0c6c14b424d20b6dae7794960854",
     "packages": [
         {
             "name": "azjezz/psl",
@@ -4418,21 +4418,21 @@
         },
         {
             "name": "rector/rector",
-            "version": "2.2.1",
+            "version": "2.2.10",
             "source": {
                 "type": "git",
                 "url": "https://github.com/rectorphp/rector.git",
-                "reference": "e1aaf3061e9ae9342ed0824865e3a3360defddeb"
+                "reference": "2abbf73dc953fdc5a556c0c3d5c47aa4da47d34c"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/rectorphp/rector/zipball/e1aaf3061e9ae9342ed0824865e3a3360defddeb",
-                "reference": "e1aaf3061e9ae9342ed0824865e3a3360defddeb",
+                "url": "https://api.github.com/repos/rectorphp/rector/zipball/2abbf73dc953fdc5a556c0c3d5c47aa4da47d34c",
+                "reference": "2abbf73dc953fdc5a556c0c3d5c47aa4da47d34c",
                 "shasum": ""
             },
             "require": {
                 "php": "^7.4|^8.0",
-                "phpstan/phpstan": "^2.1.26"
+                "phpstan/phpstan": "^2.1.32"
             },
             "conflict": {
                 "rector/rector-doctrine": "*",
@@ -4466,7 +4466,7 @@
             ],
             "support": {
                 "issues": "https://github.com/rectorphp/rector/issues",
-                "source": "https://github.com/rectorphp/rector/tree/2.2.1"
+                "source": "https://github.com/rectorphp/rector/tree/2.2.10"
             },
             "funding": [
                 {
@@ -4474,7 +4474,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-10-06T21:25:14+00:00"
+            "time": "2025-12-01T10:59:13+00:00"
         },
         {
             "name": "revolt/event-loop",
