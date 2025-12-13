@@ -18,7 +18,7 @@
     "ergebnis/phpunit-slow-test-detector": "^2.20.0",
     "icanhazstring/composer-unused": "^0.9.5",
     "infection/infection": "^0.31.9",
-    "maglnet/composer-require-checker": "^4.17.0",
+    "maglnet/composer-require-checker": "^4.19.0",
     "mockery/mockery": "^1.6.12",
     "php-parallel-lint/php-console-highlighter": "^1.0",
     "php-parallel-lint/php-parallel-lint": "^1.4.0",
