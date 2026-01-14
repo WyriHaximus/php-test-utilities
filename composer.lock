@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f8570b4eafc7489cebf2bab3c1be1bdb",
+    "content-hash": "0c5c0c259a1e71aa68df4d6e440e6a6a",
     "packages": [
         {
             "name": "azjezz/psl",
@@ -8909,16 +8909,16 @@
     "packages-dev": [
         {
             "name": "wyrihaximus/makefiles",
-            "version": "0.7.16",
+            "version": "0.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/WyriHaximus/Makefiles.git",
-                "reference": "2628d098eb9c628e18c7d7b7e822a66c7c144775"
+                "reference": "1ad229c80c4ca166193305f3c6700f40f60c0de2"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WyriHaximus/Makefiles/zipball/2628d098eb9c628e18c7d7b7e822a66c7c144775",
-                "reference": "2628d098eb9c628e18c7d7b7e822a66c7c144775",
+                "url": "https://api.github.com/repos/WyriHaximus/Makefiles/zipball/1ad229c80c4ca166193305f3c6700f40f60c0de2",
+                "reference": "1ad229c80c4ca166193305f3c6700f40f60c0de2",
                 "shasum": ""
             },
             "require": {
@@ -8927,10 +8927,10 @@
                 "php": "^8.4"
             },
             "conflict": {
-                "infection/infection": "<0.31.3"
+                "infection/infection": "<0.32.0"
             },
             "require-dev": {
-                "wyrihaximus/test-utilities": "^8.8.0"
+                "wyrihaximus/test-utilities": "^10.0.0"
             },
             "type": "composer-plugin",
             "extra": {
@@ -8954,7 +8954,7 @@
             "description": "🧱 Makefile building blocks",
             "support": {
                 "issues": "https://github.com/WyriHaximus/Makefiles/issues",
-                "source": "https://github.com/WyriHaximus/Makefiles/tree/0.7.16"
+                "source": "https://github.com/WyriHaximus/Makefiles/tree/0.8.0"
             },
             "funding": [
                 {
@@ -8962,7 +8962,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-12-22T16:36:23+00:00"
+            "time": "2026-01-14T19:42:55+00:00"
         }
     ],
     "aliases": [],
