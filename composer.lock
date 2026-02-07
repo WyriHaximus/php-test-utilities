@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "9e53d56c82691863a7c56654d21a2578",
+    "content-hash": "9d441fbfc849e7d1f26617c65ef5cbad",
     "packages": [
         {
             "name": "azjezz/psl",
@@ -1671,16 +1671,16 @@
         },
         {
             "name": "ergebnis/phpunit-slow-test-detector",
-            "version": "2.21.0",
+            "version": "2.22.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/ergebnis/phpunit-slow-test-detector.git",
-                "reference": "0749911040f6cb50a144dd80e4e6547f85597c33"
+                "reference": "4de41feec3bb1c28ff238ba20c4441dc460bf4bb"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/ergebnis/phpunit-slow-test-detector/zipball/0749911040f6cb50a144dd80e4e6547f85597c33",
-                "reference": "0749911040f6cb50a144dd80e4e6547f85597c33",
+                "url": "https://api.github.com/repos/ergebnis/phpunit-slow-test-detector/zipball/4de41feec3bb1c28ff238ba20c4441dc460bf4bb",
+                "reference": "4de41feec3bb1c28ff238ba20c4441dc460bf4bb",
                 "shasum": ""
             },
             "require": {
@@ -1740,7 +1740,7 @@
                 "security": "https://github.com/ergebnis/phpunit-slow-test-detector/blob/main/.github/SECURITY.md",
                 "source": "https://github.com/ergebnis/phpunit-slow-test-detector"
             },
-            "time": "2026-02-07T14:41:32+00:00"
+            "time": "2026-02-07T23:10:57+00:00"
         },
         {
             "name": "fidry/cpu-core-counter",
