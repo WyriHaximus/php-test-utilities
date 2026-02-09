@@ -14,7 +14,7 @@
     "ext-hash": "^8.4",
     "ext-json": "^8.4",
     "composer-plugin-api": "^2",
-    "ergebnis/composer-normalize": "^2.49.0",
+    "ergebnis/composer-normalize": "^2.50.0",
     "ergebnis/phpunit-slow-test-detector": "^2.22.1",
     "icanhazstring/composer-unused": "^0.9.6",
     "infection/infection": "^0.32.4",
