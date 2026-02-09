@@ -17,7 +17,7 @@
     "ergebnis/composer-normalize": "^2.49.0",
     "ergebnis/phpunit-slow-test-detector": "^2.22.1",
     "icanhazstring/composer-unused": "^0.9.6",
-    "infection/infection": "^0.32.3",
+    "infection/infection": "^0.32.4",
     "maglnet/composer-require-checker": "^4.20.0",
     "mockery/mockery": "^1.6.12",
     "php-parallel-lint/php-console-highlighter": "^1.0.0",
