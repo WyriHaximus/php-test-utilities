@@ -4,20 +4,20 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "ab08ce6191ecf5895e5a8ab720f3d467",
+    "content-hash": "b8dcec0840848a97a60a0e930949c290",
     "packages": [
         {
             "name": "azjezz/psl",
-            "version": "4.2.0",
+            "version": "4.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/azjezz/psl.git",
-                "reference": "15153a64c9824335ce11654522e7d88de762d39e"
+                "reference": "28c6752857597a1bb6fa8be16678c144b9097ab8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/azjezz/psl/zipball/15153a64c9824335ce11654522e7d88de762d39e",
-                "reference": "15153a64c9824335ce11654522e7d88de762d39e",
+                "url": "https://api.github.com/repos/azjezz/psl/zipball/28c6752857597a1bb6fa8be16678c144b9097ab8",
+                "reference": "28c6752857597a1bb6fa8be16678c144b9097ab8",
                 "shasum": ""
             },
             "require": {
@@ -30,7 +30,7 @@
                 "revolt/event-loop": "^1.0.7"
             },
             "require-dev": {
-                "carthage-software/mago": "^1.0.0-beta.32",
+                "carthage-software/mago": "^1.3.0",
                 "infection/infection": "^0.31.2",
                 "php-coveralls/php-coveralls": "^2.7.0",
                 "phpbench/phpbench": "^1.4.0",
@@ -68,7 +68,7 @@
             "description": "PHP Standard Library",
             "support": {
                 "issues": "https://github.com/azjezz/psl/issues",
-                "source": "https://github.com/azjezz/psl/tree/4.2.0"
+                "source": "https://github.com/azjezz/psl/tree/4.2.1"
             },
             "funding": [
                 {
@@ -80,7 +80,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2025-10-25T08:31:40+00:00"
+            "time": "2026-01-29T12:38:33+00:00"
         },
         {
             "name": "beberlei/assert",
@@ -4581,31 +4581,31 @@
         },
         {
             "name": "roave/backward-compatibility-check",
-            "version": "8.17.0",
+            "version": "8.18.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Roave/BackwardCompatibilityCheck.git",
-                "reference": "b3aab0b917d127c3e048b4f96a7f588388e30ac9"
+                "reference": "8bbe2006daad3b0fc8331376ca8c519b21e9bdb8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/BackwardCompatibilityCheck/zipball/b3aab0b917d127c3e048b4f96a7f588388e30ac9",
-                "reference": "b3aab0b917d127c3e048b4f96a7f588388e30ac9",
+                "url": "https://api.github.com/repos/Roave/BackwardCompatibilityCheck/zipball/8bbe2006daad3b0fc8331376ca8c519b21e9bdb8",
+                "reference": "8bbe2006daad3b0fc8331376ca8c519b21e9bdb8",
                 "shasum": ""
             },
             "require": {
-                "azjezz/psl": "^4.2.0",
-                "composer/composer": "^2.9.2",
+                "azjezz/psl": "^4.2.1",
+                "composer/composer": "^2.9.5",
                 "ext-dom": "*",
                 "ext-json": "*",
                 "ext-libxml": "*",
                 "ext-simplexml": "*",
-                "nikic/php-parser": "^5.6.2",
+                "nikic/php-parser": "^5.7.0",
                 "nikolaposa/version": "^4.2.1",
                 "ocramius/package-versions": "^2.11.0",
                 "php": "~8.3.0 || ~8.4.0 || ~8.5.0",
-                "roave/better-reflection": "^6.66.0",
-                "symfony/console": "^7.4.0"
+                "roave/better-reflection": "^6.69.0",
+                "symfony/console": "^7.4.4"
             },
             "conflict": {
                 "marc-mabe/php-enum": "<4.7.2",
@@ -4614,14 +4614,14 @@
             },
             "require-dev": {
                 "doctrine/coding-standard": "^14.0.0",
-                "justinrainbow/json-schema": "^6.6.2",
+                "justinrainbow/json-schema": "^6.6.4",
                 "php-standard-library/psalm-plugin": "^2.3.0",
-                "phpunit/phpunit": "^12.4.4",
+                "phpunit/phpunit": "^12.5.10",
                 "psalm/plugin-phpunit": "^0.19.5",
-                "roave/infection-static-analysis-plugin": "^1.41.0",
+                "roave/infection-static-analysis-plugin": "^1.43.0",
                 "roave/security-advisories": "dev-master",
                 "squizlabs/php_codesniffer": "^4.0.1",
-                "vimeo/psalm": "^6.13.1"
+                "vimeo/psalm": "^6.15.1"
             },
             "bin": [
                 "bin/roave-backward-compatibility-check"
@@ -4649,22 +4649,22 @@
             "description": "Tool to compare two revisions of a public API to check for BC breaks",
             "support": {
                 "issues": "https://github.com/Roave/BackwardCompatibilityCheck/issues",
-                "source": "https://github.com/Roave/BackwardCompatibilityCheck/tree/8.17.0"
+                "source": "https://github.com/Roave/BackwardCompatibilityCheck/tree/8.18.0"
             },
-            "time": "2025-11-29T01:02:22+00:00"
+            "time": "2026-02-09T11:15:47+00:00"
         },
         {
             "name": "roave/better-reflection",
-            "version": "6.68.0",
+            "version": "6.69.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/Roave/BetterReflection.git",
-                "reference": "065cd70630a023c8328f18691403cb8ea7f9f195"
+                "reference": "dccbd10b5b3da8718f2945ad50faf90a1cb2db55"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Roave/BetterReflection/zipball/065cd70630a023c8328f18691403cb8ea7f9f195",
-                "reference": "065cd70630a023c8328f18691403cb8ea7f9f195",
+                "url": "https://api.github.com/repos/Roave/BetterReflection/zipball/dccbd10b5b3da8718f2945ad50faf90a1cb2db55",
+                "reference": "dccbd10b5b3da8718f2945ad50faf90a1cb2db55",
                 "shasum": ""
             },
             "require": {
@@ -4678,7 +4678,7 @@
             },
             "require-dev": {
                 "phpbench/phpbench": "^1.4.3",
-                "phpunit/phpunit": "^11.5.48"
+                "phpunit/phpunit": "^12.5.8"
             },
             "suggest": {
                 "composer/composer": "Required to use the ComposerSourceLocator"
@@ -4718,9 +4718,9 @@
             "description": "Better Reflection - an improved code reflection API",
             "support": {
                 "issues": "https://github.com/Roave/BetterReflection/issues",
-                "source": "https://github.com/Roave/BetterReflection/tree/6.68.0"
+                "source": "https://github.com/Roave/BetterReflection/tree/6.69.0"
             },
-            "time": "2026-01-19T15:38:11+00:00"
+            "time": "2026-02-01T13:20:30+00:00"
         },
         {
             "name": "sanmai/di-container",
