@@ -4,19 +4,19 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "5d1dc5255341eb12765ccdc9488acfc7",
+    "content-hash": "4ec06da88a75c8423edd074828eda244",
     "packages": [
         {
             "name": "azjezz/psl",
             "version": "4.2.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/azjezz/psl.git",
+                "url": "https://github.com/php-standard-library/php-standard-library.git",
                 "reference": "28c6752857597a1bb6fa8be16678c144b9097ab8"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/azjezz/psl/zipball/28c6752857597a1bb6fa8be16678c144b9097ab8",
+                "url": "https://api.github.com/repos/php-standard-library/php-standard-library/zipball/28c6752857597a1bb6fa8be16678c144b9097ab8",
                 "reference": "28c6752857597a1bb6fa8be16678c144b9097ab8",
                 "shasum": ""
             },
@@ -8933,16 +8933,16 @@
     "packages-dev": [
         {
             "name": "wyrihaximus/makefiles",
-            "version": "0.10.2",
+            "version": "0.10.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/WyriHaximus/Makefiles.git",
-                "reference": "ff6cd1cc874900d2aa543b4a773bcd108f9e3eeb"
+                "reference": "aae3aa61765f5f570cfe338e26e2e0061383dc23"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WyriHaximus/Makefiles/zipball/ff6cd1cc874900d2aa543b4a773bcd108f9e3eeb",
-                "reference": "ff6cd1cc874900d2aa543b4a773bcd108f9e3eeb",
+                "url": "https://api.github.com/repos/WyriHaximus/Makefiles/zipball/aae3aa61765f5f570cfe338e26e2e0061383dc23",
+                "reference": "aae3aa61765f5f570cfe338e26e2e0061383dc23",
                 "shasum": ""
             },
             "require": {
@@ -8978,7 +8978,7 @@
             "description": "🧱 Makefile building blocks",
             "support": {
                 "issues": "https://github.com/WyriHaximus/Makefiles/issues",
-                "source": "https://github.com/WyriHaximus/Makefiles/tree/0.10.2"
+                "source": "https://github.com/WyriHaximus/Makefiles/tree/0.10.3"
             },
             "funding": [
                 {
@@ -8986,7 +8986,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-02-26T19:01:56+00:00"
+            "time": "2026-03-12T06:38:36+00:00"
         }
     ],
     "aliases": [],
