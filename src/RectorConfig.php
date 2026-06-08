@@ -39,6 +39,7 @@ final class RectorConfig
         foreach (
             [
                 '/etc',
+                '/examples',
                 '/src',
                 '/tests',
             ] as $path
