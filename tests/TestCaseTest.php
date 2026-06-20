@@ -9,11 +9,11 @@ use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\Attributes\Test;
 use WyriHaximus\TestUtilities\TestCase;
 
+use function file_get_contents;
+use function file_put_contents;
 use function func_get_args;
+use function mkdir;
 use function random_int;
-use function Safe\file_get_contents;
-use function Safe\file_put_contents;
-use function Safe\mkdir;
 use function str_starts_with;
 use function strtoupper;
 use function substr;
