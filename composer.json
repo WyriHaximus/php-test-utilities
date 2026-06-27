@@ -27,7 +27,7 @@
     "rector/rector": "^2.5.2",
     "roave/backward-compatibility-check": "^8.19.0",
     "squizlabs/php_codesniffer": "^4.0.1",
-    "wyrihaximus/coding-standard": "^4.0.0",
+    "wyrihaximus/coding-standard": "^4.1.0",
     "wyrihaximus/phpstan-rules-wrapper": "^14.0.0"
   },
   "require-dev": {
