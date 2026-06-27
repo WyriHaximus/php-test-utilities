@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "654d73362ea0f07fdd64b82d9eef94b7",
+    "content-hash": "0b89a68f284d99d1742879df699e79f1",
     "packages": [
         {
             "name": "azjezz/psl",
@@ -8877,16 +8877,16 @@
         },
         {
             "name": "wyrihaximus/coding-standard",
-            "version": "4.1.0",
+            "version": "4.2.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/WyriHaximus/php-coding-standard.git",
-                "reference": "5d23a1bc394b0ba17050a2f0e06cf8ce01999008"
+                "reference": "15de1c4e2be8857b2c086810659eac158dfe7531"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WyriHaximus/php-coding-standard/zipball/5d23a1bc394b0ba17050a2f0e06cf8ce01999008",
-                "reference": "5d23a1bc394b0ba17050a2f0e06cf8ce01999008",
+                "url": "https://api.github.com/repos/WyriHaximus/php-coding-standard/zipball/15de1c4e2be8857b2c086810659eac158dfe7531",
+                "reference": "15de1c4e2be8857b2c086810659eac158dfe7531",
                 "shasum": ""
             },
             "require": {
@@ -8917,7 +8917,7 @@
             "description": "WyriHaximus Coding Standard",
             "support": {
                 "issues": "https://github.com/WyriHaximus/php-coding-standard/issues",
-                "source": "https://github.com/WyriHaximus/php-coding-standard/tree/4.1.0"
+                "source": "https://github.com/WyriHaximus/php-coding-standard/tree/4.2.0"
             },
             "funding": [
                 {
@@ -8925,7 +8925,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-06-27T19:31:33+00:00"
+            "time": "2026-06-27T19:56:09+00:00"
         },
         {
             "name": "wyrihaximus/phpstan-no-safe",
