@@ -145,7 +145,7 @@ final class Installer implements PluginInterface, EventSubscriberInterface
         $composerJson     = json_decode($composerJsonString, true);
         $composerJsonHash = hash('sha512', (string) json_encode($composerJson, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT));
         if (is_array($composerJson)) {
-            if (! (array_key_exists('scripts', $composerJson) && is_array($composerJson['scripts']))) {
+            if (! array_key_exists('scripts', $composerJson) || ! is_array($composerJson['scripts'])) {
                 $composerJson['scripts'] = [];
             }
 
