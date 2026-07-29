@@ -35,6 +35,7 @@
   },
   "conflict": {
     "composer-unused/symbol-parser": "<0.3.3",
+    "composer/composer": "<2.10.2",
     "composer/pcre": "<3.3.2",
     "sanmai/di-container": "<0.1.17",
     "sanmai/pipeline": "<7.9",
