@@ -9,6 +9,9 @@
     <include>
       <directory suffix=".php">../../src/</directory>
     </include>
+    <exclude>
+      <file>../../src/Rector/Rules/ReplaceTestFunctionPrefixWithAttributeRector.php</file>
+    </exclude>
   </source>
     <extensions>
          <bootstrap class="Ergebnis\PHPUnit\SlowTestDetector\Extension"/>
