@@ -10,5 +10,7 @@
     <file>../../src</file>
     <file>../../tests</file>
 
+    <exclude-pattern>*/src/Rector/Rules/ReplaceTestFunctionPrefixWithAttributeRector.php</exclude-pattern>
+
     <rule ref="WyriHaximus-OSS" />
 </ruleset>

@@ -3,6 +3,8 @@ parameters:
 		- ../../etc
 		- ../../src
 		- ../../tests
+	excludePaths:
+		- ../../src/Rector/Rules/ReplaceTestFunctionPrefixWithAttributeRector.php
 	level: max
 	ignoreErrors:
 		-

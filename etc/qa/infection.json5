@@ -5,7 +5,8 @@
             "../../src"
         ],
         "excludes": [
-            "RectorConfig.php"
+            "RectorConfig.php",
+            "Rector/Rules/ReplaceTestFunctionPrefixWithAttributeRector.php"
         ]
     },
     "logs": {

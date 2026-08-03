@@ -7,7 +7,7 @@ namespace WyriHaximus\TestUtilities;
 use Rector\Config;
 use Rector\Configuration\RectorConfigBuilder;
 use Rector\Php71\Rector\FuncCall\RemoveExtraParametersRector;
-use Rector\PHPUnit\CodeQuality\Rector\ClassMethod\ReplaceTestFunctionPrefixWithAttributeRector;
+use WyriHaximus\TestUtilities\Rector\Rules\ReplaceTestFunctionPrefixWithAttributeRector;
 
 use function file_exists;
 
