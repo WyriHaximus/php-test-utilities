@@ -1,24 +1,11 @@
 parameters:
+	level: max
 	paths:
 		- ../../etc
 		- ../../src
 		- ../../tests
 	excludePaths:
 		- ../../src/Rector/Rules/ReplaceTestFunctionPrefixWithAttributeRector.php
-	level: max
-	ignoreErrors:
-		-
-			message: '#Method WyriHaximus\\TestUtilities\\TestCase::setUp\(\) is not final, but since the containing class is abstract, it should be.#'
-			path: ../../src/TestCase.php
-		-
-			message: '#Method WyriHaximus\\TestUtilities\\TestCase::tearDown\(\) is not final, but since the containing class is abstract, it should be.#'
-			path: ../../src/TestCase.php
-		-
-			message: '#Error suppression via "@" should not be used.#'
-			path: ../../src/TestCase.php
-		-
-			message: '#Parameter \#1 \$scriptsSection of static method WyriHaximus\\TestUtilities\\Composer\\Installer::addMakeOnInstallOrUpdateToScriptsSectionAndRemoveCommandsItReplaces\(\) expects array<int, string>, mixed given.#'
-			path: ../../src/Composer/Installer.php
 
 includes:
 	- ../../extension.neon

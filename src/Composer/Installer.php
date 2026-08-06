@@ -151,12 +151,14 @@ final class Installer implements PluginInterface, EventSubscriberInterface
                 $composerJson['scripts']['post-install-cmd'] = [];
             }
 
+            /** @phpstan-ignore argument.type */
             $composerJson['scripts']['post-install-cmd'] = self::addMakeOnInstallOrUpdateToScriptsSectionAndRemoveCommandsItReplaces($composerJson['scripts']['post-install-cmd']);
 
             if (! array_key_exists('post-update-cmd', $composerJson['scripts'])) {
                 $composerJson['scripts']['post-update-cmd'] = [];
             }
 
+            /** @phpstan-ignore argument.type */
             $composerJson['scripts']['post-update-cmd'] = self::addMakeOnInstallOrUpdateToScriptsSectionAndRemoveCommandsItReplaces($composerJson['scripts']['post-update-cmd']);
         }
 
@@ -174,10 +176,12 @@ final class Installer implements PluginInterface, EventSubscriberInterface
 
         if (is_array($composerJson) && array_key_exists('scripts', $composerJson) && is_array($composerJson['scripts'])) {
             if (array_key_exists('post-install-cmd', $composerJson['scripts'])) {
+                /** @phpstan-ignore argument.type */
                 $composerJson['scripts']['post-install-cmd'] = self::addMakeOnInstallOrUpdateToScriptsSectionAndRemoveCommandsItReplaces($composerJson['scripts']['post-install-cmd']);
             }
 
             if (array_key_exists('post-update-cmd', $composerJson['scripts'])) {
+                /** @phpstan-ignore argument.type */
                 $composerJson['scripts']['post-update-cmd'] = self::addMakeOnInstallOrUpdateToScriptsSectionAndRemoveCommandsItReplaces($composerJson['scripts']['post-update-cmd']);
             }
         }
