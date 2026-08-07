@@ -14,9 +14,11 @@ use function file_put_contents;
 use function func_get_args;
 use function mkdir;
 use function random_int;
+use function realpath;
 use function str_starts_with;
 use function strtoupper;
 use function substr;
+use function symlink;
 use function sys_get_temp_dir;
 use function time;
 use function uniqid;
@@ -126,5 +128,30 @@ final class TestCaseTest extends TestCase
         self::assertDirectoryExists($tmpDir);
         $this->rmdir($tmpDir);
         self::assertDirectoryDoesNotExist($tmpDir);
+    }
+
+    #[Test]
+    public function rmdirRemovesDirectoryContainingSymlinkToDirectory(): void
+    {
+        $root     = $this->getTmpDir();
+        $includes = $root . 'reference' . DIRECTORY_SEPARATOR . 'includes' . DIRECTORY_SEPARATOR;
+        $target   = $includes . 'target' . DIRECTORY_SEPARATOR;
+
+        mkdir($target . 'nested', 0777, true);
+        file_put_contents($target . 'nested' . DIRECTORY_SEPARATOR . 'Stub.mk', "x\n");
+
+        $linkTarget = $target;
+        if (strtoupper(substr(PHP_OS, TestCase::WIN_START, TestCase::WIN_END)) === 'WIN') {
+            $linkTarget = realpath($target);
+        }
+
+        /** @phpstan-ignore ergebnis.noErrorSuppression */
+        if (! @symlink($linkTarget, $includes . 'linked-target')) {
+            self::markTestSkipped('Unable to create symlink on this platform');
+        }
+
+        $this->rmdir($includes);
+
+        self::assertDirectoryDoesNotExist($includes);
     }
 }

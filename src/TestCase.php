@@ -12,8 +12,8 @@ use RecursiveIteratorIterator;
 use SplFileInfo;
 
 use function file_exists;
-use function is_dir;
 use function is_file;
+use function is_link;
 use function mkdir;
 use function rmdir;
 use function strtoupper;
@@ -43,6 +43,7 @@ abstract class TestCase extends PHPUnitTestCase
 
     private string $tmpNamespace;
 
+    /** @phpstan-ignore ergebnis.finalInAbstractClass */
     protected function setUp(): void
     {
         $this->baseTmpDir = $this->getSysTempDir() .
@@ -57,6 +58,7 @@ abstract class TestCase extends PHPUnitTestCase
         $this->tmpNamespace = uniqid('WHPTU');
     }
 
+    /** @phpstan-ignore ergebnis.finalInAbstractClass */
     protected function tearDown(): void
     {
         if (! file_exists($this->baseTmpDir)) {
@@ -84,27 +86,48 @@ abstract class TestCase extends PHPUnitTestCase
 
     final protected function rmdir(string $dir): void
     {
-        $directory = new FilesystemIterator($dir);
+        $iterator = new RecursiveIteratorIterator(
+            new RecursiveDirectoryIterator($dir, FilesystemIterator::SKIP_DOTS),
+            RecursiveIteratorIterator::CHILD_FIRST,
+        );
 
-        foreach ($directory as $node) {
+        foreach ($iterator as $node) {
             if (! $node instanceof SplFileInfo) {
                 continue;
             }
 
-            if (is_dir($node->getPathname())) {
-                $this->rmdir($node->getPathname());
+            $path = $node->getPathname();
+
+            if ($node->isLink() || is_link($path)) {
+                /** @phpstan-ignore ergebnis.noErrorSuppression */
+                if (@unlink($path)) {
+                    continue;
+                }
+
+                /** @phpstan-ignore ergebnis.noErrorSuppression */
+                if (@rmdir($path)) {
+                    continue;
+                }
+
+                throw ErrorExceptionFactory::create('Error deleting link: ' . $path);
+            }
+
+            if ($node->isDir()) {
+                /** @phpstan-ignore ergebnis.noErrorSuppression */
+                if (! @rmdir($path)) {
+                    throw ErrorExceptionFactory::create('Error deleting directory: ' . $path);
+                }
+
                 continue;
             }
 
-            if (! is_file($node->getPathname())) {
-                continue;
-            }
-
-            if (! unlink($node->getPathname())) {
-                throw ErrorExceptionFactory::create('Error deleting file: ' . $node->getPathname());
+            /** @phpstan-ignore ergebnis.noErrorSuppression */
+            if (! @unlink($path)) {
+                throw ErrorExceptionFactory::create('Error deleting file: ' . $path);
             }
         }
 
+        /** @phpstan-ignore ergebnis.noErrorSuppression */
         if (! @rmdir($dir)) {
             throw ErrorExceptionFactory::create('Error deleting directory: ' . $dir);
         }
@@ -112,6 +135,7 @@ abstract class TestCase extends PHPUnitTestCase
 
     final protected function getTmpDir(): string
     {
+        /** @phpstan-ignore ergebnis.noErrorSuppression */
         if (! file_exists($this->tmpDir) && ! @mkdir($this->tmpDir, self::DEFAULT_MODE, true)) {
             throw ErrorExceptionFactory::create('Error creating directory: ' . $this->tmpDir);
         }
