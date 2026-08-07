@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "fc72bc2e2311c8209621eaef8156060d",
+    "content-hash": "3d358fda2c8e128293821cd6f9caec14",
     "packages": [
         {
             "name": "azjezz/psl",
@@ -3378,16 +3378,16 @@
         },
         {
             "name": "phpstan/phpdoc-parser",
-            "version": "2.3.2",
+            "version": "2.3.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpstan/phpdoc-parser.git",
-                "reference": "a004701b11273a26cd7955a61d67a7f1e525a45a"
+                "reference": "fb19eedd2bb67ff8cf7a5502ad329e701d6398a3"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/a004701b11273a26cd7955a61d67a7f1e525a45a",
-                "reference": "a004701b11273a26cd7955a61d67a7f1e525a45a",
+                "url": "https://api.github.com/repos/phpstan/phpdoc-parser/zipball/fb19eedd2bb67ff8cf7a5502ad329e701d6398a3",
+                "reference": "fb19eedd2bb67ff8cf7a5502ad329e701d6398a3",
                 "shasum": ""
             },
             "require": {
@@ -3419,9 +3419,9 @@
             "description": "PHPDoc parser with support for nullable, intersection and generic types",
             "support": {
                 "issues": "https://github.com/phpstan/phpdoc-parser/issues",
-                "source": "https://github.com/phpstan/phpdoc-parser/tree/2.3.2"
+                "source": "https://github.com/phpstan/phpdoc-parser/tree/2.3.3"
             },
-            "time": "2026-01-25T14:56:51+00:00"
+            "time": "2026-07-08T07:01:06+00:00"
         },
         {
             "name": "phpstan/phpstan",
@@ -6376,32 +6376,32 @@
         },
         {
             "name": "slevomat/coding-standard",
-            "version": "8.30.1",
+            "version": "8.31.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/slevomat/coding-standard.git",
-                "reference": "70a3b2150600122f87c59cae1c1b5902ba73798b"
+                "reference": "0a40807a48873948bfa7ffce2a4e69ba40cf5e76"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/slevomat/coding-standard/zipball/70a3b2150600122f87c59cae1c1b5902ba73798b",
-                "reference": "70a3b2150600122f87c59cae1c1b5902ba73798b",
+                "url": "https://api.github.com/repos/slevomat/coding-standard/zipball/0a40807a48873948bfa7ffce2a4e69ba40cf5e76",
+                "reference": "0a40807a48873948bfa7ffce2a4e69ba40cf5e76",
                 "shasum": ""
             },
             "require": {
                 "dealerdirect/phpcodesniffer-composer-installer": "^0.7 || ^1.2.1",
                 "php": "^7.4 || ^8.0",
-                "phpstan/phpdoc-parser": "^2.3.2",
+                "phpstan/phpdoc-parser": "^2.3.3",
                 "squizlabs/php_codesniffer": "^4.0.1"
             },
             "require-dev": {
                 "phing/phing": "3.0.1|3.1.2",
                 "php-parallel-lint/php-parallel-lint": "1.4.0",
-                "phpstan/phpstan": "2.2.2",
-                "phpstan/phpstan-deprecation-rules": "2.0.4",
-                "phpstan/phpstan-phpunit": "2.0.16",
-                "phpstan/phpstan-strict-rules": "2.0.11",
-                "phpunit/phpunit": "9.6.34|10.5.63|11.4.4|11.5.55|12.5.30"
+                "phpstan/phpstan": "2.2.7",
+                "phpstan/phpstan-deprecation-rules": "2.0.5",
+                "phpstan/phpstan-phpunit": "2.0.18",
+                "phpstan/phpstan-strict-rules": "2.0.12",
+                "phpunit/phpunit": "9.6.34|10.5.63|11.4.4|11.5.56|12.5.33"
             },
             "type": "phpcodesniffer-standard",
             "extra": {
@@ -6425,7 +6425,7 @@
             ],
             "support": {
                 "issues": "https://github.com/slevomat/coding-standard/issues",
-                "source": "https://github.com/slevomat/coding-standard/tree/8.30.1"
+                "source": "https://github.com/slevomat/coding-standard/tree/8.31.1"
             },
             "funding": [
                 {
@@ -6437,7 +6437,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2026-06-27T11:26:35+00:00"
+            "time": "2026-07-31T10:42:43+00:00"
         },
         {
             "name": "squizlabs/php_codesniffer",
@@ -8955,27 +8955,27 @@
         },
         {
             "name": "wyrihaximus/coding-standard",
-            "version": "4.2.0",
+            "version": "4.3.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/WyriHaximus/php-coding-standard.git",
-                "reference": "15de1c4e2be8857b2c086810659eac158dfe7531"
+                "reference": "6efccf79994a0a4fc3692a47a5b72448900fdc38"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WyriHaximus/php-coding-standard/zipball/15de1c4e2be8857b2c086810659eac158dfe7531",
-                "reference": "15de1c4e2be8857b2c086810659eac158dfe7531",
+                "url": "https://api.github.com/repos/WyriHaximus/php-coding-standard/zipball/6efccf79994a0a4fc3692a47a5b72448900fdc38",
+                "reference": "6efccf79994a0a4fc3692a47a5b72448900fdc38",
                 "shasum": ""
             },
             "require": {
                 "dealerdirect/phpcodesniffer-composer-installer": "^1.2.1",
                 "doctrine/coding-standard": "^14.0.0",
                 "php": "^8.4",
-                "slevomat/coding-standard": "^8.30.1",
-                "squizlabs/php_codesniffer": "^4.0.1"
+                "slevomat/coding-standard": "^8.31.1",
+                "squizlabs/php_codesniffer": "^4.0.4"
             },
             "require-dev": {
-                "wyrihaximus/makefiles": "^0.12.1"
+                "wyrihaximus/makefiles": "^0.13.3"
             },
             "type": "phpcodesniffer-standard",
             "extra": {
@@ -8995,7 +8995,7 @@
             "description": "WyriHaximus Coding Standard",
             "support": {
                 "issues": "https://github.com/WyriHaximus/php-coding-standard/issues",
-                "source": "https://github.com/WyriHaximus/php-coding-standard/tree/4.2.0"
+                "source": "https://github.com/WyriHaximus/php-coding-standard/tree/4.3.0"
             },
             "funding": [
                 {
@@ -9003,7 +9003,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-06-27T19:56:09+00:00"
+            "time": "2026-08-06T23:29:46+00:00"
         },
         {
             "name": "wyrihaximus/phpstan-no-safe",
