@@ -4,8 +4,5 @@ parameters:
 		- ../../etc
 		- ../../src
 		- ../../tests
-	excludePaths:
-		- ../../src/Rector/Rules/ReplaceTestFunctionPrefixWithAttributeRector.php
-
 includes:
 	- ../../extension.neon
