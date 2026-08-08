@@ -3,10 +3,6 @@
     "source": {
         "directories": [
             "../../src"
-        ],
-        "excludes": [
-            "RectorConfig.php",
-            "Rector/Rules/ReplaceTestFunctionPrefixWithAttributeRector.php"
         ]
     },
     "logs": {
@@ -20,75 +16,6 @@
     "minCoveredMsi": 100,
     "ignoreMsiWithNoMutations": true,
     "mutators": {
-        "@default": true,
-        "FunctionCallRemoval": {
-            "ignore": [
-                "WyriHaximus\\TestUtilities\\TestCase::waitUntilTheNextSecond"
-            ]
-        },
-        "MethodCallRemoval": {
-            "ignore": [
-                "WyriHaximus\\TestUtilities\\TestCase::tearDown"
-            ]
-        },
-        "Continue_": {
-            "ignore": [
-                "WyriHaximus\\TestUtilities\\TestCase::rmdir"
-            ]
-        },
-        "TrueValue": {
-            "ignore": [
-                "WyriHaximus\\TestUtilities\\TestCase::provideTrueFalse"
-            ]
-        },
-        "ArrayItemRemoval": false,
-        "FalseValue": {
-            "ignore": [
-                "WyriHaximus\\TestUtilities\\TestCase::provideTrueFalse"
-            ]
-        },
-        "PublicVisibility": {
-            "ignore": [
-                "WyriHaximus\\TestUtilities\\ErrorExceptionFactory::create",
-                "WyriHaximus\\TestUtilities\\TestCase::provideTrueFalse"
-            ]
-        },
-        "Ternary": {
-            "ignore": [
-                "WyriHaximus\\TestUtilities\\ErrorExceptionFactory::create"
-            ]
-        },
-        "Identical": {
-            "ignore": [
-                "WyriHaximus\\TestUtilities\\TestCase::getSysTempDir"
-            ]
-        },
-        "UnwrapStrToUpper": {
-            "ignore": [
-                "WyriHaximus\\TestUtilities\\TestCase::getSysTempDir"
-            ]
-        },
-        "Concat": {
-            "ignore": [
-                "WyriHaximus\\TestUtilities\\ErrorExceptionFactory::create",
-                "WyriHaximus\\TestUtilities\\TestCase::getTmpDir",
-                "WyriHaximus\\TestUtilities\\TestCase::rmdir",
-                "WyriHaximus\\TestUtilities\\TestCase::setUp"
-            ]
-        },
-        "ConcatOperandRemoval": {
-            "ignore": [
-                "WyriHaximus\\TestUtilities\\ErrorExceptionFactory::create",
-                "WyriHaximus\\TestUtilities\\TestCase::getTmpDir",
-                "WyriHaximus\\TestUtilities\\TestCase::rmdir",
-                "WyriHaximus\\TestUtilities\\TestCase::setUp"
-            ]
-        },
-        "Throw_": {
-            "ignore": [
-                "WyriHaximus\\TestUtilities\\TestCase::getTmpDir",
-                "WyriHaximus\\TestUtilities\\TestCase::rmdir"
-            ]
-        }
+        "@default": true
     }
 }

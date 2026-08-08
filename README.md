@@ -25,21 +25,6 @@ Some defaults to make working with this package easier with PHPStan have been ad
 Any test file can extend `WyriHaximus\TestUtilities\TestCase` and it comes with some goodies such as random namespaces
 and random directories to use for file storage related tests.
 
-## Rector
-
-A `RectorConfig` is provided with defaults including where `etc`, `src`, and `tests` are. It also converts all
-doc tags to attributes that it's aware of.
-
-```php
-<?php
-
-declare(strict_types=1);
-
-use WyriHaximus\TestUtilities\RectorConfig;
-
-return RectorConfig::configure(dirname(__DIR__, 2));
-```
-
 # License
 
 The MIT License (MIT)
