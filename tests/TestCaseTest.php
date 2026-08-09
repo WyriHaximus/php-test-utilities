@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace WyriHaximus\Tests\TestUtilities;
 
-use Override;
 use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\Attributes\Test;
 use WyriHaximus\TestUtilities\TestCase;
@@ -32,18 +31,6 @@ final class TestCaseTest extends TestCase
     public const int PENTIUM = 66;
 
     private string $previousTemporaryDirectory = '';
-
-    #[Override]
-    protected function setUp(): void
-    {
-        parent::setUp();
-    }
-
-    #[Override]
-    protected function tearDown(): void
-    {
-        parent::tearDown();
-    }
 
     /** @return iterable<array<int, string>> */
     public static function provideTemporaryDirectory(): iterable

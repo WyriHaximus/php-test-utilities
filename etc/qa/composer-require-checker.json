@@ -3,18 +3,13 @@
     "null", "true", "false",
     "static", "self", "parent",
     "array", "string", "int", "float", "bool", "iterable", "callable", "void", "object",
-    "Rector\\Configuration\\RectorConfigBuilder", "Rector\\Config\\RectorConfig",
     "Composer\\Composer", "Composer\\Config", "Composer\\EventDispatcher\\EventSubscriberInterface",
     "Composer\\IO\\IOInterface", "Composer\\Package\\RootPackageInterface", "Composer\\Plugin\\PluginInterface",
-    "Composer\\Script\\Event", "Composer\\Script\\ScriptEvents", "JetBrains\\PHPStormStub\\PhpStormStubsMap",
-    "Rector\\PHPUnit\\CodeQuality\\Rector\\ClassMethod\\ReplaceTestFunctionPrefixWithAttributeRector",
-    "Rector\\Php71\\Rector\\FuncCall\\RemoveExtraParametersRector",
-    "PhpParser\\Node", "PhpParser\\Node\\AttributeGroup", "PhpParser\\Node\\Stmt\\ClassMethod",
-    "Rector\\Php80\\NodeAnalyzer\\PhpAttributeAnalyzer", "Rector\\PhpAttribute\\NodeFactory\\PhpAttributeGroupFactory",
-    "Rector\\PHPUnit\\Enum\\PHPUnitAttribute", "Rector\\PHPUnit\\NodeAnalyzer\\TestsNodeAnalyzer",
-    "Rector\\Rector\\AbstractRector",
-    "Symplify\\RuleDocGenerator\\ValueObject\\CodeSample\\CodeSample",
-    "Symplify\\RuleDocGenerator\\ValueObject\\RuleDefinition"
+    "Composer\\Script\\Event", "Composer\\Script\\ScriptEvents",
+    "JetBrains\\PHPStormStub\\PhpStormStubsMap",
+    "Mockery\\Adapter\\Phpunit\\MockeryPHPUnitIntegration",
+    "PHPUnit\\Framework\\Attributes\\DataProvider", "PHPUnit\\Framework\\Attributes\\Test",
+    "PHPUnit\\Framework\\TestCase"
   ],
   "php-core-extensions" : [
     "Core",

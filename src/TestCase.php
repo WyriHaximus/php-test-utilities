@@ -6,6 +6,8 @@ namespace WyriHaximus\TestUtilities;
 
 use FilesystemIterator;
 use Mockery\Adapter\Phpunit\MockeryPHPUnitIntegration;
+use PHPUnit\Framework\Attributes\After;
+use PHPUnit\Framework\Attributes\Before;
 use PHPUnit\Framework\TestCase as PHPUnitTestCase;
 use RecursiveDirectoryIterator;
 use RecursiveIteratorIterator;
@@ -43,8 +45,8 @@ abstract class TestCase extends PHPUnitTestCase
 
     private string $tmpNamespace;
 
-    /** @phpstan-ignore ergebnis.finalInAbstractClass */
-    protected function setUp(): void
+    #[Before]
+    final protected function initializeTemporaryTestEnvironment(): void
     {
         $this->baseTmpDir = $this->getSysTempDir() .
             DIRECTORY_SEPARATOR .
@@ -58,8 +60,8 @@ abstract class TestCase extends PHPUnitTestCase
         $this->tmpNamespace = uniqid('WHPTU');
     }
 
-    /** @phpstan-ignore ergebnis.finalInAbstractClass */
-    protected function tearDown(): void
+    #[After]
+    final protected function cleanUpTemporaryTestEnvironment(): void
     {
         if (! file_exists($this->baseTmpDir)) {
             return;
