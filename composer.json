@@ -14,7 +14,7 @@
     "ext-hash": "^8.4",
     "ext-json": "^8.4",
     "composer-plugin-api": "^2",
-    "phpunit/phpunit": "^13.3",
+    "phpunit/phpunit": "^13.3.1",
     "wyrihaximus/phpstan-rules-wrapper": "^14.4.0",
     "wyrihaximus/qa-tooling-wrapper": "^2.0.0",
     "wyrihaximus/rector-config": "^1.0.0"
