@@ -12,12 +12,17 @@ use PHPUnit\Framework\TestCase as PHPUnitTestCase;
 use RecursiveDirectoryIterator;
 use RecursiveIteratorIterator;
 use SplFileInfo;
+use Throwable;
 
 use function file_exists;
+use function in_array;
 use function is_file;
 use function is_link;
 use function mkdir;
+use function preg_match;
 use function rmdir;
+use function str_contains;
+use function str_starts_with;
 use function strtoupper;
 use function substr;
 use function sys_get_temp_dir;
@@ -45,10 +50,16 @@ abstract class TestCase extends PHPUnitTestCase
 
     private string $tmpNamespace;
 
+    /** @var list<mixed>|null */
+    private array|null $rmdirIteratorOverride = null;
+
+    /** @infection-ignore-all */
     #[Before]
     final protected function initializeTemporaryTestEnvironment(): void
     {
-        $this->baseTmpDir = $this->getSysTempDir() .
+        $sysTempDir = $this->resolveBaseTempDirectory();
+
+        $this->baseTmpDir = $sysTempDir .
             DIRECTORY_SEPARATOR .
             'w-h-p-t-u-' .
             uniqid() .
@@ -60,6 +71,7 @@ abstract class TestCase extends PHPUnitTestCase
         $this->tmpNamespace = uniqid('WHPTU');
     }
 
+    /** @infection-ignore-all */
     #[After]
     final protected function cleanUpTemporaryTestEnvironment(): void
     {
@@ -67,7 +79,10 @@ abstract class TestCase extends PHPUnitTestCase
             return;
         }
 
-        $this->rmdir($this->baseTmpDir);
+        try {
+            $this->rmdir($this->baseTmpDir);
+        } catch (Throwable) {
+        }
     }
 
     /** @return iterable<array<bool>> */
@@ -79,21 +94,62 @@ abstract class TestCase extends PHPUnitTestCase
 
     final protected function getSysTempDir(): string
     {
-        if (strtoupper(substr(PHP_OS, self::WIN_START, self::WIN_END)) === 'WIN') {
-            return self::WINDOWS_TEMP_DIR_PREFIX;
+        return sys_get_temp_dir();
+    }
+
+    /**
+     * @return non-empty-string
+     *
+     * @infection-ignore-all
+     */
+    private function resolveBaseTempDirectory(): string
+    {
+        return $this->absoluteTempDirectory(sys_get_temp_dir());
+    }
+
+    /**
+     * @return non-empty-string
+     *
+     * @infection-ignore-all
+     */
+    private function absoluteTempDirectory(string $directory): string
+    {
+        /** @var non-empty-string $fallback */
+        $fallback = sys_get_temp_dir();
+
+        if (strtoupper(substr(PHP_OS, self::WIN_START, self::WIN_END)) === 'WIN' && DIRECTORY_SEPARATOR !== '\\') {
+            // @codeCoverageIgnoreStart
+            return $fallback;
+            // @codeCoverageIgnoreEnd
         }
 
-        return sys_get_temp_dir();
+        if (in_array($directory, ['', '.', self::WINDOWS_TEMP_DIR_PREFIX], true)) {
+            // @codeCoverageIgnoreStart
+            return $fallback;
+            // @codeCoverageIgnoreEnd
+        }
+
+        // @codeCoverageIgnoreStart
+        if (DIRECTORY_SEPARATOR === '/') {
+            if (! str_starts_with($directory, '/')) {
+                return $fallback;
+            }
+
+            if (str_contains($directory, '\\')) {
+                return $fallback;
+            }
+        } elseif (preg_match('/^(?:[A-Za-z]:[\\\\\\/]|\\\\\\\\)/', $directory) !== 1) {
+            return $fallback;
+        }
+
+        // @codeCoverageIgnoreEnd
+
+        return $directory;
     }
 
     final protected function rmdir(string $dir): void
     {
-        $iterator = new RecursiveIteratorIterator(
-            new RecursiveDirectoryIterator($dir, FilesystemIterator::SKIP_DOTS),
-            RecursiveIteratorIterator::CHILD_FIRST,
-        );
-
-        foreach ($iterator as $node) {
+        foreach ($this->createRmdirIterator($dir) as $node) {
             if (! $node instanceof SplFileInfo) {
                 continue;
             }
@@ -133,6 +189,30 @@ abstract class TestCase extends PHPUnitTestCase
         if (! @rmdir($dir)) {
             throw ErrorExceptionFactory::create('Error deleting directory: ' . $dir);
         }
+    }
+
+    /** @return iterable<mixed> */
+    private function createRmdirIterator(string $dir): iterable
+    {
+        if ($this->rmdirIteratorOverride !== null) {
+            return $this->rmdirIteratorOverride;
+        }
+
+        return new RecursiveIteratorIterator(
+            new RecursiveDirectoryIterator($dir, FilesystemIterator::SKIP_DOTS),
+            RecursiveIteratorIterator::CHILD_FIRST,
+        );
+    }
+
+    /** @param list<mixed> $override */
+    final protected function setRmdirIteratorOverride(array $override): void
+    {
+        $this->rmdirIteratorOverride = $override;
+    }
+
+    final protected function clearRmdirIteratorOverride(): void
+    {
+        $this->rmdirIteratorOverride = null;
     }
 
     final protected function getTmpDir(): string

@@ -68,7 +68,9 @@ final class Installer implements PluginInterface, EventSubscriberInterface
 
         $jsonRaw = file_get_contents($rootPackagePath . '/composer.json');
         if (! is_string($jsonRaw)) {
+            // @codeCoverageIgnoreStart
             return;
+            // @codeCoverageIgnoreEnd
         }
 
         $json = json_decode($jsonRaw, true);
