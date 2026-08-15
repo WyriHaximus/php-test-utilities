@@ -14,9 +14,6 @@ use function func_get_args;
 use function mkdir;
 use function random_int;
 use function realpath;
-use function str_starts_with;
-use function strtoupper;
-use function substr;
 use function symlink;
 use function sys_get_temp_dir;
 use function time;
@@ -24,7 +21,7 @@ use function uniqid;
 
 use const DIRECTORY_SEPARATOR;
 use const PHP_INT_MAX;
-use const PHP_OS;
+use const PHP_OS_FAMILY;
 
 final class TestCaseTest extends TestCase
 {
@@ -53,7 +50,10 @@ final class TestCaseTest extends TestCase
     #[DataProvider('provideTemporaryDirectory')]
     public function testTemporaryDirectoryAndGetFilesInDirectory(string $int): void
     {
-        self::assertTrue(strtoupper(substr(PHP_OS, TestCase::WIN_START, TestCase::WIN_END)) === 'WIN' ? str_starts_with(TestCase::WINDOWS_TEMP_DIR_PREFIX, sys_get_temp_dir()) : str_starts_with($this->getTmpDir(), sys_get_temp_dir()));
+        /** @var non-empty-string $sysTempDir */
+        $sysTempDir = sys_get_temp_dir();
+
+        self::assertStringStartsWith($sysTempDir, $this->getTmpDir());
         self::assertNotSame($this->getTmpDir(), $this->previousTemporaryDirectory);
 
         $dir = $this->getTmpDir() . $this->getRandomNameSpace() . DIRECTORY_SEPARATOR;
@@ -90,7 +90,7 @@ final class TestCaseTest extends TestCase
     #[Test]
     public function successGetSysTempDir(): void
     {
-        self::assertFileExists($this->getSysTempDir());
+        self::assertDirectoryExists($this->getSysTempDir());
     }
 
     #[Test]
@@ -128,7 +128,7 @@ final class TestCaseTest extends TestCase
         file_put_contents($target . 'nested' . DIRECTORY_SEPARATOR . 'Stub.mk', "x\n");
 
         $linkTarget = $target;
-        if (strtoupper(substr(PHP_OS, TestCase::WIN_START, TestCase::WIN_END)) === 'WIN') {
+        if (PHP_OS_FAMILY === 'Windows') {
             $linkTarget = realpath($target);
         }
 
