@@ -438,8 +438,10 @@ syntax-php: ## Lint PHP syntax ##*ILH*##
 	$(DOCKER_RUN) vendor/bin/parallel-lint --exclude vendor .
 
 composer-normalize: ## Normalize composer.json ##*I*##
-	$(DOCKER_RUN) composer normalize
-	$(MAKE) update-lock
+	@before="$$( $(DOCKER_RUN) php -r 'echo hash_file("sha512", "composer.json");' )"; \
+	$(DOCKER_RUN) composer normalize --no-update-lock; \
+	after="$$( $(DOCKER_RUN) php -r 'echo hash_file("sha512", "composer.json");' )"; \
+	[ "$$before" = "$$after" ] || $(MAKE) update-lock
 
 rector-upgrade: ## Upgrade any automatically upgradable old code ##*I*##^code-style^##
 	$(DOCKER_RUN) vendor/bin/rector -c ./etc/qa/rector.php
