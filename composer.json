@@ -20,7 +20,7 @@
     "wyrihaximus/rector-config": "^1.0.0"
   },
   "require-dev": {
-    "wyrihaximus/makefiles": "^0.14.0"
+    "wyrihaximus/makefiles": "^0.14.1"
   },
   "conflict": {
     "composer-unused/symbol-parser": "<0.3.3",
