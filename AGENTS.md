@@ -57,6 +57,7 @@ Before adding an instruction ANYWHERE — AGENTS.mds, rules, agents, skills, hoo
 - Always reload this file before you start processing a new request.
 - Always show the plan. / When calling `CreatePlan` always show the plan.
 - When ever you're done, before returning to the user always done 1 to 3 passes of reducing the amount of code you wrote while keeping it readable and maintainable.
+- Shutdown works by removing everything that uses the event loop; never call `Loop::stop()` anywhere.
 
 ## Packages to consider when working with logging
 - [`wyrihaximus/psr-3-context-logger`](https://github.com/WyriHaximus/php-psr-3-context-logger) — PSR-3 decorator; merge default context (optional `[Prefix]`) into every log call
