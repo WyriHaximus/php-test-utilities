@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6b50daccfcc80c268bffd79ca181094d",
+    "content-hash": "7a6e49492a0b46ec9864903ab949cbb9",
     "packages": [
         {
             "name": "azjezz/psl",
@@ -9464,16 +9464,16 @@
     "packages-dev": [
         {
             "name": "wyrihaximus/makefiles",
-            "version": "0.14.2",
+            "version": "0.14.6",
             "source": {
                 "type": "git",
                 "url": "https://github.com/WyriHaximus/Makefiles.git",
-                "reference": "82117fa449fb1d60eb305f6ec01b09c424775c2d"
+                "reference": "5429f0ecb0b7537efacb4f5ad5c8859e468a727e"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WyriHaximus/Makefiles/zipball/82117fa449fb1d60eb305f6ec01b09c424775c2d",
-                "reference": "82117fa449fb1d60eb305f6ec01b09c424775c2d",
+                "url": "https://api.github.com/repos/WyriHaximus/Makefiles/zipball/5429f0ecb0b7537efacb4f5ad5c8859e468a727e",
+                "reference": "5429f0ecb0b7537efacb4f5ad5c8859e468a727e",
                 "shasum": ""
             },
             "require": {
@@ -9485,7 +9485,7 @@
                 "infection/infection": "<0.32.0"
             },
             "require-dev": {
-                "wyrihaximus/test-utilities": "^14.0.0"
+                "wyrihaximus/test-utilities": "^14.1.0"
             },
             "type": "composer-plugin",
             "extra": {
@@ -9514,7 +9514,7 @@
             "description": "🧱 Makefile building blocks",
             "support": {
                 "issues": "https://github.com/WyriHaximus/Makefiles/issues",
-                "source": "https://github.com/WyriHaximus/Makefiles/tree/0.14.2"
+                "source": "https://github.com/WyriHaximus/Makefiles/tree/0.14.6"
             },
             "funding": [
                 {
@@ -9522,7 +9522,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-08-22T13:06:03+00:00"
+            "time": "2026-08-26T20:51:39+00:00"
         }
     ],
     "aliases": [],
