@@ -25,7 +25,9 @@ use function is_array;
 use function is_string;
 use function json_decode;
 use function json_encode;
+use function preg_match;
 use function preg_replace;
+use function str_starts_with;
 use function strtolower;
 
 use const DIRECTORY_SEPARATOR;
@@ -61,12 +63,13 @@ final class Installer implements PluginInterface, EventSubscriberInterface
      */
     public static function findEventListeners(Event $event): void
     {
-        $rootPackagePath = dirname(self::getVendorDir($event->getComposer())) . DIRECTORY_SEPARATOR;
-        if (! file_exists($rootPackagePath . '/composer.json')) {
+        $rootPackagePath  = dirname(self::getVendorDir($event->getComposer())) . DIRECTORY_SEPARATOR;
+        $composerJsonPath = self::composerJsonPath($rootPackagePath);
+        if (! self::isAbsolutePath($composerJsonPath) || ! file_exists($composerJsonPath)) {
             return;
         }
 
-        $jsonRaw = file_get_contents($rootPackagePath . '/composer.json');
+        $jsonRaw = file_get_contents($composerJsonPath);
         if (! is_string($jsonRaw)) {
             // @codeCoverageIgnoreStart
             return;
@@ -86,19 +89,9 @@ final class Installer implements PluginInterface, EventSubscriberInterface
             return;
         }
 
-        $hasMakefiles = false;
-        foreach (array_keys($json['require-dev']) as $package) {
-            if ($package === 'wyrihaximus/makefiles') {
-                $hasMakefiles = true;
-                break;
-            }
-        }
-
-        if (! $hasMakefiles) {
+        if (! in_array('wyrihaximus/makefiles', array_keys($json['require-dev']), true)) {
             return;
         }
-
-        unset($hasMakefiles);
 
         if (array_key_exists('name', $json) && $json['name'] === 'wyrihaximus/test-utilities') {
             self::addMakeOnInstallOrUpdate($event->getIO(), $rootPackagePath);
@@ -107,7 +100,7 @@ final class Installer implements PluginInterface, EventSubscriberInterface
         }
 
         foreach (['require', 'require-dev'] as $key) {
-            if (! is_array($json[$key])) {
+            if (! array_key_exists($key, $json) || ! is_array($json[$key])) {
                 continue;
             }
 
@@ -135,69 +128,62 @@ final class Installer implements PluginInterface, EventSubscriberInterface
     private static function addMakeOnInstallOrUpdate(IOInterface $io, string $rootPackagePath): void
     {
         $io->write('<info>wyrihaximus/test-utilities:</info> Adding <fg=cyan>make on-install-or-update || true</> to scripts');
-        $composerJsonString = file_get_contents($rootPackagePath . '/composer.json');
-        if (! is_string($composerJsonString)) {
-            $io->write('<error>wyrihaximus/test-utilities:</error> Unable to read <fg=cyan>composer.json</> aborting');
+        $composerJsonPath = self::composerJsonPath($rootPackagePath);
+        if (self::isAbsolutePath($composerJsonPath)) {
+            $composerJsonString = file_get_contents($composerJsonPath);
+            if (! is_string($composerJsonString)) {
+                $io->write('<error>wyrihaximus/test-utilities:</error> Unable to read <fg=cyan>composer.json</> aborting');
 
-            return;
-        }
-
-        $composerJson     = json_decode($composerJsonString, true);
-        $composerJsonHash = hash('sha512', (string) json_encode($composerJson, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT));
-        if (is_array($composerJson)) {
-            if (! array_key_exists('scripts', $composerJson) || ! is_array($composerJson['scripts'])) {
-                $composerJson['scripts'] = [];
+                return;
             }
 
-            if (! array_key_exists('post-install-cmd', $composerJson['scripts'])) {
-                $composerJson['scripts']['post-install-cmd'] = [];
-            }
-
-            /** @phpstan-ignore argument.type */
-            $composerJson['scripts']['post-install-cmd'] = self::addMakeOnInstallOrUpdateToScriptsSectionAndRemoveCommandsItReplaces($composerJson['scripts']['post-install-cmd']);
-
-            if (! array_key_exists('post-update-cmd', $composerJson['scripts'])) {
-                $composerJson['scripts']['post-update-cmd'] = [];
-            }
-
-            /** @phpstan-ignore argument.type */
-            $composerJson['scripts']['post-update-cmd'] = self::addMakeOnInstallOrUpdateToScriptsSectionAndRemoveCommandsItReplaces($composerJson['scripts']['post-update-cmd']);
-        }
-
-        $replacementComposerJsonString = json_encode($composerJson, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
-        if (is_string($replacementComposerJsonString)) {
-            $replacementComposerJsonHash = hash('sha512', $replacementComposerJsonString);
-            if (! hash_equals($composerJsonHash, $replacementComposerJsonHash)) {
-                $replacementComposerJsonString = preg_replace('/^(  +?)\\1(?=[^ ])/m', '$1', $replacementComposerJsonString);
-                if (is_string($replacementComposerJsonString)) {
-                    $io->write('<info>wyrihaximus/test-utilities:</info> Writing new <fg=cyan>composer.json</>');
-                    file_put_contents($rootPackagePath . '/composer.json', $replacementComposerJsonString);
+            $composerJson     = json_decode($composerJsonString, true);
+            $composerJsonHash = hash('sha512', (string) json_encode($composerJson, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT));
+            if (is_array($composerJson)) {
+                if (! array_key_exists('scripts', $composerJson) || ! is_array($composerJson['scripts'])) {
+                    $composerJson['scripts'] = [];
                 }
-            }
-        }
 
-        if (is_array($composerJson) && array_key_exists('scripts', $composerJson) && is_array($composerJson['scripts'])) {
-            if (array_key_exists('post-install-cmd', $composerJson['scripts'])) {
+                if (! array_key_exists('post-install-cmd', $composerJson['scripts'])) {
+                    $composerJson['scripts']['post-install-cmd'] = [];
+                }
+
                 /** @phpstan-ignore argument.type */
                 $composerJson['scripts']['post-install-cmd'] = self::addMakeOnInstallOrUpdateToScriptsSectionAndRemoveCommandsItReplaces($composerJson['scripts']['post-install-cmd']);
-            }
 
-            if (array_key_exists('post-update-cmd', $composerJson['scripts'])) {
+                if (! array_key_exists('post-update-cmd', $composerJson['scripts'])) {
+                    $composerJson['scripts']['post-update-cmd'] = [];
+                }
+
                 /** @phpstan-ignore argument.type */
                 $composerJson['scripts']['post-update-cmd'] = self::addMakeOnInstallOrUpdateToScriptsSectionAndRemoveCommandsItReplaces($composerJson['scripts']['post-update-cmd']);
             }
-        }
 
-        $replacementComposerJsonString = json_encode($composerJson, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
-        if (is_string($replacementComposerJsonString)) {
-            $replacementComposerJsonHash = hash('sha512', $replacementComposerJsonString);
-            if (! hash_equals($composerJsonHash, $replacementComposerJsonHash)) {
-                $replacementComposerJsonString = preg_replace('/^(  +?)\\1(?=[^ ])/m', '$1', $replacementComposerJsonString);
-                if (is_string($replacementComposerJsonString)) {
-                    $io->write('<info>wyrihaximus/test-utilities:</info> Writing new <fg=cyan>composer.json</>');
-                    file_put_contents($rootPackagePath . '/composer.json', $replacementComposerJsonString . "\r\n");
+            if (is_array($composerJson) && array_key_exists('scripts', $composerJson) && is_array($composerJson['scripts'])) {
+                if (array_key_exists('post-install-cmd', $composerJson['scripts'])) {
+                    /** @phpstan-ignore argument.type */
+                    $composerJson['scripts']['post-install-cmd'] = self::addMakeOnInstallOrUpdateToScriptsSectionAndRemoveCommandsItReplaces($composerJson['scripts']['post-install-cmd']);
+                }
+
+                if (array_key_exists('post-update-cmd', $composerJson['scripts'])) {
+                    /** @phpstan-ignore argument.type */
+                    $composerJson['scripts']['post-update-cmd'] = self::addMakeOnInstallOrUpdateToScriptsSectionAndRemoveCommandsItReplaces($composerJson['scripts']['post-update-cmd']);
                 }
             }
+
+            $replacementComposerJsonString = json_encode($composerJson, JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT);
+            if (is_string($replacementComposerJsonString)) {
+                $replacementComposerJsonHash = hash('sha512', $replacementComposerJsonString);
+                if (! hash_equals($composerJsonHash, $replacementComposerJsonHash)) {
+                    $replacementComposerJsonString = preg_replace('/^(  +?)\\1(?=[^ ])/m', '$1', $replacementComposerJsonString);
+                    if (is_string($replacementComposerJsonString)) {
+                        $io->write('<info>wyrihaximus/test-utilities:</info> Writing new <fg=cyan>composer.json</>');
+                        file_put_contents($composerJsonPath, $replacementComposerJsonString . "\r\n");
+                    }
+                }
+            }
+        } else {
+            $io->write('<error>wyrihaximus/test-utilities:</error> Refusing to write relative <fg=cyan>composer.json</> aborting');
         }
 
         $io->write('<info>wyrihaximus/test-utilities:</info> Finished <fg=cyan>make on-install-or-update || true</> to scripts');
@@ -228,6 +214,17 @@ final class Installer implements PluginInterface, EventSubscriberInterface
         $scripts[] = 'make on-install-or-update || true';
 
         return $scripts;
+    }
+
+    /** @return non-empty-string */
+    private static function composerJsonPath(string $rootPackagePath): string
+    {
+        return $rootPackagePath . 'composer.json';
+    }
+
+    private static function isAbsolutePath(string $path): bool
+    {
+        return str_starts_with($path, '/') || preg_match('#^[A-Za-z]:[/\\\\]#', $path) === 1;
     }
 
     /** @return non-empty-string */

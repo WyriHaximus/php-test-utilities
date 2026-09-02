@@ -20,8 +20,12 @@ use WyriHaximus\TestUtilities\TestCase;
 use function array_filter;
 use function chmod;
 use function clearstatcache;
+use function count;
+use function dirname;
 use function file_get_contents;
 use function file_put_contents;
+use function hash;
+use function hash_equals;
 use function implode;
 use function is_dir;
 use function json_decode;
@@ -42,8 +46,19 @@ final class InstallerTest extends TestCase
 {
     private string $projectRoot = '';
 
+    private string $realComposerJsonHash = '';
+
     /** @var list<string> */
     private array $ioMessages = [];
+
+    protected function setUp(): void
+    {
+        parent::setUp();
+
+        $realComposerJson = file_get_contents($this->realComposerJsonPath());
+        self::assertIsString($realComposerJson);
+        $this->realComposerJsonHash = hash('sha512', $realComposerJson);
+    }
 
     protected function tearDown(): void
     {
@@ -53,6 +68,13 @@ final class InstallerTest extends TestCase
             } catch (Throwable) {
             }
         }
+
+        $realComposerJson = file_get_contents($this->realComposerJsonPath());
+        self::assertIsString($realComposerJson);
+        self::assertTrue(
+            hash_equals($this->realComposerJsonHash, hash('sha512', $realComposerJson)),
+            'The project composer.json must not be modified by Installer tests.',
+        );
 
         parent::tearDown();
     }
@@ -69,11 +91,10 @@ final class InstallerTest extends TestCase
     #[Test]
     public function pluginLifecycleMethodsDoNothing(): void
     {
-        self::expectNotToPerformAssertions();
-
         $installer = new Installer();
         $composer  = Mockery::mock(Composer::class);
         $io        = Mockery::mock(IOInterface::class);
+        $io->shouldNotReceive('write');
 
         $installer->activate($composer, $io);
         $installer->deactivate($composer, $io);
@@ -155,6 +176,40 @@ final class InstallerTest extends TestCase
     }
 
     #[Test]
+    public function findEventListenersReturnsWhenMakefilesIsMissingForSelfPackage(): void
+    {
+        $this->createProject([
+            'composer.json' => $this->encodeJson([
+                'name'        => 'wyrihaximus/test-utilities',
+                'require-dev' => ['phpunit/phpunit' => '^13'],
+            ]),
+        ]);
+
+        Installer::findEventListeners($this->createEvent());
+
+        self::assertSame([], $this->ioMessages);
+    }
+
+    #[Test]
+    public function findEventListenersUpdatesSelfPackageOnlyOnceWhenAlsoListedAsDependency(): void
+    {
+        $this->createProject([
+            'composer.json' => $this->encodeJson([
+                'name'        => 'wyrihaximus/test-utilities',
+                'require-dev' => [
+                    'wyrihaximus/makefiles'        => '^0.14',
+                    'wyrihaximus/test-utilities'   => '^1.0',
+                ],
+            ], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT),
+        ]);
+
+        Installer::findEventListeners($this->createEvent());
+
+        self::assertComposerScriptsContainMakeCommand();
+        self::assertSame(1, $this->countIoMessagesContaining('Adding <fg=cyan>make on-install-or-update || true</>'));
+    }
+
+    #[Test]
     public function findEventListenersUpdatesSelfPackage(): void
     {
         $this->createProject([
@@ -218,6 +273,73 @@ final class InstallerTest extends TestCase
         Installer::findEventListeners($this->createEvent());
 
         self::assertSame([], $this->ioMessages);
+    }
+
+    #[Test]
+    public function findEventListenersUpdatesWhenRequireIsInvalidButRequireDevHasTestUtilities(): void
+    {
+        $this->createProject([
+            'composer.json' => $this->encodeJson([
+                'name'        => 'example/project',
+                'require'     => 'wyrihaximus/test-utilities',
+                'require-dev' => [
+                    'wyrihaximus/makefiles'        => '^0.14',
+                    'wyrihaximus/test-utilities'   => '^1.0',
+                ],
+            ], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT),
+        ]);
+
+        Installer::findEventListeners($this->createEvent());
+
+        self::assertComposerScriptsContainMakeCommand();
+    }
+
+    #[Test]
+    public function findEventListenersUpdatesOnlyOnceWhenMultipleTestUtilitiesArePresent(): void
+    {
+        $this->createProject([
+            'composer.json' => $this->encodeJson([
+                'name'        => 'example/project',
+                'require-dev' => [
+                    'wyrihaximus/makefiles'              => '^0.14',
+                    'wyrihaximus/test-utilities'         => '^1.0',
+                    'wyrihaximus/async-test-utilities'   => '^1.0',
+                ],
+                'require'     => [],
+            ], JSON_UNESCAPED_SLASHES | JSON_PRETTY_PRINT),
+        ]);
+
+        Installer::findEventListeners($this->createEvent());
+
+        self::assertComposerScriptsContainMakeCommand();
+        self::assertSame(1, $this->countIoMessagesContaining('Adding <fg=cyan>make on-install-or-update || true</>'));
+    }
+
+    #[Test]
+    public function isAbsolutePath(): void
+    {
+        $method = new ReflectionMethod(Installer::class, 'isAbsolutePath');
+
+        self::assertTrue($method->invoke(null, '/tmp/project/composer.json'));
+        self::assertTrue($method->invoke(null, 'C:\\project\\composer.json'));
+        self::assertFalse($method->invoke(null, 'composer.json'));
+        self::assertFalse($method->invoke(null, 'relative/C:/project/composer.json'));
+    }
+
+    #[Test]
+    public function addMakeOnInstallOrUpdateRefusesRelativeComposerJsonPath(): void
+    {
+        $realComposerJson = file_get_contents($this->realComposerJsonPath());
+        self::assertIsString($realComposerJson);
+
+        $method = new ReflectionMethod(Installer::class, 'addMakeOnInstallOrUpdate');
+        $method->invoke(null, $this->createIo(), '');
+
+        self::assertStringContainsString(
+            'Refusing to write relative <fg=cyan>composer.json</> aborting',
+            implode("\n", $this->ioMessages),
+        );
+        self::assertSame($realComposerJson, file_get_contents($this->realComposerJsonPath()));
     }
 
     #[Test]
@@ -409,10 +531,26 @@ final class InstallerTest extends TestCase
 
         self::assertSame(['make on-install-or-update || true'], $scripts['post-install-cmd']);
         self::assertSame(['make on-install-or-update || true'], $scripts['post-update-cmd']);
-        self::assertNotEmpty(array_filter(
+
+        $composerJsonRaw = file_get_contents($this->projectRoot . 'composer.json');
+        self::assertIsString($composerJsonRaw);
+        self::assertStringEndsWith("\r\n", $composerJsonRaw);
+
+        self::assertSame(1, $this->countIoMessagesContaining('Adding <fg=cyan>make on-install-or-update || true</>'));
+        self::assertSame(1, $this->countIoMessagesContaining('Writing new <fg=cyan>composer.json</>'));
+    }
+
+    private function countIoMessagesContaining(string $needle): int
+    {
+        return count(array_filter(
             $this->ioMessages,
-            static fn (string $message): bool => str_contains($message, 'Writing new <fg=cyan>composer.json</>'),
+            static fn (string $message): bool => str_contains($message, $needle),
         ));
+    }
+
+    private function realComposerJsonPath(): string
+    {
+        return dirname(__DIR__, 2) . '/composer.json';
     }
 
     /** @return array<string, mixed> */
