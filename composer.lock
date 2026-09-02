@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "a94ba3596998ce44ef439ca6cb67c3b8",
+    "content-hash": "932b81a384e578e478abaad95792a3c5",
     "packages": [
         {
             "name": "azjezz/psl",
@@ -9279,23 +9279,23 @@
         },
         {
             "name": "wyrihaximus/qa-tooling-wrapper",
-            "version": "2.2.0",
+            "version": "2.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/WyriHaximus/php-qa-tooling-wrapper.git",
-                "reference": "88ef9b4a461c80c1e9eee969744005dbb3d48ac3"
+                "reference": "1a5d82f65196e644aae33341275ccfdfce609d26"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WyriHaximus/php-qa-tooling-wrapper/zipball/88ef9b4a461c80c1e9eee969744005dbb3d48ac3",
-                "reference": "88ef9b4a461c80c1e9eee969744005dbb3d48ac3",
+                "url": "https://api.github.com/repos/WyriHaximus/php-qa-tooling-wrapper/zipball/1a5d82f65196e644aae33341275ccfdfce609d26",
+                "reference": "1a5d82f65196e644aae33341275ccfdfce609d26",
                 "shasum": ""
             },
             "require": {
                 "ergebnis/composer-normalize": "^2.52.0",
                 "ergebnis/phpunit-slow-test-detector": "^2.24.0",
                 "icanhazstring/composer-unused": "^0.9.6",
-                "infection/infection": "^0.35.3",
+                "infection/infection": "^0.35.4",
                 "maglnet/composer-require-checker": "^4.20.0",
                 "mockery/mockery": "^1.6.15",
                 "php": "^8.4",
@@ -9342,7 +9342,7 @@
             "description": "🌯 QA tooling wrapper for `wyrihaximus/test-utilities`",
             "support": {
                 "issues": "https://github.com/WyriHaximus/php-qa-tooling-wrapper/issues",
-                "source": "https://github.com/WyriHaximus/php-qa-tooling-wrapper/tree/2.2.0"
+                "source": "https://github.com/WyriHaximus/php-qa-tooling-wrapper/tree/2.2.1"
             },
             "funding": [
                 {
@@ -9350,7 +9350,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-09-02T13:59:29+00:00"
+            "time": "2026-09-02T15:13:04+00:00"
         },
         {
             "name": "wyrihaximus/rector-config",
