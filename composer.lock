@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "f0b9b925a7a0cb2c1f2645b95d34e932",
+    "content-hash": "22c74cc8d12ea08ca0139336417d9a65",
     "packages": [
         {
             "name": "azjezz/psl",
@@ -9216,23 +9216,23 @@
         },
         {
             "name": "wyrihaximus/phpstan-rules-wrapper",
-            "version": "14.7.0",
+            "version": "14.8.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/WyriHaximus/php-phpstan-rules-wrapper.git",
-                "reference": "3ea53e628fc33854e4cd35c9f68f1ee5b7958a77"
+                "reference": "dd68b2b81217fe5717ee25156c39f40514831c74"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WyriHaximus/php-phpstan-rules-wrapper/zipball/3ea53e628fc33854e4cd35c9f68f1ee5b7958a77",
-                "reference": "3ea53e628fc33854e4cd35c9f68f1ee5b7958a77",
+                "url": "https://api.github.com/repos/WyriHaximus/php-phpstan-rules-wrapper/zipball/dd68b2b81217fe5717ee25156c39f40514831c74",
+                "reference": "dd68b2b81217fe5717ee25156c39f40514831c74",
                 "shasum": ""
             },
             "require": {
                 "ergebnis/phpstan-rules": "^2.13.1",
                 "php": "^8.4",
                 "phpstan/extension-installer": "^1.4.3",
-                "phpstan/phpstan": "^2.2.13",
+                "phpstan/phpstan": "^2.2.14",
                 "phpstan/phpstan-deprecation-rules": "^2.0.5",
                 "phpstan/phpstan-mockery": "^2.0.0",
                 "phpstan/phpstan-phpunit": "^2.0.18",
@@ -9243,7 +9243,7 @@
                 "symplify/phpstan-extensions": "^12.0.2",
                 "tomasvotruba/type-coverage": "^2.3.6",
                 "wyrihaximus/phpstan-no-safe": "^1.1.0",
-                "yamadashy/phpstan-friendly-formatter": "^1.4.0"
+                "yamadashy/phpstan-friendly-formatter": "^1.5.0"
             },
             "type": "library",
             "extra": {
@@ -9266,7 +9266,7 @@
             "description": "🌯 PHPStan rules wrapper",
             "support": {
                 "issues": "https://github.com/WyriHaximus/php-phpstan-rules-wrapper/issues",
-                "source": "https://github.com/WyriHaximus/php-phpstan-rules-wrapper/tree/14.7.0"
+                "source": "https://github.com/WyriHaximus/php-phpstan-rules-wrapper/tree/14.8.0"
             },
             "funding": [
                 {
@@ -9274,7 +9274,7 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-09-11T20:02:26+00:00"
+            "time": "2026-09-20T13:35:19+00:00"
         },
         {
             "name": "wyrihaximus/qa-tooling-wrapper",
@@ -9398,16 +9398,16 @@
         },
         {
             "name": "yamadashy/phpstan-friendly-formatter",
-            "version": "v1.4.0",
+            "version": "v1.5.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/yamadashy/phpstan-friendly-formatter.git",
-                "reference": "cd4882c7293591c13230b5be35e742b33d2ab2ff"
+                "reference": "c5dfd04146143ddcc297741cda2814975735605b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/yamadashy/phpstan-friendly-formatter/zipball/cd4882c7293591c13230b5be35e742b33d2ab2ff",
-                "reference": "cd4882c7293591c13230b5be35e742b33d2ab2ff",
+                "url": "https://api.github.com/repos/yamadashy/phpstan-friendly-formatter/zipball/c5dfd04146143ddcc297741cda2814975735605b",
+                "reference": "c5dfd04146143ddcc297741cda2814975735605b",
                 "shasum": ""
             },
             "require": {
@@ -9416,9 +9416,9 @@
                 "phpstan/phpstan": "^1.0 || ^2.0"
             },
             "require-dev": {
-                "friendsofphp/php-cs-fixer": "^3.93.0",
-                "phpstan/phpstan-phpunit": "^2.0.12",
-                "phpunit/phpunit": "^10.0 || ^11.0"
+                "friendsofphp/php-cs-fixer": "^3.95.25",
+                "phpstan/phpstan-phpunit": "^2.0.18",
+                "phpunit/phpunit": "^10.0 || ^11.0 || ^13.0"
             },
             "type": "phpstan-extension",
             "extra": {
@@ -9452,9 +9452,9 @@
             ],
             "support": {
                 "issues": "https://github.com/yamadashy/phpstan-friendly-formatter/issues",
-                "source": "https://github.com/yamadashy/phpstan-friendly-formatter/tree/v1.4.0"
+                "source": "https://github.com/yamadashy/phpstan-friendly-formatter/tree/v1.5.0"
             },
-            "time": "2026-01-26T15:12:47+00:00"
+            "time": "2026-09-19T13:58:44+00:00"
         }
     ],
     "packages-dev": [
