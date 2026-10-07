@@ -16,7 +16,7 @@
     "composer-plugin-api": "^2",
     "phpunit/phpunit": "^13.4.1",
     "wyrihaximus/phpstan-rules-wrapper": "^14.10.1",
-    "wyrihaximus/qa-tooling-wrapper": "^2.3.0",
+    "wyrihaximus/qa-tooling-wrapper": "^2.4.0",
     "wyrihaximus/rector-config": "^1.0.0"
   },
   "require-dev": {
