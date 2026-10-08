@@ -24,7 +24,7 @@ When [wyrihaximus/makefiles](https://github.com/WyriHaximus/makefiles) is presen
 
 This package provides a PHPStan extension so your test classes may extend `WyriHaximus\TestUtilities\TestCase`.
 
-When [phpstan/extension-installer](https://github.com/phpstan/extension-installer) is enabled, the extension is registered automatically—no manual configuration required.
+When [phpstan/extension-installer](https://github.com/phpstan/extension-installer) is enabled, the extension is registered automatically; no manual configuration required.
 
 <details>
 <summary>Manual configuration</summary>
@@ -36,7 +36,7 @@ includes:
     - vendor/wyrihaximus/test-utilities/extension.neon
 ```
 
-The following PHPStan extensions are provided through [`wyrihaximus/phpstan-rules-wrapper`](https://github.com/WyriHaximus/phpstan-rules-wrapper):
+The following PHPStan extensions are provided through [`wyrihaximus/phpstan-rules-wrapper`](https://github.com/WyriHaximus/php-phpstan-rules-wrapper):
 
 <!-- included-tooling:wyrihaximus/phpstan-rules-wrapper:start -->
 * [`ergebnis/phpstan-rules`](https://packagist.org/packages/ergebnis/phpstan-rules)
@@ -65,12 +65,12 @@ Before each test, `initializeTemporaryTestEnvironment()` creates a unique tempor
 
 Mockery integration is included, along with helpers such as:
 
-- `getTmpDir()` — a unique temporary directory for each test
-- `getRandomNameSpace()` — a unique namespace string for each test
-- `getFilesInDirectory()` — list files in a directory recursively
-- `rmdir()` — recursively remove a directory, including symlinks
-- `provideTrueFalse()` — a data provider for boolean values (don't ask)
-- `waitUntilTheNextSecond()` — wait until the next second boundary
+- `getTmpDir()`: a unique temporary directory for each test
+- `getRandomNameSpace()`: a unique namespace string for each test
+- `getFilesInDirectory()`: list files in a directory recursively
+- `rmdir()`: recursively remove a directory, including symlinks
+- `provideTrueFalse()`: a data provider for boolean values (don't ask)
+- `waitUntilTheNextSecond()`: wait until the next second boundary
 
 ## Rector
 

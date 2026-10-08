@@ -53,7 +53,6 @@ abstract class TestCase extends PHPUnitTestCase
     /** @var list<mixed>|null */
     private array|null $rmdirIteratorOverride = null;
 
-    /** @infection-ignore-all */
     #[Before]
     final protected function initializeTemporaryTestEnvironment(): void
     {
@@ -71,7 +70,6 @@ abstract class TestCase extends PHPUnitTestCase
         $this->tmpNamespace = uniqid('WHPTU');
     }
 
-    /** @infection-ignore-all */
     #[After]
     final protected function cleanUpTemporaryTestEnvironment(): void
     {
@@ -97,21 +95,13 @@ abstract class TestCase extends PHPUnitTestCase
         return sys_get_temp_dir();
     }
 
-    /**
-     * @return non-empty-string
-     *
-     * @infection-ignore-all
-     */
+    /** @return non-empty-string */
     private function resolveBaseTempDirectory(): string
     {
         return $this->absoluteTempDirectory(sys_get_temp_dir());
     }
 
-    /**
-     * @return non-empty-string
-     *
-     * @infection-ignore-all
-     */
+    /** @return non-empty-string */
     private function absoluteTempDirectory(string $directory): string
     {
         /** @var non-empty-string $fallback */
