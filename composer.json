@@ -23,6 +23,7 @@
     "wyrihaximus/makefiles": "^0.15.4"
   },
   "conflict": {
+    "beberlei/assert": "<3.3.4",
     "composer-unused/symbol-parser": "<0.3.3",
     "composer/composer": "<2.10.3",
     "composer/pcre": "<3.3.2",
