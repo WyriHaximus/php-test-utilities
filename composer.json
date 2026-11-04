@@ -20,7 +20,7 @@
     "wyrihaximus/rector-config": "^1.0.0"
   },
   "require-dev": {
-    "wyrihaximus/makefiles": "^0.15.4"
+    "wyrihaximus/makefiles": "^0.15.5"
   },
   "conflict": {
     "beberlei/assert": "<3.3.4",
