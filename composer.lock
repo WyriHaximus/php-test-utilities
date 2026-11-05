@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "45ad74d2564d9844ae3323957247db96",
+    "content-hash": "e6e8c3cebaa0fbfac3bbefccb82d5ad2",
     "packages": [
         {
             "name": "azjezz/psl",
@@ -9545,16 +9545,16 @@
     "packages-dev": [
         {
             "name": "wyrihaximus/makefiles",
-            "version": "0.15.4",
+            "version": "0.15.5",
             "source": {
                 "type": "git",
                 "url": "https://github.com/WyriHaximus/Makefiles.git",
-                "reference": "21be5310453805572de6592637df7905cefadb10"
+                "reference": "e8ae025777e6e95b0503d8cd060787a5c123b5c0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/WyriHaximus/Makefiles/zipball/21be5310453805572de6592637df7905cefadb10",
-                "reference": "21be5310453805572de6592637df7905cefadb10",
+                "url": "https://api.github.com/repos/WyriHaximus/Makefiles/zipball/e8ae025777e6e95b0503d8cd060787a5c123b5c0",
+                "reference": "e8ae025777e6e95b0503d8cd060787a5c123b5c0",
                 "shasum": ""
             },
             "require": {
@@ -9566,7 +9566,7 @@
                 "infection/infection": "<0.32.0"
             },
             "require-dev": {
-                "wyrihaximus/test-utilities": "^14.5.0"
+                "wyrihaximus/test-utilities": "^14.7.0"
             },
             "type": "composer-plugin",
             "extra": {
@@ -9595,7 +9595,7 @@
             "description": "🧱 Makefile building blocks",
             "support": {
                 "issues": "https://github.com/WyriHaximus/Makefiles/issues",
-                "source": "https://github.com/WyriHaximus/Makefiles/tree/0.15.4"
+                "source": "https://github.com/WyriHaximus/Makefiles/tree/0.15.5"
             },
             "funding": [
                 {
@@ -9603,7 +9603,8 @@
                     "type": "github"
                 }
             ],
-            "time": "2026-10-15T16:12:42+00:00"
+            "time": "2026-11-02T19:25:48+00:00",
+            "published-time": "2026-11-02T19:26:56+00:00"
         }
     ],
     "aliases": [],
@@ -9621,5 +9622,5 @@
     "platform-overrides": {
         "php": "8.4.13"
     },
-    "plugin-api-version": "2.9.0"
+    "plugin-api-version": "2.11.0"
 }
